@@ -1,0 +1,638 @@
+They want to help.
+I think you don't have to.
+That's up to you. Yes, but I want everything you had on.
+I don't mind at all. Okay.
+More light. Less light. Let's.
+Another compromise. Oh.
+Well, good morning. Welcome back to everyone who decided they would stick around with this course.
+What if he left? I think I have a pretty good idea.
+Why? Let's just keep it to myself.
+First of all, I want to apologize up front.
+I had a surgery last Friday, and I'm a little out of it, So if I cut it short, I don't think so.
+Don't hold it against. All right. Questions.
+No questions. Let's go.
+So just. Remind you about the exam dates changes.
+Here it is. Your written assignments number one will be posted probably today or tomorrow morning.
+Not going to be terribly difficult. Just don't just start programing assignment number one either by the end of this this week or early next week.
+So you will build your first language model. That has nothing to do with tragedy but it apart from from the name.
+But hopefully you'll find it interesting information, by the way.
+You're one of your teachers, right? I mean, I knew there.
+And let's go back to what we discussed then.
+What about what about that BP algorithm that we discussed?
+During our last session. Everybody understands how it works and why why it is.
+In the material to begin with. By fair concluding.
+I don't like going back to it. I'm just curious whether you've got you got the purpose for it.
+All right. By the way, that that kind of approach is being used by those modern tools such as yourself, words tokenized,
+that is built in, and we'll just learn on its own what are the parts of words instead of just coming up with a set of rules.
+So it's not necessarily I wouldn't call it useless at all, but it's it can be very helpful with word processing and tokenization.
+Now let's go back to a couple less important preprocessing steps that we talked about, which we haven't talked about yet.
+The one that you will probably not be using a whole lot is lower casing or what was called,
+again, tasteful, but that's another name for it, lower casing.
+It's another way to normalize text. Everything becomes lowercase.
+However, you have to be a little careful here.
+Now, there is going to be some applications where it's going to be redundant some or it won't work a lot.
+It will be helpful. A lot of the more important ones are stemming animal Americanization.
+Once again, it will depend on the application whether you should use it or not.
+But these two steps are were commonly used as preprocessing steps to normalize your text, so they both do more or less the same thing.
+Okay. How many of you are familiar with those term stemming and limit discussion?
+Have you ever heard those terms?
+For those who haven't, but essentially chopping off a piece of a word starting to rise up.
+Just turn that idea to a stem or a root piece or a limb.
+A There is a but limit position will not necessarily chop things frequently.
+Well, but sometimes they will just change the word completely in a sentence.
+So strumming means just, hey, let's cut a piece of the word and leave it.
+Leave the stem. Just like here you can see an airliner turns into an airline or line.
+It's not even a word. So that's a very that's a standout feature of stemming.
+You will not necessarily get words out of after stemming.
+You might, but that's okay. Whether you don't have a real work or not.
+Here's a couple examples. Nothing fancy here, just a I wouldn't even call it a word of caution, but just be mindful of that.
+You will be using some pretty fine stemless tools from all sorts of Python packages and whatnot.
+Some of them are will produce slightly different results.
+It doesn't matter a whole lot, but just be mindful of what of them is so-called Porter Stemmer.
+After. Gentlemen. Court reporter So it's essentially a set of rules.
+Pass the facts through a set of laws. There's nothing going on there.
+We will not be learning what's inside. You'll be using it.
+But this is how a lot of those preprocessing tools are being were made as a rule based approach.
+That'll be helpful. Let my position this one is a little more sophisticated.
+This deals with mapping all sorts of words, forums to the base or the base word as in the base word in the dictionary.
+That base word is going to be called. It's called LMA.
+This is what we're calling a polymath zation. So we're not real effectively.
+We may end up chopping things of the word, but that's not necessarily always the case.
+We will look at the input words and find the corresponding base word in the dictionary.
+For example. What would become be.
+Right. That makes sense. You know, different limited reserves will treat it in a different way.
+I think there is limited reserves which would keep wars as was.
+Some will turn it into being, but you get the picture right. Base word mapping from one to another.
+The bottom line is the same. We want to have a normalized text.
+Every instance of a token of a type welcomed project.
+Every token, every instance of a word will be reduced to some either its stem with stemming or its level.
+Would it make sense to do vote? If a meeting was not meet the Met.
+Being able to meet is a verb.
+Meeting is not a verb. I mean that.
+So do you have two words in the dictionary? Meaning is a different distinct word.
+This is. This is why you have that distinction. Anyway, you don't have to worry about it.
+In practice, you will just run it to the limit. Isaac will figure it out for you.
+So. Here is an example of how those two key, key pre-processing steps would work together.
+Tokenization allow out the amount of lower casing and things of that nature.
+Just one example. Once again, there will be tokenized as there will be limited resources that will do it slightly in a slightly different fashion.
+But I will not be too picky here. Note that comments are going to be their own individual topics.
+Does that make sense? Okay, Stop work.
+Okay. This is one of those frequently redundant reprocessing, so that removing supports is one of those frequently redundant nowadays steps.
+What does it mean? Let's just filter out all the common words that are not really adding a whole lot in terms of meaning and that a poor is.
+Now in practice. When you're dealing with large language models, everything just gets in.
+We're not reducing those. If you are working on your own, very basic, very primitive, what's call it an LP tool,
+you don't have the processing power removing stuff where it's making make sense because you're Why would you benefit from removing stop words?
+So you have this initial text, right? And you will remove it.
+So, so forth. You will you will have left less text with more or less the same amount of meaning.
+Let's assume that the meeting stays for the most.
+What's the benefit? That's a real mess.
+So worse to train the model with less processing, less less complexity.
+Everything will run smoother if that is something that you care about, by all means.
+Typically this will be done as follows. I think I have a little Jupyter notebooks with an example too.
+Typical, and all the packages will have their own database or less those common stop words.
+And then you just go through your input text. Okay, the stuff where it is there.
+Remove, remove, remove.
+Another approach to that is just to analyze the text and figure out the more the most common words like and have it cut off points.
+Top ten Common words. Let's just get rid of it.
+There is a danger in that, but. Do you go to other reprocessing states that's already working?
+I don't think I'll do that. You might want to do the first part somewhere, and then once we get into your projects.
+So there's a there's I think aberrations turning up were daunting.
+It's not that helps. Your call.
+Language detection will be working with English so that there's not really serious importance for us.
+Transliteration. Same thing. But these are options for you.
+So. How do we do that other than other than using, as I said,
+using prepackaged functions in your and I'll be Python packages or whatever language are you using if there is an LP package.
+Okay. But. Is is that out of the box package, always going to suit your all your needs.
+Probably not. Right. There might be a weird language that you're dealing with slang a lot,
+a lot about relationships, a lot of obligations that that package is not ready for.
+So you will have to do your own additional massaging of that input text.
+How would you go about it? I'm sure many of you did text processing one way or the other, cleaning up a dataset of.
+Putting your data set into pieces, distributing it, how well you've done that.
+I'm sure most of most of the time you did probably wrote a little function that does that.
+Maybe, maybe sophisticate it. Maybe. Bruce any other ideas?
+What about regular expressions? Have you heard that term? Who hasn't?
+Raise your hand. I wish I. We have.
+Okay. So there's not much point in. Are you are you comfortable with using regular expressions?
+Let's just raise your hand. Okay.
+So much less. The reason I'm asking is, is there a point for me to go through it a little more than than just the general idea?
+Regular expressions are your friend when it comes to very fast and very efficient pattern matching, finding patterns in text and they are very useful.
+Likewise in Python, r, E or projects.
+I'll show you an example in Python in a second.
+But the bottom line is you specify a pattern and you are very you have very a lot of room to be creative here.
+And then you run regular expressions and it will go through the input text and find matches for your for your pattern.
+Now, how would that be useful? Well, you can you do search and replace a lot, in a word.
+For example, that is exactly where regular expressions would kick in.
+You find for all the instances that match your query, but it can be something very, very flexible.
+You can replace it, you can count it, right.
+In the first instance, all sorts of easy things.
+Now, how would that be? How would that be useful for our pre-processing?
+Certain segmentations. I find all the spots where the symptoms are ending.
+I find all those. White spaces.
+Okay, well, that's one case folding.
+Replace every uppercase character with lowercase easy things, but all can be done with regular expressions.
+Okay. But to make it work, you have to come up with a pattern.
+So let me show you first. Oh, that's a work in practice.
+This would be so you haven't looked at it. Most of these, if not all those notices that I was referring to today are in Blackboard and everyone see.
+Okay. So basic stuff. Just import the package and then this would be our input tax.
+Of course, it could be the entire documents. I just have a very simple three three character string here.
+If you want to make sure that you're dealing with a row tax, just add the bar in front of it.
+That's not necessarily the important for us right now.
+So this is our input input tax. Now, the second thing that we need is a pattern for matching.
+Well, here's a pattern. Look for something that matches these three characters.
+Now, Capital and Dot will be how many of you know what that dot means?
+It's a wild card. So any any character, just a single character can go here.
+This is a very simple pattern. Just look for every every string with three characters starting with and ending with P and whatever is in between.
+All right. Now. Let's set that, set up that pattern and now we can look for pattern.
+Match is a function in our package that matches checks.
+This is very important. This is not just any match. It checks whether that pattern is at the beginning of the string.
+Does my data String is my data string string starting with something that matches this pattern.
+Does it? Well, let's see it.
+Match not found. That's because of that capital. And if I change my input tax to.
+And I'll be. We're just trying to iPad or laptop.
+Okay. This is this is a very trivial.
+Let's try something else. What else do we have?
+And. Now I could rewrite the pattern to accommodate lowercase and a lowercase p, all sorts of things.
+There's ways to do it. I'll show you how. But there's an easy, easier way around.
+I could simply ignore case. So, Adam, add a flag to my match function.
+Now much match boat. Okay.
+Now, let me let me show you something else.
+If this works. Let me start the string with something else.
+Magical sound is no longer starting with this string.
+This should. That's right.
+So Match is a very specific function that it only matches the front of the string.
+There are already functions that are looking throughout the entire.
+Straighten. Okay. But let's.
+Forget about this ignore case example and let's modify.
+Pattern here. For those who don't know,
+this is more a more elaborate version of the original pattern with something extra in instead of those lower that lowercase f,
+anything that goes in inside square brackets is an option.
+So square this square brackets three means.
+There will be one character here, but whatever is between square brackets can match that character.
+So now I can match in lowercase, in uppercase. And with just this little addition here, I could make it be whatever.
+Now, every every, every little character within square brackets would be matched.
+But I want. Yeah.
+The page? Sure. Right.
+So we did this matching.
+What about searching? Same approach.
+More or less. Instead of match, we're using the search function.
+Specify the pattern. The input data is here. But search will tell you where it where the match was stopped.
+This is our input data now an LP that matches our pattern.
+Somewhere in the middle search. Help me find this.
+Replace. There is nothing really sophisticated here.
+This place. So function still, we we specify the pattern.
+We set up the replacement string and apply it to the data that makes sense.
+You can do a lot with regular expressions.
+I will show you some more. But before we do that, let me go through some typical pattern pattern setups.
+So you've already seen the square brackets.
+Essentially it's an or disjunction representation.
+Anything between square brackets is an option for a single character.
+This is this right here is a very crude way of having a match for a four digit.
+However, you can easily replace it with a with a range.
+This would be equivalent to that pattern right here.
+A range of lowercase letters and so on and so on.
+I will definitely not go through all the documentation for regular expressions.
+You're welcome. I will not be testing you on it either.
+Just a good thing to know. Piper, you're probably familiar from other programing languages works as an R as well.
+Ligation a carrot inside square brackets.
+At the beginning says I don't want. This.
+To be matched. Not uppercase characters.
+Not uppercase S or. Yes. Optionality.
+This question Mark placed asked.
+Yes. Yeah.
+So all of this this would be the post getting to be like this wherever you are placing this.
+So let's take a look at our pattern.
+Okay. I can take this square bracket and move that here.
+That will apply to the character that shows up in sequence that in this particular place, if I don't want this to be an.
+Like this very specific character. I don't at this location.
+I don't want to answer your question. Yeah, but what it is, it's really not anything like not all that it would propose to replace that policy.
+So that's like all this.
+I can't it, I have no reason for it. Right. So what does this [INAUDIBLE] do?
+Like it's not going to let me get smart.
+Is Will and will. It will match.
+It will match the character because it's not address. If I had an ass here for some reason, whatever it means, it would not match that.
+Optional is a question mark placed? Yes, if we want to get it.
+Then you need to use an escape character at all here.
+But you would probably have to. This.
+Very good questions. Question mark after a third term means that the character is optional.
+So after assessing whether this is there or there's nothing, it's fine.
+Both cases will be managed, period.
+You already know it's a wild card. Um, there are some short cart operators that are replacing more, more, more sophisticated ones.
+For example, white space. If you really want to capture all white spaces.
+This is the this is the pattern that you could use, but it's not a.
+Slash. Once again, this is not a class where you will be teaching regular expressions, giving you the lay of the land.
+I don't. Backslash is essentially used as an escape character.
+If I want to look for something that is a part of regular expression pattern matching system.
+Okay, so here it is used as a wild card that if I want to find the period, I have to market with it with a flash.
+Anchors. These are pretty good, pretty useful, because they will notice that we're using a carrot outside.
+The pattern here Anchors means.
+Where am I looking for a pattern? Because you meet your what?
+Your matching words of different lengths.
+And you might be interested with all the words, starting with an X or all the words ending with an EPS of different links.
+You can use anchors for that end of the word anchor and or end of string anchor.
+Beginning of a string anchor, you can set up a word boundaries as well.
+So for example. Yes.
+Is what culture are.
+Let's see. Do something easier. This would capture.
+Stop. Guess I should be at the beginning means the beginning of the word, followed by O and followed by the end of the word.
+Does that make sense? It would not, however, common for the states to only see it.
+This would this one would be. To be would capture space.
+To our space. To with that below starting and you know it's two is not going to be place between
+specifically beginning between the start and the other word technicalities.
+But the bottom line is regular expressions are very useful once you get a hang of it.
+It's not easy. I was never a fan in my in my life.
+Nowadays, you have this piece. This kind of tool, wasn't it, that kind of tools or are available online?
+You can have a pattern generator. Just write what what do you want to capture or what not charge?
+You will generate a pattern. Pattern for you.
+You don't have to worry about that,
+but you have to be careful when you're coming up with your own just to make sure that you're capturing everything that you need as required.
+Sometimes if you've never done that, you will probably have to do a couple of runs developing your pattern.
+Such as here. This basic pattern will find all the instances of that lowercase.
+Right? Not uppercase, not any form you want to factor in the uppercase.
+It will find it, but it will also find other them.
+That inside other words, that you have to get a little more sophisticated than that.
+And well, I don't know about you, but if you're not very familiar with how regular expressions work,
+this reading, that is not necessarily going to be easy at the beginning.
+In any case, very useful tool. BP, I showed you BP for a reason because BP and the.
+Used as a custom made tokenize or for, you know, if you need custom made pipe processing,
+other preprocessing steps, regular expressions is a good start other than just creating a lot of functions.
+So you can find the key functions.
+Or there are a module, our match match, the beginning of the string search,
+find the location of the strings, find all, find all known overlapping matches.
+If you want to count split, what would you use?
+Split? Segmentations and segmentation Tokenisation Just figure out a pattern.
+Where are you going to split? I know it's easy for an English language, but hey, where would you split Python code?
+And I'm right. Perhaps you should look at tabs, blah, blah, blah.
+So you specify the pattern it. Does it help?
+Sup replaces everything. All right. What else do we have here?
+Find all. I will not be going through that.
+Find all instances of that in our parenting.
+But it also. Capturing. Insight or currency.
+But in any case, it will generate a list of all the matches.
+If you if you get to the size of the list, you're getting the number of instances.
+How many instances are there? And then you can replace it.
+All right. Questions.
+So we let it be and we're working on it.
+Is it documentation? Mm hmm.
+Is there like a scenario where would take too much space?
+Because in order to get the bulk of it, people actually use the word.
+So in order to get there, I mean, the example they just showed us, it first splits the word into lightning signals.
+Well, this technique is basically we're working with the huge,
+huge vocabulary of not necessarily because you can you can split words as you go tokenize.
+So you have a lot of input. That's right. You want to run the piece through it, Right.
+So first of all, you there is always an option for you to load the entire index into memory, which is a bad idea, right?
+But you could you could just go buy a pair.
+Pair, pair, pair, pair of pair. And that makes sense.
+You don't have to load everything to count how many bite bears are there?
+Not necessarily is going to be in processing time in his memory space, complexity, Not necessarily if you do it right.
+Does that answer your question? All right.
+Splitting hairs is a very crude.
+Segmentation and just go through it yourself at home and.
+Perhaps you will use it down the line in your assignment.
+All right. Questions. Is that clear? What regular expressions are doing and how are they useful?
+There will not solve all your problems, that's for sure.
+There is. There's going things where I imagine which will be hard to pick which match with regular expressions, that it's a good starting point.
+What about general tools that you have available?
+Oh, this list is pretty not comprehensive.
+Nowadays you have tons and tons of python libraries.
+But. But I will single out four now two of them and all decay and space decay is probably the oldest python library for natural language processing.
+Slow, inefficient. And I don't know, I wouldn't call it tedious, but it allows you to.
+Everything is exposed. All those little things that you do in natural language processing are available to you.
+You can play it, you can customize it. Whereas if you take space and you have things rolled into one, you can even see what's what's inside.
+You can modify it much. It will start with an object just to give you, especially those who have never worked with text.
+This is a very basic tool. We'll move to space at some point and down the line in the second part of the semester,
+we'll we'll we'll move on to those deep neck, deep learning network based packages.
+For more processing.
+I'm not going to explain what's going on, if you're interested that historically, if you want to play around how things we're going.
+This is for for hardcore LP enthusiast you don't have to filter Spacey object is probably what we should start right now.
+Hugging face. How many of you are familiar with hugging face?
+This is more of a community, really.
+There's a lot of tools there will tap into that as well.
+Those people now part of A.K.A, which was a big deal in the beginning, it no longer is, but the existence of so-called text corpora that are.
+Part of an old thinking. Many of you are familiar with the term Texas corpora.
+Text calls. Okay, here's the idea. It's a dataset.
+It's a very specific textual dataset. You have tons of it out there for you to play with it.
+Going backwards from the perspective of you being exposed to deep learning networks and how things are being dealt with nowadays.
+Text Corpus is a training session.
+It's also way more than that because.
+It's a body of text that is not necessarily just text.
+A lot of them are annotated. Annotated with part of speech text, for example, annotated with sentiment measures.
+This is this is a happy word. This is not a happy word. Plenty of things.
+There is a specific proposal that we'll get to in probably next week which which deals with word disambiguation.
+What are the synonyms? Antonyms for a word. This is all the information that it can be used for, meaning extraction.
+And no matter how you slice it, all those bodies of text were compiled by someone cleaned up.
+Probably when I was in consolidation, someone sat down and did it by hand.
+No. Does it matter what kind of tax corpus it is?
+For your application. Can you just take any text corpus, train your LP model and be happy about it?
+What are the further things to consider? But it sure doesn't add up relevant data to your to your.
+Text. So there's a there's a Shakespeare's work corpus within.
+I'll. Would you use it to train your Amazon customer service board.
+Probably not. Funny. You know, you don't.
+You would not want. We talked about Eliza, right?
+At some point because they're helping with their directing.
+This thing didn't go away. You don't want that box to just be using Slack, right?
+Or slur right? I would not work.
+So for a bother response in English, you don't want a corpus that is in other languages.
+And so on and so on. So you pick the right thing for the job.
+Now the will, the size matter. That's a little bit.
+We'll think about it. We started with with a little historical background, and I told you that back in the day, almost 100 years ago,
+things were the idea was, let's use linguistic knowledge to come up with a set of rules to process language.
+That's all over the place. The network is given a piece, a body, huge body of.
+Let's have at it. Figure out the rules on your own.
+Right. But the more rules are buried in your text, the better.
+This is why you see if you've ever worked with the. Good to have you.
+Try to not give it a go at the online instances compared with what you are charging for it.
+And do it right now, day and night. But part of the part of.
+It increases on performance as a larger, a larger body of text versus the network itself is.
+Matters as well. So pick the right one for the job.
+The right structure. There's all sorts of ways to develop a text corpus.
+Depending on your application, you may need some specific, structured, categorical write.
+You will have a body of text.
+So the names Ricky Rothenberg, Brown, Reuters and Inaugural address are the text corpora that come with an object so very well known.
+Brown is categorized a thing. It has articles, newspaper articles categorized according to what it was.
+What is it covering for technology. Right?
+Maybe you only want a subset about sport. User isolated everything there.
+Overlapping newspaper news articles voters in temporal is pretty interesting.
+There is a. The US Presidential inaugural address takes all.
+Addresses in one place. If you want to, if you're interested to see how the language has changed over over years with every president.
+Okay. Let's get a little technical.
+So we already talked about types and tokens. Do you guys remember the difference?
+Types. And so think about of a type as a word in a dictionary.
+A token is an instance of that work in text.
+So there's one type where a word there could be one or more zero or more tokens in the text for that.
+Set of types is vocabulary of the term words.
+Words is not being used to hear types and tokens of reason.
+This type a type can be a comma depending how you organize your text.
+Number of tokens or of instances of things.
+Do you think do you think there's there's some relationship between that?
+How many types are there in the text versus.
+How many in how many tokens? And why would that matter?
+There is there's a law that. Describes the relationship.
+You don't have to memorize it. It's just it's an interesting fact about about language.
+You can if you look at data sets for four different languages covering different subjects, you will see that there is a relationship.
+Of that nature there. That has to do with some of our lower communication points.
+Right. It also tells us that relationship also terrorism tells us.
+How buried is that corpus is there is a lot of focus for.
+There's a lot of types, right, That that means that there is some very broad vocabulary.
+It's a good dataset for our. Pretty shoddy Ciampa stuff.
+Well. That's. This is progress.
+This is an old problem. Here you go. Another point, 1.3 million words.
+One of the reasons we will be using one of those card corpora is because you will be using your laptop's right.
+Which. The proper processing of OC.
+Questions. There will not be quizzes on quizzed on what's in the corpus.
+I don't care about that. Just have to be aware that there's many, many of them.
+Where do you pick? How do you pick one?
+How do you select? Why do these? What? This is going to be.
+This is going to matter. All right.
+No questions. And we move on.
+Okay. What? How how's the probability situation?
+Do I need a little review? Or not.
+On additional probabilities, please. And probabilities.
+You're not good with it will have to be. You will be catching out for the next couple of weeks.
+There is going to be a lot. Probably.
+So raise your hand if you want me to quickly go through what's in the slides or if not, I will just skip it and move on.
+All right. Don't be shy. This is going to be very quick.
+Here's what you need to know to begin with. If you have events, random events, events have probabilities of them, or current events are valid.
+Well. Bands are possibilities for random variables.
+What is the probability distribution? Well, you know what?
+That's a that's a range of possible values for a probability.
+Like what is a probability distribution? All right.
+I can have a random variable, right?
+Which could. Yes. Assign a value. I don't want to.
+All right. Well, let's say that one is most common.
+Two is have a common floor as not very common.
+The probability distribution or x would be a table where we have or a vector of four or zero.
+I'm just going to make it up. Yeah. Notation, let's say.
+841044205
+Or form this vector is the probability distribution of variable x.
+That makes sense. Everything adds up. The sum is more that matters.
+So if I'm randomly. If some random process is assigning values or generating values for my random variable, one will show up most often.
+This is this distribution tells me how often.
+They'll know that. Go back to it. Go back to probability density, density function.
+This deals with ranges of values. How likely it is that you get either one or two.
+So combining events, combining values for expectations and variances,
+this is not going to be separate from your probability of something that will absolutely happen.
+One probability of something that it will never happen. Zero.
+Anything in between 0 to 1.
+Right. This is something that might happen. Exclusive inmates.
+I know that A and B are exclusive and this holds and they are complementary.
+That's absolutely. Not.
+Are complementary events. There are total probability.
+There are some probabilities. What if I don't know whether A and B are exclusive parts, then I have to factor that in.
+Some is what? Or all elementary events.
+All possible values for rhythm. This is what I was told.
+Prior posterior probabilities. Everybody familiar with those terms.
+Higher probability is the probability of the event happening.
+Without any extra information, we don't know what's going to happen.
+Right. So. For example, we have a die.
+Are six possible events I wrote that could be one, two, three, four or five six.
+Right. If it's a fair die, then probabilities are one over six for every single one of them.
+This. This would be prior probabilities.
+Now imagine that I have some. I'm at a shady casino and I get.
+Get a heads up. Hey, listen up. In that casino, those dice lies a little loaded, right?
+Once. And tools are showing up way more often than the others.
+That is additional information that is on the show, evidence that allows me to condition my belief about that.
+I will no longer apply probability of die being low.
+As one over six, I will have to recalculate it. There's almost no that is probable.
+But in any case, once I learn a new piece of information, new evidence, I have to update my belief about something.
+I have to change my probability from prior.
+She posterior. I hope everyone is familiar with this expression from conditional probability of event a given some evidence.
+E I have that evidence I have to update.
+I have to move from a pay to pay rate.
+This is this is like you're you're being counting in this class, right?
+Probability that you will get an A is less when you start the semester.
+Now the midterm comes on you and you get a C on the midterm.
+Now you have a new evidence. What is the probability that I will get an know?
+The same thing. Oh, it. Yes, I know a lot of artists at all.
+All right. So prior probabilities. No evidence.
+Evidence shows up. Change the posterior evidence.
+Now, here's how it applies. I will show you that.
+Here's how it applies in in our context.
+What's the probability that the word. Sucks.
+Shows up in text. How would you go about it? Just this.
+You're sitting in front of a screen. There's a there's a chat board that just spits out random or semi random.
+Thoughts in English. What's the probability at all?
+Hello, for example. Ah.
+Morning. Morning. Let's do. Morning.
+I think it will depend on a couple on a couple of things.
+We'll look at how many times the orders call.
+How often is that word used in English? The.
+Does that make sense out of all those thousands and thousands of English words?
+Right. Probability of morning is probably higher than the probability of.
+Berserk, right? Just because morning is more open to use than reserved in English conversation.
+Written English. Whatever. Everybody.
+Can you put a number on a specific number of probability of mourning?
+Show up, showing up ever. Absolutely not.
+Right. Because you would have to factor every every English conversation, every English utterance.
+And that changes all the time. It's impossible. So you.
+I'll show you how to get to estimates. Right.
+But what if So I ask you, what is the probability of word morning showing up?
+Right. There is going to be some number that you can based on on the corpus as you set.
+For example, what if I already have good on the screen?
+Would that increase the chance of a morning showing up afterwards?
+Yes. Good. Is the evidence of a preceding war.
+And this is the approach that it will be using pretty soon.
+So evidence given we change prior probability posterior.
+So. If you had never seen that formula, you'd better get on it.
+And there's all probability for one one of those.
+If you click things around, you get a product from.
+You could have more than one evidence you factor in.
+Marginal probabilities of different things. For a higher probability, you will have to worry about it too much.
+Joint probability. What's the probability of two or more events happening?
+Right. So I asked you about the individual worth probability.
+What's the probability of more? Right. Then the question then that question.
+The other question that might be interesting. What is the probability of a phrase?
+Good morning. Showing up. Good.
+And. Morning. Probability. Good morning.
+Beautiful. And better join.
+Probability. We want to find that value.
+Joint probability it will all be coming back to that if you're not.
+And I hope this is. Want to make sure.
+For some reason. There's always a problem with some of those mathematical formulas.
+Here is them. Yes. But make sure that no one is confused.
+I'll switch to it whenever a gibberish shows up.
+So, Inspector General, how many of you never heard about a change in probability?
+No shame that I it. It's a way of representing joint probability with a product of conditional probability.
+It will matter a lot in this course. Either.
+She is here. You have access to PDFs?
+Great. Never mind.
+Let's go. X x, Abi. Next stop and stop and minus one figure is real.
+Another way of representing on the show probability.
+And if someone is not familiar with this rule, here is a bunch of slides for you to go through.
+Why would that be useful? Okay. It has to be quick and it has to be enough.
+If anyone needs more. Talk to me. But I expect you do at least have those bases moving forward.
+The probability of additional probability prior or posterior bay is the chain rule.
+Whenever I need it, I will bring it back. But. The questions.
+That we have. Let's now talk about.
+I think that I get over. And.
+Everybody agrees. Words do not randomly appear, in fact.
+There is no doubt about it. The reason why he is so successful is because it is placing words in the sequence that seem natural to us.
+They make sense. No. How do how do we pick that word?
+Good. What could go there by morning?
+Evening. Good soup. Right. It's also worth asking all sorts of options here.
+Every single one of them will have a probability associated with it.
+What? What large language models are doing or what language models are doing?
+Are they're taking some time to do some random messing about,
+but they're picking the best option based on that probability which they got from somebody.
+The way Chad extracts those probabilities is by quote unquote, reading the tax corpus and trying to figure out,
+well, we'll just adjust the weights of the learning Network in a way resembling those probabilities.
+We will do something cruder first. And to do that, you guys have to understand two pieces of information worth the frequency.
+How often does it show up in the corpus? And its rank?
+Rank means its position according to the frequency. What about?
+Prediction. How can we use rank and frequency for a prediction worth prediction?
+Could this be, Carol? Good morning. Good morning.
+So, regardless, very few people are participating.
+It will be greeting with good morning to the frequency for morning would be more than good.
+But instead that it is expected that mining would be going next to good.
+Why would that be? It will be on the go for a good look at the Bangkok morning as there is a pretty classic out of the 40.
+Yeah. So there is a couple problems.
+Yes. But it's a little more sophisticated than that.
+If you factor in two words, a sequence of two words or three or four things are becoming difficult.
+But let's let's go back for a second.
+So let's just the morning I think everybody agrees right now that we can learn from the caucus morning shows up.
+I don't know, 2000 times and the total number of tokens in this in those carpools is 10,000.
+So 20% chance that you will see more. It's a rough estimate.
+This is this has nothing to do with reality of age.
+A rough estimate. What will be the probability of my name, my last name showing up in that same corpus?
+I'm not trying to be narcissistic right here. But my work, my last name is probably a very rare occurrence in any text corpus.
+Right.
+So what is the probability that you will probably not find my last name anywhere in the corpus and definitely not the ones that we listed so far.
+So zero. Right. Does it mean that my name will never show up in any conversation?
+All of this horrible, horrible, terrible.
+So you can. The numbers are telling you zero, right?
+Can you reject my last name as a as a potential viable entry into the conversation or some text?
+You can. Yes. Really classify it based on no particular email.
+Certainly prevent initiating it then you are particularly using Good morning or something like that.
+Plus specifically, you should begin with your own ex.
+Okay. You could just I if I understand your approach correctly,
+you could play around with frequency a range depending on the context a little bit or use a different corpus and fairly adjust the thing or two.
+Yes, absolutely. This is this is not a bad idea.
+What I'm trying to highlight here is the absence of of a token or a type event in the corpus, which should which automatically,
+if we're using this very crude way of estimating the probability, it throws a wrench into your process.
+Right. But let's say it's a pretty elaborate carcass.
+Nonetheless. So you will get most English words there with frequency you over a couple thousand or whatever.
+It shows up once or twice, whatever. What about a sequence of two words?
+Then you would be counting how many times good morning shows up over the all the all the counts of 2 to 2 to two words or two tokens sequences.
+Right. That there would be an estimate how often good morning shows up in the cartoons.
+Everybody agrees. Three words, sequences, forwards sequences.
+The longer the sequence it is, the less likely it is to show up as evidence somewhere.
+Right? So you can't simply count.
+Because there is no instances, just like with my last name, there will be no instance in that corpus and we have to go about it in a different way.
+So how how would you how would you approach the problem?
+Let's say, let's. Let's write something funky.
+Yeah, that's right. How likely it is for you to see that sequence in in Wikipedia?
+No, that's right. Novels.
+Probably not. Right. But it's it's a viable sentence, right?
+It could be a part of a conversation. You're working on your you're now speaking Amazon.
+Why not? Right. Yes. But we can see lots of good story like the model would retain.
+But not then that can be prevented. Okay, so let's.
+Hmm. That because here's my aim. Because that would be a predictive part.
+Because this is something that is not really an English word, but that sequence in itself is going to be pretty, pretty, pretty rare, Right?
+This is not how people talk or write. And yet a language model which lets let's define what a language model is.
+I have it. So there you go. That's a model that captures probability distribution over words and the sequences.
+This is probably not what you expected. This is this is a huge model.
+It's like a big, big table. It's not really a table.
+But imagine a big table where every every word or every sequence of words in English.
+No matter how long I'm making it up. But that's that the that's the idea would have its own associated probability value.
+Okay. Of course you will. Infinity is not going to work.
+So we have to go in a different way about it.
+Chargeability has that. It has buried in those probabilities.
+Okay. So it has to figure that out. And it will.
+Or was I with that? There you go. It will.
+If that large language or language model is any good, it will give you an estimate of how likely that sentence it is to appear.
+It's going to be at very low, but it will slap a number on it.
+Okay. Does that make sense?
+So. How would you use?
+How would you use that information? Well, we'll go to the technicalities on the Wednesday, so I'll stop in a second.
+I don't want to start with with all the mechanics behind it, but if you had a mechanism I'm not saying a table that has.
+Word sequence, probability number. But if you had a mechanism that if you queried it, what's the probability of this sequence?
+We'll give you a number. How would you use that word?
+The prediction is obviously you saw that we were talking about word prediction.
+Okay. If I have this three letters, three, three words, what's the most likely four words, long sentence or expression?
+Right. I could find those probabilities, but are there any applications for that language model?
+What could it tell you? A lot of thoughts.
+Now, I'll give you an example that I will refer to probably on Wednesday is not working.
+Okay. Imagine that your language model, whatever it is, for better or worse, can give you a probability value for two separate sentences.
+One My favorite food is Chinese too.
+My favorite through food is British. Okay.
+If you have two numbers, probabilities extracted from human communication, whatever, what does that tell you?
+The and I look at the distribution of number of Chinese people that Chinese dishes and the like.
+Based on that if we select one statement. Okay.
+Okay, good. But you're going a little too far. Let's let's keep it on the surface level.
+You're a you're a person, which is who we're was.
+Well.
+Well, I just watched the TV, and they said the probability of the sentence my favorite food is Chinese is point four, and my favorite food is English.
+British probability is 0.05.
+You get that information. What kind of conclusion can you draw from it?
+I wouldn't want more. People say Chinese is my favorite than British, right?
+Can you draw the conclusion from that?
+People like Chinese more than British because they they talk about it.
+All right. This is indirect, of course, But do you see how this could be used?
+Right? Obama said. George Bush said right.
+Donald Trump said right. There is plenty of information to extract from it for recommending commendation.
+Absolutely right. So a language model, if built well,
+which pretty much boils down to a very good dataset and then a very good well-structured neural network in our case can give you that information.
+Yes, you can. You've been exposed to tragedies where it's just talking with you, talking with you.
+But buried in that language model is way, way, way more information that you can tap into.
+Does that make sense? Okay. Sounds.
+It sounds a little interesting. All right. So starting on Wednesday, you'll learn how to build the crudest possible language model.
+There is. And hopefully you will be able to turn that into code as well.
+Any questions? All right.
+Very well. Thank you. Welcome back.
+I trust this report, by the way.
+So I don't know if you were thinking a sentence, but I hope not for any of you, because, you know, I thought was.
+In the last. Really?
+Yeah. So right now, this is a separate report that we haven't yet come out by the.
+You should know that despite.
+That's Newcastle United.
+You have to have.
+But I've got one in my nose.
+It's my understanding that the others had been protected.
+That's not how you can do it.
+I did it all enough. I know that I be what I thought this was all possible.
+Professor three divided by one.
+Yeah. I think there will be a clue.
+What? I think.
+Look. It gives you an idea about it.
+Yeah. Yeah, it makes you interesting. But you don't want to be that friend that you.
+Like. I.
+

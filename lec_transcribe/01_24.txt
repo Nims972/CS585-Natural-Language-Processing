@@ -1,0 +1,665 @@
+Reading was made.
+Well. Explosion.
+Okay. But. Okay.
+Morning. She is ready.
+I. It's full of more and more people rolling.
+So let's begin to question concerns.
+No. Okay. Well, just things. Yes, things.
+For the time deduction. Thank you.
+I'm assuming everyone saw your assignment already.
+The programing assignment is going to be largely based on what we will talk about today.
+And be frank, about 80, 75, 80% of it.
+You already have it in me.
+And there's more post that for you to take a look at, especially lowering some of our pleura into the gate and working with it.
+There's nothing really what we will be doing in in your programing assignment
+is essentially a lot of a lot of looping through the list and counting things,
+making sure that you're come to the right and put the numbers in the right places.
+That's that's what we want more or less of what it is. There is really nothing fancy going on there.
+There's no need for fancy data structures. Lists or hash tables will be just fine for whatever you're doing.
+What I don't want you to do is be building a language model, essentially.
+What I don't want you to do is using any out of the out of box Python libraries for that.
+Just load the corpus, process it yourself with your own code.
+And that's what I expect. Nothing. Ready? Thank you. If you were using ready made packages, it would be like five, maybe maybe ten lines of code.
+That's not what we would. I want you. You will not, quote unquote, see some suffering with with that programing assignment.
+But I'm expecting to see at least some of you some minor challenges when dealing with X, That's number one.
+And the other thing that I expect you to see is after you're done, once you start playing with the model,
+you see some funky stuff that is nowhere near the quality of say, you do, but it will give you an idea how things were done and still could be done.
+Okay, let's go back. So last time we talked about you blow it up a little bit.
+Last time we were talking about data set our X corporate rate, which included information about tax.
+I want to highlight one thing. I'll repeat it one more time.
+Yes. Your that are going to be datasets, typically, usually training datasets in a machine learning sense,
+but they're so much more than just sequences of text.
+There is going to be corpora where you have additional information that is like.
+And so I wouldn't say outweighs the actual content, but there is information about tags, all sorts of things that you can extract.
+So it's a little more than just a bunch of documents, right?
+I think I showed you this slide right before. If not, this is something that is related to your first written assignment.
+This is something that you are supposed to see once you process a corpus.
+Okay. This is a relationship between the rank and the frequency of words.
+And what I want you to see there is. Regardless of the carcass, you should see more or less the same relationship.
+But that relationship also means some some frequency.
+Expectations rank when it comes to work distributions, though what we are going to do today is is to build a very crude language model.
+And that very crude model will be based on a very obvious observation.
+Like words do not appear randomly in texts, right?
+They are usually grouped together. One way to look at it is to call it that they are co-located.
+Some words are located near to others that mean phrases, names and these.
+Courthouse, ritual verbs, all sorts of ways.
+Words are being groups, words are being groups. Now, how does that translate into a language model?
+So. When we were talking about the Corpus Annie Corpus last time we were talking,
+I was we started the discussion about what is the probability that this word will appear.
+And in English, for example, we can use the corpus to have some estimate of that, but we can go farther than that.
+What is the probability that this particular phrase, this drug?
+Will appear in English. What is the probability that a certain sentence will appear in English?
+It's a valid sentence or not. So there's ways of directing information from.
+The language model. If you do it like I don't I'm not sure if I showed you that, but this is this is a by the way.
+Okay. So there's there's actually a little function in an LDK that does that.
+This is sort of I mean, I'll keep asking that because I never remember it, but I imagine a lot of you have some machine learning experience, right?
+Did you before training your model, machine learning model, did you eyeball the dataset?
+Like, what's in it? Let me understand what's in it.
+Okay. This is one way of eyeballing corpora to see, for example,
+what kind of words profound can be found in in in neighborhood of concrete as it's a little tool to give you.
+Both about. Relationship.
+And I want to remind you that, hey, we're looking at English, but those words or tokens could be anything to figure out the DNA strands and whatnot.
+If you don't, English is easy to understand and reliably understand your problem, which is not in English.
+It's some sort of different language, but eyeballing might be of use.
+All right, But let's go back to language models. I want you to focus on the first bullet point right there.
+I already showed you that. But let's bring it back to that.
+A statistical language model is a probability distribution are over words of our word sequence.
+What does it mean if you think about it?
+What? We talked to GBP Gemini, our language model.
+They're performing the same. Their purpose is the same.
+They do a lot more than that nowadays. But that's the purpose.
+It was one. The next what was there.
+That was more along with predict what could be the next war. Of course the previous ones.
+I think that yes, a language model can be used to predict the next worth.
+Actually, it could be used to predict the word in the middle son using the word, and it could do a bit more than that.
+And I got totally agree with you. Those tasks can be realized by having that distribution.
+In crude set crude terms, this means a language model.
+In a perfect world, maybe not a perfect or what the probably your intuition could be.
+I'm not sure if it is, but your intuition could be. Let's have a table for every possible world word in English.
+Let's talk English and have a associated probability of it.
+Okay, then let's expand it and let's have a table of four.
+Every sequence of two words in possible sequence of two words in English.
+Legal, valid or not. Okay. Three, three words forwards.
+Five words. A million words. Right. Is that possible?
+Perhaps we could do that. Well, you've got the number of those, in other words.
+Yes. And then there's a limit to it, because you can I'm sure you can imagine Corpus.
+For example, what we talked about, Shakespearean works, Corpus, Right.
+You would not expect to see 21st century swear words in that corpus.
+Right. But that won't work to a large degree.
+It is going to do it. But this is the stuff which they are using become difficult because there is no problem.
+They have to do to ear.
+You're saying that the Chesapeake does not have all the probabilities for every single right and doesn't know every sequence.
+Yeah, exactly. Actually, your programing assignments, one model will not know every sequence either.
+That's not the point. It's impossible.
+You can if you if you put your mind to it, you could keep you could keep generic generating infinitely long sequences of English words.
+Third might be gibberish for all I care, but technically, you could create a string like that.
+Right. So if you were thinking about a table for every possible sequence of English words with a probability number assigned to it, this is a data.
+You can't really do it right. So we need some ways of handling that.
+Doing it in a different way. And you will do it in a different way.
+But it will sort of take advantage of all the basic components, just like you will see in a second.
+Okay. All right. But if I have those probabilities, right.
+Let's say I had those probabilities.
+What? What can I. Get out of it.
+Right. If if a certain sequence of words, let's say let's call it a sentence, has a high probability according to my language model.
+What? What does it mean? It's probably a valid sentence and it shows up a lot in human communication, English communication.
+And if it if it has a very low probability or zero that are moving into my language model,
+your language model, it's going to be in a very best and unlikely sentence to be found somewhere.
+Okay. So those numbers actually tell you something. Which degree?
+Right. Probability of a word appearing anywhere in the text is going to be dictated.
+What appeared before and really what appears after that.
+If we're doing it, we're generating it one at a time.
+What can we do? It before matters, right? This is what the.
+Language model can do for you. The language model can also.
+Support some other decisions and how if you type in a gibberish right or a word that is mispronounced misspelled.
+It will if it might give it a zero probability.
+Right. So that's that's a power.
+In any case, what you will be using, building your model and actually what it does to some extent as well is using the words frequency,
+because this is this is this is not a perfect piece of information.
+This is a proxy for probability of of occurrence of that order.
+Just a word. Okay. So it's a fairly easy task.
+Let's scan through the entire document, extract the vocabulary, all the possible types in in the documents,
+and then count the tokens, which I hope you'll remember the difference between types and tokens and.
+How would you go about it?
+So we already established that I cannot build a table that will answer a lookup table that will answer every question for me.
+What's the probability of this sequence? It's impossible. I have to generate that probability as I go in, in a sense.
+So that requires me to.
+Perhaps chopped us and us into pieces.
+Right. And then have some individual probabilities and somehow aggregated our.
+I imagine no one would attempt the simplest model or I assume this is a horrible assumption.
+All words have equal probabilities. But it's a storm.
+But. Right. Let's go a step further and as I said, use the frequency as a proxy.
+Of probability of a word.
+So let's say that we have a sentence.
+Here comes the white. And then we want to find out what the next.
+How would you go about it?
+We can get some worse like smaller weights, I guess, because like the and all those words, I guess the revulsion way more often.
+So like they can somehow change the there by some kind of way or something.
+Okay. So weighting words depending on the context.
+Yeah, that's a great idea. But this is at least one step about what we're about to do.
+And, well, just deal with do something later.
+Yes. Growth and your predicting the next forward given that it has already occurred.
+So this is absolutely a great idea.
+Let's have a conditional probability. We are given what came before.
+We already have that now. Let's count.
+Let's try to estimate probabilities of every single word in our vocabulary.
+Right. Given this. The sequence right here.
+Does that make sense? All right. But you said let's just focus on weight.
+So, look, it's not all that much.
+So probably I'm going to stop you right here.
+Very good comment. But imagine that we have no clue what weight is.
+What is a sequence of characters to the computer that happens to appear a certain amount of time in the text,
+though the computer has no clue about objectives just yet.
+Think about it. Here is a is an I.D. numerical I.D.
+It comes is a different night. Just a sequence of numbers.
+That's what the language model we're dealing with right here is looking at it.
+It doesn't care about it just yet. It's just don't. But, yes, that information would definitely help.
+But what about going a little further back? Would that help us do that?
+Absolutely. Should we go? Stone.
+Then comes the plea to the stop bird.
+What if. What if you're trying to predict the last word in a novel or in peace?
+Right. It's a big, big book, right? Should you go all the way?
+All the way to the beginning? Or just the last sentence or the last three words.
+Maybe, but that sentence stems out of what preceded it, right?
+Well, there might be some relationships, so I'm not trying to, you know, trick you here with that question.
+It's just things to consider. Many things to look at.
+Yes. So when we think of frequency, does that only apply to one?
+Okay. So, like, rabid. Like what if it was like we always refer to the rabbit as the white hair.
+So what if. What if. What if What if we looked for frequencies of sequences rather than individual words?
+Right. Great idea. You guys agree? All right.
+So how likely is the sequence? How many of you are familiar with the concept of the Negro?
+Okay. Quite a few. Okay. So this will be pretty important for a while.
+And then Graham is a sequence of and items.
+And in our in our course, we we'll be using it to define sort of a window for our observation and program.
+133 podcast. Our three words make it easier.
+Credit Union gram. We're just looking at a lot more at the top.
+A background, Two words. Okay, so this is the way I ask you, how far should you look back or what the neighborhood should be that matters?
+What what is the window of your interest? Where do you start looking at the context?
+I knew the constraints, but yes, I told the resources are going to play a role.
+You can't just load everything right. And.
+You could try, but there's always going to be a limit to it. They try loading entire Wikipedia into your laptop.
+Oh. Oh. Probably not going to work. Right.
+But then again. Expanding that that scope is going to have its own problems.
+Right. Imagine that. You're trying to predict the next word in some New York Times article.
+And you're looking at that and every every New York Times issue from 2023.
+But there's going to be, you know, articles about sport.
+News. Some essays, whatever poems may be written to you all.
+Do you want to look at everything? Probably not. So that's a that's a difficult choice, by the way.
+Those angles could be those grounds, could be just anything, just individual comment.
+They could be a phone interview syllable. It could be individual letter. It's depends on the problem.
+We'll be using tokens or it's for the most part.
+Here's a here are some examples for you. But.
+Let's just say. Let's go to your suggestion here.
+All right. Let's. Try to estimate the probability.
+I'll be using the word estimate a lot because we're not calculating anything remotely close to the actual,
+but we're just estimating if you're using frequency of a word from a corpus to gauge how how what's the probability of the word good in English is.
+You will just get a nasty. Relative to other words, you can't just get.
+Precise value for English will never happen. So how. How would we go about it?
+But the probability of a serious probability like they opinion of the OC.
+So that would be. Doing probability, right?
+Word one. It was. Why that?
+What's your name? And. And running through it.
+What works to equals? Prior.
+Makes sense. Joint probability. First, the word is white.
+Second word is rabbit. So how would you.
+You can calculate that. Precise value for it.
+How would you estimate or just make sure that we're estimating.
+How about that? How many times you seen. White Rabbit in some characters.
+The. It makes us.
+But that would be one part of that. We're looking for a ratio.
+Why does the total number of words to rule the world, why it has been doing okay?
+All number of the let's put one up here. A little number.
+Words be overt at all numbers.
+Oh, come on. I'm getting right. Right.
+Seem to be getting. She.
+And be my exports be makes more sense. Total number of words.
+What? What does it say? I would even.
+Let's call it two tokens.
+I think it could be helpful, but we're sort of mixing apples and oranges here.
+All right, Let's just leave it. You are absolutely right, though.
+Your approach is better. It's not necessarily the only one.
+So we are looking at at least three questions that we could possibly try to answer here.
+And. Stop me if I'm not making sense, but hopefully it won't.
+Why would the probability of sentence.
+Being white. Brown It's a valid sentence.
+Who was that? White rabbit? Who is it? Right.
+White Rabbit that works as a name was. This second one is.
+Ability to work. Praise being.
+White grab. That makes sense. We're looking at a window of two years perhaps, so someone mistyped something.
+And I want to check what or how likely it is This.
+The sequence of two words is in English where it makes sense.
+And the third question would be. What you brought up.
+Rabbits. Even What? These are three different numbers answering slightly different questions.
+The first one will tell you how likely is the White Rabbit as a sentence to appear in English?
+The third one that these two are most important to us. The third one is how likely is the word rabbit?
+To follow the words. What gave them the white proceeded this one.
+It's more it could be used for spelling corrections.
+That sort of things will not be focusing too much.
+But let's let's give it a go here. I don't.
+White Rabbit over all.
+Number. All sentences in that make sense.
+Okay. How about we do that?
+And I got that number. All sentences.
+English, mostly. This is. Last week.
+We should be factoring all the nonsense that can be generated by English.
+So this number, it is impossible for us to acquire meaning that this approach.
+As out of the window immediately.
+Well, we could change it to Corpus and then we can have some estimate.
+Okay. But what about.
+The white rabbit comes. Let's see. I'm interested in how likely that sentence is in English.
+And I'm looking at a. Caucus that does not include white Rabbit sequence.
+Is that possible? Or.
+You know, could be count. That's right.
+Right. Yes. It's so bad in hurts.
+How likely are you going to spot that sentence in a novel somewhere or in Wikipedia?
+Pretty unlikely, even though it's true. Right. So what?
+This is probably going to see. All right. Zero in most corporate.
+What do we do then? If we follow the number one, we end up with.
+The probability of this sentence being uttered by anyone in English is zero, according to the language.
+Is that true in practice? No. It's a perfectly valid sentence.
+Say it aloud. Is 585 is so bad it hurts.
+Right? And we have an example. Okay. What do we do?
+Let's leave the conditional four for later.
+What do we do? The answer is either you go for a deep learning model which will do eventually, or let's start with some very,
+very crude, brutal assumptions that will reduce the quality of work we're doing.
+But they have that change. How many of you remember, General, from probability?
+It allows us for those who don't remember it.
+That allows us to decompose a probable joint probability, which would be.
+That's right. This is a joint probability or specifically that probability one where it is this second, what is that third word?
+Is that token or whatever you use into a sequence of conditional probabilities?
+Okay, so. We'll get back to joint independence.
+I'd say the average rate to calculate this probability is that a bi gram, a unique gram.
+It's a trigger because their end is equal. Right. So we already talked about how all English is English sentences.
+This is not going to work with your slides I'm sure are showing and logical and symbol were always for some reason this appears.
+This is and. And in logical.
+And. So probability of that sentence can be.
+Let's let's use the word calculated for now. Calculated using a decomposition into three conditional ones.
+Right. Probability that the first world is computers times probability that second words are given.
+The previous one is computers. Probably the third one is by doing it right?
+Yes. Useless. Given that the two words were a computer.
+All right. If my if my initial sentence was was longer, I would have more conditional probabilities to deal with.
+Right. So. And notice how the given part is go crawling all the time.
+From an equals zero to call one an equal to and go da da da da da.
+The longer the sentence is, the more difficult to capture those conditionals are becoming.
+All right, Just. Why are they difficult to capture?
+If we're using the accounting approach. Right. The longer the sentence and the sequence of words is, the harder it will be to find it in the corpus.
+Right. So a single word, find a gram.
+You can probably find it. But the longer it is, the less likely it is to appear in the corpus and you have nothing to tap into.
+So. What should we do?
+That goes for our early, simple example.
+Well. We can follow your advice here.
+And how. Calculate individual probabilities, probability that some board is equal to computers.
+It's easy to find out how many times computers appears in Corpus.
+Divided by all the tokens in the corpus. This one's easy.
+What about this? So we're looking at.
+How often useless or appears after a sequence computers are.
+Does that make sense? Out of all three tokens sequences, how many of them are computers are useless over Computers are something.
+This. Who The nominator right here is the sum of all the instances.
+Computers are something for every possible word and in the corpus.
+Does that make sense? So you're scanning through the corpus.
+I see. Computers are funny. Computers are. This can't count.
+Come, come, come, come, come. And the numerator count.
+How many times you see computers are useless and you have a proxy or that conditional probability that accepting a proxy.
+And I estimate this has nothing to do with reality in English.
+But it's. It's getting. Okay.
+Do you agree with this? Equality right here. Here we have a sum which really means, okay, I'm not some I'm counting all the instances we have.
+Computers are something which means really, I'm counting every instance when computers are shows up followed by something.
+It could be at the end of the sentence. And that's all that makes sense.
+Is that a viable approach to.
+Estimating conditional probabilities. But it's bad.
+It's not going to get you anything close to perfect.
+Then do you have anything better? They think about it.
+If if I told you I don't have a coin on me. Right. If I.
+If I had a coin on me and I told you that this coin is not fair, meaning that hats shows up 70% as opposed to 50.
+Right. How would you how would you test what I said?
+Can you count it? Can you come up with a formula for that?
+No, you just keep tossing it for a long, long time and count all the instances to get an estimate.
+Is this coin fair or not?
+Right. Same approach here. Is there's nothing better, at least at the moment.
+Okay. Does that make sense?
+So. Here's the general idea for any any immigrant.
+Conditional income. Probability of some word following.
+Words before. It is the count of.
+Although occurrences of those words and that final word over all the occurrences of those keywords, words, that's the general sequence.
+We're back to the same problem. The longer the sequence, the harder it will be to find those comes right And actually.
+You will. When you look at the corpus, it will be very, very easy to find a zero for that denominator, right?
+Very unlikely sentence. Gibberish or that C is 585 sentence that I brought up.
+It's not going to show up in the corpus. So you went to zero here, which is immediately the problem.
+But, well, let's let's. Let's deal with what?
+So that was one end of the spectrum.
+Yeah, that one is where we have two tokens to deal.
+Very long sequence versus a sequence of two. There is no sequence of less than two, right?
+Okay. Just do the accounting and we have it.
+But still, we. We do have that problem. Of context.
+Now back to our original general.
+Okay. What Chabrol is saying here is that every.
+Next on the show. Probability is is is based on given more than before more.
+Right. So as I said. You have a problem, right?
+The longer that given sequences, the harder it will be to.
+I think those estimates, in fact, pretty quickly will have zeros zero times zero times zero.
+This is not what you want, right? So what I'm trying to say here is that, yes, this could be fairly easily found.
+And just by counting occurrences in the corpus this.
+Okay. If I found that there, probably I could find out of this.
+The third one is going to be a problem. So let's say point one times point two times zero, we have a zero probability.
+No. No way around that. Right.
+The longer the sequence, the more likely it is that one of these is going to be zero, according to our accounting strategy.
+So. What do we do?
+Yes. So what if we start with the holes of more specific case?
+And if it doesn't work, then like go to the to combination.
+Then if that's problematic, then go to the are good.
+Try something simpler, right? And this is.
+This is where. The Markov assumption comes in third.
+If you don't remember what a mark of assumption is. It's related to that.
+If you have a sequence of events, right. Think about B, A and M as words.
+Right. With Mark.
+With mark of assumption. We will.
+Assume that whatever preceded it could be a long chain of k k words, Right?
+Whatever preceded A is already roll them into a then the entire history is represented
+by by a and so to guess them we would only look at ignoring whatever came before.
+Does that make sense? Markov assumption. Everything that happened before is really encoded in the last step.
+Does that make sense? Is that a valid assumption for or language?
+Like, Oh, yes, we can rely on it. On somewhat.
+And the estimate is very good if we estimating probabilities.
+If you make peace with the fact that you're not going to get the actual actual annual probabilities no matter what.
+Well, what let's let's keep digging and let's keep simplifying things because we have nothing better.
+Right? If I can't. Have this right, even though I have that and that.
+Let me try the next best thing. Something similar there.
+Okay. Does it work? Okay, I'll get to it.
+But before let me summarize what we discussed so far in terms of what the language model will do for the most part.
+Language model should supply you with all the information to answer, at least to solve at least two tasks.
+Give you the joint probability of a sequence of a word or a sentence.
+We already give you conditional probability for a word, guessing or token guessing.
+Does that make sense? In both cases, we have to have because of the chain chain rule.
+We will have to have either individual word probabilities or conditional probabilities.
+And those conditional probabilities. I already showed you how to estimate.
+Okay. So far, so good. Okay.
+So with the Markov assumption, here's what we're going to do.
+For every ability such as this one.
+Probability that useless follows computers are or supercomputers are or beautiful supercomputers, whatever of that sequence.
+How however that long this sequence is, we are going to assume that Markov assumption holds, meaning that it's just the last word that matters.
+And we will approximate this probability by as a background conditional useless follows are just bar.
+Does that make sense? You're losing information right here.
+There's no question about it. Your probability estimates are going to get worse.
+But. A bad estimate or is better than none.
+That's DARPA. All right.
+So let's put it all together.
+We have. The joint probability rate, which by chain rule ends up being a product of conditionals of if word of the given all preceding words.
+If we inject the Markov assumption here, that part right here.
+But instead of all words preceding becomes one word or two words, depending on what kind of Markov assumption level are we apply.
+Let's just keep it simple with just one word. Markov assumption that works.
+Okay. You can take it even a step further, actually.
+Do you understand what this says? If you really want to be super crude, forget about conditionals.
+Let's just assume that words are independent of each other and the sentence probability is just the product of,
+in the individual words, probabilities without any without looking what came before.
+Does that make sense? Pretty bad.
+It would be pretty bad. Absolutely. I mean, now think about it.
+A sentence. This is garbage.
+Garbage. This is your last. Be great. Would have the same probability.
+Which is not true in English. Hey, maybe there will.
+That would be some applications where that wouldn't matter that much.
+For example, searching like you're searching for key keywords in documents.
+This would do. Okay. This is where we were.
+We'll stay with a background language model with first order mark of assumption.
+We're looking at the previous word only. Yes, We're admitting that I do have a zero probability rather than giving some value for a partial match.
+What is it better to hope to just assume zero probability or assume truth or just have any numbers?
+Why not give a real value to the actual greater value of having the shot?
+Think about how much will depend on a test early.
+About how good you want your numbers for some tests.
+Yeah. Researching. I just brought it up as an example.
+You don't really have to. A French researcher.
+Thanks very much. The favorite to game.
+Among those looking for the switch with the pirates in an environment lackluster with the best hitting three,
+wood doesn't have any meaning with a switch.
+But let's say that you want. So you're looking for or let me make make that look what you're looking for.
+You're searching for. Stories worth three Marvel characters show up at the same time.
+Does that make sense? No. There's a document, right?
+What is a marvel animal? Spider-Man. Superman. Batman.
+Right. You want them to show up in the document? You're looking for a document with all three.
+You wouldn't care whether Superman is in front of Spider-Man or Batman is in front of a Superman in that text when you're searching.
+You just want them together. Does that answer your question?
+No. This would be the case where you could use that.
+How likely all three are going to show up. I don't care in what sequence.
+This expression here removes any any interdependency as far as the sequencing goes.
+All right. You think that would be the particular question that you have be having on Comedy Central?
+A combination of heroes combination, and then I think the joint probabilities of all three.
+I mean, all of. That.
+Not sure that I agree with you, but we will be solving a completely different problem than you can or for what I describe.
+You don't have to use this language model to find what you're looking for.
+Forget about them. Forget about what I said. This is a very crude way of calculating probabilities for a sentence.
+If you have nothing better, you can use that. Okay. Forget about the searching and babbling like whatever.
+But this essentially means that your find with with assigning probability values to sequences without looking at the ordering within them,
+Can we settle on that? That works. Yes.
+Or. Any other questions?
+Maximum likelihood estimation. Everyone knows what it means.
+Thinking the probability is that best probability values that best matched the data.
+That's the bottom line. Okay. Okay.
+All right. Thanks for that example. But I think this one is from one of the textbooks that I.
+That I. If you like. This is a caucus, a very, very easy, very basic.
+Right. Three sentences. Good.
+Here's a step you will see very often in processing text data, adding beginning and end tokens at the beginning of the word,
+beginning of sentence, beginning of the document and end of the document to mark.
+In this case, it's beginning and end of sentence that works.
+One of the reasons for for adding that is we will be using a big window.
+Just like the text. And that helps with the edges also.
+Does it matter if if if you can figure out where the order of the word is, actually.
+Does it matter if we can pick up on oh, this word is frequently a starting word or a token in a sentence.
+Having been around probably the start of the sentence I.
+Does that help? Does that tell me that I is frequently.
+Or not frequently the starting word of a sentence.
+Okay. This is our vocabulary.
+Types of unique types.
+At the bottom you have the table. You have the table of occurrences, which means frequency.
+Okay. Let's try to estimate the probability that Sam follows an.
+Which is a conditional probability, though one word follows some preceding word.
+And if you agree with what we talked about so far, we'll be estimating it using counts.
+More specifically, how often a certain sequence appears.
+That's the numerator right here over how often the first word of that sequence here comes up in the corpus.
+That works. 50%. Does it mean anything?
+In practice in the relation to the other words in that in the corpus, yes, but English.
+English has nothing to do with reality.
+But we have a very small corpus here. Nothing.
+Nothing. Meaningful is here I am.
+Same principle. This is how you would build a large lake.
+Which model? By with this and mark of assumption.
+How great those individual probabilities star themselves somewhere.
+And that's it. You can also obviously calculate or estimate by your own probability that I describe.
+How likely is a certain token to appear at the beginning of the end of of a sentence.
+But that makes sense. Yes, it's a large language or the conditional part would be sort of patient or like become but every time you want to.
+So the very high level answer to that question is it would be encoded in the neural network waits and embeddings will get to that.
+It's a large language model is trying to capture or retain the same same information in a different way.
+And the more accurate way the goal is somehow, somehow in the model, there is this probability that can be extracted.
+So that's what doesn't compare this to the other facility.
+So here we're just doing counting, right?
+And we'll sort of building a little table of probabilities.
+Right. Lem will ultimately want to wants to capture the same kind of probabilities,
+but instead of a quote unquote table, they will use a neural network to store it.
+That's a very again, this is a very high level. But other than that, there is no obscure magic.
+So. There's there's a lot of bells and whistles that surround that.
+Just those probabilities, they were the relationships part of speech tags that will adjust those probabilities a little bit.
+We're just starting very small. We're just looking at tokens without looking at meaning whatsoever.
+We can add that later. But the principle idea is the same.
+We have a corpus. Some words appear more than others.
+Some tokens appear more than others. Some sequences appear more than others.
+The language model is trying to capture them. And then we store that information to produce a new speech, new new, new text.
+Or just answer questions. Answer your question.
+So we thought we start with the people council,
+but it's using some sort of probabilities to to to tell you what is the most likely word that follows the other word.
+And it will do way more than that if there are ties, hypothetically,
+or or it wants to be fancy because chat jeopardy will not or not always give you the same answer phrase the same way.
+Right. Slightly different synonyms. Right. It will play with that.
+But the basic idea is captured the same thing as here.
+And. Other questions. Yeah.
+Okay. 15 minutes before that. So your textbook.
+Or at some point collected data about some restaurant restaurant opinions.
+I think it was kind of like Yelp or something along those lines.
+I really don't remember. But.
+There's a caucus, which is way more elaborate than that one.
+And I'm using an example from the text and say you're welcome to look at it again yourself.
+These are parts of this. This is an excerpt from from the caller's sentences in English.
+Can you tell tell me something about reprocessing here?
+Possibly. Was only reprocessing applied?
+Or lowercase. Yeah, that makes sense. Okay.
+Okay. Almost 10,000 sentences. 1500.
+Give or take words or tokens in that purpose.
+So it's not large, but there is some information in.
+Here's an excerpt of the language model information for that corpus.
+Previously, I was just giving you individual words right here.
+Let's have a table of some for some selected diagrams.
+Sequences of two words. The way this is structured is arrows are.
+First words. Columns are second words.
+In other words, here. 8 to 7 means.
+The sequence started with I and finished with what happened eight 827 times.
+You can see that the opposite want. I is much less frequent.
+That makes sense, right? Notice the zeros as well.
+That should not be a surprise. Okay, so can we.
+Can we calculate probabilities that.
+I don't know. I eat. Appears or it appears after I.
+Using that information. Sure we can not.
+That little estimate at the bottom will help us do that.
+But we're missing one one component. We're missing the denominator value, which is the count.
+The number of times a specific first word appears in the corpus.
+So let's say we have eight. Okay. Have here it appears 736 appears 2500 times.
+Okay. Can we turn this table above into a table of probability estimates now?
+Absolutely. Just divide it by the correct value.
+To normalize. Probabilities.
+Okay, so now we have. Nice little proble zeros are still here.
+Okay. And because that corpus is pretty large, I wouldn't be able to give you a table for all the possible talkers, which was what it was.
+It was on or something like that 700 that opened up to.
+Let me add some additional conditional probabilities here that are calculated based on this corpus.
+In addition, because I will try I will show you something that I already mentioned last time, but I won't give you numerical.
+The yes, the these numbers add up to one. Or.
+Some of them. So some of them should be.
+These as a whole will not add up to one column.
+The words. If we are dividing by the same.
+By the same. Denominator, should it add up to one?
+So I'll think about it. Okay. We have.
+I e I was. I am right.
+Let's say that there is. Our probability.
+Conditional probability would be based on how.
+Second word. Right. I'm sorry about.
+First. Seconds over counts.
+All right. Should this add up to one then?
+Yes. There you go. Okay.
+Each column adds up to one. So if you don't see the entire column here because there is seven 700 words, not what is it, eight or something.
+This is just an attempt. Okay, We have our probabilities.
+We have some extra probabilities I won't use.
+Now, do you guys remember how we estimated the probabilities of a sentence sentence using a chain rule that will be a product of end of conditionals?
+And after applying Markov rule, it will be, in our case, conditionals.
+Following word given preceding. Just that. So let's say we have a sentence.
+I want English food. According to our approximation, we would it would be a product of multiple conditionals.
+With that Markov assumption, that makes sense.
+This is not going to be the perfect probability estimate, but it will do.
+Okay. Let's flip it around and ask a slightly different question.
+What's the probability of a sentence? I want Chinese food.
+And we're basing this is and this is some corpus that there is based on people expressing themselves.
+Right. Talking about restaurants.
+Okay, so same principle. Different numbers.
+Okay, Now we have two probabilities. What do you see here?
+And what what does that tell you? Chinese food.
+Chinese food is more popular, right? Can you draw that conclusion?
+You sure can. Some people just express their opinions. Those opinions were stored in a in a corpus in a dataset.
+That dataset was analyzes statistically. And even though that language model, no matter how crude it is.
+It has no clue about what Chinese means. It doesn't have no clue what food is.
+It's just looking at sequences of of words and it's just looking at how are they related to each other.
+Also under this Markov assumption. So it's only looking at two a window of two diagrams, right?
+Any app, it was able to capture it. What?
+For better or worse, some sort of sentiment right here. Do you see that?
+Could you use that language model built like that? Even the simplest way.
+You don't need a like, large language model. To answer that sort of question.
+I like Python. I like job right.
+You could do a of if it's scanned StackOverflow for example if it was able were able to to capture all StackOverflow information and then do the same
+thing you would be able to tell how how popular Java is versus why yes you could do a simple search how how many times Java appears as a token?
+It's a fact. It will be faster. Just like with the Batman things and whatnot.
+But if you have a large electron which model, you can extract all sorts of information.
+But remember it only it only retains probabilities of words and sequences.
+That's all it does. It captures that.
+But with then that information or what mean, it captures that not necessarily stories that as you can see, you can calculate it based on some query.
+Right. So questions.
+No question. Is is is anyone at least slightly impressed?
+There's nothing you can do on your laptop. It will not be nowhere near what Chad can do.
+But still. They're very, very, very simple statistical model and can give you a lot of information.
+Those numbers have nothing to do with how likely that those sentences are in English in practice, but in relation to each other.
+You can you can discover something.
+Okay, here's a technicality for you that will be very, very important when dealing with natural language processing.
+This is a nice little product of individual probabilities, right?
+Are some of those probabilities fairly low? Not too low, but pretty low.
+So what's going to happen in the computer if I keep doing zero?
+0.001 times 0001 times 00001.
+Da da da da da da da da da. What's going to happen is the British overflow.
+What will happen will end up with a zero. On paper you will.
+You can have a period of precision. As you wish. But in the end computer you will have an overflow.
+Which means that even though you have all those probabilities that you want,
+your sequence is so long that the technical aspect of computation reduces the probability of zero.
+Do you want that? Absolutely no. There's no way out of it.
+Which is. Take your calculations to the logarithmic space.
+Do the calculations. Summing is not only going to be faster, but it's not.
+You will not. Well, it ultimately you will hit a limit of integers or whatever.
+Float, float, float type. But that is going to happen much later than if you keep multiplying things.
+Just don't forget it. Should you choose to do that, don't forget to bring back the log space results into linear space again.
+That makes sense. Those are computer technicalities. Okay, well, we have 4 minutes.
+Do you see us running into problems with precision in this class?
+Yes. Think about it.
+If you say say I gave you a sentiment analysis, challenge it and you would you would you would use this model.
+And applying it to IMDB reviews. Some of them are lengthy.
+Right. So let's say that you have an AMD review that is 400 words long.
+Now, you would have if you use this background approach, you would have quite a few background probabilities to take a look at.
+And if if that person is using obscure words, there are probabilities are going to be too low.
+Fancy speak, right? This is absolutely likely to happen, even even in simple applications that we will see this in this course.
+All right. About those zeros.
+Why are they bothering you? They will kill the buzzard too, because it only takes one diagram that is a zero that has a zero probability estimate.
+Your probability is zero. Because it's a problem, right?
+What would you do about it? We had some rules.
+For example, English rules, which were like, there is no way that like, for example, after Magic two,
+there is a lot of, you know, they're going to complain because these are just rule based and it can all be zero.
+Okay. And he is rumored to be the minimum in the caucus.
+It's a great idea. You could just have a fixed number.
+Very low probability. Okay. I don't know. Let's just. Let's have at it.
+But there's there is a couple ways out of it.
+Smoking is is one very, very simple way of applying that.
+And I will show you black glass as one and one tells you everything you need to know here as far as this little technique is concerned.
+Add one to everything. Everything.
+And then to your account, as you would usually the thing that you have to pay attention to is for a particular world,
+this is a probability of a war, right? So count of the number of occurrences of that war is plus one.
+But the count for all words has to be updated with the size of the vocabulary,
+because after all, we are adding one to every every word or every token.
+I'm sorry. Every word. So plus one in the numerator plus v as in size of the vocabulary in the denominator.
+No, no. Is that the best way you can do yours is probably better, but it requires more effort to be put into that.
+That is very smart because there is like there is always a probability that a word can be combined with another word or use somehow innocent.
+All right, time's up. See, zero questions Are are there any questions with that?
+Interesting as well. Do you know how to go about your programing assignment?
+Now, this is more or less what you be doing.
+All right. Thank you. I'll see you next time.
+Every little bit helps explain why I don't want to go back because I didn't want I don't have to worry about fear and panic.
+So here they were willing to know the truth, actually.
+Plus, I knew I spoke to somebody mathematically.
+Yeah. Literally tampering with the data.
+Yes, yes, yes.
+The larger that dataset, the larger the loss, the more insignificant that changes as much as anyone can actually significantly affect.
+Yes, but you should not be thinking about the representation of your problem.
+It should be very concrete. So. So really, I suppose you should be happy with related relative probabilities.
+How is that or a related frequency related to doing that?
+It has nothing to do in English, but it sort of captures how where they are in English with respect to each other about this in an accessible cubical.
+So the idea is you have almost anyone getting the exact idea, not the group already.
+It's just reality. Yes.
+So keeping that in mind, even if you're anyone changing the variable, but related patterns are more or less, more or less larger.
+The numbers here are dealing with less damage.
+You know, holds.
+Everything is always continuous. Yeah.
+The quality, the quality of your model is going to largely depend on that was important for you and some preprocessing.
+And course again when you look at that data, garbage in, garbage out underscore the weakness.
+And in the beginning that is no, they are not.
+Yeah, we are trying to get to the problem. You don't want to look into what actually works because it will continue to expand.
+But in this case we chose MICROS because we are using one of the assumptions that in here is, I mean, every word is only in the beginning of the word.
+That point is so because it's just one word dependent on them that isn't very different.
+It might not surprise you. You could go with three and it would be I mean, there are second order market.
+So history of any words is rolled into the last two words.
+Okay. So okay, so in this case, you think of it that way.
+Normally it is the last name in the first order.
+It's the same concept. Understood.
+But wouldn't it be fair to say that the higher the order of my play, the more we are More?
+Yes. Yes. Because then again, you would have way more of those zeros in in in that table.
+Yes. Okay. And then you do smoothing.
+And if you do smoothing in, really? Yes. In your computation, there is a flow.
+But those zeros are not helping you to understand what's going on.
+Okay. So it's your choice. You could do try ground or ground, whatever.
+If it helps, you could actually.
+

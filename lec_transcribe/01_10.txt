@@ -1,0 +1,703 @@
+Just. This is.
+But. Hey, good morning.
+Welcome back. Where is everybody else?
+This is hilarious. Second session and three fourth of you are gone.
+All right. Suit yourself. I'm talking to the people who will be probably maybe watching their recording later today.
+You better stay on top of things if you plan on not showing up on a regular basis.
+All right. Let's get to it. Questions? Not very well.
+So we'll have to consider taking attendance announcements.
+Everybody got that week number one to do list. There's nothing serious there.
+Go through the syllabus. Make sure that you understand everything.
+If there's anything that you disagree with, this is the time to bring it up, is the time to decide whether you accept it or not.
+I will not take any complaints.
+After the first two weeks, though, the rules and regulations that python everybody set up, if not, start working on it.
+We will have our first programing assignment probably within the first three weeks or so, and then later on Monday.
+Do not come here. I will not be here. I mean, you're welcome to, but I will not be here.
+All right, let's they will just do a an easygoing lecture about.
+Basics. Behind and I'll be so nothing nothing seriously technical, but at the same time important.
+I would like to introduce some some some really, really, I guess, selective historical background of what we're dealing with.
+It's not going to matter for your exams, but I think it's worthwhile to have an idea where things are coming from.
+Okay, then it will just define MLP and what it does.
+You might be surprised or not surprised that you might be too focused on certain aspects of it without and overlooking others.
+And then we'll talk about language basics.
+I think before we start, let's let's talk about why would you use an LP?
+And I would like you to think about it in a in a specific way, right?
+Because you guys were born in an era where Internet is there, the computers are there, your phones are there.
+It's all a given. But if you if you think about the AI or actually engineering in general,
+a lot of engineering effort across disciplines goes into making our life easier.
+Right? We are lazy. We want things done fast, we want things done efficiently, cheap, blah, blah, blah, blah, blah, blah, blah.
+Make our life easier for whatever reason right now.
+Imagine, imagine that you are are moved back.
+I don't know, 18th century, 17th century, no computers whatsoever.
+I'm sure you can easily imagine a situation where a robot would help you.
+You don't know what a robot is, but, you know, chores or even manual labor.
+That's something that people would like to avoid. But what about language?
+Is there any thing that a person in 18th century or 17th century, whatever,
+few hundred years back would want to automate or have done by someone else or have
+some sort of artificial helper without naming an artificial helper or whatever?
+Is there anything that comes to your mind? Like what do you use language for?
+Communications. Right. Okay, So go back. Right.
+If you know history a little bit, a lot of words. People moving around.
+Blah, blah, blah. Right. Trade. A lot of that happening.
+Exploration, exploitation, too. But let's not talk about that.
+So how would you. What kind of language related activity would you like to out of it?
+Translation. Right. Okay. Anything you're taking, right.
+Just you would have to have a machine that understand what you're doing and does something for you.
+Of course, it was impossible at the same time. Translation.
+Perfect. You're. You're. You're Christopher Columbus.
+You're invading. Let's call it that. This beautiful land.
+And you meet the natives. And then you have to converse, Right?
+That was. That was difficult. Anything else?
+This. You know, it's really big.
+I wouldn't even dare to pinpoint a specific task that that was sort of the last to what we know about it.
+It'll be. Yes, but it's just so you.
+I guess. Yes.
+You would probably want the machine to tell you what this what the person this person will really say to me or what did they think about it?
+What about the cryptography? But that be a language related task if it doesn't come to your mind easily when you're thinking NLP.
+Right. But translating language into into code, it's its translation still, right?
+So if you can squint your eyes and think of, of, of cryptography as a, as an early application for, for MLP.
+Right. You would like to mechanize. Deciphering, deciphering your messages or not for military purposes, secrecy, whatnot.
+So if you really want to, you can think of that as one of the original ideas that make people think about it,
+think about automatic translation, and actually I'll get to it.
+That machine translation was was one of the first task where early computers were employed.
+And I'll get get to that too. So let me show you a couple of people,
+tools and events that started in NLP in the previous century you are all familiar with you've been using Google Translate,
+what you've been using, Siri, Alexa, all this, all that stuff will not be talking.
+I will not consider this historical right now.
+We'll get to it at some point. But let's go back almost 100 years more than that.
+Really. How many of you are familiar with that gentleman, Mr. Markov?
+I'm sure you've heard about Markov chains, Markov models, Markov property and whatnot.
+This guy had nothing to do originally with with natural language processing.
+But it turns out that his work is going to show up in our course.
+Okay, so he didn't know that he will be apart?
+Of course, for sure. This is Mr. and I will try to pronounce it for you.
+Not so sure. A Swiss Swiss scientist.
+Who probably did not think about computers and whatnot.
+There was no computers at the time, at least digital computers. Somehow, some mechanical machines were developed before his age.
+In any case, he was a linguist, among other things.
+And he had this idea that I don't know if you guys will agree today or at the end of the course that language is a system.
+You know what the system is in general. Something comes in, processing happens.
+Something comes up. Speech comes in.
+Our understanding is happening, meaning is extracted, and all sorts of approaches can be applied to understanding that as a system.
+So while it has no direct application or direct bearing on LP, that idea meant something.
+He also observed something that is probably obvious to everyone right now is that language and the meaning carried by language is.
+Of encapsulated. By relationships.
+Between the words sentences are enough so that those relationships.
+Define meaning, Use the around words.
+You get a slightly different meaning, right? Yeah. Does that look like the first two words?
+Hey, let's chop the problem into pieces and try to understand it and put it all together later.
+Does that sound like a computer science problem?
+You do that all the time in other courses. You get to load the file, chop it into pieces, put it all together to do something.
+Okay. Another opinion that he. Stated is this A shared language system makes communication possible, as it sounds obvious,
+but paying someone, someone to have to say it right, you have to understand.
+Sure, the language would mean for better or worse. Do you understand what I'm saying?
+So a common ground needs to happen.
+Once again, there is nothing computer related here. But think about your.
+Web pages. HDMI. Right. Your browser has to speak the same language as whoever wrote that page.
+Otherwise nothing. Your network communication protocols that both sides have to speak the same language that applies.
+To help you, obviously, as well.
+And I would like you to think about start think about language as something way more than what we used to write and speak in a way more than English.
+I don't know how many of you tried to use Chad or any of those tools, for example, for code generation.
+I'm sure that coding sequel sequel queries.
+Child. You can do that, right? You get me top five, blah, blah, blah.
+From from this column, it will generate a sequel query for you based on that, just like it would generate an image.
+Except it has to understand. And that's a big word.
+Understand it. Anyway, let's leave this guy aside.
+Let's go to someone that you are very familiar with, Mr. Turing.
+He's responsible for two things that I will bring up. Both should be well known to you.
+Number one is the Turing machine, which in the it's a theoretical definition of what a computer is really.
+That's one thing. And the other one that we'll get to in a bit is the Turing Test.
+How many of you are. Yes. Doing this?
+Basically, it's just a very questionnaire. Questionnaire?
+Mm hmm. Because he or she has to figure it out.
+But of course, the question is stop or a journey or.
+Okay, that's good. I don't want to. Anybody else.
+Do you guys agree? Let's go to the Turing Test.
+I'll give you a piece of data. I'll get back to it.
+This is this is it.
+I'm not disagreeing with you, but there's a simple difference that I would like to highlight here is that I made that mistake at first myself, too.
+So I think you said something along the lines that after seeing a couple of responses,
+the interviewer will decide, this is a guy or this is a human being, right?
+Everybody sees that that way. It's that slightly different.
+It's Turing test is meant to decide.
+I'm not able to tell if it's a human or a machine.
+After seeing their responses, those two are slightly different.
+Not that it matter matters much, but. Okay.
+Turing test is is absolutely not a perfect tool for deciding.
+After all, you could you could. I'll show you something related to Turing test.
+I'm sure you have read news about passing the Turing Test or whatnot, that it is a proof that it fails.
+I mean, well, if we use that first definition, decide it's A.I. or not.
+But if we flip it around and say, okay, just I'm not able to tell, this is a human, this is a machine, I just simply don't know.
+It's so good that I'm not able to tell. But that's Mr. Turing.
+Is is it Turing test fundamentally requiring anything that in your mind is associated with natural language processing?
+Absolutely. The machine has to generate whatever the language is being used.
+Let's say it's English, right? The machine has to generate something for the interviewer to do for the interview.
+It has to look like something that an actual human being generated.
+So. Well, an OBE is certainly used for any 1943.
+This is a very interesting thing. I've heard about what I call a base model.
+I think this is the way you pronounce it. It looks like a neural network.
+They actually did not develop or thought about the neural network, but they made the first attempt at modeling the neuron in here.
+A single one. Okay, so 1943, this is where the theoretical background for deep learning machine learning.
+A lot of machine learning was laid down. Okay.
+When they were developing that, they were not thinking about MLP or Earth.
+Well, I'm sure you they thought about imitating human brain.
+But nowadays, all that kind of cutting edge and old stuff is done using deep learning networks.
+So this discovery or this theoretical development made it happen.
+How many years later? Well, let's say let's make it make it.
+I really do. Thousands. 2010. So six years later, we had to wait for it.
+I'm sure most of you know why. Why did we have to wait so long for that?
+The actual successful use in A.P. and other things of a neural network.
+Why not in 1944 or. Competition was competition, Right.
+And it was no competition at that time.
+And there was no general purpose computer at that time ready.
+Okay. That's number one. Yes. Those of you who are doing encryption, stuff like that, you what we're still looking at for a very good point.
+There were computers or at least devices that we would call a computer existing at the time.
+This is Second World War time. So obviously military use.
+But the computers at the time were designed to perform one particular task.
+So you would not be able to run notepad and edit your image and do all Skype communication.
+Nobody does anymore search on the same machine.
+That that happened a little later. The next slide is about it.
+Okay. But the other part that is missing from this model itself, and it's our chat chip or neural network based MLP is.
+Data. Okay. And here, let me stop for a second.
+Okay. I started this little discussion here by asking you if you were in the 1800s or 1700s,
+what what would you use a problem for in terms of like we talk about translation now.
+Let's look at the different side of it.
+Let's say that I started speaking Polish to you right now, and I don't think anyone else speaks Polish in this room.
+Of course you wouldn't understand me, which is fine.
+But if you were really to attempt to pick apart what I'm doing, to try to understand, because I mean, 1800,
+1600 people wind up all across the globe and somehow they communicated and gestures and, you know, whatever.
+They made it happen. Eventually. It led to a basic understanding of language, not a full proficiency, but steps.
+So if you were to do that, I mean, some of you are international students as well.
+You you have a decent command of English, are very good command of English.
+But you perhaps some of you coming into this country have had to adapt a little.
+Right. So how would you go about it? I want to learn Polish or, you know, Tasmanian.
+There is no Tasmanian. Let's say it exists. I want to learn.
+There is a person from that country or from that region right here writing something, saying something.
+How would you attempt to understand?
+You initially learn the basic words. Learn the basic words, Right.
+Okay. What next? What would you say?
+Not necessarily consciously observe, but you would observe that.
+Patterns, write words, go in sequences, right?
+Oh, there has to be some underlying rule that governs that.
+Right? Logically, you would try to follow.
+Eventually, you would follow. Extract patterns.
+I, I have a I don't know if it's perfect.
+It is perfect to me. I have an example.
+How does it work? At least from my perspective.
+I shared it with some of you in the past, but ultimately you forgot it.
+So here's the here's what I'm talking about, and this will become important down the line.
+Okay, It is edible. Kind of give you an idea of how moderate an opiate actually works, if you're not familiar with that just yet.
+By the way, do you think Chad understands what you're writing or saying?
+Like, understands, understands in the same sentence. You understand me right, though?
+It absolutely doesn't understand. It has no clue whatsoever what you are talking about.
+Well, we would have to kind of go back and define what understanding me is.
+But in a general sense, it doesn't at all.
+So let me give you an example. Maybe this will highlight what's going on right here.
+So I'm a foreigner, just like many of you. I learned British English in school.
+Like very nice, polite sentences. Hello, How are you?
+Good morning. Blah, blah, blah. And.
+But I never really spoke with a person from a different country, from English speaking country before.
+It was just, you know, not exactly theoretical, but you're learning the rules and you're just trying to respond,
+usually based on those rules and based on the words that you learn.
+Right. So you're always in my situation.
+I come to this country, right? And, you know, everybody is nice and smiling.
+Hello, How are you? They well, they would ask, so what what would be your response to that?
+Pass that question. Hello. How are you?
+Right. Oh, I'm. I'm okay.
+My mom is sick. My dog just died.
+You know, the the the the plane was cramped.
+Get the picture right. That's if you take that.
+Question at face value, this would be a logical response.
+Someone is asking me about my state, right? Right. But it turns out nobody cares.
+It's just. Hello. But if you don't know that, you have to learn that my dog just died.
+The plane was grabbed is not the correct response to that. I wouldn't even call it a question.
+It just a greeting. Right. So what do you do?
+You're just. Well, you will, in jest.
+What are other people doing in the same situation?
+Other people will say, I'm fine. How are you? Hello.
+Whatever. After you hear that a number of times you'll just hate.
+I shouldn't be talking about my dog or cat. And I'll just say, okay, they are expecting.
+Hello. How are you? As. As well. All right.
+I don't have to understand. I don't have to understand a cultural background or history behind that.
+Okay. Would you give that response?
+Now. Now compare the two things. So I'll finish that round in a second.
+But compare those two responses. Right. One.
+Hello, How are you and me laying it out? What's going on?
+Yes, me processing the actual request.
+Understanding it and coming with a response. The other one is sort of a mechanical response.
+Oh, everybody says that. I'm going to say the same thing.
+Okay. This is what Judge Stewart. This is what he's doing all the time.
+It's just it's it's like a person who hurt pretty much everybody in the world
+and it pretty much everything single thing on Wikipedia and from the books.
+And then there is a statistically the best response to whatever he wrote.
+Statistically. Hello, how are you?
+Is a response to. Hello. How are you? Right. That's what it is.
+It's a purely mathematical place.
+This is what you see on your screen. Helps the machine.
+To distill that. All right. This is the most common response or one of the most common is, first of all, enough of a range of questions.
+Okay. So far, so good. Interesting. Yes.
+So when we talk about creativity, like how does it understand so that it can't actually get a good insight.
+So does it mean that you believe that this word is in context to this sentence?
+And I think we all learn about something that is called embedding and embedding.
+And what it means is that words, as they are understood by oh, sorry,
+I don't want to use that as their in just that by just repeating are represented by vectors of data called embeddings.
+We'll learn about those and those embeddings sort of.
+Encapsulate the context as in this one word shows up most commonly with other words, and very rarely with other words.
+Those in those vectors will represent. Oh, hello.
+How. High numbers to get right.
+Hello, dog. I'm probably very low.
+So there is that information is being encoded.
+Okay. There are other tools that help you extract the context to, you know.
+How to charge a body or whatever length language model to it to better respond to you.
+I don't want to use the word understand, really, but do better respond to you.
+You will see that you probably saw that many times that that sarcasm I running that sort of thing is just not flying very well.
+So if you if you can't capture that context, there is no additional you know, crutch that is there.
+Like, for example, hey, Chad, you remember when someone says, I don't know what it would be a sarcastic thing.
+See, it's 585 is great. Okay. Well, someone says they probably don't mean it.
+There's all sorts of additional things that you don't see behind the scenes that.
+Are added daily, really to to to those models.
+For example, chapter three was started more than a year ago, was published more than a year ago,
+and it became better when it became better because there is old there is always,
+you know, human, the reinforcement learning going on, people hired or working for open a I will just.
+Gauge responses and light label there or score them based on that.
+It keeps learning and getting better. It will give you five or ten responses and someone will.
+Working for opening, I will say this is the best response. Moving forward, this will be better.
+So, you know, the technology to the model itself is one thing, but it's just like a tree with a lot of moss on it.
+There's stuff. But you got it.
+And one common here for the future you will see in this course a lot of things that might seem irrelevant or less relevant now than they were before.
+Linguistics. Morphology. Oral information about language details.
+There are. If you think about it, which was tragic, either they're kind of.
+Fuzed into the model already. You don't have to do extra work to get it, but.
+I don't know anyone working on remodels right now or planning to work stuff like the kitchen.
+But I'll give you an example. The.
+To judge. It is obviously the best when it comes to English.
+Other languages. It it's not going as good because there's less interest to begin with, less data to train at all.
+Da da da da da da da da da.
+So if you wanted, for example, to tie it to something that works in your own language or that's specifically designed to handle,
+you know, medical, medical health care. Vocabulary or the weight or documents you will have to.
+Fine tune it. This is the term. And at give it some more information or perhaps even got to give it a little extra component that if you see this,
+do that and then start doing your strategy. Okay.
+So it all matters. There's all sorts of applications.
+Usually you will have to either find unit or or some other component or remove the component that just it gets in the way.
+There's a lot of moving pieces. All right. Sounds good.
+First computer. And yet I'm sure you've heard about it.
+It's not. This is the first actual programable general purpose.
+That's the most important term here. General purpose?
+It could have been used. It was used for multiple purposes.
+You just program to death, do the notepad, do Twitter, whatever it was out there at the time, it was designed to calculate projectile trajectories.
+So military applications. But some of it was clever enough to quickly hijack it and use it to design the hydrogen bomb.
+Very cool, right? If you've never seen a photo of it.
+This is. This is. This is it. This entire thing is a computer.
+All right. 1946.
+This was the moment where Programable computers became a thing.
+Obviously, it's a far cry from this laptop. This was the first moment where we could actually use a computer.
+Of course, anything's possible. All right. So there was a couple of things going on in the 1940 and 1950s that gave birth to.
+An LP or the need to find the need for an LP.
+This is this is an interesting one. A project from 1940.
+Yes, actually, it means digitizing. Written work.
+Religion for religious purposes, military application, religious applications.
+It seems to be a theme in human history. I guess this is the first sort of a Google Books approach where you're digitizing a lot of paper information.
+As you can see here, it was quite a few words that were indexed onto punched cards.
+Have you ever seen a punch card? Now that I'm not sure of anything to punch through, it's probably not.
+It was just plugging. Once in the right places, I don't really know.
+But like, you know, the sixties, seventies computers,
+still big walls of computers as input that would take a piece of paper with holes in it in a specific place.
+These are the punch cards and punch them. And this is how you encode information.
+You better not make a mistake because otherwise you're you're waiting for a week for any response.
+And that that was all and that was these were the times.
+So as you can see, there is a trend people want to digitize.
+Written content. Here is an interesting moment in the history of an LP.
+Mr. Weaver was working for. I don't remember him.
+Some Rockefeller Foundation. I'm sure you've heard the name Rockefeller.
+And he. He was considering.
+We have a computer program, right? It's available. Let's use it for something.
+And he came up with this idea. Well, a computer should be able to translate easily for us.
+Right. So we're going back to my original question. There was a need for translation.
+As you probably can imagine, more than translating Shakespeare from English to Jew, Polish or whatnot.
+It was it was mostly, Hey, let's translate for the Russians or doing into English or back and forth because it was Cold War.
+But he had those ideas. You. And that to carve to some of the green.
+But he was wrong in a sense.
+It's like the imagine that. I mean, it's fascinating to me to read that this is really written in English.
+When I look at an article in Russian, this is really written in English, but it has been coated with some strange symbols writing.
+Would you agree with that? There's like a cryptography problem.
+It's the same thing, but it's written using a different alphabet or something like that.
+Is that true that if you have ever seen Russian, anybody's exertion understands their language?
+Well, I do. So I can tell you that it's definitely not that it wasn't that easy, but that idea led to it.
+Let's try and. We already talked about Turing customers.
+At some point, IBM got involved saying, Let's build a machine that will do the translation from English and then back and forth.
+And they paired up with Georgetown University to to build a machine like punch cards.
+Again, you see those punch cards here? And they actually made a demo with that using a machine that before automatic translation.
+Between the Russian and English. They have like 60, 60 sentences or so, and it kind of works.
+Unfortunately, unfortunately, it was a bit of a dead end ultimately, but it was a nice trip.
+Now, 1936 is is the birth of a really good college.
+So that kind of matters. There was a community of people that were interested in mimicking what we are doing, including journalism and writing.
+All right. So this very, very productive era for AI in general.
+No. Let me go back to my question.
+So you're listening to me talking in Polish. You're trying to extract.
+Meaning from it. Okay. Remember also what the Swiss scientists.
+We need a common language shared between us to understand each other.
+So what do you do? What would you do next if you wanted to have a general?
+Come on. Way for computers to understand us.
+Quote unquote, and be able to talk between each other.
+And this is the moment where I want you to once again think about language as a way more than our communication back and forth in English.
+How many of you took a programing language, the URI class or some?
+Parts of it. Yes. Three dirty.
+No. Form a language they are.
+How is it that a C++ compiler on my machine understand your C++ code or Python interpreter?
+He spoke. They have to understand each other.
+Great lesson. So if you think about it, your programing languages are very formal, very strict languages.
+There are rules for syntax, right, that you cannot violate.
+And anybody did, as I have learned ever.
+No, just higher order language. That's fine. Python.
+You can read it? Yes. Okay. I think you can read it yourself for the most part.
+I think we can understand what's going on. Even if you're not a coder or this assembler, it's just, well, zeros and ones is what computers understand.
+Assembler is a bit about that. It's like of zeros and ones.
+But in instructions and data, what not. There's a spectrum of that.
+So in 1957, Noam Chomsky, how many of you heard that name?
+Few is more more known these days as an activist.
+He's a retired professor, but he was a linguist.
+He was a computer scientist back in the day, and now he's more known for his activism and full disclosure.
+None of my business. But if you're more of a right leaning category, Noam Chomsky is probably not your friend.
+But in any case, he made a lot of developments. He wrote this book where he was advocating creating a link,
+a formal language to encode our unstructured gibberish in English and otherwise in some form, only because a computer needs a formal way of.
+Encoding information, correct? You make a mistake programing.
+If you make a typo or write on functional instant function, it will not understand that you have to have those that are.
+So his idea was let's let's build.
+Growers that are very well structured.
+But he also. Came up with this example and the you might have seen in the past.
+Have you seen that sentence somewhere before? Over the last three years previously.
+What does it mean? Denning.
+Tell me what it means. It's not surprising, at least from our perspective.
+But I will use this sentence to highlight something that is a very huge importance for people who deal with natural language processing.
+Death sentence is proper English.
+There is nothing wrong with grammatically correct.
+Syntactically correct. But it means that.
+So. He advocated for a separating syntax and semantics and using looking at them
+independently to extract will be careful because even though it's correct,
+syntactically, it just doesn't work.
+Sounds obvious, right? You can come up with a sentence like that of yourself in a split second, but you don't pay much attention to it.
+You understand? Okay, this is gibberish. Whatever. Move on.
+The computer has to do something about it. Let's move on.
+So. Two ideas Separate trees, syntax and semantics separately develop tools for both.
+Develop Also grammars are a forum for both ways of encoding language.
+1950. I'm almost done with this historical part of history.
+Have you heard about Eliza?
+We'll talk about allies in a couple of weeks, but in a month or two, actually, we'll talk talking about chatbot, 1964, first chat bot.
+You can read what it was doing here, really, or not so much.
+It was developed. Why don't you guess what was what was the rationale behind developing developing a child's body at some university?
+So am I speaking right or why would you do that?
+To entertain people in 1996.
+These were serious people. There was no talk radio.
+There's no entitlement, just entertainment all over the place, serious people at universities.
+World What would you choose to do? I'm not quite sure, but it was used for people who just wanted to come to film or like what they like to have done.
+Very, very, very close. It was. Go ahead.
+Yes. Yes. It was pretending to be a shrink.
+Really? That's that's what it was. And. Ow, ow, ow, ow.
+You might look it up yourself, but I'll cut to the chase, Will. I'll show you that down the line for a little bit in a few weeks.
+But it was very successful. I get that people are actually students who use that word emotionally attached.
+You will see. There's a link right here where you can play with it.
+But. Ah, actually, no. This is on Wikipedia. Okay. I'll even.
+So don't. Don't look it up. Don't. Don't play with it, Will.
+We'll get back to it. You'll see the first chapter in action, and we'll talk about what's behind it.
+All right. 1964. Um, this is.
+This is really of no huge significance for you, But historically, 1966,
+there was a committee by National Science Foundation, National Academy of Sciences, that decided.
+Hey. We tried this machine translation thing on a computer.
+It didn't work. That was the idea. It can't be done.
+It's not easy. And, you know. That was a very important moment for AEI.
+There was a couple of moments like that. I don't expect another one coming in any time soon or ever.
+But it was called The First Aviator.
+No, we're not giving you any money to work on this nonsense or this artificial intelligence thing imitating people.
+It's just not working. Move on. Work on something else.
+Right. The people just abandoned that idea.
+How many of you are doing any research right now?
+Like formal research, writing papers? How many of you are planning a career in academia?
+Okay, just one. Otherwise, you just want your degree and get your 200 or 300 K a year coding stuff.
+Fair enough. I mean, if you end up in academia, if you're not a successful researcher, you're not bringing money.
+You're done. Nobody wants to do that. I'm exaggerating, but that's more or less what it is.
+So you're working on something that is not bringing money.
+All right. Here's another of early.
+Chat bot, but let's just not talk about this one.
+This one is even though this one this one is interesting we'll talk about it was once we start talking about chatbots but.
+Here is an interesting and questionable thing about this one.
+It is. People claim that it passed a Turing test.
+Once again, Turing test is not perfect. So.
+Take it with a grain of salt. But 1972 was a much needed for older people thinking of not able to tell whether it's a computer machine.
+I'm pretty sure if you did that again now, it would it wouldn't pass.
+People would know this is just too stupid for you.
+But at the time, it was pretty impressive. All right.
+Another thing. So I. I stopped here in 1970.
+I promise we'll get to the need to do all the algorithms and whatnot next week.
+But some background is is of value here.
+So first, the probes that I tried to highlight here, 1950s to 1970s is.
+More or less in line with general AI and general approach to AI.
+Let's try. What are they really?
+We're trying to build something that mimics us in our thinking.
+The first 20 years or 30 years of NLP and I go hand in hand because people were trying to distill what's here into a set of rules.
+If they do that. Doesn't work, especially when it comes to language.
+So role based systems weren't out of the way very quickly, but that was the first approach.
+And the second one that we will touch upon is statistical and probabilistic models.
+Let's look at the statistics behind the language and try to build a model.
+And actually your grids and your deep learning models are kind of statistical models in a sense.
+All right. And then 9019, nineties or early 2000, this is where machine learning was first introduced.
+Let's give it a go. Okay. Still no Internet in this shape.
+You know it. Not enough data and not enough computing power. But let's try to use neural networks of 20 tens deep learning and All right.
+So that's more or less the history. Does it make sense to you?
+There's a lot of things that people believed in and they just dissolved.
+That's how it works. Okay. Questions.
+So the question is what is and I'll the. Stands for Natural Language Processing, obviously.
+But what is natural language processing in your in your mind?
+I feel like taking words and translating it into something like.
+Anything that deals with digital processing.
+What let's start with speech or writing. Text in general is considered natural language processing.
+Natural natural language being our language.
+But really at this stage and A.P. expands to other languages as well, you know, the copilot and whatnot think here is a formal definition for you.
+That's a subfield of linguistics,
+computer science are they are concerned with interactions between computers in the language or more specifically processing large amounts of text.
+Speech processing. This is something that we will not be covering here.
+Natural language understanding. This will be our main focus.
+So natural language processing and natural language understanding are related, but not the same things.
+Natural language generation. I hope you will have time for that.
+I mean, we will do some of that because what Chargeability does is it's generating natural language, but there is an extension to that.
+A very scary one. Nowadays, a computer can talk like you using your voice and say whatever whatever it wants, right.
+Or somebody else wants of that. That part is interesting and scary at the same time.
+This is not a formal definition, but you can also think, as you said,
+natural language processing is thinking of some piece of text, whether it's just a paragraph, a tweet, or thousands of novels.
+It chops and chops it into pieces and tries to extract something from it.
+That something can be can be a lot of different things.
+Okay, We'll be talking about. Some of them.
+All right. Text processing. This is so natural.
+Language processing is really just one form of dealing with computers, dealing with language and speech.
+There are others that are in that not necessarily fall under the same category.
+Text processing. Have you done that?
+You sure did. Microsoft Word. Right. Your your.
+I don't know. So fixing mistakes in your Microsoft Word, this text processing, there's nothing intelligent about it, really.
+Computational linguistics. I'm not sure if anyone here is interested in that, but what do you think?
+Computers can help you understand languages.
+Let's go back to this example or I. I speak Polish, right?
+We we started with the idea that you will pick it apart.
+Right. And let's you're smart. You're a graduate student.
+You want to build a machine. Hey, I'm going to go and get a coffee and watch.
+Watch Netflix. This is what let's have the computer analyze what this guy is saying and.
+Distill it right. So computation, computational linguistic deals with that, or you can think of it as a as a computer assisted linguistics, right?
+If I'm a linguist, a computer can help me understand what's going on with languages.
+You want the computer to process it, right? A linguist wants to understand the language, different sides of the same couple.
+Any other applications for for computational linguistics that you might think are ever watched the arrival?
+Anybody watch the movie Arrival? What was it about part of it that at least kind of a descending planet, like trying to understand aliens better?
+It's true. I work a lot whether it will happen computer helpful that other is just full disclosure for legal reasons.
+I'm not cuckoo. I'm not saying that you will be the Deciphering Aliens Road.
+No, it's just a reference here, but a different quote unquote alien language.
+Could be what? Deciphering whatever.
+Lost civilizations or gone. Civilization Left.
+Right. There are languages, remnants of languages from from the past that we don't fully understand.
+Computers can help you understand that. And decipher or speech processing.
+Well, Alexa, Siri and whatnot, that's better.
+But that's more of an easy or Alexa going on here.
+Um. Oh. People enabling human machine communication.
+This is probably the primary reason for an LP.
+Learning or distilling something from love from written sources.
+Do you ever. Do you have the patience to read an article that has four pages nowadays?
+That's a serious question. Or what?
+What would a sound bite or a tweet be Better.
+Summarize it for me how many times you would like. You would prefer someone to summarize a chapter in your wretched textbook for you.
+Let's get right. Computer can do that.
+Especially that there is so much stuff in digital.
+This number is probably way too low.
+90% or more of things are.
+All digitized. What about companies?
+That are right on Facebooks, the Google.
+Do they want to learn something from written sources?
+They sure want to learn something about you from what you wrote in your email or your comments or what you didn't write.
+The last one is linguistic related.
+Pretty obvious. We want to understand why. Anything else that you can see that we're LLP.
+Be useful beyond that. I can do more.
+Okay. Anything else? So we can think about it as we go.
+Okay. Before we proceed. Where?
+Where did you see an LP so far?
+I'm sure. Well, let's not talk about that. That's obvious, right?
+Where did you see an idea or something that you would consider?
+I'll be taking notes by making comments and comments, taking on that comment.
+Okay. So analyzing sentiment and sentiment and analysis.
+Yes. Right. But the keyboard on my portrait is what?
+What should I use? Go ahead.
+Isn't it annoying? I stay disabled at the moment.
+I got a new phone. Okay, so that's a language model for you.
+We'll talk about what language model. When you're googling, are you using an LP?
+Yes, you are. All searches. Textual searches or searching with actual material is really only.
+Captions. Very good. Very good. So sort of a speech processing and translation into words.
+Why would I want that? Why would that be an MLP?
+And not just. Just. Just. Just basic. I hear this.
+This is. But what what LLP is especially good at here.
+I think when you speak, you have my words in a sentence.
+And as to just that whole process of sleep described towards dealing with an autistic action,
+and then you have and it has to be correct when someone mumbles or something or that there is noise in the background.
+What about what about automated? Call centers.
+I'm sure you've dealt with it. Right. For this.
+For English. Say one for Spanish. Say two.
+Do you think that machine at the end understands?
+One or two. I'm sorry. You were plenty of that.
+Of course. Absolutely. And helping. I assume that's where the line would be if there is one between speech recognition and the.
+So. Well, that's a tough question, but it.
+I would say that speech recognition as as is the baseline would be just take
+the cells not not open individual sounds right translate them into syllables,
+that sort of thing. And build words.
+Now, A.P. would work on top of that, and it would correct doing well if there was an ambiguity between what was a what?
+What are the two? There's a term for words that sound each other the same, that.
+But they're different. What's the example? Hmm.
+Homophones. Yes, Homophones.
+Right. So. So. And will step back and use the context to decide which worth it really should be.
+Does that make sense that it would be another layer that that speech recognition is
+just it's it's like digit recognition in your handwriting one one character at a time.
+Translate it. Translate it and hope you will go then. Okay. This just doesn't make sense or it doesn't work.
+Let's just flip it around because I understand the rules of the language.
+This word should not be here. It should be the other one. Does that answer your question?
+Okay. All right. Anything else?
+That's a little bit. All right.
+Applications. So we talked about some real practical words, but there is names for it.
+You mentioned sentiment analysis. This really falls under tax classification.
+This is classified as a as a positive response or positive commentary or something about the tax classification could be spam, not spam.
+Anything that decides this text belongs to a certain category.
+Language modeling. This is by far the most popular application right now.
+Right. What decide what's next? This is what you mentioned.
+This is what country does it really if you've never written?
+Explore what what's behind the scenes if you never read up about it?
+Chuck You will ask questions. We'll give it a a prompt chat between right and you will get a full response in a couple paragraphs.
+But really, what it does, it is it's building its response one word at a time and you're getting the whole thing.
+The language model really is doing that building. Okay.
+What words should be next or what would words should go between two words?
+That's the task for a language model, information extraction.
+This is where people want things first. Read that article for me and summarize it.
+How many of you did that with Chargeability? There you go.
+Information extraction. Just distilling. Information retrieval.
+Okay. This is more like searching for a needle in a haystack.
+Find something that matters to me within a whole lot of documents.
+Right. Conversational agent, you should sure use one question answering.
+I mean, all this stuff is really at this stage done by by a single tool, this chap Chip.
+This is probably a bit to the side topic modeling.
+For example, you could use an LP tool to sort your a lot of documents into groups based on the topic within.
+So now PR tool would read it for you and to say, okay, this is this is about sports, this is about blah blah, blah, blah, blah, blah, blah, blah blah.
+Sorry. Is that easy? Not really.
+All right. So, language modeling example or let's.
+Let's keep that. Everyone use them is judging me, but I've never seen that.
+There's a link to a chat to not chat.
+Just getting to one of the early versions that we can play around.
+I think it's still like been playing around with it for free and see how how, how bad it is compared to 2 to 3, 3.5 or and so on.
+Information, text classification, let's just.
+People would consider those slides as links to.
+Tools where you can experience some of those applications yourself if you've never use that information.
+Extraction might be interesting. Breaking information retrieval lets you do that all the time.
+What's what Google? I love me.
+I'll leave this one here. Anybody interested in space exploration?
+Maybe someone at the church hoped these Alexios series are obvious as the converse and conversational agent.
+This is pretty cool. SIMON But this is a little device that was placed on the International Space Station.
+I encourage you to watch the video about it. There's nothing fancy, but it's a little assist in that space.
+Russian translation. Yeah.
+There's so much things that you can think of. Here's a little summary for you of what is happening with you.
+You're looking for inspiration, really work where to apply.
+And the bottom line is, wherever there is written or spoken.
+Material. And nowadays in art you can include code or whatnot and help them process it and do something for it.
+So. The same tool that you will use for spam classification will probably not be playing Jeopardy where it very well.
+So if you think you have a grain of salt which which which applications.
+When you're looking at that slide right here, I'm assuming everyone can see it.
+Which application would you consider easy, quote unquote, Relatively easy.
+Which one would you consider a hard. Classification and classification.
+Is it okay? Everybody agrees what would be hard for social networking sites, right?
+What about conversation agents? Right. It's.
+It's really. In Chad, GP or whatnot.
+And it's good. It's good, but it has its limits, right?
+Personal assistant, Right. So there's a there's a spectrum when it comes to MLP tasks.
+This this can give you an idea whatever is or whatever is, I don't know, up to here.
+The medium can be considered as solves problems, at least in English.
+Spell checking isn't even close.
+Domain. Domain. To the special agent.
+What does it mean, Closed domain? Conversational agents like automated telecom.
+Exactly. Or the Amazon assistant. Right. And we'll just give you.
+Predefined questions. It will take your answer. If it doesn't understand your answer, it will ask again, but it just can't come up with it.
+So this is this is by very far from an open domain conversational agent, Right.
+So this PR machine job makes this comment well.
+What? Which language do you consider hard? Chinese.
+Do you think it is easy to translate from Chinese to English?
+Do that. But is it is it is it perfect?
+So you have to be bilingual. At least you have to appreciate how good a machine translation is.
+I can guarantee you that. That.
+If I open Google Translate and go from Polish to English or a single word or two or as combination, that's usually fine.
+But a sentence I will laugh at this is going to be pretty bad if if languages are coming.
+I mean, granted, machine translation is getting better and better every every, every year, but still nuances.
+Idioms. Neologisms, that sort of thing.
+Machine translation for chat has a problem that everybody knows about.
+It's trained on data that that stops at a certain date, right?
+It won't be able to tell you, I think, about what's going on with Israel and Palestine though, because it wasn't true.
+I think it was an update. In any case, if there's a new word in the Polish, for example, that was just created,
+the machine translation algorithm that was trained a year ago will not know what it means.
+Every Polish person will understand that. So there's going to be this this arms race going on, catching up forever.
+And poetry. What about poetry?
+Is that easy? That's a skill in itself for a human being to translate poetry from.
+From one language. Actually, you're creating something completely different.
+Really? So I think this is pretty hard for easy stuff.
+For example, legal documents or or, you know, user manuals and things like that.
+It's going to be easy, but regular conversation, nuances, things of that nature, not so much.
+Okay. So was that remotely interesting?
+Did it inspire you to stay in this course or you go next, next week?
+Your choice for that.
+But we will be exploring all most of those tasks.
+And full disclosure, we will.
+I mean, to start. Here.
+We'll go through the language, details and whatnot, and then ballistic models and whatnot, how things were done, how they can be done.
+And remember, I want to highlight that. Remember, this is mostly not explainable.
+I. That's. And to some degree that is explainable.
+But if you don't need performance, you might as well just go for it.
+Right. Hey, we'll keep going.
+Any requests? Any comments?
+I will be asking you that question. This is the first time I'm teaching this course.
+I mean, for anyone, it's similar, but still. So I want you to be at least satisfied with the content.
+So many comments, notes, requests.
+Very good. All right. I'll see you next Wednesday.
+Please take a look at the syllabus, especially at exam dates.
+I'm planning on moving things around between a couple of my courses because I already heard some.
+Got some requests from people. So let me know if something does not add up.
+We'll talk about it next week. Thank you so much. Have a good week.
+Helen Thomas.
+Yes, sir. It was day one of yours.
+I just wanted to write like this stuff and I.
+It's going to be nice, but the glass is water. But it's not too much.
+What is an LP as it does have a sweet overlap.
+I really took some of the concept of the standard, you know, will be for use of ability, much more so here that I really I try to keep them separate.
+But I know that you know and I'll be right there will probably be like a lecture at the end of a very high level overview of language models.
+So by that time, you will be exposed to all this here in 585.
+I know. Almost overnight. I did dig deep learning in the previous summit, so I just want you to know that it will be beneficial for me.
+So, so large language models are in deep learning space, but in deep learning courses are learning how to build a deep running model.
+In this course I will not be making you build one.
+I will explain what it is for those who have never had this experience.
+If we have the time, you will be using a deep learning model for worthless speak or actually language that will hopefully give information,
+but not the underlying deep learning structure as a synthesis.
+Here it is what you need. So it will be a junction between theoretical and oh yeah, I am AB-SOUL.
+So I guess the question how efficient should we think of this course on a scale of 1%?
+Well, so before I answer,
+I will tell you that there are not I'm not going to leave anything else with with average writing skills you don't need super high enough.
+So, you know, even if you hit the point where I don't know what to do, I'm here to help.
+You have have paralysis and expect me to help you a day or two before I need to start early.
+And then you have we'll have a bunch of questions. How possible, how do I keep this?
+I can help you that. All right? I will. I will be hosting.
+So I like notebooks.
+Which are their notebooks with some code. Let me get you started For some assignments that will be doing some.
+I will show you some Python code that does in class correctly, which will be rolled in to those notebooks.
+So you should be fine. This is not a programing course, but it's what I, I expect from grad students as grad students to be comfortable with that.
+And if, if you're not your grad students, you're supposed to do learn on your own.
+But as I said before, I know you'll never forget that exam and I know what you're doing.
+My favorite question, the number one. I don't have that. Yes.
+Or a number two I like.
+I usually say it's going to be a surprise, but I will give you an idea.
+But typically for for my 40, 81 years, it's a mix.
+Apply this algorithm to solve or do some calculation.
+I heard that I know that there might be a of questions, but I up for multiple choice questions.
+But the smallest section of it, it's not definitely not going to be just multiple choice questions that I will be doing.
+Okay. And how many assignments expect you to complete?
+As I said, so I would I would think about 4 to 5 written assignments by end of entry for at least two programing assignments.
+I'm aiming for four. They're not going to be hard.
+They're not going to have a very time consuming, in my mind, just kind exposition,
+three tools and several other things besides sheeted assignments, so to speak.
+Three assignments. Yes. Okay.
+There might be some calculations here. Here is an algorithm.
+Here's a simple problem applied as algorithm so that most of them on paper.
+And for my internal review.
+

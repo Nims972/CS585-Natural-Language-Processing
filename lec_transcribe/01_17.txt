@@ -1,0 +1,696 @@
+She. Be.
+So. Yes.
+Been. Well, good morning to a beautiful crowd, but to all the delicate souls who chose to watch it later at home.
+Questions before we begin. Questions.
+There's a couple of logistical items that you have to go through.
+First of all, updated exam dates. Some of you complained about clashes with other courses.
+So I listened. And this is these are the changes that I came up with.
+Midterm will be two days earlier.
+It will be posted in the syllabus. I will remind you about it. This is just to let it out.
+And the final is going to be on Monday instead of Wednesday, last week of classes.
+Okay. If anyone has a woke up and has a problem with that, just let me know.
+But I would like to finalize that by the end of the next week.
+I wasn't able to please everyone, especially people who are taking C 581 and 585 with me.
+The final I think we'll have both exams on the same day.
+I wasn't able to come up with anything else. All right.
+Tags. This is already in Blackboard. That's information.
+But we have three days or three days right now.
+They will be handling your assignments, your grading or assignments, handling discussions with you during office hours.
+That information will be in the slides, in the syllabus.
+But there's also a section in black you can look at.
+All right. Let's go back to our conversation that we started last time and clean it up a little bit.
+Today. We'll go back mostly to the basics of text processing and language basics.
+Why do we need that? Right? Why don't we have to talk about things that are that linguists are dealing with,
+especially the modern MLP really is less and less requiring any linguistic knowledge from from you.
+You can build that large language model without complete understanding of your language.
+It is possible, however.
+If you remember, I brought up those historical bits last time to give you an idea how people approached that at the beginning.
+So the language, number one is a system. Number two, meaning it's hidden in the interactions between pieces of the language that is important.
+And 50, 60, 70 is let's try to bring design a system that uses a bunch of rules to cover the language.
+Okay. Now, this went away for the most part, however.
+Sometimes the details that I will explain today still matter.
+I'll give you an idea about it. First, let's define define the language.
+What is language? It is a structured system of communication.
+And this is what matters here. It's a complex combination of components.
+Whatever those components are is matters.
+But you can see that you have levels here, right?
+Characters. Characters built words actually will go below characters a little bit.
+Just for clarity. Words, sentences, paragraphs.
+Blah, blah, blah, blah, blah. The reason this is broken down is that at every level you have different pieces of meaning buried.
+It matters. Depending on your applications, you will tap or not tap into that particular level.
+And there are different tools for handling.
+Now, the basic block that we will not be spending time on is columns.
+So right. This is what language is built on.
+Mostly speech recognition is where this is being used.
+So it's there. Don't worry about it.
+What else, however, can be fuzed quote unquote, or merge to generate something called morphemes?
+This is the smallest unit of language.
+That carries that meaning, not just a single, even though you could argue that there is some meaning as a response.
+All right. But morphemes as a combinations of sounds as a combination of sounds carries some basic meaning.
+Here's an example of a word unbreakable. There's a missing that is made up of three morphemes.
+A lot of times those more people are going to be crazy sis and suffixes.
+Do they matter? In languages, prefixes and suffixes.
+Are they carrying experimenting? Absolutely they are.
+So you might be interested for some applications to extract that, or in other words, chop the word down to things other than just keeping the word.
+It will be up to you as an engineer to decide, Do I need to write?
+Lexie's are a version of more things that are related to each other.
+So like, things are sort of groupings of morphemes that are related run and running.
+Same thing. This this is theory will not we will not be doing we will not be challenging you linguistic knowledge on the exam.
+But it matters. No. So we have sound parts of words.
+Then we have words. Then we have syntax.
+Everybody knows what it is, right? It's a set of rules that govern the language.
+In the course of natural language, as in human language is is messy.
+There are rules, but people don't necessarily adhere to it. Programing, language, languages, sequel, that sort of thing.
+There's more rigid ness in there, but it matters.
+Okay. Part of. The challenge for the early in LP and it's still being used was to, Hey,
+let's take natural language and encode it using some intermediate language that a computer could understand that is formal.
+Remember what I told you about Noam Chomsky and his idea of grammar?
+Some of you were exposed to grammar in other courses.
+We will get to that. Parsing meaning it means let's take a sentence and let's try to figure out how does it what is the underlying structure.
+It's not as easy as it sounds, but we'll get to that.
+So. Being next level.
+Semantics, right? What's the meaning behind the sentence?
+There are syntax rules. Semantics is meaning.
+There is also an upper level that is called pragmatics.
+I'll get to that. It goes a little about semantics, if you please, but.
+Semantics means extracting meaning from interactions of pieces of of language.
+Essentially words. But there's more to it. So you will if you have never dealt with a knotty,
+you will pretty quickly realize in this course that every level starting from speech and sounds all the way to meaning the actual
+meaning has its own corresponding set of applications where you actually need to know to extract current bits of information from text.
+And every level here will have its own set of tools and you need to know how to apply it.
+So, for example. Passing.
+Let's say that you have an application that is checking what are the sentences correctly written.
+Right. You don't need to extract meaning, though it would probably help, but you can stop at this level, right?
+And so on and so on. Or tokenization will talk about it, deciding what are the part of parts of speech.
+Every level has its own complexities, all tools and all applications.
+Of course. If you're dealing with a very, very complex problem, you probably want to extract everything you can along the way.
+Moving up a lot. All right, well.
+When it comes to syntax, there is a bunch of tasks that I will tell you about, but adult tools typically do.
+First of all, you can imagine that there is something called sentence breaking or sentence segmentation.
+You're chopping your text into sentences.
+That would be one. Another one is something called word segmentation.
+But chop that sentence into words. Morphological segmentation.
+I remember when I was talking about more horses. Okay, now let's take a word and chop it in the morning if you need them.
+Passing. That's pretty, pretty easy to understand.
+Then my position and stemming this was you.
+If you read about an AP and local language models such as Djibouti, you will probably learn that this is not even being used.
+But it may matter with you. I'll tell you what it means, but essentially it is normalization and starting some zation of words.
+So run becomes run, running and running, run becomes run, that sort of thing.
+Part of speech tagging. Well, what did it work?
+Would it help to for every word to have a tag associated?
+This is the part that helped you. Certainly true.
+So that's another part at the semantics level.
+There's a lot of things going on, but you will frequently see named entity recognition.
+That means picking up the pieces of the text where where the text is referring to some some specific place date organization name.
+This is not easy, but it's kind of important. Nowadays, it's done using neural networks.
+But I'll tell you how it was done before. At some point, word says there's some negotiation.
+Okay, well, book a flight.
+This was a great book. Say more. The book for a different meaning depending on the context.
+So you might want to decide which meaning actually plays here.
+Natural language generation. This is okay.
+Call my response a chug, chug, chug agent.
+Right. Or writing a summary.
+That's. That's we're meaning meaning matters.
+So there's levels, there's applications, and there's, of course, a bunch of complexities that you can imagine yourself.
+Let's just keep that. It will come out as we go.
+All sorts of examples where language is difficult actually because of some of those other things that we will be talking about here,
+how different different approaches can be used to solve the same problem.
+I already told you, and I will tell you that again for the most part, and LP is handled by deep neural networks right now.
+But it wasn't like that before. It doesn't have to be explainability matters or whatnot.
+So we will briefly touch about heuristics based in IP, which is essentially rule based NLP.
+Oh, by the way, I forgot to ask you.
+So I mentioned all those language elements, that linguistics theory and whatnot, and then I told you that really, you don't have to do it.
+You don't have to fully understand it. Nowadays the large language model will pick it up itself.
+But where would you use it? Like, can you imagine a scenario where you actually have to go back?
+Oh, okay. I have to learn that stuff and probably use it.
+Any thoughts? All right.
+How do neural networks work? You train them, right?
+You show them examples, blah, blah, blah, blah, blah, blah, blah. You have a lot of examples.
+They will become good at picking up patterns.
+If you have no examples, what's going to happen?
+It will have no clue about a certain rule. Right.
+So if there is imagine I cannot think about anything in English, a very obscure rule, say like we're kind of banished at the middle of the 1800s.
+I'm just making it up. But imagine. But someone is still using it.
+Someone writes it for giggles. And what? That you for your neural network model?
+You have to have an example of that push through it to train to.
+Right. If you don't have that example, it will never pick up the power.
+It will never learn that rule. Would you want your NLP tool to actually recognize everything like that, even though you cannot train it?
+Like, imagine you're you're doing a chad Jeopardy conversation and you're bringing up some obscure, you know, playful sentence based on some old rule.
+Right. Would you like to see me do?
+Oh, I got. Yeah, that's a very old thing. But would you want that?
+Perhaps. I don't know. Maybe. So if you don't have anything to train the model on here, you might just resorts to a very simple hack.
+Okay, let's hard code that rule. But you can't code that rule.
+You have to understand it and so on.
+So typically, all these details will come in handy when when you're dealing with cases, something obscure or something rare,
+that where it's much easier to just write a simple, simple rule and be done with it versus hey,
+let's, let's let's search the Internet for examples of that.
+Right. So practicality here. Another aspect of that is work.
+We're dealing with all this which where you have tons and tons and tons of materials for a machine to learn from.
+That's not necessarily the case for other languages.
+Polish there's probably 40 million more or 40 people speaking, Polish more than that.
+But that's a drop in the bucket, right? So less writing, less examples in other languages are like that.
+So in that such cases, role based approach might be handy sometimes.
+All right. Machine learning as an early machine learning based Markov models will go through those and then deep learning, which is everyone.
+I imagine everyone here in this room wants to learn how it's applied to.
+And I'll go through every single one section here with some examples.
+And for those who would like to sort of position where MLP is that that diagram will give you an idea.
+It's not everything is machine learning. Know that not everything is deep learning related, but there's also overlaps here.
+Once again, for those who know me, I keep saying that for 80 or other courses you're learning tools.
+Get a toolbox. Whether you will use all those tools.
+Now, maybe not, maybe never. Maybe it will inspire you to use something else.
+We'll talk about all sorts of things.
+Now, another thing that I think is a thing that is a common theme across most of the applications is the existence of a pipeline like that.
+There is going to be variations, but most MLP systems that you will deal with have most of the parts here.
+So you have, let's call it ingestion at the top where you're.
+Ingest ingesting information from text.
+It might start start with speech or voice.
+What? We will not be doing that here. And then there's all sorts of processing at different levels that I explain to you.
+First morphology and parsing, then reasoning.
+Right? And that is being fed this box, which is your application letter is just suggesting you are, know, cooking recipes or translating things.
+This is this is your end of things.
+Okay. You can use an LP to feed text in it parts it, process it trumpet as you wish.
+Then make a decision here and do something about it right in this box.
+So this, this is where the I dunno translation tool would be.
+Right. The actual application then.
+Well your application came up with it with something and it has to relay it back to the person.
+It will usually be over the person. You want a natural language response.
+Let's plan what we want you to say.
+It doesn't have to be structure. Now let's rephrase that in something that is syntactically correct.
+Turn it into. The actual speech, which what sounds to generate here.
+Have a computer. Say it for you. These parts are probably where we will not be spending too much time here.
+But you can see that pipeline throughout most of our energy problems.
+And I guess you can see there's, you know, silos where every single step matters or levels.
+Okay. This is what will concern us right here in this course.
+So no speech processing, no signal processing, nothing of that nature.
+But we will deal with all the levels that I explain.
+I haven't talked much about pragmatics, so let me bring it up.
+This is a a level above semantics.
+Imagine semantics will tell you. What did I mean?
+What's the meaning in the sentence? Does that make sense?
+What is the what are those individual words? Meaning, right now, pragmatics is how do you use that sentence?
+So imagine a conversation, for example, between two people.
+One says, Oh, it's cold outside, right?
+And the other one says, Back, Ooh, it's cold outside.
+Is that right? Same thing, same words. But there's slightly different views on it.
+Right. So pragmatic still deals with that. It's it's more meaning, more tapping into context.
+Talk about that as well. One thing that I want you to understand.
+So no one gets confused. There's three terms that are related to natural language processing.
+Natural language processing is everything dealing with natural language.
+There's two subcomponents, big ones, but still subcomponents.
+Understanding nlu, natural language, understanding natural language, generation.
+So chapter, you obviously does both.
+For example, it understands what you're quote unquote understands what you wrote and it can generate the response for you.
+What we dealing with. Both. All right.
+I think this is this is pretty pretty obvious. So I will just let that slide here.
+I don't I don't think I have to explain parts of speech framework, what they do,
+but understanding those and picking which what which is which will matter.
+There's also some levels to it, obviously. And now there are great examples, a great example here.
+Common nouns, classes of appropriate nouns should you be able to distinguish based upon.
+I feel tower as a something special named entity.
+Recognition comes back. So you have to be mindful of that very little key tool should be capable of sorting that out.
+All right. Morphology. We talked about it. So once again, morphology tells you how the world is built out of individual forms.
+There is usually going to be a root, some sort of a word morphing that defines what the meaning and associated.
+Suffixes and prefixes that might change them or add something to it.
+There's two types of of of prefixes, inflection and derivation or derivation.
+All you're creating a new meaning essentially by adding prefix.
+An AP is different for tapping. Racist.
+Okay. This is a distinction that you have phrases and clauses, actually, that those two terms you should be very familiar with.
+Phrases are groupings of words, not sentences necessarily, but sequences of words.
+Clauses are a special type of a phrase that will contain a subject, and therefore a phrase does not have to consider that if that difference matters.
+For now, you can just register that there are two of them and this gradation matters.
+Praise Clause centers. Right sentences are made of clauses and phrases.
+Yeah, it makes sense.
+This is in a bit of linguistics here. It makes sense to distinguish between different phrasal categories.
+The objective traits. Da da da da and LP tools can recognize that.
+I'll show you how down the line we'll talk about mechanism that will tell you by looking at a phrase.
+What kind of craziness? It all carries meaning.
+Remember that every single component carries so little meaning.
+And you are the one who. She likes them.
+She don't mind. All right. Are saying just relationships between words in a sentence stuck.
+How are these? What is this syntactic structure in in this given set?
+Okay, so this is what I keep saying all the time since the beginning of this.
+Lecture. There is a level levels to knowledge that you can extract every single Bible of language.
+We will be mostly dealing with syntactic, semantic, and that pragmatic knowledge,
+to some extent morphological and such that discuss a little bit world knowledge too much.
+But at any level you can extract something additional.
+If you're too old, needs the syntax. Do I need to explain that?
+Explain that. What is it? Every language will have a set of rules.
+Right? How many of you have heard the term context?
+Free grammars? To.
+Okay. So we'll get back to that.
+Context Free Free Grammars is essentially a sort of a language, a form of language for restoring.
+Natural language sequence or encoding natural language.
+This goes back to Mr. Chomsky and his grammar. Thank you.
+Let's. Let's translate it.
+I'm going to overdo it right now, but let's translate it and pass it into a above form that is more formal and more digestible.
+Frequent viewer to work with. Right. You can see the difference, right?
+Java code versus natural language. Java code very structured.
+There is no room for creativity either.
+You have to be syntactically correct.
+So context free grammar is sort of it's a bit of a representation of that very formal language of representation.
+Part of speech tagging. Oh. What kind of word is.
+Word is that. What part of language is that word?
+Let's tag it out along the way. Here is a verb, right?
+Semantics. I imagine everyone is familiar with on the right.
+Nonetheless. Logic. First thought of the logic expression.
+Would it make sense to encode whatever is being said as a has a set of propositional logic or a sort of logic or any the logic sentences?
+Or encode natural language using thing like that.
+It absolutely makes sense. How many of you were in my shoes for every class?
+Q Okay, so we did logic, right? Logic means encoding in us for any logic was used to create a knowledge base, a formal representation knowledge.
+All birds fly. That's not necessarily true, right?
+For the most part, that's the rule. You want something.
+You want things about the world encoded in such a way.
+So the math deals with extracting that.
+It's more than just coming up with logical sentences corresponding to.
+Some of the great history. How many of you are familiar with the term word embeddings?
+You will learn about it. And this course? Definitely.
+There is no guarantee Gemini without fourth embeddings.
+This is a fundamental problem. Absolutely.
+Have to understand pragmatics. Okay. But this is.
+I keep saying about it. How is language used to achieve specific intentions?
+You are not only carrying meaning with your words, but you want to use it to reflect what your intention is.
+And especially in an exchange, this conversation.
+So whenever you're building a chat agent, chat bot or whatnot, how to deal with.
+Well, all right, I'm. And it's a different kind of submarine.
+But we have a certain level syntax cares about.
+Syntactically correct sentences. They don't have to be meaningful because you get the picture.
+All right. So here you have a bit of a summary where how components of language.
+Growing components of language, starting with word phrases, clauses, sentences and entire blobs of text are are being.
+Chop according to syntax, semantics, pragmatics, division and applications.
+You don't have to memorize that. Just take a look at it. It makes.
+Says if it doesn't make all sense. We'll get to it.
+At least some of those components. Well, we'll see how.
+Those levels translate to actual. Application.
+Perfect example is sentiment analysis. Would you agree with that placement?
+Sentiment analysis. Sentiment can be derived just by looking at the word itself.
+It's not going to be a perfect sentiment analysis.
+You see awards happy this in in the tax write it in immediately kind of punch up the positive positive any of that.
+I'm tired of text. Hello? Of course. It's making you seem a little deceiving, but look at.
+All right. Questions so far. I'm going through the stuff pretty quickly because it's just basics.
+Not particularly. Not technical stuff. So far, so good.
+Too slow. Too fast. Too boring. Right.
+All right. Know.
+To people. You want to force the computer to do the job for you, right?
+Understanding the language, what our computer is not good at.
+What kind of data? Computers are not good at handling.
+Unstructured, structured. So do you want clean?
+How many of you had to process or clean up datasets before our computer?
+That's not exactly what I'm talking about. But you get the picture something that that a person will pick up quickly.
+Oh, there's a mistake, you know, Horrible. A computer has to be over.
+Fab the right thing.
+But what I'm getting at here is, well, we're a computer to process whatever text you're feeding or whatever it has to be output pass to.
+But some sort of representation in internal representation in memory that he can work on.
+Simple arithmetic squares, numbers and a couple of operators.
+This is what computers like. We're not doing something that simple, but representation matters,
+and whatever representation you will choose, you will not have to worry about that too much in this course.
+But if you were to build something from scratch, I guess this is pretty obvious.
+No ambiguity, right? Computers don't like ambiguity.
+Precise. Right. Capture everything about the language that is relevant to the application.
+Makes sense. Essentially, you want something very precise, very formal, very deterministic structure to encode language.
+You achieve that by. Making sure that your syntactic structure captures relationships or fruits.
+You want to capture the logical form of individual words and assemblies.
+And then it's pretty obvious, right?
+How do how do we get us and our representation capture and relate the total final meaning of both?
+All next. If you're interested.
+This is. This is where those. Pieces reside in that top level pipeline that I showed you.
+At least parts of it. Syntactic structure start the first logical form to the first and then the final.
+Okay, so far, so good. Now, another thing for you that is that is that that should be pretty up.
+Can a computer. Work with words only are.
+With words as an input. Without any extra.
+Convergence. In the meantime, what? What is your CPU doing?
+Adding. Subtracting. Right now A couple other operations.
+Nothing more. Can you do that? Or worse? Absolutely not.
+So. Whatever words are coming in to your energy solution have to be translated into numbers.
+Okay. Now, can you imagine what kind of numbers, what kind of structure behind that, those numbers?
+There is. Can you randomly assign numbers to birds, for example?
+Or doesn't have the legal structure. So the reason I asked you about it were the merits.
+Yes, because word embeddings are one way a very good a very efficient way of turning
+words or phrases or sentences into vectors that I can be or can understand.
+Actually, if you think about it. This is what is happening when you're applying automated natural language processing or text processing.
+Every single time you work with Google Translate, that is happening all the time.
+You type in some text and Google Translate. It is being, well, tokenized.
+We'll talk about it a little preprocessing that happens behind the scenes.
+Then it's turned into a vector of numbers. Was it has that factor it can work on.
+It can perform basic computation and it will give well, it will not give you back an output vector.
+It will be an intermediate step. But based on that output vector, something will happen.
+Something will be displayed on screen for, you know, if you're building and then LP tool, you'll be building that output vector right there yourself.
+I mean, not necessarily from scratch. And then you will build this piece, What are we doing here?
+So, for example, you can make a decision, let's say that it's a sentiment analysis tool,
+so there will be an output vector and based on this vector, you will see.
+Spam not spared. Higher, higher rate, blah, blah, blah.
+Or it could be a blog. Or a tweet based on that.
+So you will be responsible for that. Is that clear?
+Yes. This is this is a fundamental challenge here.
+Turn text into numbers in such a way that all that meaning that we were talking about relations between words.
+Those prefixes. All this stuff is somehow construed as a vector of numbers.
+Embeddings are it related fields.
+I don't know if you will often interested in following that.
+So let's just let's just leave it here for those who are super interested in exploring, you know?
+All right. Challenges. So. What challenges do you expect with processing language?
+Know. Sure. If. If I gave you an exam question, give me an example of a sentence that would be challenging for a computer to understand.
+Everyone would get it. Yes. And of course, better for us.
+Excellent. Very difficult for a computer to have those without some extra context.
+Probably impossible. Oh, this is this is actually an excellent example of what I was talking about.
+Some some obscure metaphor that everyone understands, but it's really in writing.
+So you can't train your. It's a similar.
+You could just have a translate. If you see this metaphor, this actually means something else.
+Pregnant sarcasm. I mean, these are.
+You don't understand it. Okay, very good. Or even something basic like.
+Like multiple ways to interpret this.
+Are you familiar with that proverb? The ever seen it?
+And I was like, in hour. But this is certainly fly.
+This is not the first verb that, you know, I guess flies might be just as many flies as an insect.
+Right. So you can interpret this sentence in multiple ways.
+That's that's immediately a problem for a for a computer.
+Not the most difficult ambiguity. Ambiguity of all sorts is going to be a problem.
+A lot of examples. Training data examples will help the machine figure it out.
+But this is this is a problem.
+What about. Figuring out some of those.
+These are, I think, article titles. Let's talk about the first wondering for legal reasons.
+I mean, anything we're all talking about dancing, but is it easy to understand what it means?
+But that's the that's the bottom line. It's not really that easy.
+Will probably need some context.
+This red tape holds up new bridges. Our new bridge is helped by actual red tape.
+Let's see. Everybody knows what it means for a computer. Hey, red tape or a little red duct tape or something.
+Help! Very difficult.
+Or computer neologisms.
+Is that a problem? I mean, new wars are being generated every every year.
+I don't keep track of that that well. But was when was the last time?
+Where's the cutoff point for the latest Jeopardy!
+That's now. Was it March last year or something like that?
+In any case, those models are being trained on data that is already a little dated.
+Right. So a new word was created in that problem.
+In the meantime, something just came out. Young people started using.
+Subject you will not be aware of. I've never seen that as an unknown work to me.
+So keeping up with that, this is is always going to be a problem.
+Language, even though one could argue that the language used is being dumbed down.
+People don't use that many words anymore. Blah, blah, blah.
+That's all we're talking about. You know what I'm talking about here.
+The simpler the language, the easier it is for a machine. The more flowery, the more elaborate language it is, the harder it will be to process.
+And language is always ahead of the machine that is translating for me, if anyone is interested.
+And understanding language. Here is an optional reading for you. Absolutely.
+I'm not telling you to do that. Interesting.
+Okay. Questions we have. No questions.
+Everybody understands there's levels, there's granularity, different tools,
+and you should be at least aware of where things go and what could be applied.
+How many of you ever had to kind of ask similar questions?
+We had to clean up the data that is cloud text, pre-processing.
+How many are really good at it? Or.
+I imagine you don't like doing that at all. That's all.
+Let me ask a different question. When you are those who work in food processing.
+It's a CSG file. It's a text file, for example.
+Have you dealt with situations where you actually wrote a little routine that goes hundreds of lines of code, right?
+And whatever it generated, it wasn't.
+There was still something that you missed. Oh, I have to add this little extra rule or something like that.
+Text processing and processing kind of deals with.
+With that, you want to make it clean for the machine, to use it, for it to understand.
+But you also want to prepare it for for extracting all the rules so that step is unavoidable.
+Now what is going into that step will differ depending on the application.
+Well, at the very basic level, you're dealing with two steps here chop the text into sentences and then chop sentences into not words anymore,
+but something that is called a token. And token is not necessarily going.
+It will be a word a lot of times, but it will be other things like exclamation points or periods, numbers of.
+I don't know what emerges. Right. Anything. That individual piece of text that carries some meaning that is worth extracting.
+So. Let's say that we have a sentence that is already tokenized.
+We'll get back to tokenizing in a little bit,
+but we have a sentence that is chopped into focus and there's at least four key reprocessing steps that are usually used.
+Not always. Lower casing, also called case folding.
+That's pretty easy, right? You want to standardize everything, but you might miss something along the lines, right?
+New York. Right. As a name of a city, you probably shouldn't be lowercase in the end up being a new dog.
+New York Regs. What you want Removal of punctuation and stop words.
+This is where. Where if you digging into literature about natural language processing tools, you'll see that people don't do that.
+What are stop words? What do you think? Stop Words are. Yes that a for and things that are there.
+There's a lot of it, but it's not necessarily carrying a lot of meaning.
+There is a need for some applications that you just can't describe.
+Why would you discarded, though? If you were to, why would you discard stories?
+That's going to be a huge chunk of a regular text language person.
+There's going to be a lot of that and. Why would you disagree?
+You're not getting much up. Okay. They don't carry a.
+I agree with that. So. If you feel that you're not losing anything by discarding them.
+All right. And any other arguments or discarding words?
+You're like, trying to get under a workout. Okay.
+So that would be that is actually a great comment.
+This is not necessarily performance related.
+It kind of is. Then you may have a cap on how many words that you're MLP to ingest time.
+So that's one idea. The other one is very simple, right?
+The more words you deal with, the more processing time you require.
+There's no other way around it. So extra words will slow your system.
+I mean, it's going to be in nanoseconds. But those nanoseconds may that.
+So what you all agreed about large language models is that you keep everything if you can.
+You're not discarding. There's some cases where you might.
+So this is. This was debatable. Stemming and limit causation.
+I will explain it pretty soon. That sort of means normalizing the words to a single formal.
+They're different or slightly different. And also both of these are debatable.
+So neural network, deep learning network based and LP tools are not even going to bother.
+Is it run running or happy?
+Happier. Let's bring it all it care is information.
+Let's let's keep it older and open.
+Tools are we're always like always but most of the time using STEM and limit position.
+Okay, let's go back to the concept of.
+Tokenizing segmenting and tokenizing. How would you segment text into individual sentences?
+What we what will be your approach? Let's focus on English. You're passing or you're processing.
+Let's not use the word part to your processing. Going through text.
+Character and character by character. How would you know?
+Okay, this is the end of the sentence. This is the call for a punctuation.
+What about 5.0? Yes, We're going to leave with a special token.
+But what if it's not there? Sometimes it will be there.
+An end of line, end of sentence, that sort of thing. It is there.
+Just grab it. But if it's not there, it's just roll text.
+It's an exclamation point. Fine. This is probably and then the end of the sentence, but not necessarily.
+So that's. It's not as easy as it sounds.
+At the same time, it's not as. As difficult as it.
+As other problems. Here's one solution to it. Have a decision tree.
+I will just ask a couple of questions and then will decide this is the end of a sentence or not.
+We will not be doing that. You're an ALP Python libraries will have a segmentation tools in there.
+You don't have to worry about it. But if you were to build one, this is a good start.
+Okay. Otherwise.
+If you want to. Do it yourself.
+There's a lot of tools available for you, but it's a simple split right method in Python, regular expressions, anywhere, anyone.
+If you use regular expressions. A few people will learn that some of it.
+So. A question for you.
+Why would you use your custom? Commentator or isn't tokenized when you have an LP package in Python that does that for you.
+Can you think of a scenario? Yes, but somebody's want to extract all your photos.
+Okay. But. There is there are pieces of the tax that are not necessarily handled well by this customer.
+Tokenizing. A language you have no idea about.
+And different language, perhaps. What about the Python code?
+Should you be looking for tabs? Absolutely indentation matters.
+So. Though, the thing that I would like to you to keep in mind throughout this course is that when you think MLP,
+I imagine many of you immediately jump into MLP parsing and English language and talking about it could be sequel command or something like that.
+Mostly you use English.
+All right. Now, here's a very important concept.
+I already talked about tokens.
+Now tokens and types are two things that go together in an LP, and you have to understand what they are and what the difference is.
+Okay. Type is an element of the vocabulary.
+You can start thinking about type as a single word in a dictionary.
+A dictionary lists all the possible words in your vocabulary right now.
+Let's include emojis. Let's include punctuation, all that stuff.
+So let's not call the words every single individual, unique,
+possible piece of text that will appear on a very small piece of content or appear in your input, albeit can be described as a pipe.
+Single word or token is going to be an instance of that, right?
+So one one type, multiple tokens representing that type.
+Here's an example How many tokens we have nothing.
+Right? A good US is assuming that we're splitting the space.
+These are all tokens of token token.
+Now there's only seven types because of course.
+Shows up twice. There's only one type representing course.
+Do you see it? Okay, now. This is not irrelevant, but will not matter a lot.
+There's also something called the Type two token ratio that is being used in analyzing text.
+What do you think it means? What does what will is value meet?
+If you're looking at the text, you can extract it. There's a ratio of blah, blah, blah, Typekit operation.
+What kind of message is this number conveyed about the text?
+Diversity and purpose creation, Right. The.
+There is two ends of the spectrum. Very, very.
+Very flowery language, if you please, and something that is just possibly using the same words over tokens over and over and over.
+Like. Like, like, like, like, like. Like it was like yesterday.
+Right. That would be very weird. Like.
+Before you. Just settle in, assume.
+Okay, let's just drop it or let's talk like where there is space or more specifically,
+where there are white spaces, tops, spaces, and the end of line markers, non printable characters.
+You know, some of this is a good approach for many, many languages and many text, but it's not going to cut it for every single language.
+If you're bilingual, you might know something about it depending on your second or third language.
+Not a big problem in our class.
+But if you're dealing with a language that does not subject to that very well, you will have to use some a lot of ways of tokenizing.
+Possibly you will have to do something that is called supports for conservation.
+I'll explain what it is in a second. That's like chopping not sentence, not into just words, but as pieces of words.
+Finding what those reports are, and there are algorithms for that.
+How many of you are familiar with for encoding? Have you heard that term?
+All right. So if you were to build your own token isare, one of these algorithms listed on top are going to be your friends.
+As you can see, they're fairly recent. So let me walk you through by per encoding and had it how it works.
+There is always going to be two components for for those algorithms learner and segment three.
+If you're have some familiarity with machine learning, there is some relationship to it training and then deployment if you place.
+So let me show you. What it is.
+But before that, you can think of three levels of tokenization approach.
+One on the left. Whitespace based organizations.
+This is probably that automatically comes to your mind when you're thinking tokenization.
+Let's just find those spaces are white space. Let's jump in here.
+This is this is a very coarse grained approach.
+On the other end of the spectrum, on the right is let's chop it a accord where the part down to individual characters.
+You could do that. Absolutely. There's no problem. This.
+If you choose that approach on the right, you will be forced to use way more computation than the like.
+And you may not be necessarily sure that one, let's chop it that way and pass it upwards to lots of other levels for processing.
+You will not have the guarantee that those upper level processing steps are going to extract the same meaning from that you might lose.
+So careful there and there are some intermediate step software support tokenization.
+In ideal world, this is especially when it comes to English or the middle level languages.
+This is where we are chopping words down to suffixes, roots, prefixes.
+You can do it and use a rule based approach here, but you could do something, something else.
+And by per encoding algorithm, it's actually very, very good at finding the roots, prefixes and suffixes on its own.
+You don't have to define rules for it. Look, just look for air.
+I know.
+Just let the computer find the pattern itself so you can think about about type encoding as a sort of a machine learning pattern recognition system.
+Okay, so where does it come from by per encoding approach?
+How many of you know how, for example, a zip compression algorithm works?
+Anyone. No.
+Let's start with plaintext.
+Let's get the JPEGs and what not just plain text.
+Plain text is made of characters. There is a table of characters.
+There's an X amount of characters available. Let's focus just on an alphabet with ABC through right.
+So your text that you will compress would encode every single character with one number.
+Number, number, number. And number. Number. And then you get a whole big file.
+Now, what if you recognized Paris, for example, at the top, a triple A in a row shows up a lot.
+Why not create a new alphabet where 888 is going to be one unique character that doesn't exist in real life, but let's make it up.
+And then whenever you see triple J, let's replace it with a character.
+Now you have one character instead of three, or if you have a sequence of eight days in a row, you're cutting seven days out of it.
+So you essentially create a new alphabet.
+You encode your input text using this new alphabet and starting this new alphabet for someone to later unpack it.
+Very simple approach, very effective. The more repetition like that is there, the more compression there will be.
+By for encoding is using is a very similar principle.
+It will try to look for something called a byte pair or pairs of characters that show up often.
+And it won't just essentially create a new alphabet. It will be called a vocabulary to.
+To find very common SOP words.
+Okay. Let me show you how it works. This is the algorithm right here, the pseudocode, for it.
+It's really not complicated. There's two input parameters.
+Purposely, we'll talk about what a corpus is or near future, but essentially a data set,
+a training data, a text training data set and number of mergers.
+K number of mergers moves. How many new new fighters do you want to create?
+How many new characters do you want to add to your vocabulary?
+And then you have those two components. The learner and the segment learner will learn a new alphabet, quote unquote, a segment.
+There will be an. Dropping new text according to this new vocabulary.
+Does that make sense? So it will.
+It will sort of do the character based tokenization, but characters will be groupings like AA will be its own character,
+and it will find or or AMG will be treated as a special individual character.
+Does that make sense? All right, let's go through the process.
+I imagine that this is an input data that makes zero sense, right?
+Let's just keep it simple. Do you see a lot of more or less common SOP words or prefixes and suffixes?
+There are. And by their encoding, we'll find them.
+Now, first step is to extract the initial vocabulary.
+As you can see, it's a list of characters that appear in this corpus.
+There's no A, there's no B because there is no. And the corpus?
+Fine. Step number two, we are adding.
+And consider. Consider these as words.
+The beginning and the end spaces matter.
+Step number two, we will add a stop token.
+That sort of approach is going to show up many times in an LP, all at a stop token to our vocabulary to indicate this is where the word starts.
+Or. Or essentially to discover suffixes to indicate that something is a suffix.
+Okay. Number of magic words is let's set it to eight.
+It doesn't have to be. You can take it yourself.
+And this is what you do.
+You will. Take every word from this corpus.
+Low, low, low code. So there's five loaves right in that cartons.
+Then you will chop that word into individual characters from the vocabulary.
+That's not low. It's l0w class.
+This extra stop token to indicate this is where the war ends.
+We want to retain that. So we have five of those two lowest six viewers, three wires to news.
+So the counting, the count matters here.
+Now, the more before we do the merge, we have to locate the bite pair or the pairing of two characters that shows up the most often.
+In our case, the first candidate is P. Okay.
+So what your encoder will do, It will.
+Okay, We found this. This is the most common by spirit.
+Let's use it. Okay, let's use it and add it to our vocabulary.
+So this is our new character and it's going to be treated as a single character.
+And let's replace all the instances of E-R in our original table right here with that new character.
+So now we are, even though it's a two characters, we can see it.
+It's treated as one repeat. So next step would be e R.
+This is treated as a single character and.
+This end of. Or token or character.
+I'm sorry, Symbol. All right, so these hearings are the second most, most often.
+And so let's fuze them. Now we have another character which is made of think through those made up three actual words added to the vocabulary replace.
+Ultimately, you will end up.
+After I specified Kate to be eight, I will do eight cycles of that nature, eight merges.
+I will have eight new characters in my vocabulary.
+And with that new vocabulary, I will go back to my caucus.
+Okay. Just laugh, and I will do.
+A character based tokenization using my new vocabulary, which happens to include fuzed new characters.
+Does that make sense? Exactly. It's a very, very simple but very effective way of automatically.
+Finding. Southwards.
+So here is a resulting example.
+This is our new vocabulary. So we have low as a character.
+We have e r with end of word symbol there as individual characters.
+So if you look at a word such as lower, it will be processed as low power.
+Did it figure out a suffix right here?
+Does it? Does that something mean something? Absolutely.
+Okay. Is that clear what byte encoding is doing?
+The thing that I see students miss here is that step adding that stopped open.
+Some people skip that and it matters. There's nothing fancy going on, to be honest.
+Yes. So the goal of this is to like, make the vocabulary, make a new alphabet.
+Kind of like a new vocabulary. Vocabulary is is sort of.
+You make this mental association with words mostly.
+Right. Think about as I guess the best way to describe it is a cross between alphabet
+and and a dictionary that includes individual characters and supports and words.
+Because this will find the words as well. You can see.
+Newer. It found entire word newer.
+Through the processing. If we went for K larger than that, we would find more words or more words.
+You end up with this mix of an alphabet and dictionary.
+Does that make sense? Which is better when applied later in tokenization than a pure whitespace approach?
+First, it will after prefixes, common prefixes, suffixes.
+It will capture very common words, which you might end up using as a basis for your self worth removal as well.
+That. But disregard that. Okay.
+Questions so far. Would you like to build one yourself?
+Yeah, we'll have better things to do than that.
+But there will be a written assignment that is asking you to do a little processing like that.
+It will not be huge. It will not be a little.
+A lot of work inside. Very cautious so far.
+Another step preprocessing that I mentioned lower casing.
+I already told you that you have to be. It helps sometimes, but you have to be careful.
+This is. This is something that you would like to preserve, right?
+It's very tricky. Stemming.
+All right. So we'll get back to it during our next session.
+But let let me give you an idea. Stemming and limit possession.
+Stemming. Well, chop words.
+They won't keep of stem of the word and will chop off a suffix.
+Except that stem in itself is not necessarily going to prevent real world war.
+Here you have airliner is being chopped into parallel early.
+This is not a real work. Okay. So steaming is a very crude way of just doing this extra step tokenization.
+But let's just chop up suffixes without minding what the word is later on.
+Let my position, which is that here's some examples for you.
+We'll talk about the actual tools that do that next time.
+Limitation, though, is a more sophisticated way of doing a similar thing.
+All magic words do existing root words run running will be mapped to run or was will be mapped to.
+To me. And so and so this is not a crude let's chop it, but let's map it to an actual word in the dictionary.
+This is a little better in this stemming in terms of preserving information.
+The point of both is to normalize your text.
+We don't have multiple forms of the same words floating around in the input text.
+You want. Normalized version of it.
+As I said, I have one more minute. As I said, it is a large language models.
+Don't even bother with that, but it might come in handy for some applications.
+All right. So. Here's an example.
+For example, with actual Americanization, My position, my stop words.
+We talk about those. Usually you will have a database of stuff, words that you can just search for.
+The show preprocessing steps that might show up that you'll have to do it a language
+detection you show you I'm sure you so Google translate detecting whatever you're writing.
+This might be interesting here transliteration from Cyrillic to English, Latin alphabet and whatnot.
+We will not be doing that. But just just so you know. All right, well, 40, I don't want to keep you any longer.
+Any questions? Was that interesting? So what?
+All right, let's get to it. Regular expressions will be next and next week.
+And I will show you in code and find out how to do some of those work.
+And we'll see how it goes. Thank you.
+See you later.
+Produce more software or any information as to why you like this one?
+I love it. I think it is pretty low in value.
+So I think what we want is just to show up treatment, help.
+So people find it. Okay. Easy to go together very often and probably a part of something to answer your question, you know?
+Yeah. My job is yes, sure.
+Anything. Anything that works this time. I just had a question about that, too.
+Yeah, well, I wish you well, and I hope my coding is still work.
+They knew he. Yes.
+I mean, you know, you can you can write it on paper and scattered or just because interruption and paste and whatever,
+whatever your day takes will remain legible during those.
+That's according to data science, with all natural language processing tools that end with algorithms that actually work,
+the hardware can only work better and it can be better valuable as computing hardware network level would definitely be acceptable.
+Think this is what you see. This is what happened here that made up us right here.
+This is where you get to see. This is a little story we're driven by.
+But if you want to be closer to part one of the network processing system you want to deal with actually have value.
+Cloud computing is applicable to everything and doesn't have to be, you know, illustrative and innovative.
+What I agree is very hopeful.
+I mean, I really think the kids already did.
+I don't feel much more or less against them.
+I think I definitely, definitely.
+
