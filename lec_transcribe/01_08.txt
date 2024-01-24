@@ -1,0 +1,694 @@
+Was probably harder.
+Yeah. So not much else I can say.
+Yeah, Think that's pretty fast.
+Back to base. Yeah, I think, you know, I.
+Yeah. Sure.
+She. Right.
+Yeah. Yeah.
+Yeah. All right. Good morning, everyone. I'm assuming everyone here, as far as see, is 585 is grad course dealing with natural language processing.
+How many of you have met me before? You all right?
+So. Well, I have to introduce myself first.
+But before I do that, I understand. Well, I'm talking to maybe a third of you.
+This group is supposed to be about 100 students right now where everybody else is.
+But clearly, most of your registrants for this class live under the assumption that Professor Arco will be doing it right.
+Unfortunately, Professor Argaman was left this year and I took over,
+so I will not be open that if you choose student throughout this course, because why am I doing this?
+We're back. I think around there we're in a natural language.
+Processing is not my primary area, I call it.
+He is one which is an undergrad version of it, a little lower lo scale.
+So it's not like I don't know what I'm doing, but they're Anyway, this is not my research area.
+I'll do my best. Another fair warning. I learned that I will be doing this for about two and a half weeks ago.
+So it will be, well, a bit of an improvization as we go.
+So fair warning. Everybody understand that I'll do my best.
+I'm not going to hide things that I don't know.
+So ask me questions. Now with that out of the way, for those who don't know me, my name is the outlook.
+JAKOSKY That's at the top. If you can't pronounce it, that's fine.
+I'm sure I can pronounce some of your names either. So as long as I know that you're talking to me, we're fine.
+How many of you are registered for CSI? 85. 81 as well.
+Okay, So you're you're about to hear more or less the same spiel later today.
+Uh, who am I? I've been a variety for way too long.
+I suppose I got my bachelors in robotics and coal, and I get my Masters and Peabody here at AP, and I've been teaching.
+There are since 2019. So it's been a while.
+As far as my experience with natural language processing, I taught CS for 81, as I said, for two years this year of teaching.
+And again, it will be a much different experience, of course, with Chad shipped out there.
+So everything well gained changed a lot.
+Now how to contact me. Email is preferred, so please don't use Blackbird to send me emails just directly email me.
+I don't check. I mean, it's much harder for me to see emails in Blackboard than in my mailbox.
+You'll get the response eventually, but this is much easier.
+My office is upstairs. My office hours are going to be after this class on Wednesdays and Tuesdays and Thursdays around lunchtime.
+If you can't make it, this is mostly for online students.
+Is request meeting or we'll find out.
+Thanks a lot for that. Questions so far.
+All right. So before I go further, how many of you are here Because it's a required course for you.
+Don't you want it? Right. That works even better.
+All right. Where should we go next?
+I have one thing you to get out of the way as well.
+So let me ask you a question. What? What is my role here in Europe?
+According to you. I'm your instructor.
+What is my role? Because I want to make sure that there is no disappointments and misunderstandings.
+At the end of the semester. Okay, so what is my role?
+I'm just on the person to help you understand the course content to hopefully teach you something.
+And then the worst part is I have to grade you, right?
+So keep that in mind. I will do my best to teach you.
+Then we will have exams and I will grade. I have to grade.
+I will call it as I see you. All right. I fail people.
+That's not to say that I will fail any of you.
+But don't expect rule to is, Hey, I can't fail people, right?
+The point is, you get to work. Okay, so let's set that expectation.
+I'm here to teach you and then to Grady to evaluate.
+How much knowledge have you retain. I will have to do it.
+I will do it, and I will. There will be no personal sympathy ins or something like that.
+This is your exam. This is your grade. There are enough.
+All right. Now. Don't take that a wrong way.
+I have to. I have to organize this course or my semester.
+Somehow. I have almost 400 students this semester, which is up over 50% more than last one.
+Is that a lot? It is.
+So in order to.
+Help you go through the semester and all your colleagues in other classes for three other classes.
+I'd like you to help me with that by following some of the rules.
+So. Well, you're a grad student, so I have.
+I guess I can assume that most of you can read it. It's an email.
+I hope so. I've seen examples of something else, but I don't know what it means.
+Here is a little link at the top review.
+Second bullet point there. This is very important for okay at this.
+Do your subject when we're in your email. I know some some of you will forget it, but try at least that will help me quickly decide.
+What is this email about? Right. Where is it coming from? I don't know your names just yet.
+I will try to learn as many of them as possible. So please, please, please have identified your email subject.
+So I look at it and see what is it about the third one?
+I will. I promise I will try to answer all your emails in a timely fashion, especially for online students or in-person students.
+I expect you to be here and ask your questions here. But if for some reason you have to ask me offline,
+please do check the syllabus blackboard discussion board or review your lectures before you ask me a question.
+I might have already answered that. That happens all the time.
+It will save everybody some time. Blackbird discussion board will go to Red at some point is a great place for you to ask questions,
+as is a greater for me because I can answer it and everybody can feel other than just responding to the same questions 40 or 30 times.
+Okay. I understand some of you are shy.
+Some of you may have good command of English.
+Your English is your secondary language. Might not want to use the discussion board.
+But buddy, if that's not a problem, please do use discussion board.
+There is a little section general course related questions I have.
+Get there. Everyone will see my answer. All right, another important one.
+I know you love chat, use and all that stuff that writes things for you when you're writing your emails to me.
+Please spare me that.
+I don't want to scroll through two pages of only the lines with my goals and blah blah, blah, blah, blah, blah, blah, blah, blah.
+Get to the point. All right, people like I need this.
+Can you explain that? Two paragraphs to that should suffice.
+Can we have that? You guys are adults. You can write things on your own.
+All right. The next one is sort of just to set expectations.
+I'm not promising that I will be responding to you on weekends and after hours.
+I probably will, because I don't have a life and I love my students so much.
+But just don't expect that. Okay? I know you're getting everything in one second at three where your services are.
+Hey. And I give it to you right now. You want to use.
+Let's have a look. Right. Last one.
+Sounds probably harsh. It's not meant to be harsh, but it's true.
+If you're skipping classes that there's hundreds of you or something in section zero one,
+I will not be taking attendance here, even though I expect you to be here.
+Okay. But skipping the class and then coming back to me when you have recordings available.
+Hey, can you explain the entire lecture again for me?
+Just for me, because I wasn't there. I was watching Netflix or I was playing my favorite game and I didn't care about you.
+Right. That's rude. I mean, plus, I may not have the time to help you with that, right?
+Even though I'm fine, I'll do it. So.
+Once again, setting expectations. Unless needed.
+I promise I will respond to you with within one business day.
+If I did that, that means that I probably miss your email.
+Please remind me about it. Okay. Is that clear?
+All right. Questions? Justin Bieber.
+So today we're not going to be doing any actual lectures, just full production.
+I'll go over the syllabus to set the rules so no one.
+Nothing will be big about the course. There will be no office hours this week, so I will hold my office hours, three days a week.
+I will respond to your emails. I imagine you will have about 40, maybe five days for this course.
+I only have one name so that you will be updated on that.
+But of course they will not hold your office hours.
+If you need anything from me. This week.
+Just email or ask me before or after the lecture.
+That's fine. Uh, first communication.
+Everything. Everything that you need from me will be on Blackboard.
+I will let you know what the plan is, what you remember about in Blackboard quizzes.
+So of quizzes, if anything.
+Quizzes as in multiple choice questions, that sort of thing, to help you refresh your memory.
+I'm considering adding those two to the course.
+They're not they're not going to be a fundamental part of the course, as in, there will be no quizzes you will be graded on.
+Those who were in my first writing class know what it means to not have those in this course.
+I might just post quiz here. Practice.
+Okay. Here's a bunch of question questions.
+Go through it. See if you understand the questions. Understand what?
+What this name means, what this acronym is about.
+It will be for practice purposes only. Okay. If anything that depends on on time that I have but assignments.
+I'll go to Blackboard in a bit. In a bit. Assignments.
+Announcements. Your grades will be in Blackboard grade wise.
+Keep in mind that. Oh, the weights will not be added in Blackboard.
+No, the weights will be in the syllabus. If you want to find out what your score is for the course, you will have to recalculate it yourself.
+The reason I'm doing it that way is because, well, especially for this course, since it's my first time.
+I. Having planned exactly how many assignments there will be, it will kind of depend on your performance to some degree.
+It will all depend on the pace of the course.
+I have no idea how this will play out. Out. I want you to.
+Well, it will. The pacing of the earth will, to some degree, depend on you.
+If I need to stop or slow down or speed up something, I will after consulting.
+Is that fair? And that will translate to the amount of assignments.
+We'll talk about those questions.
+All right. So let's go to Blackboard for a second. As everyone received my blackboard announcement.
+Okay. You haven't. That's that means that there is some problem that we need to resolve.
+Luckily, it's not a problem.
+All right, so here is your 585 blackboard page.
+There is the syllabus. I will update it at least once with T.A. information.
+It's not like I'm going to be in the middle of the semester. I'm not going to change the syllabus entirely as there will be an update.
+I will put a time stamp here so you can see where it was updated.
+But the only thing that I plan to change is adding information.
+Everything is in there. I expect to read in the past years the information about me and my office hours.
+If and if I see an email from one of you with a question.
+Hey, where is your office? I'm going to lose it. All right.
+You guys are 20 somethings. Students should be able to find that.
+Why am I bringing it up? It happens every semester. Hey, where is your office?
+Like, All right. This is information about me.
+TBD for days. All the information email where they will be holding their office hours, how long they will be here.
+I will let you know what you do. Or this is probably not super important, but.
+There is a serious department page with all sorts of stuff.
+Seeing students. I don't even know what's here. I just added it.
+Maybe someone will find it useful. Just a short book for your academic calendar for the semester.
+So you know, where's the deadline to withdraw from this wretched course?
+Okay. Textbooks. Let's go to slides for a second.
+There is no required textbook for this course.
+The reason for that is. Well, I told you that I'm not an expert in that,
+but I've been looking at text books drawn up for a while and the single one that will become comprehensive.
+And, you know, there are three references that I will.
+With YouTube every once in a while as an optional reading.
+These are. The optional extra that I'm talking about.
+The first one is, well, almost 25 years old, actually, without five months.
+Right. So. It is kind of it is dated.
+You can find a PDF on it online.
+I will not for copyright reasons. I will not share it with you.
+But you can find it if you knew the stuff in there is, I will.
+I wouldn't call it obsolete because it stops.
+But things are not being done that way anymore to a large extent.
+However, there's a lot of interesting background information on.
+What do you have to do in A.P. and how it was tackled in the past?
+We'll spend some time in this course going through historical approaches,
+eventually arriving at these or whatnot by the end of the semester in the second half of the semester.
+So this will be relevant. To some degree, I will not give you any reading assignments from from that textbook.
+I own it. But if you find it somewhere and you are really interested in help, it's still worth your while.
+Okay. These two. This is probably the as far as I'm concerned, this is probably the best one.
+The most comprehensive one. There is a third edition in the making right now.
+It has been in the making for a while because this one was published in 2008.
+The good news is. This is.
+This is the one. This is a third edition draft online for free for you to review.
+Of course, it's a draft, so it's being updated. There's bugs in it, so take it with a grain of salt.
+I will give you reading list optional reading assignments from this source.
+Okay. You have a link and use it.
+It actually gets pretty good in my opinion. The second one.
+Is. This is probably the newest one.
+This one's not my favorite, but it's good and you can find it all the way as well.
+There's a link to the GitHub page somewhere here. The notes are really a draft of top of the of the book.
+This is a grad class right here, mostly grad students.
+I do expect you to explore on your own and so I will not be forcing you to go and read this and that, but I will be.
+The idea is I will cover a topic in class.
+And if you want to learn more, here are resources for you to go to look up topic.
+Look up the algorithm. Whatever. Follow up.
+Okay. You can ask me where should I look for or more?
+That's fine. I welcome requests.
+Hey, can you point me do some YouTube? Resources that cover this or that topic.
+I will not. I don't keep out a lot about the use of resources, but I will look it up for you.
+Fair warning. There's a lot of crap on it, but seriously bad, bad material that won't just mislead you or that the explanations will be off.
+So I will try to, if anyone to I will try to find something that is in sync with reality.
+All right. Don't believe everything on the Internet.
+People believe that the earth is flat right now.
+There was some bad stuff about Michael, but read it and make your decision, whatever you want to state.
+All right. Textbooks clear. If I find anything else, I'll share it with you along the way.
+A meeting and a new textbook shows up. I don't want you to buy anything.
+I don't want you to purchase any textbooks. If you are into A.P., you might consider getting a hard copy for one of these entirely optional questions.
+Okay. So here's what we're going to do every week.
+Those who know me. There's nothing new here. We'll meet in class.
+Right here. I don't think the room will change. I doubt it.
+On Mondays and Wednesdays that every week around Wednesday, I will send you a black birth announcement with your weekly to do list.
+This will be a reminder. Here's what I want you to do for the next couple of days.
+It will be mostly in sync with what I'm doing in class.
+Sometimes that to do list will see what I will cover.
+Sometimes it will follow you. Sometimes I will not be reminding you.
+I will forget to remind you. Here's an assignment in a week.
+But Blackbird will remind you about it as well. In other words, your aggressiveness.
+You have to keep track of it yourself. But I'll do my best to include everything.
+Okay. Full disclosure for working.
+I can't do copy paste stuff a lot, and every once in a while I will slip up and something will not add up.
+Just. Okay. Hey, what's this about? All right.
+This does not add up. Okay, I will correct it.
+I can admit my own mistakes, which is arriving these days, so I don't have a problem with that.
+Call me on it because I expect to call you on stuff, I think.
+Oh, is that okay? And I call you on your behalf sometimes, if there's any.
+All right. What do you do? Lists. We'll have reminders about what do you have to do?
+Reading, viewing assignments and information about your written and programing assignments as well.
+So I will announce your assignments ahead of time.
+Sometimes I will tell you what it's. What is it going to be about?
+Not that it changes a whole lot. And then here is something that I hope you will be using is the discussion board where you can ask your question.
+Questions about assignments. There is probably some more stuff that some other threads there will be started here for now.
+You have general cursor related questions. Ask anything you like.
+I will probably add a thread about coding and python.
+How are you feeling about python? Good.
+But I don't need to hold anyone's hand. I have to do that.
+We can talk. Okay. So discussion board is something that you should check frequently, especially once the assignments start.
+Because from my experience I get questions via email that I already answered in the discussion board.
+I don't want to be rude. I checked the discussion board, but it will be here if it's not here.
+Might as well ask me a question. What do you mean by that?
+How do you handle that? Right. Use it. All right.
+Since we're back in black words, Blackbird class notes.
+Expect this section to expand. This is where a word of your materials will be.
+Lecture slides will be posted typically before the lecture.
+Sometimes I don't anticipate that for this course, but sometimes I will not post a slide that before the lecture.
+If I want to have a discussion without you having the answers in front of you.
+But that's that is going to be rare. And if that happens, you will get your slide back afterwards.
+Now, another full disclosure. I've heard complaints about myself in the past and how he's just using slides and reading those slides.
+I don't read all the slides. Sometimes I wonder if it's a definition, but you trust me.
+You don't want me writing on the board, especially this board right here, those various mobile.
+So what I do is I will create a slide deck with enough details in a step by step, walk through, through,
+through a problem or something like that, so I can refer through it without using that you can see to scribble.
+Okay. And then. That's just that gesture.
+Okay. So slight backs are going to be there for you. Can I make a comment here?
+General Colbert. So once again, I have not taught this course before, but I've dealt with grad students since four for 8480,
+which for those who don't know, is introduction to it. I. In.
+Oh, some of them. They bailed out, of course.
+And my observation is. Once again, Internet may say something different, that I'm the most horrible person that is has no morals, empathy whatsoever.
+But my observation is. People who do not come to lectures.
+People do not take notes. People who do not ask questions are the ones who say thank back.
+I know that having a slide deck online is very convenient because you have everything in one place.
+But from my experience, I'm twice her age.
+Taking notes yourself. Helps a lot.
+You don't like writing or your brand type it, whatever, but it really helps.
+I don't care if you will do it. It's. It's you. Whatever your system is, whatever your preference is.
+I don't care. That's just fair warning. Look at that house.
+So even though I will post everything in there, scribble on it, add an added comment, whatever.
+So you know what we're dealing. That's just my experience.
+Lecture slides. There will be more. I'll post some links to YouTube videos.
+I will probably have some worked out examples here as well.
+And we'll see. We'll play it by ear. Okay. Worked out examples will show up in the class for some reason.
+I will be talking to you and whatever I have in front of me is not cutting.
+I need something more. I'll add something. Okay. Check frequently during class recording.
+Panopto section is where the recordings of of lectures will be.
+This is a message mostly for for online students.
+I do not record them myself. I do not control them.
+I do not create or fix technical issues with that support desk.
+Okay. Now it's 21st century.
+So I decided to merge the Blackboard page for all my sections.
+So that means that both in in-person section and online section have access to recordings.
+Of course, many of you will use that as an excuse not to show up.
+You're adults. You might pay for it.
+Trust me, I've seen that over and over. Watch all the videos just before the exam.
+I'll just go skim through the slides and I'll be fine.
+Some of you will. So there were any those I get.
+So I'm not hiding that. It's available to everyone for review if you're not able to make it.
+By all means, use it. Fair. Or do you want me to hide it?
+Of course. All right. So that's. That's Blackbird.
+I'm assuming everyone knows how to use Blackboard otherwise for checking grades online, though.
+Okay, well, questions. So far, so good.
+All right. Well. What will you need other than Blackbird?
+Oh, you will need a computer with Python. Is there a question lurking in in the audience?
+Can I use FORTRAN or COBOL or I don't know JavaScript to do for my assignments?
+Is there a question like that out there? If Python is not your preferred programing language.
+I understand. It's not mine either. I don't consider it a superb language.
+The reason I will insist on using Python here is for grading purposes.
+Okay. So what I think right now all three sections are it's almost 150 students in this course.
+There is 48. There's going to be a lot of grading if we can have some consistency, an automated rating to some degree, that works for everyone.
+You will get your grades faster. Does that make sense? This is the main reason behind using Python here.
+The second main reason is Python is a these days and most most of the NLP libraries are in Python.
+You don't want to break up your cells though.
+I may ask you to write some things from scratch and NLP related by the way on.
+This is a serious course. I understand that you want to learn about tragedy, transform architecture, so whatnot.
+You're right. Because it's hot stuff right now.
+But it's this is a serious course, which means that we are more slanted towards the your understanding, implementing,
+modifying or operating versus just using it a type in this command in Python and you will get this, is that clear?
+So that's my expectation. You know, decent math statistics and programing skills.
+Do we have that? All right.
+See, attending the class, As I said it, it does help.
+I will not be chasing or hurting you to come into the class.
+In fact, there is going to be an intangible class participation factor, which some of you were familiar with, who took my class before.
+So I'll be keeping an eye on your attendance.
+I remember faces. I will keep an eye on your class participation.
+This helps me to understand where you are really with your interest.
+If I never interact with you, if I never see you in class, all I have to deal with is your assignments,
+which I don't really care that much about in your exams, because I have to give you the grade.
+Right. And then if I have your exam. What I see is what you get.
+All right. But we'll get back to it.
+So my advice, half the class that really makes a difference should see us skills.
+How many of you are announced? Yes. Is there anyone here think there is one biomed student online line or something like that?
+Well, data structures is recursion. I don't suppose that's a problem.
+Oh, let me backtrack. How many of you are?
+For How many of you see this was not your undergrad program.
+Okay. So I understand that you went through Sears for a one for 30, right?
+Maybe. Hopefully. If you need help with any of these, just just ask.
+All right. I'm not. And to some degree, I will take the assumption.
+I will make the assumption that you all know everything and are comfortable with algorithms.
+Data are structures. I know it's not the case even with CSS students.
+I will not leave you hanging if you are missing something, but you have to approach me.
+I need help with this and that. Okay. You will need the.
+Problem solving skills. Abstract thinking. I always add it here because my exams are designed to test your understanding.
+Okay. What does it mean? It certainly does not mean.
+Here, here's a list of 100 questions. Memorize them and I will pick ten of them.
+So you can you. Maybe you will remember that this is not what I will be talking about.
+Something in class. You will be doing something in your assignment.
+And then I will take that on the exam, flip it around, turn it around and make you solve a problem.
+It will not be difficult, but you will have to look at things at different perspectives.
+If you don't understand the concept, it will be a problem. Is that clear?
+So you have to have them. Memorizing is something that I abhor.
+Okay, so there are things that you have to memorize, but. Use that kind of curiosity of the mind.
+Of course, creativity. Yeah, I like that.
+Okay. Someone's creative. Here is where I dislike creativity.
+Mind you, if you find a loophole on the exam that will make your life easier.
+I hate that. I will close that loophole and during the next semester I will give you credits there.
+Okay. That was a side note.
+Speaking of which. When in doubt.
+But I will be grading or making some sort of a decision unless you did something or blah, blah, blah, blah, blah.
+I will rule in your favor. Okay. I'm not sure.
+How to grade your work exactly. It will be probably more in your favor than that.
+Okay. All right.
+Questions? Page.
+This will be updated. So nothing new. All right.
+Exams. There will be two exams.
+Dates are already in the syllabus. Anyone who has a problem with those dates, this is the time.
+I mean, the next few days, this is the time to bring it up.
+The exams will not be cumulative, meaning that half of the material, the second half of the material.
+Oh, don't blow it and start learning.
+On day one, you will be allowed to have a one double sided letter size cheat sheet for your exams.
+Fair warning, no electronic devices. There will be a need for calculator, regular cutlery.
+This maybe. No airpods, no phones, no nothing.
+I will explain the rules before, but I'm laying it out right right now for you.
+Nothing on the exam. And I promise you that it will go beyond lectures and assigned work.
+That does not mean that there is not going to be a little working or two or three questions that are testing.
+What are you actually paid attention to at some point?
+To me? Okay, I have the right to ask you anything about.
+But the material that we got. I will not provide sample exams even just because I don't have it.
+I have never taught this course. And then plus, I don't do.
+I don't like doing that. That's not.
+And in my blood, your assignments and your coursework and your attendance should serve as a preparation for your exam.
+Is that clear? The last line is very, very important.
+I have no reason to distrust you. The distrust.
+But then again, I have tons of reasons to distrust you based on my experience.
+So exams are my only real significant way of evaluating of what you love.
+Right? I will not be hovering around your head when you're completing your assignment to check whether you're cheating or okay.
+I know people do that all the time now with all of my services.
+This isn't something that I'm not going to be fighting. Okay.
+You're getting your assignments. Make the best of it if you choose to.
+Cheat there. Then you get away from it. It's very likely that I will find out on your exam and your exams will matter.
+But in the end, when I won't be assigning your final grade.
+If your assignments are spotless and your exams are.
+Horrible. There's a very logical, logical connection in my mind.
+Hey, something does not add up. And the example will be my leading source of information.
+All right. Assignments, as I said, use them to study and prepare for exams.
+I will help you with your assignments if you're stuck.
+I will not give you solutions, of course, but I'll give you a chance.
+Just ask for them. They're not going to be hard.
+There's not going to be extra credit. I don't do extra credit in my courses.
+Why? I find that unfair to people who work in the entire semester.
+I don't know. So I'll ask if there is going to be any extra credit.
+It will be for the entire group. That's the only fair way that I know of.
+Simply don't let assignments. I think I give everyone enough time to complete assignments.
+Way more than it's necessary to complete them, and I would expect you to complete them on time.
+There will be a ten minute grace, grace period for you to submit your work.
+Afterwards, your assignment is going to be considered as late as gets your reports.
+There's one exception. You can play the card once during the semester.
+You can submit your work within 16 hours of the deadline and you will get 50% of the credit.
+This is known. Not negotiable. I will not be here.
+Procrastination. Okay. There's always people do it all the time.
+You do the work. I'm going to respect that. And they all will be treated fairly.
+That's good. Having said that, there is nothing wrong in asking me for an extension.
+I will decide whether you will get that extension or not.
+This is not going to be like a week extension, a day or two, depending on the weight of the assignment.
+But whilst this extension is given. No late submissions whatsoever.
+No. This is for the most part.
+To make the course run smoothly for years, to have the time to grade it for you to be prepared for the exam.
+And so on and so on. I. If it wasn't for that having just completed and submitted, I don't care.
+But it has to happen in some structured fashion.
+So I'm not it. It may sound like I'm straight, but you will have enough forever.
+All right, Who else?
+Oh, this is what I wanted to say. This is a tricky subject.
+So bear with me.
+I understand that regardless of all the convenience of the modern university, there is a lot of pressure on you, financial and otherwise.
+And there is. There's always mental health or other issues at play for some of you.
+Usually if there is a problem of that nature of any other or any other nature, please stop.
+Okay. In private, I will keep it to myself. Or if it applies to whatever, just.
+I don't because this is optional. You don't have to talk to me about it.
+There is something that I need to know that affects your performance.
+I mean, it doesn't mean that I will make some special accommodations for you every time I might.
+This is to say that I'm not a heartless person.
+I recognize that it's just not necessarily something that I can help you with.
+Okay. You have to deal with that in your self procrastination, your.
+Your whatever. What's going in your head? I'm not trying to make your life miserable.
+I understand certain things. There's not much I can do.
+If I want to remain fair to others. But we're human beings.
+We should communicate. Sounds good. For medical reasons.
+You have to document this applies to exams.
+Don't expect rescheduling because of because while you want to go and see Taylor Swift tonight other than studying, let's be real.
+Okay? US. And by the way, this is something that I experienced and it seems to be on the rise.
+People make up excuses about things they should not be making up excuses about, like, Hey, someone died in my family.
+No one died. So when you're trying to gain my sympathy that way.
+This is not cool. Okay? Same with mental health issues.
+This is even worse if you're just going to pretend so you can get happen that way.
+I can't question that. So don't. Please don't do that. It happened in the past is this is why I'm bringing it up.
+Okay, we can talk about problems, but just don't lie.
+All right? Anything else? Questions? Can we go to the syllabus?
+How many of you want to quit the class already? All right, syllabus.
+I expect you to read it on your own. How much time do we have? About half an hour.
+All right. Do it. This information was covered already.
+Exam dates. This is in part we will we will have our final I planned our final for the last week of classes.
+Not the week of finals. The reason I do that is with almost 400 students, I will trying to grade that before the semester is over.
+And I need time to be able to show your graded exam to you as well.
+This is the only reason why I'm making it. Is that okay?
+This will be our last session. We're actually kind of lucky because, well, after 1240, this is your lunch break, so.
+Unless anyone objects for exams, I can just extend the session more time for the exam without the okay,
+cut into your meal time so you can have more time to solve your problems.
+Related full. Once the exam comes up a lot.
+You hear this? This will be.
+I've seen it. Let's we go Let's talk about the topics that we will cover in this one.
+What are your expectations later? What do you want to learn?
+You get a grade and go? Possibly.
+Okay. The plan is, as I said before, to kind of at.
+Semester in the first part of the semester,
+a little above that will be kind of going through historical approaches to NLP and plucking certain components of it that are still valuable.
+I will tell you probably a lot of times that a.
+This is not exactly how things are being done at the moment.
+But that doesn't mean that you should disregard that there is some application for some of those algorithms that will go over.
+So how many of you have any machine learning background?
+Oh, okay. So I guess we'll do a little introduction to machine learning as well, because the second part will be,
+you know, Transformers chapter three is how, how do those things work?
+Of. I'll be blunt. We will not build a church, a fully functional church in this class.
+And you probably know the reason. Right. You you know, you don't have the processing power.
+And first, first and foremost, data.
+That they used. Or any other company.
+But we will. I plan to have at least one assignment that kind of mimic working with or building apart a large language model.
+I once again, I was given this course two weeks and a half ago, so I don't have a full blown plan.
+But this is this is in my mind. Well, we'll we'll get it.
+So at the very least come coming out of this course, you will understand what is behind tragedies or any other large language.
+What you mean We may not be able to to to build it from scratch, but it will do something about it.
+Is that I. Okay. This stuff right here.
+It's going to be. Basics.
+Sort of a word that natural language processing came from whatever the components were, bits and pieces.
+Here's another thing that I have to mention.
+I'm not a I don't have a linguistic background so that that doesn't necessarily get in, get get in the way of teaching.
+You know, especially nowadays, linguistics or the understanding of the language is, is less and less relevant for first to making NLP work.
+But it matters especially how many of you would like to look to build and NLP model in your own language.
+I'm assuming some of you are more than bilingual or trilingual, right?
+That in that case, having some linguistic understanding helps.
+Most obviously, English is not my primary language as well, so I'll take that as well.
+As a as a factor, I understand you it so.
+How many of you are concerned with? Ethical.
+Applications out there. Raise your hand.
+It's fitting. Let's have it. Let's make money off of it.
+Right. Here's the thing.
+This is my personal opinion. It doesn't mean I'm.
+So can I do a little rant? Like a little rant?
+Yes. The speed, the pace with which it changes right now is it's crazy.
+It's just it's just mind blowing. One way it affects you in this course is that I'm.
+Definitely not going to tell you about the latest and greatest or whatnot.
+By the time we're done with this semester, there's probably going to be a million other developments.
+So catching up with the novelties is going to be hard.
+Actually, you know, university courses used to be used to be ten years behind.
+And we're teaching things that are established and gelled and solidified about ten years ago or so, and that has to speed up.
+Obviously, it's hard. Second thing, as much as I would like to uncover everything that is under the control of tragedy or whatnot,
+or you won't be able to because it's proprietary, we'll never, unless you work for open, they will not know what's inside.
+So I can't you that. Third, and this is what I was getting at.
+How many of you are aware of us of all sorts of legal battles being opened in A.I. or other companies?
+That that creative, generative A.I. tools some of you.
+So essentially the the bottom line is that tools such as as GPP.
+Collect use the data that was collected not necessarily in a legal way.
+Recently, I read about New York New York Times having a legal battle with open dude.
+Hey you guys is our user article with articles without pay, right?
+So this is an ongoing problem. And my guess is that the way and tools will be created in the few near future is is going
+to be affected by that opening or whoever will not be allowed to use a certain data.
+Without permission. And that will definitely affect some sort of some parts of the model, some some quality.
+So I want you to have that in mind that whatever we will talk about might change.
+And there is an ethical component to it that cannot be disregarded anymore.
+And I forgot what my training was, but.
+Oh. We'll talk about that part as well.
+You have to call. Aspen.
+How. Oh, I got.
+I mention mentioned that parts of the material are kind of dated, right?
+Some of you understand machine learning as well. Right.
+If you do understand machine learning, you should know that.
+Can you explain what the machine learning algorithm does every time?
+Not necessarily. There are algorithms that are explainable where you can go back and say all of this is because there was an even statement there.
+This is what happened. And there is algorithms that are not explainable or are very difficult to explain.
+So the reason I brought up those legal battles, this is not only privacy, this is not only copyright issues, but there is also a worry.
+Why did you write that? You. Explain it to me.
+And that is going to be a problem.
+And if that becomes a large problem, enough people might revert in some cases to, hey, we were doing it in a different way before.
+It wasn't as good as Chuck D or neural network, but at least I can use it to explain it.
+Does that make sense?
+So my point is that the stuff that we that's historically a part of anarchy that is not so used anymore might come back to some degree.
+All right. Second part conversa conversational ai large language models, which is chap chip and whatnot, generic the VHS game.
+But. Or more in the emails generating new text.
+Other than just giving more simple responses, yes or no classification, that sort of thing.
+These will be the. Closing.
+Topics for this semester. All right.
+Anything? Is there anything that is missing here that you would like to add?
+You're welcome. This is your class. You're welcome to suggest something.
+I will most likely come back and say I refuse to do that.
+Just kidding. But that there may be no time for that.
+Or it might be. It may require a certain level of understanding that is not in that group.
+So we'll see. You're welcome to bring up.
+Can we talk about this? I will take a look at your suggestion, if I can.
+I will plug it in. Within reason.
+So fire away. All right, as we go.
+By the way. I will try to gauge or look like this in terms of understanding.
+This is computer science basics, machine learning, understanding, that sort of thing.
+You know, to navigate that can't keep it somewhere in the middle.
+All right. Because I, I understand how frustrating it is to go to a basic stuff over and over when you would like to get to that.
+But I will try to balance it out. All right.
+So this is our. Plan.
+These are the key topics that I will address. I think everything that is listed here will be covered and I will try to add as much.
+Other stuff as possible. As I get to preparing all of the materials, most mostly the old stuff is already in there.
+My 6481 experience. So we'll all have time together to.
+All right. Let's go further to the two things that matter the most for some of you online students.
+Just a reminder here, I will not be doing live streaming in class.
+I try to do that for for for for a while in my other classes.
+That is just a chore and it's not really helpful.
+So I will know that your recordings will be posted in Blackboard.
+I normally see them within a couple of minutes after the lecture is done, but it could be hours.
+If it's not there, Contact support desk exams for the online section.
+There is the name you should get familiar with Mr. Charles Card.
+He does. He arranges all the online section exams.
+I don't do that though, any for every single student on the online section.
+Even if you're here every week. You have to talk to Mr. Scott before of exams to arrange.
+This is where I will be taking your exams. I haven't looked where everyone is.
+If there's someone in my section that is in California or Texas or something, there is testing centers.
+Everything can be sorted out, but it has to go through.
+Mr. Scott. No, the part, the hard part.
+Grading. Rhythm assignments.
+I don't know how many there will be, but I would expect four or five 20% of it rate are coming.
+Assignments 2 to 4, depending on your python skills.
+Okay. I I'm pretty, pretty surprised every every semester that a lot of people just struggle with it.
+By the way, I will help you with every single programing assignment.
+I will not solve it for you. But if you throw a question at me, Hey, how do I do that in Python?
+Even if I don't know it? I will try to look it up for you if I have to exact.
+All right. So don't sweat any 20% for your programing exams, both exams or 30% of your grade.
+There is only a few undergrad graduates, so mostly this scale applies to you as is usual.
+Now, this is probably something that you don't see in other courses.
+This is. This is what you need to get on a. Word, we're going to start to get an A.
+You need. To score 90% on the average of your belt exam has to be above 90%, and your total score for the course has to be above 90%.
+That cleared. That's a lot. That is this is going to be a challenge.
+I am ready to relax those rules a little bit.
+Depending on how everyone performance.
+But the reason I'm doing it that way is, once again, your exams are my only way to truly gauge vaccine selection.
+So I've seen more cheating over the last three years that I care for.
+Okay. I don't want. I don't want that. I want people who really work hard to be rewarded.
+I don't want cheaters or dishonest people. I'm not accusing anyone of anything.
+It's just pure statistics. Okay.
+So, exams. Show me what you got.
+We'll see after the first exam where the group stands, I might relax.
+Those are all solo. So don't freak out just yet, but I have expectations when it comes to your exams exam, so you better get on it early.
+Don't drop the ball. Okay? Oh, what else?
+Is that clear? Okay.
+Ethics. Well. He went through it time and time again.
+I do. Ask you not to lie to me.
+I get lightning every every semester, regardless of me saying that, but I really don't need that.
+It just takes a lot of my time to track things, to correct things, to analyze things.
+We can communicate. I understand that this is what usually happens.
+People wake up after their first exam and said, Oh, my exam is my first exam.
+It's bad. How do I get to an end? Right?
+And this is where people will say, okay, maybe I should track this.
+And then. It usually doesn't work on exams.
+Oh, I don't want that. I don't want any sort of cheating.
+You know that, right? Hey, if I find anything in your assignment, that is cheating.
+No matter how small, you're getting zero points for the entire assignment and you get a reward.
+Exactly. I will not be tolerating them. No tragedy exists or other tools exist.
+I'm assuming most instructors are struggling with. How do you tackle that?
+I want to know your guys. Both of your AA students or many of are as students.
+I definitely want you to embrace it, but there is a line that has to be drawn.
+So this is where I'm drawing. You are not allowed to use strategy or tools for your program.
+Is that cool? Yes. I don't want people to come back to me.
+Well, if I have to. Programing are things that are look almost exactly the thing that happens for some strange reason.
+It's called coincidence, according to students.
+And then they can say, Oh, you gave me the same suggestions.
+We're not going to have that. Instead, please ask me if you need help with turning out like this again.
+I will help. You don't have to cut corners.
+It's okay not to know how to solve a certain part.
+Okay. I'll help you.
+For written assignments, you can use Chad GP2 to some degree, but you will have to document all your chargeability or any other air to air.
+You will have to document it and add it to your report.
+Okay. I use this prompt to solve this problem, to answer this question,
+and I don't want you to use air tools to answer questions for you, but to help you understand.
+Of course, I will not be keeping track of that. But let's have a healthy, healthy activity.
+All right. Once again, I will not be monitoring what you do in your assignments, assignments or for you to learn and study exams.
+It is where I'm going to pay a lot of attention.
+It doesn't mean that you should go and cheat and cut corners with yourself because day assignments will help you really, really help you for exams.
+Trust me. So is that cool? Everybody understands that.
+Additional accommodations. If anyone needs accommodations based on some disability or anything of that nature.
+There is KDR Center for Disability Resources and IAP can contact them and I'll order as best as I can and you request of that nature.
+Great. Oh, yeah, that's it.
+Any questions? No.
+All right. Any requests? Oh.
+I have fair warning. I'm not a comedian.
+I'm not going to make that entertaining. I am.
+If you stick with this course. I am cynical, I am sarcastic.
+Sometimes I'm not politically correct.
+I will try to keep my mouth shut. I will never, ever try to offend you.
+If anyone feel that I offended you are saying something.
+That was definitely not my intention. But these days everything is possible.
+My English is secondary language. I think I'm fairly I'm doing well.
+But I can make I make mistakes every once in a while. Call me on it, ask me to explain again, rephrase it, whatever.
+If you need anything from me, ask for it. I don't handle entitlement well, so keep that in mind.
+I owe you teaching. I owe you grading.
+I owe you. Everything I have in terms of my knowledge, but that if anything,
+anyone here has sort of as client service attitude towards academia, like you're paying tuition, this guy should be all helping me.
+This is not how I work. Okay? I will not be responding to that.
+This is not backed up and you are not allowed or that's too big of a word.
+I will not respond well to two comments.
+Hey, where is my second pickle? This is this is not how I work.
+Okay. I will be respectful towards you.
+I, I understand that I respect from you is not a given.
+That's fine. Hopefully open it along the way.
+In other words, I'm telling you all these things about my approach to teaching and my attitude towards certain things.
+Because I want us to understand each other and go through the semester smoothly.
+Okay. Oh, So have 2 minutes left.
+Right. Anything else? Ready to learn something?
+I promise you, some of that stuff is really boring. So get ready for it.
+Really? Really not. Exciting something.
+All right. If there's no questions, you know where to find me. Otherwise, I'll see you on the last day.
+Read the syllabus. Make sure that you understand everything.
+You later. Thank you. What do you mean?
+I intended to do. Think.
+You know. When the hearing ended, as I think I put it, a was like that.
+I was like, not in the black community, you know.
+We'll keep you updated. I think we may have lost the section where they all sort of very email support this.
+I should be there. I'm not there. That's all I have to connect.
+Is there anything they naked be going to be highlighted in this?
+No, I. I'll take it for you, etc. You're not going to end up anybody who refused to play or they played.
+They're different. There won't be at the end though.
+I think all part of part time, which I was a little bit, but I think there is very little overall, there is not much of the know.
+I think, you know, I think a lot of people look, I think you can make up your own brother, not your own right.
+But I think for the most part, I think I have some planning.
+Really. I would like to sort of, you know, you know, you're see, these great is not enough people think about by three other parts.
+But I will point out that, you know, there's an old single from Spike Lee's right because I mean yeah I see programing as I know.
+I hope them to be related to each other. I would definitely cumulatively make it.
+Yes, I think that's good. Or at least some of it we'll be able to reduce some stuff.
+Ultimately, what you do with the company are so we think there's all people see the challenges, see the complexity that comes with potential.
+Stand by. Thank you very much.
+All right. Any other questions? I think the message is ready, obviously, that you are okay.
+You aggressively address the underlying position.
+Okay. Yeah, I you go to Blackbird so people will see us resources, blah, blah, blah.
+Click on there. There's a date application for grad students. I don't think you will get to this semester, but I will handle that.
+Instructors don't handle that themselves like you as a grad student will have to fill out the form because it's a little late for that,
+but you can still try it. Can I get in on the caller?
+And he has lost your experience there.
+So I thank you, Mike. I can't promise you that.
+I don't decide. I don't know. I mean that certainly.
+I think that's fine. That's that's what I look like you get.
+I just wanted to ask, but this could be included in your movie, which will be 60 characters and not enough.
+Thank you for that. That's good law practice bird theory before that.
+So that what's better than what I did in my undergrad.
+So.
+
