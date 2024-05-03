@@ -1,0 +1,669 @@
+This is glory. Don't worry, I will not share it with anyone just for my personal amusement.
+Robots don't have to live. Could be the assignment deadline.
+All right. Good morning. Questions.
+We decided to change. Otherwise, we'll talk about.
+Some of the more advanced neural network structures that are used for, um, not only text processing.
+This is the recurrent neural networks.
+Part of neural networks is a stepping stone towards.
+Encoders, decoders, transformers for the most modern architectures.
+So let's talk about it today. But before that, do you remember convolutional neural networks?
+Okay. There were when I was describing them.
+Right. I told you that they're mostly used for images.
+And it makes sense. You're the network is learning to figure out filters that are pretty easy to, well,
+maybe not pretty easy, but quite easy to picture as something that filters out aspects of an image.
+But what about using convolutional neural networks for text?
+So convolutions in image processing.
+You can think of convolutions that amplify the presence of a line.
+Diagonal uh, an I or some little details that that are shows up a lot in, uh, input the training data set.
+Uh, what about text?
+In other words, those convolutions, those filters, those convolution kernels are able to look at more than just one pixel of an image, just.
+And it will look at its neighborhood.
+And we'll try to summarize the relationship going on between neighboring pixels, right align curve, whatever in good and gross.
+I'm very good okay. So context right.
+Anything else? Think about, as you said, Ingrams, this is a wider spectrum than just one single token or award, right?
+So we're looking at more than one component, a little piece.
+We have more than one code token to look at.
+If we have more than one worth to look at, what can we see based on your experience in this course so far?
+How about your your, uh, current programing assignment?
+Would you extract some sentiment even just by looking at a few neighboring words?
+It's much easier than just looking at a single word because you have you get a single word happy, right?
+But then you have a surrounding word not happy about something that changes everything.
+So thinking a little along those lines, convolutional neural networks.
+Can be applied to tags. They're not often applied to text.
+But you could train a convolutional neural network to detect little details about, um, more than just one word tense.
+It is possible to do that. You will not see convolutional neural networks very often doing that.
+But you could play. Uh, also.
+You can think of as convolutions.
+I sort of remember those convolutions in convolutional neural network are filters that are meant to highlight something.
+So. If you apply convolutional neural networks to text, you can generate filters or kernels that will act sort of like,
+uh, a higher level embedding of the word we learned about word to vec.
+We didn't talk about other more than embeddings.
+Word to back is uh, is uh, individual word embedding.
+There's a word or some vector for. By the way, word to back has a has a boy in a middle of a truck coming.
+Because it will if you you if you're going to use word to that embedding,
+you will end up having the same vector representation for the for word regardless of its meaning.
+So if you will have two sentences. I like this book.
+Right. And another one, I want to book a flight.
+You will process it. Replace every single word in those sentences into word two like vectors.
+And are the embeddings going to be the same for book and book in both sentences?
+If he's worth to that. Yes. So those embeddings are not going to keep any, any information about the surrounding.
+There's other levels of embeddings of higher level embeddings that can be generated.
+We'll talk about it later today. Okay.
+Uh, convolutions are not going away.
+We'll come back to it. Uh, I'm going to give you an idea.
+Um. Of using your CNS for classification,
+you could use a convolutional neural network for exactly the same problem that you're trying to solve with your current programing.
+No problem with that. You could do it. You know, what you are working on right now is kind of equivalent to this last layer.
+That would be the the regular neural network. You're not making a neural network, but that neural network is doing the final classification.
+Convolutions happening here are trying. Is that part of the network where you're trying to highlight new words and
+prepared modified the text a little bit and extract amplify dampen things in it.
+So this final layer you could use your Naive Bayes here.
+It wouldn't be the best idea. But as a last step you could put it there.
+Convolutions would be just massaging the text and highlighting.
+All right. Um. Let's leave convolutional neural networks aside.
+How many of you are familiar with recurrent neural networks? Can you explain what it is or not so much?
+Uh, can basically store some sort of memory.
+Uh, basically short term computations so that the recurrent neural networks stored some form of memory, keeps track of short term memory.
+There's nuance to that. But yes, it's the recurrent neural network essentially is saying, uh, we do this.
+Yes. No. Yes.
+Recurrent neural network is using some.
+Some. Some. Something about the past as an input to the future.
+Let's just put it this way, because it's a little more nuanced than.
+It's easy to think of neural network as layer after layer after layer, and then connecting those layers.
+Recurrent neural network kind of is like that.
+But it's a little bit a little different. So let's let's get into the details today.
+What about long term long short term neural networks.
+I think it's an improvement of I mean, which stores memory for the long term.
+So the long, slow short term memory is going to be an a modification of Ram that takes care of some of the problems that are RNNs.
+But before we talk about Arlen's problems, why don't we talk about feedforward neural network problems?
+I mean, maybe let's not call them problems, right?
+Deficiencies when it comes to processing text. This is a feedforward neural network.
+Two hidden layers, nothing special in output layer. Input layer.
+Uh, in practice. This will be just represented by a bunch of matrices representing weights.
+Every layer will be outputting a vector that will be processed through another matrix of weights, and so on and so on.
+Data is that forward. And then whatever, whatever this last layer is doing could be classification and regression.
+Anything there is, whatever it is trained to do, it will do it.
+It will generate an output. But when it comes to text.
+To say whoa, whoa. Let's say that the feed forward network neural network is.
+Processing text in in in sequences of.
+Dry grapes, right? There's three inputs, right?
+Every input, every feature is a word. So you could you could feed a trigram through it.
+And classify maybe or even or predict the next word.
+Fine, you could do that. But what's the problem here?
+A trigram is a very small sequence of text.
+You're trying to capture something greater than that, longer than that.
+This neural network will kind of fail to do that.
+So first three words. Next three words.
+Next three words. It will not remember what it's seen before.
+You could help it a little bit by by using a sliding window.
+So first three words second. Starting at second turning the third.
+But still it will. Once that trigram passes through the network, there is no memory of what happened before.
+So this is a key deficiency of playing for neural networks.
+It does not remember what it has said. See if it is used for for classifying Cat images.
+One image classifier done. It's a completely isolated job compared to whatever follows.
+That's fine. This is made for that and we can leave with that.
+But for anything. What about video? Would that be sufficient for video?
+No, because video is a sequence of frames, a sequence of images.
+One is related to each other and you want to capture that relationship to classify, predict whatever it is.
+Same with text. Whatever comes first.
+Will be followed by something else. And there is a connection.
+Sometimes that connection is pretty long spanning.
+If you remember from one of the last sessions, coreference resolution, right.
+For that aspect of NLP is trying to map relationship relationships, long term relationship index.
+Oh, we a Prime Minister said this and that.
+And then there's two sentences of choices. And then he also mentioned that something something something coreference resolution will map.
+And the Prime Minister sat with he also mentioned. But that requires keeping that span and keeping some sort of memory.
+So let's say that you wanted to improve your feed forward neural network.
+How would you go about it in in the sense that you want to capture sequential, um, sequential data you already mentioned, right.
+Have some sort of memory. What kind of memory? What's your intuition remember.
+So here's here's what comes in feature vector right.
+That feature vector is fed in and then processed. But remember that remembering the previous feature vector will be helpful.
+Kind of. Yes. Then this is more or less what the recurrent neural networks are doing.
+They're not remembering the feature vector itself, but some version version of it.
+Okay, so let me show you. One does not have a memory.
+The other one does not does have a memory. This is this is.
+That grammatical comparison of a regular neural network and the recurrent neural network.
+You can see here. Let's just say that we're using just one layer, right, one processing layer, one hidden layer in our regular neural network here.
+If we were to take some. Oh.
+Have some analogy between the two. To make that that recurrent we would use some sort of a feedback mechanism.
+That red arrow here represents okay, whatever passes through this layer, please pass it on forward or upward in this case to the output.
+But also bring it back again. Circle it back again.
+So the next processing um, data, the next data that is processed will be somehow aware of what passed through with before.
+Now, on the right you have something that's called in here at the bottom, something that's called an unrolled representation of a.
+Of, uh, this recurrent neural network structure.
+Any time. What does it mean?
+So the fundamental difference here is that logic.
+Let's assume that the input is some feature vector.
+It's a vector of numbers more than one. And recurrent in regular neural network.
+That vector will be fed into the network at once. Everything will be fed through it.
+Process output. Recurrent neural network will break it down into.
+Pieces. So you could think of input T minus one or input one, whatever however you call it.
+You could think as as the first element of the input vector.
+This could be a scalar value. Could be another vector in itself.
+If you have a feature vector made out of little vectors. It could be anything.
+In our NLP context, that's whatever comes here as one part of one piece of data.
+Is going to be a word or a token, one token at a time, maybe one character at a time.
+That happens to. Of course, I'm not showing you any embeddings because of words that cannot be fed into it.
+Directly say it would be an embedding representing that word, but that's okay.
+And then every unrolling of that.
+RNA and right here in time is going to grab another piece of that input sequence and process it.
+I don't want to say independently because we will have information from the prior.
+Data from the prior, uh, that already provided to us as an input.
+Whatever comes here through this red arrow is going to be called a hidden state or the previous hidden state.
+Do not confuse that with Hidden Markov model. This is something different.
+The hidden state as an. Hidden layer state.
+In other words, an input. That first input that through this cell you are in that cell.
+Is going to be process and whatever this process is going to be, if you remember in the next.
+You will see pretty quickly that this cell, you know, this is, uh, is really kind of like a single neural network layer in itself.
+It's a bit more than that. So would you say that even though I have almost the same structure as here.
+Right. Which is input layer. Ah. And then layer and then output layer.
+Input is processed through the middle, whatever you call it.
+Let's call it RNN even if it's being processed through that thing multiple times.
+So if I have an input with, I don't know, like 100 words or 100 bits of information, I'm going to end up with the right.
+Um, this is my input. Maybe I can then.
+Hundred. Players write for every or every part of that data.
+It will be one layer. Another one. Another and another and another.
+Keeping. Keeping the state, passing it forward as we go.
+And. The final output will be here.
+Can you imagine that? Unrolled.
+Structure being like that. So. The amount of depth of this quote unquote network will going to depend of what?
+The number of input elements, right? The length of the sequence that we're processing.
+Which means that even though I want you to fully grasp that concept, even though it.
+I have one one little structure built in here, just like for this, a regular neural network, right?
+Um, I'm using it multiple times for a one input lecture.
+This is a totally different approach to the regular neural network, and it has huge consequences.
+Let's hold that thought. Okay. I will come back to those huge consequences.
+Yes. We came up with this.
+This. If you keep the, um, if you keep the previous state,
+but the way you're producing that previous state kind of embeds what had happened two steps before or three steps,
+except, uh, for lack of better expression here.
+That late? That older data, that older information kind of decays over time being replaced.
+This is why this is why we have a talked about it and I'm not I haven't I don't think I will be able to convince you just yet.
+But this is what remains have short term memory that they're considered short term memory, uh,
+structures because they're very good at, at short distances in sequences, maybe one, two, three, uh, items 100, not so much.
+They're not very good. And I'll tell you why.
+And then we'll talk about an alternative. Uh, is anyone seeing those symbols anywhere?
+This is this is not something for you to memorize.
+But if you start reading up, um, papers or, or advanced deep learning textbooks, uh,
+your network structures will no longer be illustrated with something like this,
+but more using boxes with little icons representing a different kind of a label.
+So just making you know where this is, what is out there.
+Consider those emoticons for for neural network structures.
+This is a recurrent layer. Um.
+Symbol. But there's another, uh, difference technical difference between regular and recurrent neural networks and its ability to paralyze processing.
+I don't know how much experience do you have with neural networks, but regular neural networks can be quite easily paralyzed.
+You can use multiple processing processors or CPUs, GPUs, whatever,
+to repeat the same kind of work on multiple CPUs at the same time and then aggregated.
+Do you think recurrent neural network would be easy in this regard?
+I mean, if one input is has a relationship to another one, you cannot disconnect them, right?
+They have to be kept. And at the very least, that connection has to be communicated.
+Even if you're using multiple CPUs, they have to talking to each other.
+Hey, I just processed this, by the way. This is for you because you're processing the next one.
+So that that is a common complexity theory. Regular neural network does not have that have.
+Copies of that network. Processing multiple images at the same time.
+They don't have to communicate at all so that this is a technicality.
+Um, I, I do hope more. Most, if not all of you, will end up working with that sort of structures and trying to figure out how to.
+Whatever you call output. Okay, so we have some internal state.
+We haven't talked about how to represent it or encode just yet.
+This is a fundamental difference for between regular neural networks and recurrent neural networks.
+That they is for keeping some memory.
+Let's call it short term memory. The goal to become.
+Spanning very large equals a length and are and unlike the the regular one can process and extract connections in sequential data.
+So time series, tags, videos and anything else that you come that comes to your mind.
+Stock market prices get can be predicted using RNNs.
+Our hands are doing something very similar.
+Not not super similar, but something similar to the Markov models.
+Same approach dealing with, well, not dealing with sequences.
+Okay, so let's talk about, uh, what's inside.
+I already told you that inputs and outputs are going to be either vectors or scalars.
+Most likely there will be vectors and don't deal with scalars a lot in moral networks.
+Now, what is inside a little unit like this that is going to be reused?
+Do you remember what and what? What is action activation short for?
+Activation function. What kind of activation functions? Do you remember?
+Sigmoid. Okay. There are plenty of them, right?
+What is sigmoid doing? Equivalence between -1 and 1.
+It converts, uh, data. It squishes data to 0 to 1 ranges.
+Hyperbolic tangent that does -1 to 1.
+Why would you. Why would you do that to begin with?
+It was pretty easy to understand what logistic regression right. We want it to simulate probabilities.
+But here the probabilities may be not just one, but certainly if you like the context of the numbers, because otherwise it's a bit like,
+uh, how do you measure the relationship between, let's say, someone, I don't know, 300, my mother and I.
+Mhm. Uh, if we give it between 0 and 0, it's good to know that we can use this to control the weights.
+Uh, so would you call it normalization, maybe standardizing the output very well.
+No. Notice, notice the flow of this, uh, reddish light.
+That reddish line is is what is being remembered from the previous.
+Iteration. Right. This is this this is this is memory.
+Right? Coming from a time before this was already process that was right here.
+Produce some HD minus one and is being that for another row.
+This is not, as you can see, a plain input.
+So that RNA and cell does not remember the input itself, but it does remember a process input.
+You can think of it as this box right here is being trained.
+It will be trained like a regular artificial neural network. Oh, we'll get to that.
+It's trained to process input and code it in some special way.
+So it highlights important information from the past and past.
+It passes it forward. It's like, uh, I don't know, having a little assistant that pre processes data for, for for you right.
+Okay I'm getting this input. I'm going to highlight what matters for you and discard the rest here.
+Here it is. This was your previous input. Okay.
+That's what is happening. What about bias? Do you remember what science was for?
+You saw it with a perceptron. Bias is a standard little addition to any basic neuron neural network unit thing one just to level things out.
+So by default, it's always been uh oh.
+This plus is just, um. Summation.
+Uh. What do you what would you expect?
+HD minus one to be a scalar or a vector a vector okay, so what will this plus do here?
+It will be a vector. So. All right.
+So we're looking here if this HD.
+All right. Here you go. I'm never before if I have.
+Let's make it a plus. So HD minus one.
+Let's say this is our HD minus one. This is my bias.
+This is where I summing them together. Very simple, but it enforces certain.
+Constraints, um, on those vectors.
+They have to be of the same substrate. No whatever came out of this first summation is then added to the input.
+Does that make sense? Historical data mixed in with current input.
+And then let's use it and extract the most important information from it.
+This is where the activation piecewise activation will happen.
+So we will have to in our case.
+You could use sigmoid. You could use hyperbolic tangent.
+You could use other layers and activation functions.
+I'm not going to tell you which ones to use. Actually, the sigmoid or even the hyperbolic tangent are not necessarily the most common nowadays.
+Ralliart is probably. The one thing you will see more is or a leaky ReLU as well, if you don't know what it is.
+This one does not allow negatives at all.
+Leaky ReLU will just have a little, little, little nugget negative component attached to that activation function.
+But that's a secondary aspect of it. So again here I'm going to stick to a sigmoid.
+Everyone's familiar with sigmoid. It doesn't have to be a sigmoid.
+This will be applied to whatever vector.
+So okay one vector plus another vector a sum of those two vectors plus one was an input vector.
+A vector goes into an activation function and a vector leaves activation function so that sigmoid will be applied.
+Uh, so I would if I applied sigma to this vector it essentially means.
+Yeah. Sorry. But A plus D and so on and so on, individual sigmoids to every element of that vector.
+However, I just introduced times you and times that.
+What are those? What do you think?
+Are those. Which.
+Right. Just like. The weights here represented in those connections.
+We are not doing something terribly difficult and different here.
+That will do you and the. We'll talk about it in a second part ways.
+And if I have a vector with multiple inputs and I.
+Should just be a vector to. There will be a matrix, right?
+And well. This.
+So what you can see here x t times w.
+Hey, bear with me for a second. Whatever happens right here before hitting the plus is really.
+Something like that. Input.
+Weights. I'm represented by a matrix.
+Multiply the input vector times the weights. Vector weights matrix.
+Get a new vector out of it. Feed it to the next layer.
+This is exactly what is happening here. And here.
+And then there's just a activation function applied.
+So the bottom line is you have really a neural network here.
+And inside of that bias is really also part of this neural network as a layer, just like a regular one with an activation function.
+So this I should probably put that bias in along with inside that red box.
+But that's just what you do. So what is highlighted here really.
+Is kind of like this layer in in that regular neural network.
+Does that make sense? The only.
+The key difference is I'm always mixing in this previous input on this.
+I'm sorry, a previous state for every every time I need to process new input.
+And while I'm sending out. That process to state the output and also sending it to the future,
+which means let me remember it and I will pass it to whoever is doing the work next layer.
+That's the same thing, right? Without unrolling it.
+Unroll. So it's like I'm I'm using imaginary copies of the same structure,
+but there really is just one structure that has a memory that is being constantly updated.
+This is the error in it. Does that make sense? For me it was this is the this is another weight matrix.
+So in our artificial neural network this would be sort of the and you write here that set of weights would be the already processed our.
+Let's go back to this. We processed the input mixed in with with the previous state.
+I pressed into the activation function and something is coming out and it is being passed to the output layer along the way.
+It will be. Multiplied by corresponding another set of weights.
+So it really is like a regular network, except we're injecting that state back, back and forth, back and forth, back and forth and updating things.
+Again and again. Is that structure clear? Okay.
+Is the math clear? More or less. We will not be doing the math here.
+I just. What I what I want you to, uh, to, uh, take out from from recurrent is the convolutional neural network discussion.
+And no recurrent neural discussion is sort of, uh, familiarity with certain components and typical components.
+And what are they doing? So here over the regular neural network, we'll do the same thing.
+We're transforming the input into something else over and over and over.
+And in this case we're also mixing in the previous states.
+But as part of that transformation. Okay.
+Do you think? Wait. In the names for it.
+Values. Input. Weight matrix. Use the recurrent weight matrix.
+An output weight matrix could be just the names.
+But, um. Do you think those weight matrices change when you're processing a sequence?
+No. They stay fixed. Right. It's the input and the previous state that are being changed.
+What about bikes? What about bikes? What do you mean?
+What about bikes? No, but it should at once.
+The network is trained by us. It should stay. But it will be.
+It will be. What are we doing?
+This. It won't be the same. It will change during the training phase.
+It will be adjusted once the model is trained. Once the network is trained.
+Settled. Just like all those matrices. Okay.
+So this is this is a formula for.
+The current state of that cell. It is a sigmoid process.
+Sum of input weight matrix times the input vector plus recurrent weight matrix times previous state.
+Plus button's previous state is a vector of biases. A vector U is a matrix as well.
+Now what if we're just starting? So aged minus one, it makes sense.
+If I'm in the middle, middle of the sequence where I went through a bunch of elements, I produced a pretty good state.
+I can use it. What about a situation where I'm starting?
+I don't have a previous state I don't have. I don't remember anything because I haven't seen anything.
+Just so what would happen to HD minus one if output my T was zero or 1 or 21?
+So t minus one is zero. I did something I said out of 5000 that there's no stable.
+That's not we have nothing to mix with with, with the current inputs.
+So obviously this is the initial state for the memory, our initial value for the zero vector.
+That's it. How? How about multi-layer or less?
+What is in the regular in neural network. What what is the benefit of having multiple layers or making the network even further?
+Do you guys remember when we were playing with this little online talk?
+Our results usually got better when we introduced more layers, right?
+Because the network was able to capture more news that way, it was nothing stopping you from adding more RNN and layers here.
+You can do it the same way.
+Those layers would kind of work independently. Yes, and they will process the sequence on their own and then pass it outwards.
+What about bi directional or. This is this is a thing.
+But take a look. Think about it by directional.
+Uh right. The regular one just takes a sequence, goes left to right or right to left.
+However, it is being but in one direction. First element.
+Second element. Third element. Fourth element. Would there be a benefit of simultaneously passing through the sequence in both directions?
+You're. We're talking. This is an LP cause we've talked about context a lot.
+Right? When you were building your first language model, you were predicting the next word based on what happened in the past.
+Would you agree that if you also knew what follows,
+it would be much easier and your prediction would be much better if you had the previous three words and the next two words?
+Absolutely. So vibrational RNNs are doing exactly that.
+They're grabbing. This does not have to be applied to words.
+And then NLP it and it works well. With that.
+Be there grabbing the sequence and just processing it two directions at the same time, which improves the output.
+Trust me on that. So two layers forward and backward layers.
+You. Know.
+Question three. So we have this nice little structure where we're processing a sequence.
+Let's say again a hundred elements related to each other.
+Hundred of them. We will the final output.
+Will be always based on previous outputs, right?
+We start with at time, zero time, one time, and we're done with time 100th and we get our final output.
+In other words. We are not much of this world.
+They're kind of reusing this layer a hundred times.
+Unlike, um. A structure like this where I have two hidden layers that are completely different represent, but different weights.
+I'm sort of making imaginary of layers that are exactly the same layer after.
+And because we're not changing weight matrices in our biases.
+Right. So we're passing the input through a hundred of the same layers to get the output.
+And that network is not being, being built specifically.
+Oh let's have a 100 layer network built for processing this 100 sequence.
+No we just have really have one layer, but we're recycling 100 tons.
+That's that. That is what what is happening and.
+There's there's no way around it. Our final result is.
+It's kind of the result, as if we went through a hundred layers.
+Okay. Is there any challenge with that?
+This is a loaded question, so you don't. Let's let me clarify a little bit to get the okay.
+Okay. That back propagation. Back propagation.
+Why would that be a problem. Very good. Because. Because of a single layer.
+So what happens with back propagation? Back propagation?
+What where when is it use? When I'm training my network.
+Right. So, um, let's go back to regular network.
+Artificial neural network right here. I have a sample input.
+Let's say that we're doing classification, so I have a label for it. Let me pass it through two layers.
+I will get some output. Compare it with the original label right.
+And now backpropagation kicks in because I will measure measure of the error and
+calculate the derivative of the loss function which measures the scale of the error.
+And then I will pass that. Derivative or the gradient backward.
+So everyone here can learn. Hey, I was guilty of making a bad prediction.
+Now I have to adjust myself to some extent.
+So if I have two layers I have to recalculate two derivatives, pass them or two gradients and pass them backwards.
+Backwards. Backward. Right. It's that derivative.
+Really? It's based on some sort of, um, loss function that has to capture what happened here.
+Right? Or in other words, we're capturing the error at the output layer.
+But that error was caused somewhere else before and before and before.
+So when we're going backwards with backpropagation, we have to recalculate and calculate the derivatives and find the gradient and pass it backwards.
+Is everybody on board with that? Okay.
+So that's another good omen for the holidays.
+Well, we're training the network right now.
+So yes, at the moment when we're waiting, where we're feeding and the input through the network or the all the weights are come up.
+And those weights are usually used when we're calculating derivatives,
+but they're derivatives for this 100 layer, same weights, 99 layer same weights and so on and so on and so on.
+Now what happens if. You have this long sequence, right?
+That sequence will end up being. Think about it in a good way.
+Matrix U is, uh, historical. The hidden state matrix with matrix right here.
+Input times, input weights and then it will be all over you.
+Times you, times you times you times you times you.
+Actually the times you this sequence. This is what the loss function is based on.
+Everybody agrees that calculating the derivatives.
+It's going to depend a lot on what's in you and you and you, right?
+Uh, you were done so propagating from the initiatives?
+Yes I did. No, no, no, don't do the poaching. So no cattle into the back.
+Propagation of the undead. Then we can go to the professional.
+Then we can veto that. Yes, but the turning, the which occurred in the loss function and the gradient of the revenue.
+And then do the same process. That's exactly what should happen.
+We should we should update the weights as well, though.
+There will be a final, uh, weight update based on those little changes.
+Layer by layer by layer by layer. But the problem is.
+If those waves are very small.
+Imagine that you're taking a gradient and you're multiplying it by something very small, very small, very small, very small, very small, very small.
+Right. You know what happens. You you've dealt with a linear programing assignment in a computer.
+This gradient will ultimately become zero and it might become zero before it reaches actually the place where it should be where the problem started.
+So if there's a zero gradient, there is a zero change to the way there is zero learning.
+There is you can feed how many samples you want.
+It will not change the network, the network's learning.
+This problem is called vanishing gradients.
+Hi. Kind of an interview question, if you would, please.
+What is a vanishing gradient? Any deep learning network, meaning any neural network that has a lot of layers, is subject to that problem.
+The more layers you have, the more likely it is that you will have something or the opposite where those weights are large.
+Then you can have exploding range, which means.
+The gradient is getting larger and larger and larger.
+And really, if you think about the gradient being a signal for a component in the network, hey, hey,
+kindly adjust yourself because you caused some problems in the classification or whatever it was, right?
+Just a little tiny bit because you you were just a little bit guilty right here.
+If we're dealing with exploding gradients,
+that little piece somewhere like a single weight or something responsible for a little problem, we get yelled at.
+Hey, what did you do? Stop doing that.
+That's. That's a problem. So now the wage changes.
+What we've just. Bumping up and down and the learning would be very, very unstable.
+So. Can you see that without going into math and showing you examples?
+Can you see what vanishing gradients and exploding gradients are?
+Who hasn't heard those terms before? Good for guys.
+All right, so how would you. How would you fix that?
+What's the problem? What's the main problem. Think the constant adding some constants at every layer different constants are at the same constant.
+Thank God.
+Well, that got us into trouble in the first place, because every time we're multiplying the same weights over and over, they're small or large, right?
+What if we were a little adaptive about it?
+Would that help with. But let's take a final look at this recurrent neural network structure.
+Everything comes in and all the hidden states, previous states are multiplied by the same weight vectors.
+If we could. Do something about those that aren't to fine tune both those ways.
+Every time. So we're not multiplying things too much or too little.
+We would be golden, right?
+There's a chance we would improve the situation. Yeah, that's a great. This is what?
+Long short term memory. Creation of the neural network is.
+If if the previous one was. Confusing.
+How about this? Then.
+So I know someone. Some of you 1 or 2 people already have seen long short term memory mentioned somewhere, right?
+But there a deeper explanation or.
+Or not so much. Okay.
+Let's go back one more time. This is our recurrent neural network.
+Could you guess? It gets multiplied by a six weight matrix.
+Input gets in. It gets multiplied by a fixed weight matrix.
+Here. All this stupid boxes right here. Ah, man.
+All together to mimic the behavior of the U.
+Matrix and the matrix. But those mimic version mimic versions of them will change every time depending on the previous stage,
+the input itself, and also something an additional piece of information a cell state.
+A cell state. A very primitive way.
+Or a very crude way of looking at the state. Cell state is.
+This is a long term memory component.
+To complement the short term component, which is which we used with a recurrent neural network before.
+It's a little more nuanced than that, but that's the general way.
+So in other words.
+You can think of this, the cell state as something in terms of tax that is looking at a longer spans and tries to preserve some long span information.
+Whereas the H1, which is the previous hidden state, it is looking at something that happened one one word or two words before.
+Now use your imagination. What is something?
+You're scanning the text, right? Let's say that you built a system that is raising and lowering a bunch of Boolean flags, right?
+I see this, I see that, and you keep it up or down until something disappears, right?
+What is what is that? Something that shows up and disappear?
+Loosely speaking, in terms of language. I'll give you a hint.
+Right. Um. Programing languages, we're talking about natural languages, but programing languages, right?
+You start if something and then whatever it is, it's Python that it call on the right.
+And then you write a bunch of code or other languages.
+Like what? Make it even easier? Other languages will have structures where you, uh, have keywords that initiate a block of code.
+And then there's and and at the end. Right. So for the da da da da da da and.
+Right. So cell cell state.
+Yes. In one sentence. End of sentence. Beginning a sentence.
+Start it right I select capital. It's a good way of, of detecting at the beginning of the sentence.
+And then I keep the flag raised until I see, uh, period or an exclamation.
+Right. I drop drop the flag. What about quotation marks?
+Open quotes. Keep that in mind until close quarters.
+Write paragraphs. What about?
+Go ahead the windows doing that, you get an entire sentence before so you don't specify the window at all.
+You're just you're just that cell state sort of keeps some.
+Well, it's really hard to to put a specific label or a specific value or a specific feature of that because this will all be trained or learned.
+So there's not a structure to it, but it will be able to remember, okay, I saw something, I got excited by it.
+Let me stay excited until I stop seeing that again.
+Does that make sense? This is the purpose of the cell state.
+What about tense? Or dialog, right?
+Could you could you use that to. Hey, one person is speaking.
+That person stops speaking. The other person is speaking.
+Right? You could use that all day. And the beauty of this approach is that you don't have to spell it out to talk to the neural network.
+This will be something like like the far from it, but still similar to convolutional neural network.
+It will learn by itself what is raised by hand.
+Lower my hand. So cell state will do that kind of hidden state of the previous state would do what?
+What it did before. All right.
+Um. How about how about a little tour for this diagram?
+Is anyone interested in? What? What's. What's inside there?
+There's a lot happening. Uh. Full disclosure, if you look, uh, look up, uh, LSTMs in different resources,
+you might you will definitely see different arrangements of those components.
+You will see something's missing or not obvious.
+There will be there. And minor differences, but that.
+There subjects. That's the gist of what should be there every time.
+All right, so a few things first. That little black dot is a place where vectors are concatenated,
+which means that two vectors are taken and the one vector is made out of a longer vector.
+Those little circles is where vectors are going to be copied or duplicated.
+In other words, whatever comes into this dot will be same.
+A copy of that vector shift upwards and then progress the right point wise addition.
+You know already what it is a vector plus a vector point wise multiplication.
+This is really. Or is it? This is not a matrix vector multiplication, just a simple element by element multiplication.
+Nothing fancy going on. Okay.
+Uh. And no, I mean, to make that long short term memory concept work.
+The idea is to constantly decide what should what is what is a gate?
+And anyone with electrical engineering background transistors.
+All right, let's let's go down a little to something. What is a gate in front of your house?
+You open it, people go through it, you close it.
+People don't go through it. If you open it a little bit. Just a tiny little Chihuahua will pass through, but your neighbor will not, right?
+So gates perform that functionality here.
+They get input signal in and. Adaptively decide how much of that signal and what parts of that signal will get through everything.
+If you pass a vector through this little box, entire vector will come out, except some parts of that vector will.
+Let's squint your eyes. Some parts will be reduced to close to zero.
+Some will get amplified. I want this part too. You pass through that part?
+Not so much. Okay. Or even negative doesn't matter.
+But you can see that there are sigmoids and hyperbolic tangents here,
+so you definitely can already picture filtering or compressing things to zero one and minus one one.
+Right. And there's three such gates. First one on the left is called a forget gate.
+I forget gate decides what, but it's what ends up deciding is which parts of the cell state are going to be forgotten next.
+Remember when you were when I was describing a quotation mark?
+Remember quotation marks? Another one shows up. Oh, let's use the forget gate to remove the quotation.
+Forget about it. I'm oversimplifying what is happening in there, but that's the general idea.
+So there's one forgetting. There is an input gate which decides how much of that input that just came in should be retained in the cell state.
+So once again, quotation mark oh quotation marks appear.
+Let's incorporate in the in the cell state. This little box will make it happen.
+Then let's we'll talk about this one in a second. Then there is an output gate.
+How much of the current cell state should be passed forward to the next round?
+All right. And then the candidate states candidate values.
+This one this one is responsible for mixing.
+So we have our input right in the previous state.
+And then we have a cell state. And this one decides which which values of the cell state which.
+Aspects of the cell state should be. Adjusted the most, in which one should be differently adjusted in the opposite direction.
+You see a hyperbolic tangent here, so we'll end up with minus ones.
+And plus what's something. Times minus one is going to reduce things, right.
+Something times plus one or something positive that will amplify that.
+That's that's the idea. Okay.
+So I'll state right. This is. Once you see the formulas, it will probably become clear.
+Is it over overwhelming a little bit? Wait until you see what's inside those box.
+This is an inside of your forget gate.
+What do you see inside of that forget gate? Neural neural network.
+Right. But what's specific, uh, about it?
+Um. I try to make it as.
+As less as. Not so confusing, but do not get too attached to the number of notes between two layers.
+Okay, this is not going to be what is it? Seven and for always.
+But there's going to be a difference between the number of, of of notes in in in in both layers.
+They're not going to be the same. So if you see here I have an input layer to this network that has more inputs than the next layer produces.
+All right. How many of you are familiar with the concept of PCA principal component analysis okay.
+Very good. Where did you use it for dimensionality reduction.
+Right. Very good. So a large vector reduced to a smaller vector while retaining the key information that was in the larger one.
+There were some losses, right? PCA. That's not the only approach here.
+Would you say that this network does something like PCA?
+Takes a large vector and processes it into a smaller vector.
+This is whenever it comes out of it. This is not an answer to the question what's the next word?
+It's not an answer. Is this a cat or a dog? No, it just creates a new vector.
+This. Okay. Would you say that PCH, or any form of dimensionality reduction summarizes a lot of data with less information?
+That's what it is, right? You're losing sight of that information, but it distills what matters here.
+So in the context of of, uh, forget gate is it is distilling what should be forgotten.
+Good idea. And oh by the way FC here those of course means fully connected.
+And then another world, and then another in your own. And another neural network.
+This one is not a neural network, but a pretty pointless, uh, hyperbolic tangent.
+Uh, if you think that, I will expect you to memorize that thing on the exam.
+Definitely not. But here's.
+I. I want you to observe how the interplay between different vectors and some processing steps is changing the things inside the structure.
+Amplifying things, highlighting things, dampening, reduce, summarizing or compressing even information.
+Some of those components used in a different context use in a different way.
+Some of those approaches will show up in in other architecture architectures that we will discuss pretty soon.
+Encoder. Decoder. Network. Are you familiar with?
+With those. I'm sure you've seen a little two funnels meeting in the in the middle.
+That's that's the architecture, right? Is anyone here really confident that you understand why there is this following happening?
+Well. It is a it has a bottleneck, but it is a bottleneck by nature.
+Uh, we'll talk about it. But here's here's what I'm talking about for those who are not sure.
+I'm sure you've seen. Someone must have showed you something like this as a decoder.
+Encoder decoder architecture. Right? Work data is passing through that plain.
+I know it is used for data replication. The structure that it is used for a lot of things, but really technically what is happening here, right?
+Is the equivalent if you rotated this this network with 90 degrees, you would have more or less what's happening here.
+The dimensionality is reduced and some processing happens.
+But we'll get to it, um, later.
+We have three minutes. So why don't I leave the suspense for Monday and I'll finish that there.
+Uh, once again, I don't want you to memorize that.
+I want you to, uh, get as much as possible, uh,
+understanding of of why are we putting components in there or what what what's the what's the benefit of concatenating vectors?
+What are gaining by what what are what are those gates doing?
+And so on and so on. This will come back and questions if anyone learned anything interesting to you that.
+All right. No questions. Okay, good.
+What's your programing assignment? Perfect.
+Yes. I mean, we're always going to be friendly with them, but we, uh, just have to show only public reviews.
+And our results are not really good considering that 70% of the reviews were bad.
+It was really good. It's pretty good. Have you have you draw some conclusions from that then?
+Yeah. Next time I'll go. There you go.
+There you go. Bad data or incomplete or biased data is is a problem.
+So I'm I don't mind what's the what's the accuracy of the accuracy of this vehicle.
+But it's got it's not it doesn't show reality because even though it's pretty good it's because most of the reviews are just bad.
+Okay. So like yeah if you say ten times yeah that's good.
+Yeah. Eight out of ten times, you'll be right. Okay. Well, you saw it.
+Anything else? Is there any benchmark for you for in this like university program?
+No, no. If your accuracy ends up being something below 0.5, I want to see that it will not affect your grade.
+I want to be on the check in. What's going on? I don't care if your classifier is 0.9 accuracy.
+Your point 46, right? Um, I don't care about that at all.
+I care about you going through the motions and and dealing with a larger data set in most cases, pre-processing and making design decisions.
+Okay. Should I remove stopwords or not? Is it going to affect anything?
+Do I care? I want to be here or something when I'm doing that anyway.
+The process is you will learn. You will have plenty of opportunity to actually refine your your model in your on the job.
+All right. Thank you. I'll see you all. Uh, Monday.
+Yes. 581 people. I will repeat quite a bit of that later on, so you don't have to show up if you don't want to.
+Okay. And what do you think?
+I'm in a bit of a crash, but basically coming are here.
+Let. Him.
+There. Okay.
+Okay. So I love you. You know that.
+But you know one thing on how everybody else did, we might have a conversation.
+I think I have to go really quick.
+So, what is it? I think it's about the program.
+Okay. So I think I asked my favorite class.
+So when. You look at a student like the last, this is normally the.
+Data show. You know, there's nothing new about it.
+I think it can be used to understand what was happening on that day.
+I'd rather you not take it out today. Okay.
+If you want to play around with it. And this is how I.
+Would you come to build another one and show that your main submission is more or less or a little note?
+I want to use that as a switch or window on it. That's that's fine by me.
+But it has to be a second or third option.
+The first one should be. I took it as it was done.
+If it's bad, it's bad. Okay. So you know, but can be used as a package or in the separate package.
+We can use that. We can use the psychic model. Those things.
+But he bears has to be absolutely yours from scratch.
+Yeah. From scratch. But you like importing pandas.
+Oh, yeah. Yeah. But the name that you have.
+That's going pretty good. I have a question.
+Um, so you have plenty of options to play with, right?
+When you're pre-processing your your data. Right.
+You could remove stuff or you could limit that is not limited to whatever.
+Uh, I gave you a pretty straightforward assignment.
+Loaded a loaded and processing classifier. Right. If you want to build another model on top of that, because you have in your mind an idea.
+Okay. If I switch that off or switch that I have just I will have a better performance.
+By all means, do it. But as a second additional additional piece.
+Okay. But I didn't understand the meaning. Okay.
+What are you doing? Uh, I'll be in my office and in my work program that I have to run.
+Okay. But my.
+What? What will you. Do, though?
+I want to know. How do we submit to you?
+Uh. Not sure. I mean, I removed one of the works.
+Yeah. The only thing maybe is attention.
+Yeah. I mean, we can record it, but I would be, you know, maybe.

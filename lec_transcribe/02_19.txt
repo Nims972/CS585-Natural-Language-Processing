@@ -1,0 +1,616 @@
+Was. But.
+I heard.
+American Morning. Questions.
+Well, a new survey.
+Programing aside, the coolest elements are what you say your midterm is next week.
+Any questions? I'll give you the list of topics either on Wednesday or in Blackboard.
+For those who are in the online section, if you haven't confirmed with Mr. Scott, where are you going to take the exam, please?
+Because I need it. All right.
+Do you think that you can expect for the exam in terms of rules of paper?
+No electronics whatsoever, including AirPods, earbuds?
+Nothing. Nothing. You have it in the back.
+The only piece of electronics that you can have outside is your calculator.
+Regular card calculator. No phones, Just got a simple calculator.
+You want your fancy for that?
+No communication. Of course you will be allowed one letter sized, double sized.
+Double sided. Oh, sorry. She cheated. Otherwise.
+Close book. Close notes. So you see that sheet wisely?
+There will be no programing questions that I will not be asking you for any functions or anything of that nature.
+However, you are expected to understand algorithms enough.
+Walk me through a simple, simple problem. You need a pseudocode for the algorithms on your cheat sheet.
+Whatever works for you. As I said, I will give you a list of eight topics.
+It will not be exhaustive, but the things that I will list will be the usual suspects.
+Otherwise, if I didn't say it will not be on the exam.
+It's fair game for anything that I mentioned in class.
+I will I will not be, you know, reaching very deep into obscure little pieces of information that I provided.
+But there might be a little question here in there that requires you to go back.
+About interstate logistic regression. Now, how it works, how the text classification works, it let me walk you through it again.
+So the idea is, is is logistic regression a generative or discriminative model?
+Discrimination because it just decides this does not belong over, it belongs to a certain category.
+So the byproduct of that is well, the aspect of it is not really a byproduct, is having a decision boundary built linear in this case.
+So it's a line or a plane or a hyper plane, depending on the number of dimensions that you're in and that.
+Separator is defined by the following equation or weights.
+R w x is from input vector weights or a vector to be is another parameter that defines the line.
+So distance distance matters to the separator to the decision boundary, the lower in one direction the number is.
+This number will be a scalar value. The farther it is from the boundary, the higher it is here, the farther away it is from the boundary.
+Positive and negative values means on one or the other side of the boundary.
+It will depend which part you are defining as positive or negative.
+Spam. AB It's up to you. Depending on the problem which one you will be more focused on.
+But that's not terribly important.
+Okay, so our task of classification is a binary classification.
+We have a training set. Our training set is used to classify things to train a training model that will be able to classify things later.
+If we apply a logistic function to the result of our.
+Classification which which amounts to calculating this value.
+Really, once we have that value and we feed it through the logistic regression, logistic function, you will get out.
+We will go to what? A number between zero and one, which could be a probability.
+How likely a certain document in our case is going to build?
+Unlikely is a document to belong to one of those categories that we didn't specify Not.
+So last time we talked about how are we.
+Let's think about was how are we going to find that separator?
+Because that was a key aspect of it that we haven't touched.
+Ultimately, it is it is measuring the air based on the test set and then using the same last function.
+To aggregate all the years, and then we want to minimize that loss function.
+This is a binary classified classification problem for binary classification problems.
+Cross entropy is a typical loss function.
+You don't have to memorize that. This is if you ever want to.
+Applied in practice. But the question is, okay, so we have our gloves function for how are we going to minimize?
+And one of the possible approaches is to use a gradient descent, which is a very common way of finding a minimum.
+But can we find can a gradient descent find a minimum in.
+For any function or any lost function? No.
+For our problem. For logistic regression, this cross entropy loss function as a very useful property.
+It has one minimal. There is no local minimum or nothing.
+There is one global minimum and it will bite. It is complex.
+It's concave. Either way, whether you're minimizing or maximizing.
+There is just one minimum or maximum that's bound by an algorithm, such gradient based algorithm, essentially.
+Not every function will be like that.
+This is an example of a non convex function where it will be might be difficult to find a solution using gradient descent.
+Those who are in 581. Or, you know, other ways of fighting.
+And, you know, just to give you an idea. We're minimizing a loss of function for a machine learning model.
+Let's call logistic regression is a machine learning model.
+It's a very simple one, but it's a machine learning model.
+Now, when you think machine learning model, you most of you probably think deep learning networks or large neural networks.
+These are some beautiful visual visualizations of neural network specific architectures last functions into these space.
+Obviously, those those neural networks are not.
+The lost functions are in in the space. But this is just scaled to.
+Up to this base. So if you look at those.
+Those two are at the top. Would it be easy to find a male there?
+Probably not. So that's that's a challenge.
+But in the case of logistic regression, we're more in this category.
+For those of who are not familiar with gradient descent.
+Start somewhere and calculate the derivative of the lost function and find it's all in the opposite direction of the gradient.
+And this the idea is this should get you to the to the bottom or to the top.
+Gradient descent implies that we're descending down, but really you could be ascending as well as just flipping signs and differences.
+So great. This is a step, step by step approach that ultimately is meant to find the minimum right here.
+Is it is it super easy? Not necessarily, because some when you're setting up your gradient descent, you have to set up the step size, right?
+Your steps might be too large. Your step would be from near there.
+Right. Which would overshoot them minimal.
+So that's bit of an art bit one.
+There is adaptive step sizes. We will be getting into that in this.
+Lecturer. So essentially all of the gradient of the opposite direction.
+And hopefully you will find your your own.
+So now this is an easy problem.
+This is a function of one variable.
+Here we want to have a function of two variables or two parameters.
+Really, in practice, it's going to be multiple, multiple variables.
+In this case, we have w going to be you.
+So ask yourself that our our line or our plane or our hyper plane is defined by a vector of weights down by us.
+So this can be easily this weight vector can be easily expanded into multiple dimensions.
+What does it mean? That doesn't mean that that means that we have a here we have a gradient in one dimension.
+A vector in one dimension to that.
+Here in any space we will have a gradient vector, a made up of and components that will be pulling.
+For every dimension it will that gradient will be pulling your algorithm in different.
+Places with different strengths, Right. Depending where that minimum is.
+So what you really have to focus on is following the gradient in all those directions.
+At the same time, whatever it tells you to go.
+So here it's just the easy derivative, right?
+When we have an and dimensional space, we will have a.
+Gradient vector made up of partial derivatives in all possible directions.
+You have to find all those partial derivatives. This is difficult if you need to have a no loss function, this is already given to you.
+That's that's pretty easy to find. And then you take your next position is going to be your current position minus learning rate.
+This is very important times the gradient in this direction.
+In a specific direction. So let's say this is a position in the law.
+Let's say we have X, Y, Z, this is what y t plus one will be y t minus learning right times of the gradient,
+a long y partial derivative along the way, and so on and so on.
+So you'll end up with creating. Gradient.
+Partial partial gradients in every single direction. A learning rate is a high parameter that tells you how fast you should go.
+This decides the step size. If you overshoot it, you're overdo it.
+You will be overshooting your destination if you make it very small.
+What's going to happen? Very slow convergence, but more chance that you will find it.
+Here is a gradient vector you push first with this along every dimension.
+This is this is a pseudocode. You know how to memorize it.
+Really? What? What matters here is.
+That individual step. Next volume is current volume minus learning rate times the gradient in this particular direction.
+Okay, So here's here's an example for you.
+We talked about regression right last time, as all of us sort of by byline.
+Here's how you would react. You would use gradient descent to find the linear regression.
+What So what is being used as a loss function for linear regression?
+Some of errors. Yeah. So it's not a cross entropy loss.
+It's a different problem. It's a different loss function. That would be our loss function, which is the sum of errors squared.
+All you have to do, we're dealing with two dimensions.
+So we have two parameters to, to a function of two variables we will have or partial derivatives of the loss function along both.
+Nearby is both perimeters find it and then all you have to do is just keep updating your position or the or the parameter values as you go with.
+That's the formula that I'm going to show you. Great learning where it is.
+You're learning where it is all thinking, Is that clear?
+How great it is that I don't want to repeat too much of the information.
+Once again, if you have a nice little convex function, it should find the minimum very easily.
+If you don't have a nice convex function, it will bless you some local minimum, which is not the worst thing in the world, but.
+It may be pretty suboptimal. Okay, So we had a little discussion, if I recall correctly, about placing this.
+Let's go back to logistic regression. We build our we found our boundary line using great intercept.
+We can use it right now. But there's another thing to to take into account, right?
+We have our nice little boundary and.
+After beating the value through the logistic function, we'll get a01 range of outcomes.
+It's up to us to decide what do we categorize as positive label or negative label one or zero.
+It's important that it's one or zero, especially from your calculations, but you can think of it as spam and or vice versa.
+So how do we decide what label we should assign if our point falls here?
+According to our. Approach here.
+Or label it as. The positive value was much like it's about whatever it was.
+But we made an assumption that this kind of support is precisely in the middle of it.
+We don't have to do that right. Can move things around.
+What is what is going to be the effect of. Plus moving that red line, which means essentially changing point five to something else.
+Yes. To be subject to 0.2 die or number of points would be categorized as one whose value for the point still looking for.
+About the texture and well, this number of points would be categorized as zero.
+So there might be tons of misclassification. Ah, we always have a chance of misclassification.
+Do we always have a chance of misclassification? We don't think the range is 0 to 1.
+It's like you keep it to the point five, so we have a probability of 50% of being good right at the beginning,
+not that scope without considering the training,
+given if people how they do things right, except you're you're both right and if you're starting right point five is a good place to start,
+especially if you don't know much about your in your data.
+You haven't built any model based on this data yet.
+You are in the middle of it. You're building you built it time tested testing will give you some idea.
+Okay, let me maybe my model is not so.
+Perfect. Maybe it is physically misclassifying it positive.
+Maybe it's misclassifying negatives a lot.
+And this is where we can. Introduce some change.
+Is there going to be. If I start moving around the building?
+Right. Yes, two point.
+I'm obviously changing the region that we're.
+Input values. Input input data has been classified as one or zero positive.
+License plate. Public or negative label. But what are the consequences?
+Misclassification? Yes. But is it is it is it always bad that our model will misclassified things be the last thing we talked about?
+The example with giving false positive tests like for example, this is better to give a false positive rather than post negative.
+So it's the same here. It's important for us to almost certainly catch, for example,
+a spam message to make it so that it will have like 5% as a true positive and a small percentage of true positives, false positives.
+This is better for us if we just want to this it.
+But like in scenarios where we don't want false negatives to be, I mean, we really want to try to false negatives.
+We need to change the threshold. Let's say if we want to detect before person having cancer or not.
+Mm hmm. And if the model is set to 0.5 and we don't have a lot of databases that this person gets,
+we might have to add just the 0.5, because that's really important.
+Very good. What about biased data with moving, moving that line?
+Help us compensate for that. Well, if we're dealing with spam messages, we may have way more spam examples than they have.
+And that could affect our our models prediction capability and.
+So. One solution and let's go get more data to balance it out.
+But if you can't get more data,
+you can still play around with this better here and hopefully compensate for a lot of the training that is is lacking for there.
+But how will we choose that value, though?
+What would we base our decision should be? Should it be 0802 or five or something?
+Some other number? You call all commission, make very good comments.
+Yes. Those since let's say we have a lot of space, then the probability of having a high will be very small.
+So maybe set the threshold or have a lower percentage.
+Do you have any numerical guidance in making that decision?
+Giving given the confusion matrix and all the associated parameters?
+Right. They the confusion matrix tells us a lot about our on our model.
+And after all, if you guys recall that it was cancer and no cancer or any diagnosis of example.
+This is where we are looking at a model.
+This is a scenario where we're looking at our model, our confusion matrix, and okay, there's too much of these, right?
+There's not enough those for what we are for what we're looking for.
+So. Confusion matrix is a very primitive basic, but a good idea to start with.
+Yes. So like for our project, we also using the confusion matrix to use like an arrow secret to like.
+Exactly. Visualize. Help us determine the threshold.
+How many of you are familiar with RC first?
+Oh, we'll talk about it in a second. All right.
+So let's see. Let's imagine that my.
+Reddish and bluish dots on those.
+Or this. That represents.
+Anti-Spam messages from the desktop.
+So the fact that these are here means that they are or they were originally classified as m the fact that.
+These are at the bottom is. In the past said.
+They are classified as spec, so I know their labels.
+Now my model is is used to detect, have messages and is a part of label.
+How well is it doing? Let's throw it right.
+Oh. All three cases to point.
+And let's see how well it is doing. I have three actual different thresholds.
+Let's see how well I do it. Where are those?
+Where are those? And I'm in Spanish as.
+Problem very well pointed out.
+Confusion matrix is going to be a good. Indicator.
+Of how good our model is. So true Positives.
+True because it is in my case, when my model.
+Classifies all the positive samples as possible.
+Positive samples in my case, or are there any above the threshold?
+In this region. So all these are originally positive samples.
+These three are the ones that my model classified as positive.
+Those were not classified as less positive.
+Let's put three here. Number two, all this false negatives.
+Right. Something that is originally labeled as positive and was labeled as step two of the.
+False positives. Something that is labeled as positive, but it shouldn't be.
+One. True negatives. Well, there was supposed to be a negative spin, and it was classified as one.
+And let's do this for. So help me out here by reading what's already in the confusion.
+True positives are spreading far, right? Everybody agrees.
+One, two, three, four, one.
+Also negative. Read through two negatives.
+One false positives. In practice you will have thousands of of.
+Samples. Classified. This is just a part.
+Alternating. So what is the consequence of lowering the threshold?
+This is this is what I had was point five confusion matrix.
+And I have two false negatives. Right. I lowered the threshold and ended up with less false negatives.
+So can you see the effect of. Manipulating this threshold.
+I can adjust what comes out. Let's see, a higher threshold.
+So three true positives right here and classify it as have two false negatives and ABS classified as zero for false positives.
+Every single negative was correctly classified as negative.
+Here at Drexel. Less false positives.
+Do you see? Do you see where where is this going?
+Now, can you come up with examples where where you would want to, other than the ones that we already used,
+where where you would want to let that have less false positives?
+I mean, if the technician says, shoot the missile.
+But it wasn't actually the case. Like, there was no danger. We don't want false positives.
+Yeah, I suppose the war. But what about TSA agents?
+Unless they like it, they probably don't want to.
+Frisky. Right. Every time. What about lowering the number of.
+False negatives. How about some text related?
+Situation. Also negative is went positive.
+Something that should be positive was labeled as negative. But.
+Classification Center. Absolutely anything. Sentiment classification.
+Or how about how about your your kid? You wrote us you wrote a little an thing that that searches the internet and is looking
+for all the documents or that or other papers relevant to a topic you're interested in.
+Right. And you want. You're doing a survey.
+You want to capture all of them. Positive is something of interest.
+Negative is definitely does not an interest rate that you want to capture everything.
+This is not a life threatening situation. Absolutely.
+There's a problem. So is it clear what moving around that threshold will do?
+Well, I Pit .2.5.8 just arbitrarily.
+You could place that threshold everywhere.
+In fact, you could just start with 00001 and go over all the way to one more point 99 999, anything, whatever.
+Can you? Every time.
+Every time you're essentially ending up with a different model.
+A different classifier. Is it worth it?
+I mean, if you do it at this so granular level, you will find the sweet spot where your classifier is doing exact helpful.
+Let's say that it's possible you will find a spot where your classifier is doing exactly what you want.
+But what's the price? It's a competition, excessive computation.
+If you want to keep multiple models in your memory.
+You have way more possibly way more models to do handle because after all, you have to test every single.
+You already trained it. The only parameter that you're moving is that threshold.
+Right? And now for every threshold, you will run it with it.
+You will run the test set again and again. Confusion matrix.
+Am I happy with it? Am I not happy? Another one. So as we said, computationally expensive if you have time for it, by all means.
+If not all, you have to restrict your search or just be happy with point five or some something that you came up with.
+Yes. What is the x axis? This is your value.
+That comes out of other classes r b for logistics, applying the logistic value.
+So this is minus infinity to plus infinity.
+X is your document vector W and the R.
+Classifier parameters that define that life.
+So you're doing essentially a product of two vectors and trying to find out how how do they align or not.
+And then. Right.
+You're this is the result of feeding whatever you came up with through the logistic function that would've compress it to zero.
+Okay. So I already gave you an a list of a little description of every single.
+Patrick here. I did not provide one additional one, which is called F, measure F score.
+Which summarizes precision and recall sensitivity.
+Now, what about this rosy curve? For those who have not earned it.
+Let's talk about it. Those who heard about RC curves, what is what does it mean?
+The receiver operating characteristic. What's your hunch?
+Yes. I'm not sure, but it should be like 45 degrees out into the Gulf.
+Should be balanced above and below. Mm hmm.
+Well, and when it comes to practice.
+Yes. Well, that by degrees line mean means something.
+You don't want to fall below it. That's. That's. That's absolutely true.
+Now, where does this rosy thing come from? It's not a machine learning, but it was adapted for our machine learning.
+Signal processing wanted to use radios, essentially.
+And are you receiving what was actually sent or is it garbled?
+So networking, wireless communication, radio communication to begin with.
+This was a way of measuring of how good that receiver is.
+I. So.
+What you can see on this are all Sica is.
+We're using two metrics here. False positive rate.
+And. You can find them.
+Here. Okay, Those are the short metrics for your confusion matrix.
+Now, remember that we have three models, right?
+We looked at three models with three different thresholds, trained on the same terms at three different thresholds, 4.5.2 and 2.8.
+Every single one of them got a different, different confusion matrix.
+Therefore, they're getting different values for true positive rate.
+And false positive rates. How many true positives that we get over the total sum of true positives and false negatives.
+This is a true positive rate. False positive rate is how many false positives we got over.
+False positives and negatives. These are ratios or they're going to be ratios between zero and one.
+And as you can see, every single.
+Motto of us has its place on this curve.
+If I was going 001 threshold all the way to 19, I would have something like some curve like this.
+I only have three points to look at. Therefore, that looks a little ragged.
+But. This gives you an idea how good the model is.
+Now, back to your comment about the 45 degree line, which would go from 0 to 1, and that's a 45 degree line.
+What does it mean?
+And by the way, if this is like clear RC curves go goes all the way from zero here to this blue point that follows follows the yellow.
+Lights if it's not visible. Yeah. It actually means that the model, all the models are finding equal number of true positive false positives.
+So those are values like. They're not not back down to is right.
+So ideally we want zero. Do we want a 0.0 to 2 to a positive rate to be one like normal?
+Is it possible to Right. We want a true positive rate, be one with zero zero false positive rate.
+So our ideals. Very good. Come in. Our ideal ideal spot is here.
+If our model is here, you have something perfect.
+This is not going to happen in reality. But the Europe your points on that curve should strive to move.
+Somewhere towards that corner right here.
+The closer they are, the better. So this tells you something about your model.
+Now there's another component to our ozone curves is the area under the curve, which allows you to compare two models because let's say that I hear.
+The three logistic regression models that I have are actually the same model with different thresholds.
+Thus it's the line. The decision boundary is the same.
+The original decision span, Nussbaum is the same. It's not changing.
+It's just me pushing the pushing the thresholds for probability.
+Right. So really, those three. Three points describe a single logistic regression model with different parameters.
+Now, if I have had another one and say that I had points right here, one here, the other here, how do we compare that?
+But let's. Let's actually. The one thing that I have another model that would be great here.
+Right here. Right here.
+Another hour. Right for a different model.
+Now, which one is better? Just by looking at those points.
+Difficult to say. The area under the curve will help you decide that You can measure that.
+It's pretty easy. In this case, if that rosy curve is is a smooth line, you can just integrated here.
+It's just triangles. That to period of.
+If you have. That area under the curve.
+The higher it is, the better the model. This is how you would compare it to models.
+If your area under the curve is below 4.5.
+What does it mean that you do flip a coin?
+Exactly. Your model is useless. A random decision making classifier is going to be better.
+It's a year. You don't want your model to mean anywhere in this world at all.
+And. I'm curious to see your neighbors classify your models because.
+I've seen another group of dependent, different different data sets, of course, different sizes and whatnot.
+Mostly, mostly, mostly that I was able to see as well.
+For naive as you're going to have one point, really, there is no thresholds to to move around.
+You have one model you want at one point and a lot of times it would be something that over.
+I'm thinking fairly early about that point five.
+Yes. When we set up the points, are they always in the semi or like some of the choice?
+Well, you're just you just you just put all the earth.
+Well, we have thresholds here, right? Three thresholds.
+So for whatever sub model, if you please, with different results, just put, put a word or the dot falls and connect.
+Okay. Is it clear what the IOC curve is means and how can we use.
+To decide whether one model is better than the other.
+Here's a I don't remember what I took samples from, but here's a.
+There is something that you wouldn't typically look at when you're analyzing a model like logistic regression.
+Build a number of models and try to.
+Pick the ones and you can see the different curves. Green.
+Reddish and whatnot. They respond most likely correspond to a different training tune tests that break down same data set at a different breakdown,
+and then the dose is different for. Positions.
+Those steps correspond to different. We build the model, same model, but different probability thresholds.
+So first. They just choppered into training in a different way and you will get a different model.
+Now you can play around with the probability threshold to get those steps right here.
+That's why we have multiple RC curves. Here is the average.
+So just an analysis. This is pretty typical.
+Of course, as you can see, the the red one across is just shows anything below it is worse than chance.
+And there is another variant of that curve, precision recall, recall or very similar.
+You're just putting different values on as your current and that's.
+Very similar approach. You want your classifier to be in the one one spot for Frederico.
+Great precision. Your comments about.
+Those curves. The middle one probably means he's the most.
+If you have unbalanced data, our AC curve will probably not be the best indicator of how good your.
+Model is if you have imbalanced data.
+This precision recall curve is probably a better measure of the quality.
+Nothing hurts. It doesn't hurt to to to belt both and compare them.
+But if you have imbalanced data. Precision recall is the way to go.
+No, we haven't talked much about a certain challenge.
+So spam am happy, unhappy? Cath No.
+Cath. Right. Those are binary classic classifiers.
+What about. Nonbinary, multiple label classifiers.
+Can I use logistic regression for that purpose? Not directly.
+Right. Because this this is a discriminant discriminative model.
+It just finds a way to cut it between the data.
+But this is where the boundary happens. Deal with it.
+Yes. We just split into multiple logistic regression.
+Just Blum right now.
+Exactly. Exactly. This is this is how you would approach that problem.
+So. Let's say that this is our.
+Just. Regression model. There is some.
+And right here, the separatist. But once.
+Not very well, but. Okay.
+It happens from low points.
+But there is also bringing points. Different level labels.
+So the approach in this case would would be to build one.
+One classifier read not.
+That's right. Doing all this is not going to do the best.
+Let's give it a go. Green. Not green.
+Blue, not blue. And then the classification you're performing on this case, three classifications instead of just one.
+It's not so difficult to do it. Address that with the confusion matrix.
+Yes. But would be better to use the simplicity that Goodman.
+Absolutely. Absolutely. You're you're welcome to go for any anything else if you were just.
+I, i, I love logistic regression so much that I can't I can't stand neural networks and whatnot.
+Let's just go for it then. This this is your approach.
+But this is this is not going to be nowhere near perfect.
+But if you if this is what you're after. Logistic regression is, after all, pretty simple to build, right?
+Pretty easy to maintain relatively fast in training.
+So if this is your your your thing. Yes, your question.
+So when you talk like this degree version, you are using a sequence function.
+So basically it encapsulates everybody. So what if we just change the function and we use it to classify items?
+I'm not sure which function to use. Like for my. Well, well, you're still have this dividing boundary.
+So dividing the decision boundary comes first and then you're feeding it through activation function.
+So the activation function will not change. It's on one side or the other.
+Does that answer your question? So logistic regression, right?
+Before we get to the zero. Two, two, two, one.
+Before we get to that, we have this. This is our logistic regression model that tells us will tell us.
+This document is on the left or below or above the line width and I will give a logistic regression in this case, forget a logistic just yet.
+We'll give you a number. High positive, low, negative, low, high, negative, low positive.
+Those will be spread out from minus infinity to plus infinite.
+Now, the logistic aspect of it will just compress that, but the decision is still there, right.
+Does that answer your question? So if you move that decision component and use it for.
+Yes. Then you could you could keep the logistic function and replace the model before a neural network.
+Right. Or a layer of of euros, for example, or these things are interchangeable.
+Logistic function happens to be very, very, very good when you want to simulate probability.
+Okay. Confusion matrix. There's multiple ways of handling more than two labels when it comes to analyzing models.
+You could have X class or any class confusion, but calculate recalls for every position, for every individual class.
+You could also do something called macro averaging or micro averaging.
+Compute performance is for for every class individually which would be built.
+Three models right come up with confusion, matrices for all three and then average results that would be micro averaging.
+I'm sorry. My ground raging, my crap raging. Collect decisions from all classes into one confusion matrix, just like this one.
+And. So this would be micro averaging the macro average.
+Micro averaging one condition matrix for all variables macro micro averaging, sorry,
+macro averaging, individual confusion matrices for every label and then average them.
+Okay. So far, so good.
+Tax classification.
+The process, regardless of whether you're using regression, naive base, case, nearest neighbors, whatever it is, is always going to be the same.
+Get your data. Hopefully is it is balanced.
+Hopefully it's meaningful. Yes. Ultimately, we're giving us the same results.
+Not necessarily. No, I don't think so.
+There's different approaches. You'll get a chance to practice that in for your assignment to see whether it works.
+Any other questions? If you got the same result right, why would you?
+Why would you use two different techniques that maybe was close to zero?
+Oh, you can't get that.
+The reason you have those two is because you can't get out the zipper.
+What's the word for it? With binary?
+With that confusion matrix, there is no ambiguity. What's going on?
+Right. It's. It's pretty easy to understand now when you have multiple classes.
+What are you actually trying to. The question is, what are you actually trying to measure?
+Are you measuring it correctly? Neither one technique is just giving you a perfect answer.
+This is exactly. You're using it to compare it to money ultimately.
+So it's a relative scale. Does that help?
+It's like with all those probability estimates that we were going through for four weeks already, right?
+We're not after the actual number. We're trying to compare it to things.
+And if we can preserve the relationship between two things, micro averaging will preserve the relationships between two models.
+Macro averaging will preserve the relationships between between two models.
+One is better than the other. Does that help? Okay.
+All right. We have data. You have two options.
+Always either split it into just training and test set, build one model, test it.
+Our three sections training, validation and tests.
+We haven't talked about valuation. Choose a valuation metrics.
+How are we going to evaluate our model? So confusion matrix is a good start, scoring that sort of thing.
+Now, the big the big thing right here, road tax into vector form.
+Otherwise there is no classification whatsoever.
+Of course, bag of words is you should just learn what it is and forget that you ever met it in practice.
+Train the classifier using the training set.
+Evaluate the classifier using the tests. So once you're happy.
+So with logistic regression, right, we build build, we have a boundary.
+This is not a our line plane over plane that and then we're adjusting the probability threshold.
+Once we re happy with this probability threshold and that boundary line deploy, the model is ready to classify the user experiences.
+Should it stay that way forever? That model. Well, in practice.
+I mean, this is. Well. GP.
+You can work classifier. It's no problem with that.
+But you can hear about or read about different how often they retrain at the post of the different.
+Versions. Right. Mostly. Mostly do catch up with documents that were published after the previous iteration, but also some things.
+So your model is unlikely to stay in the same shape or form forever.
+Or you're going to. I have new data, I have updated data. I have cleaned up my date.
+I have a better, better approach. Let's put it into.
+Okay. What if you're a model is not doing well?
+What if this RC curve is barely above 50%?
+What can you do? What does the first.
+Point me, we ended up with a sparse feature package.
+What does it mean? We need to clear clean data that could help clear.
+But what is as far as vector data, either the long term, the right thing from the underrepresented class or even the mild?
+By cutting some of the data from over? There is many ways of doing that.
+Cutting to balance out removing some data is an idea.
+But then again, your your model is going to be most likely less accurate because of that, because it hasn't seen enough samples, hypothetically.
+So removing data from a dataset is an option, but not the best one.
+Synthetic data can be generated based on whatever you have.
+There's all sorts of techniques for balancing out. But this is beyond what this plan.
+The back to my question, what is a spa speech feature vector? It could be a factor that has maybe only a few positive points.
+Like, for example, if it was a binary feature and it's filled with zeros.
+Yes. Like four or five. Once again, that's really skewing the decision.
+Exactly. As far as vector space, as far as matrices are vectors and matrices where you have a lot of zeros and very few nouns,
+relatively very few non-zero points. If you think about bag of words, imagine that review of a movie on IMDB.
+Great. Great. Great. Great. Great. Great. Great. Great. Great. Right. It's a plausible review, right?
+But it's in bag of words. Representation is going to be 0000001.
+Or if it's a non-binary, it's going to be one right here.
+And then 0000. That is a sparse feature vector.
+It it's not carrying a lot of information.
+Those zeros are not telling as much. So each is a better representation.
+And banks will get to that. Skew the data.
+We talked about it already so high.
+I can imagine an entire entire chorus dedicated to just balancing out the data.
+Different techniques. Not in here. Maybe we just need a better learning algorithm.
+Forget about this logistic regression and go for something more accurate, better pre-processing feature extraction.
+Maybe I shouldn't have removed the stop words, for example.
+Maybe I should have done limiters or something more sophisticated to cut through everything that would classify parameters,
+hyper parameters need tuning. In our case, logistic regression.
+What would be our high per parameter? That would be a parameter differential.
+That would be a parameter to the learning rate.
+Right.
+So this is a good moment to ask you, what is the difference between the machine learning model parameter and machine learning per hyper parameter?
+This is a very important distinction. But we don't do the model paper.
+Those are the values we give to the good with the good good.
+And then that the whole training process is based on the high parameter.
+Now, you can, you can rephrase allow me to rephrase the algorithm a little bit, hyper parameter as well.
+Once the model is ready, hyper parameter is irrelevant.
+It's the model parameter as in the line in our case.
+That will play a role in the actual classification. So hyper parameter is only used during the training that breaks down hyper, but there is used to.
+Set the model carvings on stars are set.
+I parameter out only the model parameter state.
+We deploy the model. So doing right that that's always going to be.
+A problem we have. Okay.
+So you have seen those metrics before, right, that with goal accuracy or whatnot.
+And here's a little argument why accuracy is not.
+The best metric. We go back?
+Right. USS.
+Long story short. If you've never done machine learning or very little.
+Get it. Wrapping your head around what these mean, actually, and how are they affecting your your model.
+Takes a little practice. I'm not going to force feed any interpretations on you.
+Just hopefully you'll do it yourself.
+One message here is avoid just using accuracy because it will not give you the full picture.
+What will give you a better picture is something called an escort, which combines report and precision.
+Issue one one metric.
+Right. Questions.
+There's other metrics for machine learning performance.
+Out there. These are just basic functions. Okay.
+Under fitting overfitting. Everybody knows what it is by now.
+You don't want your model to be too, too closely coupled with training set.
+It will not be general enough bias versus their variance.
+But I understand I don't want to repeat things that you cover.
+But what about this validation set that I keep mentioning?
+So for for our naive base rate and model for our logistic regression, we we just assumed, okay,
+let's take a data set carried into training, set a larger one, and then a test set and we're done.
+But there is another way of handling those, including an extra subset validation set.
+What is this one about? What is this? Used for.
+That's better. If you want to bring different different models.
+So and so before the was just training and tests, then you can just build one model,
+test it and be done with it with validations and all that can come with ten years of vision, such as catching overfitting or other failing.
+For example, if we have a 99% accuracy, for example, in the training, 70 to 80% validation.
+So that's a large gap. That means that we all are fitted.
+It's like you got to choose a. This is how it should be used.
+Mostly it gives us a little wiggle room when it comes to selecting what should be the training set, which should be the testing, right?
+So it is saying like if like your model is too conforming to the training set,
+that's that might be because of how you choose the training set and tests.
+Right. That choice matters. You may you may have a cluster of of a very biased data in the training set.
+A worst case scenario. Right. We have spam and samples, right.
+And there's 20% of them and 80% of them in the data.
+And you just happen to think that the training set made only of samples and the test set is made up of only spam samples.
+So your model will never see a spam. It's sample.
+During my doing, it will only see one label during training which makes it useless.
+So now validation validation subset is okay, let's shrink this training,
+set a little and just keep moving it around and let's see if we're getting the same results.
+Does that make sense? Or different results? Does not make sense.
+Isn't there a thing called the case? The [INAUDIBLE] is this?
+You just leave the past, set aside,
+and then keep splitting the training set into different ranges and see if you're going to get different models or not getting the same model time.
+You're getting different models. You may just end up picking the best one, Right?
+Is that clear? Or do I need to go over it again?
+So validation check is just kind of a little bit of an issue in between the training.
+So I can picture it as a window where you can just taking slivers out of the training set to make it different.
+For example. Okay.
+We made a decision to split the training. And then you're just validations that you've been here and you may be moving a train.
+Let's make it up. Training isn't just this or another validation piece here.
+Make training said that part. And so on and so on.
+Chop chop. And a little finer to make.
+Essentially you have different trainings and smaller and different training sets.
+When you're training models to train multiple models and see how they stack up if they get the same answers.
+When tested. That means that the data you have here is pretty consistent.
+If you have large differences, let's say your training set is this versus that, right?
+If you have large differences, something's up and you have to investigate.
+Does that help? All right.
+Questions? So training, the same training the same type of model with different training in some sense, yes.
+Just to have a collection of them tested using the same person and see what comes up if they if they're performing more or less the same.
+Your training, that is considered well-balanced.
+If there's a lot of discrepancy between the performance, there's there's something wrong.
+Or if you don't care about what is wrong, you just, hey,
+I'm going to pick the best way and shuffling to the top of the valediction and shuffling and shuffle divided into.
+But then you would have to. Yes, it's a it's a solution, But he would have to take multiple models anyway.
+Multiple models. And he could shuffle as is best for a shuffle especially.
+He was nice to draw some balanced in there and shuffling would help.
+All right. Thank you. And I'll see you as it takes care.
+So how would you like.
+Yeah, but it's almost like, you know, maybe it's like, I don't know.
+But I used to think that you might life in the last two or 3 hours of the day in getting a product to match the limited there is,
+but this might be disappointing. Okay, so sense.
+That makes sense. I really hope that this gets this.
+Don't come back to this at all for these matters.
+Exactly. So it's actually one of the smaller probabilities, but that's speculative.
+What the transaction, whether it is what happens. So I don't know.
+I mean, the paper on this. Oh, you will have plenty of space on the on your exam right now.
+So I guess my question is. No, no, I'm fine.
+I'll grab the paper. If that's not enough, you're going to put it right here.
+So it means it's not going to pass in case any one fails.
+The reader checks assert that you don't have to go and come up with a population of
+just what they may be teaching and a strict Tier one translation of this category.
+You can have a larger one. Enforcement let ourselves like this 188 more on both sides.
+But whatever you want, I should just let you do that either.
+Yes. Okay.
+I'll I'll give you that. And I think I deserve it for interestingly, I had already had it done before.
+But this one, I have a.

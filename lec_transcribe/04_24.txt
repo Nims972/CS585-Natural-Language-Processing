@@ -1,0 +1,694 @@
+Good morning. Still on time.
+Of questions? Three of you.
+Parks. Thank.
+My crime. Questions.
+My questions. How are you going to proceed?
+Uh, um. Maybe some. I have time.
+I would like to go over the last piece of the material, if you don't mind.
+I think we will have a tremendous discussion with four people down with him.
+Oh. How was the exam?
+I think better than. The other way around.
+I think I was a it. Think of this island.
+It was a little bit like that. Yeah. The beach.
+I need to know who is a student. Okay.
+All right. So, for better or worse, I led you through, uh, LP historically and then up to some recent developments.
+Not necessarily. The most recent. Recent was, of course, which is a bit of a shame, but hopefully the next iteration of this, uh.
+Of course. And when it comes to an LP, I'm sure everyone knows.
+Here's great stories, right? Large language models.
+Specifically, GPT is on on the news, right?
+Beating all sorts of records, beating, outperforming people in tests.
+Right. There is of course, so not so recent from ball plots showing how GPT models world.
+Scoring on on all sorts of tests available as safety nets here.
+AP tests are essentially the people's most important people's, and that sounds like a great thing, right?
+Or scary? Or both.
+Okay. So I'll get back to. This this little diagram right here.
+You know, that, uh, GPT thinks of are examples that.
+Yes. In the previous slide there was DVT for no reason.
+What is the GPT? GPT for sure.
+I do not scroll through the entire slide. That but you be part of the GPT four advancement is adding images as as inputs along with text.
+So no visuals, just just text.
+But what they do like they don't training another on the other they like remove the inputs for visual, but usually I don't remember.
+Sometimes where you have you have a text input, um, image.
+Okay. But for no reason. They when they do they don't.
+They just don't have any right to it.
+But the model going through but the model still is going to use those inputs to calculate it.
+I don't have the answer for you, I imagine.
+I imagine they would just have to versions of one without looking in images at all.
+That's not visible. Or just ignore.
+Jack. I don't think that would be the case. Yes, I think they are two models.
+Before long before you say. So the image part I think is taken care of.
+I don't know if it's no visual. Probably daddy is out of the picture and it's already beautiful.
+Dolly would be a step forward, you know, vision.
+My understanding is that there is there's no that image in what is not a part of the model.
+I don't think you will be able to just pick it up without question.
+That's the question for open air, whether they have money for that or not.
+Um, I need to think about it from a purely research perspective.
+Wouldn't you be interested in if you're if you have training or two models, one without images and one with images on the same text input?
+Are you going to get the same quality? That would be an interesting question in itself, right?
+Try. Okay, good.
+Taking a bar exam. How's that? Lawyers should be concerned.
+This is another one. Uh, message. Multitask language understanding is a benchmark.
+I'm not. Um, I will not give you a lot of the details here, but it's a benchmark that's based on multiple tasks.
+Not just thinking a SAT exam or something, just doing question answering and whatnot.
+And this is the results are, uh, based on the shot accuracy.
+Know, I think, you know, what you're seeing is great, though.
+So, uh. This is multi-task as in language understanding.
+So you have a GPT up GPT model trained on English.
+And then shown, for example, which are now in a different language.
+And then how did it. Right. So you have Italian.
+Pretty good. Polish.
+Oh, so back close to Russia. I was not surprised.
+However, this is great at 62% for some.
+I don't even know what these languages. Punjabi.
+I understand completely different languages from English and it's still doing pretty good.
+What does it tell you? I think it tells you a pretty good sends you a pretty good message that our languages are not that different.
+Actually, speaking of one another looks great.
+There you go. That's what I was looking. Discard that or.
+If I don't know. But if I could do it, I could just use those.
+That that component of that transformer block right here as a as another text encoder instead of a,
+because you would have to just swap visual embeddings from text.
+Uh, I'm sure you know that there's. More and more language models out there that we could list in a single class.
+They're all meeting with each other. How does he.
+Whoever has the most data wins delivery.
+Net or similar languages.
+Language based, uh. Image generation. Almost everybody was great.
+Pretty impressive, huh? So I'm thinking you.
+You have a pretty good idea how those work. By the.
+Copilot. Do you understand? I'm assuming you would know how that would work, right?
+You know as well. Just use the same structure.
+Is that the transformer? Instead of being an English text, just reading it.
+Data. It's it's fascinating.
+And this is something that I was hoping for our little discussion over isolating.
+Um, well, when you're signing up for GitHub or any such service.
+Right. There's a there's some legal mumbo jumbo that you have to check.
+I have read and understood everything. Right. No one really reads that.
+Most people thought of that. And I have nothing against GitHub.
+But then GitHub here has access to all your code, and it doesn't have to ask you for permission to use it to train its its own model.
+Right. There are two things on that because I think the system there, uh, the platform's own your content.
+I think that's okay with that.
+That's pretty much it. And the other is, uh, even if they asked for permission and these technologies like to, you know,
+they have to be considerate of the conditions, like the notion that, oh, 20 years ago or 15 years ago.
+I have no idea. Absolutely.
+So I have two questions related to that. So is that okay that it's a standard for a platform to own your work?
+Is that okay? It is an absolutely an ethical question.
+But, um, it's it's like saying, uh, uh uh, um, of a bag storage.
+Room at the at the train station knows your stuff because you you left it and they think it's different, but not that different, right?
+So the reason I want to have this discussion is you guys won't be making decisions along those lines building.
+To cover that kind of. The other one is you're absolutely right.
+The the legal system is so behind in the with that with all the stuff that well what do you do.
+And now we have a problem. We'll talk about what legal initiatives are all over the world.
+And shortly, if you think about it, go home.
+That that all those big companies even even if that law comes through globally, which I don't see, I don't see coming.
+There will be, like other data havens somewhere where we're keeping our servers there, and the law does not apply, right?
+We can harvest whatever. And this is where the users would be making a call.
+Okay, I don't want to work with this company, but that's in the system certainly now every every startup.
+So you're you're creating a startup, right? That is subject the new to new laws to law.
+Caught out a little bit to a where I is and now you're you're you're constrained by something that ain't open AI or Google or whatever.
+Never constraint. How do you compete with that? You can't get the same data they have, right?
+Uh, it was welcome and covet like done.
+We were looking at stuff that it's, uh, difficult on the station and, uh.
+Um, that's the challenge. Okay.
+So when we ask that, you give them, they say it's nice to.
+Now it's okay for you to be called those words, but say, like, I know that difficult, but you don't know.
+So how is this being. But probably the the field is too young, but they are allowing everything.
+Um, and maybe in the future they are going to the strength because like the other league.
+Soccer was talking about.
+But he thought for the future that maybe the not going to be so good that they are going to create their own deficit from the table.
+So it's going to be it's a that's a that's another problem that we will discuss in synthetic data based on this um,
+arena that is, was being generated by. Yeah.
+In any case, um, I am assuming that everyone is seeing the problem here.
+This is like this is probably the one of the best AI examples.
+It's not new, but fairly recent that I have no qualms about.
+Uh, visual question. Answer any. Okay.
+Has anyone seen a movie made about by GBP three?
+I don't want to waste your time playing, and you might as well try.
+This is, uh, this is 2020. So it was an early, early thing.
+Uh, there you can find a lot of those on unlimited lists sometimes.
+Well, the the book is like they use the AI just for the structure, and then they start putting things in place because like,
+uh, I've been ai is, is showing me lately as usually those sort of, uh, business, but we don't know if that's 100%.
+Yeah, that's another great comment.
+And we don't know what was actually done by or was the restaurant generated by AI, and then someone published it and how much of it was polished?
+Uh, have you seen uh oh, there is also the one I was like, uh, and then started offering like something software engineering and services with an AI.
+Um, then people started studying the, the, um, trailer just for the, for the service.
+And they found out that that, like, uh, creators started asking the, the model, um, then they just, like, edit the path to make it look better.
+So, like the asking the model for one thing, uh, apparently the model was creating its own fixed,
+uh, features completely, and it was just, um, a page.
+So, in other words, basic idea that there is marketing is saying that AI is doing all this beautiful things,
+but in reality, at best, only some of it is done by.
+Right. Have you, have you seen, uh.
+Well, was. Gemini released, I think, in those last years.
+Did you see that little bit of the Google bubble model? But there was a video published out of nowhere.
+That was just spectacular because the what the Gemini was doing, it was just mind blowing and then people picked it apart.
+You can read tons of articles on them, but this is nonsense.
+This is this is just added that this is this is garbage.
+Essentially what what you presented is GPT four that you made.
+There's nothing better than that model. Your model is not capable of doing what you are showing it is.
+There is a lot of that. I have a couple of those who are talking about might as well.
+I have a couple, um. References in today's slide above.
+So are you using has anyone using the Amazon themselves?
+So, uh, check out stores that include, uh, um, whatever they call you walk in, you just grab things and then then everything is done automatically.
+It turns out that it was just not I handling that,
+but people monitoring everything in India out of all places we still don't know because like the news to you, uh, uh, even a little Indian culture.
+Uh, is that true? Or they were like, supervising that system because I know from a company that deliberation, uh, content moderation, uh,
+they they have to model the model checks if a video is okay, and then when the model doesn't, don't, don't know they are there.
+You know, we don't know if that's what happened that I would I would say it's again again
+the situation when some of it is done by AI and then the rest is in there.
+So I don't think it's just supervised by humans.
+I think it's just maybe not the most.
+Most of the work is done by humans, but like 40 or 60, uh, I would say that would be like that.
+But the problem is false advertising.
+And I mean, in even in the challenge with this, uh, trust competition through that, those companies are entering versus them.
+How many how desperate do you have to be right here to roll out that service so quickly
+that that you will cut corners and lie to people when you have that impression of being.
+Yes, yes. So that is that is insane to me.
+And we're talking about the biggest players in, uh, in the field.
+So imagine you do you make your own startup. There's five of you or three of you.
+How can you even compete with that?
+In other words, it's shiny. It looks good, but.
+Questioning. And now I think, uh, you you you have a pretty good idea what's inside and what's a pretty good idea what's possible, what's not.
+Yeah. So. But, okay, I'm not going to discredit all this fine stuff.
+Let's say that it's it's better. It's a fact.
+Those models, those tools are fascinating and great and drawing a lot of, uh, fascinating.
+Uh. Taking over a lot of tasks and in fascinating ways.
+But is it all great? So you're just seeing or we are just seeing the front of the store,
+what's happening in the back and what are the what are the consequences of what's happening in the back?
+Are you aware? So here's here's a couple ones.
+Deep learning. Fascinating. Great. Successful. Image recognition generative AI large language models are fascinating.
+Great. But. Well, uh, let's start with something fairly easy.
+This is just an opinion from. It's a paper I don't remember.
+It's fairly recent, but it's an MIT paper. Um, essentially stating that the the pace at which all the brilliant developments are showing up,
+the pace at which machine learning achieves is has its limit and it will slow down and we will not be seeing such and such.
+So, so huge, such huge jumps between gearing up to here.
+That may not be true. I mean, Moore's Law is involved in that for sure.
+Um. Money.
+Computing power. Computing power in many, many, many ways.
+But there's there are limits that nobody but few people talk about.
+Everybody's happily using it. Let's talk about those limits.
+Here's a screenshot of a paper from 2020, which is a little dated.
+I imagine, uh, and things have changed.
+This this little red box shows the price of one training run for a bath model.
+You know what a third model is, 2020. So if you had a model with 1.8 billion parameters.
+One run, but would cost you $1 million.
+Who can afford that? One training room. Can you do it at home?
+I mean, you don't have the infrastructure, much less the money. What's what's in that price?
+That. Electricity, right?
+Maintaining the infrastructure. Keeping paying people.
+Right. I don't know about collecting data. Maybe.
+How about another angle of of of the same problem?
+Do you care about the environment or not?
+Let's just go. I'll go up in smoke. Here's an actual cost of training.
+These are estimates, right? But even if they're. Slightly off.
+CO2 emissions for training, training, training and transport.
+There you go. Convert to full of being.
+This is. This is. This is. This is the amount of CO2 CO2 emission in pounds.
+How? What? From what?
+Well, to train a transformer, one of the big ones you have to follow today.
+The server server farm consumes electricity.
+That's one thing. And then you have to cool it.
+I was raising, uh, some, uh, research on Amazon or one of the big company then trying to, like, train and, you know,
+when did they say they can choose if they can train them using only the intercity in the city because it was shut down.
+So this particular issue right now, like it was written like there is this customs of China,
+they are trying to build this and no ships that just use them.
+You. Know while there there is a limited, um, electronics architecture in the place.
+To be changed to be less less power hungry, which is a challenge because we're approaching a certain limit there.
+It becomes discipline hard. I'm sure you if you haven't seen that email, you can easily find information about the big tech,
+uh, companies moving their server farms north or south where it's cooler.
+I think I'm a lot more comfortable considering having a server farm underwater to help with the cooling.
+Um, Microsoft has a system to call their servers under work.
+Yeah. So there's. This is a big deal.
+In other words. Now.
+If you think about it, all this open, all this perception, whether you care about the environment or not.
+A lot of it comes from, you know, people using models for silly stuff.
+Precisions with GPT data meaning nothing at all and don't contribute much to the society, right?
+Or generating stupid cat images. Heck, we're not perfect, right?
+People do that to. And it's all wasted.
+Now, if you don't believe me or open AI CEO this year stating essentially he's a is damn
+here boils down to if we don't find any in a better way to produce electricity,
+then I will not grow. At least not at the pace we're having.
+So, uh, and the quantum computing solve this issue?
+Yes, absolutely. Quantum computing with good speed up the computation.
+So you get much more done with within much less time.
+I don't I don't track that area that much to know how much power would an equivalent quantum computer into my laptop.
+There's nothing like that in existence. I don't know how does that compare?
+I imagine quantum quantum computers are going to make you much more power efficient in overall.
+So there's that. But he's he's talking about moving nuclear fission was, uh, the Biden administration.
+They, uh, they issued like a big one, you know, is the new state to develop.
+Yeah, that's absolutely the the future, by the way, if you're if you're if you're.
+Sending very sensitive information through to just, um, secure Https channels.
+So um, or keep in mind, um, that there's, I'm just joking that that's the strategy for, for um.
+Spy agencies is essentially that.
+This is a signal to countries such as Russia or a U.S. back and forth will just keep recording the communication between, you know, important places,
+even even though you can't decipher it right now,
+they're waiting for a quantum computing to come in and then open them Christmas, Christmas present and it will happen.
+Okay, so have I convinced you that it's okay?
+It's beautiful. It works. But is it double the price?
+Stuck on it is is huge. What about.
+What about, um, human involvement here.
+Here's an article for you. Open I used.
+Low paid workers personal come that way. To fix their model.
+Just getting back that goes kind of back to your here's your question.
+How how is that happening. The changing. Because changing evolving and some things are not allowed anymore because there there's retraining.
+There is people paid less people from like more countries in Africa.
+Um, they have them watch like a local pictures.
+Yeah. That's that's what, that's what Facebook does for for that's like another story.
+Uh, I think there's, I read articles about serious mental issues, people who do that work for a long time just watching, you know, horrible stuff.
+But luckily I know I know a person that work, um, uh, a mother that was killed, um, just to heal is talk about, um, mentally, um, people that were.
+Yeah. Like she she she also into the the work is would be.
+But, uh, even if you triple what she gets in, he, you know, he he lifted.
+I'm not I'm not surprised.
+Also comma told how much good work you can get book how much how cold you can get it from under be like that's a question for open AI.
+Obviously it must be must be useful for them. I imagine that statistically you're you're just getting you're improving something a little.
+And it costs much less than just retraining the model or hiring somewhere in the in the U.S., for example.
+Yeah, I, I actually, um, worked with one of the companies that, um, that I announced the partnership and,
+and I do think that in a lot of the article from my side, they'll say things, you know, you only paid workers $2 per hour.
+And they all made the fact that I the minimum wage is actually one third of the $2 per hour.
+So they actually they, they, they do also have.
+Yes. Because you know, and like my training courses and, and other things like, which is really easy.
+Give us some metrics.
+So for example like um, I say that these these are things that we're not allowed to talk about as they like actual content or like, uh,
+how to make the conversation better by the AI telling people how to kill themselves,
+how to be faithful to it would not be good if you're just marking it.
+This is not the end. Like because U.S. workers are paid, um, more like there's like, uh,
+a huge issue of like people are going to be fired by, by a account, which I call this is not allowed.
+So I think like this issue of kind of like, like, oh, I don't like I'm lucky.
+Like the companies do pay very well. But on the other hand, it's also a lot of people that is trying to like this is the issue.
+Are you all of you were just sitting here. I just want to get like as much money as possible.
+Like I'm full of a complicated like. Yeah, I imagine that it's there's more than two sides to that story or.
+Regardless of that, I don't I don't I don't have any such experience myself.
+And I only keep track of, of, of that aspect of it regardless.
+You can see just know whether it's being there, being underpaid, where there's fairness or what the whatever.
+You can see how much involvement the human factor has in improving those models.
+You just see the chat GPT getting better, better. Oh, they're doing some spectacular thing.
+There's an army of people just fixing. Yes, yes.
+Um, a year ago. Tick tock. Also like that.
+Um, like they would allow, um, like breakaway.
+Actually like, um, that that would get like, like a bunch of good content and they would have to read it if it's like,
+um, but if I did like plus 15 or like they said it.
+Could be like outside their country, like point like extra money.
+It would just roll it even, like people like you.
+That's how I know it. Like people that I know who are doing it so that you just get like extra money for just, like, filtering or that.
+Not a job. I would want filtering content for sure.
+I mean, someone has to do it.
+I imagine everyone in in big companies like that outcome is going on on I doing, I am publishing on I do filtering it out.
+But. That's tricky.
+All right. So we talked about the beautiful things a little bit ago and experience it all.
+And every day I know you have a better understanding of what's behind it, but there's also, uh, actual theoretical limitations to work done by order.
+So let's let's talk about that for a little bit.
+Uh, the, the I'm not going to go into details which parts of AI and NLP or whatnot are subject to that.
+But I think. Are you familiar with Mr. Gödel?
+The German mathematician worked with Einstein.
+Or is he in the 50s, I think, or 40s of last century.
+He proved that mathematics is incapable of answering all questions and in logical,
+truthful fashion there are questions that are never going to be enough,
+which means that no computers and system will ever be capable of answering all questions.
+Whether this is this is your, um, AGI general AI having limits, uh, itself, or will those limits show up even earlier?
+I don't know, but that's something worth knowing.
+So here's a question for you.
+I wish we had a bigger audience today, but even given your experiences with large language models, and I'm sure you've seen some news,
+uh, about, uh oh, this is this is becoming sentient or self-aware or we're we're close or we're not close.
+What do you think? Especially when we're talking large language models.
+You know how it works already.
+So do they think. They can closely mimic thinking but not really thinking.
+Yeah, I just a probabilistic. It is just a probabilistic model.
+The question is whether this is a probabilistic model as well.
+If it if it is exactly the same, most likely it's like different slightly different architecture.
+Think of the legend. Oh, [INAUDIBLE]. Oh, yes.
+Uh, for me at least, I don't think so far away.
+Uh, for tensor, uh, as a, as an example is.
+Uh, for certain times, if you ask should give it to like the cannibals.
+So they will say that will say, you know, uh, for the copyright issue.
+But if you said, um, can you wish an invitation for like, oh, this one, like, I think it's that it's a fun way to just.
+Oh, yeah. Human. Human would.
+No. Yes. Uh, like from my I'm a few people, you know, even though we are something like build up your science it like, um, coding.
+It's like, I don't know, like it's -20 right now.
+All that stuff, um, meditation.
+So like that because the mental issues are arising.
+Right. So all of those things are like talking about self-awareness and like doing stuff and I don't know,
+like it's just still very controversial how we are software.
+So I don't know how we are going to make anything else of the way.
+And uh, one of my program teachers was saying, like, back in the day that, um, I think, um, we are going to be thinking and like,
+computers are gonna have actually like artificial intelligence, quantum computer would be another 48 is really funny, but I actually I have.
+No. Why would someone else say there are a lot of things that are unfair?
+That is a great comment that we don't know what self-awareness means.
+How is it being generated? Are we really self-aware?
+I would question that. Let's not talk about my personal beliefs here.
+Uh, I would, uh. Um, why do we want to make something that is self-aware?
+Like, why are we thinking of things that didn't work?
+Why? What's the section about? Well, that's that's an even better comment, I love it.
+Why are we trying to build something in our power?
+Um, so. Similar to us, right?
+That's arrogance. It's called arrogance, I think.
+Or ignorance or both. Like or interest or like some things that come up when like.
+Right. I mean, it's also kind of religious for me.
+Like, I don't want to insult any of the religious, but it's just I know why wouldn't quite like that.
+I agree. Yes. Go ahead. Uh, just like I don't think we all know this, but because of this,
+the ability that we would have if we can develop some people so that if we can understand how we are supposed and how we think and develop something,
+some, you know, we can use it for those people, but it's kind of limited, I know that.
+That's right. Absolutely. If you can build a computer system that is helping those who are disadvantaged.
+I think every one of us is disadvantaged at some level in some aspects, so there's no question about it.
+But I think most, most, most effort goes into commercial products that are just making a lot of money very quickly.
+And going back to your comment about making something in mirror, mirror.
+I find it fascinating how people want AI to be like us, to relieve us of things that we have to do.
+And then the moment I becomes good enough to replace is like, oh no, no, no, no, no, we're not doing it right.
+That's just this thing. Yeah, this is pretty hypocrite.
+Hypocritical if you ask me. I love all the discussion, uh, that comes from, you know, artists arias or musicians, painters and whatnot.
+I feel their pain. Yeah. With with their.
+No. Nobody will want their work that much anymore. I mean, that's a completely different discussion, but where were you?
+Where were you when, you know, uh, clerical work was taking over or what was, uh, um.
+The companies that handle, you know. The customer calls.
+This is done by computers, right? Not right. Taken away by AI easily.
+Where where where where were the artists protesting that?
+Right. Oh, you work closely because it's it's creative work or untouchable.
+Everybody else can lose their job. So it's it's it's.
+Pretty, pretty interesting to me. Shows a lot about us.
+I suppose. That's the behavior.
+The company's ability in a media activity.
+But maybe it's related to personality because it's the more expressive people that want to work on this period.
+So it's going to happen to us.
+Very low. Okay.
+And you say like, artists are like. No. Yes. They are everyone in their own field.
+Garlic. So, um, so like pop in that they're not going to be touched.
+For example, medical bill although like, you know.
+It is there's no like, it's just very, um.
+Very controversial method. They have to be like everybody.
+And, uh, also like, I don't know if you watch that.
+They're like, old people will be aware that, uh, there was a guy, like, manufacturing up with his own hands and then,
+like, ringing that big computers or like, big machines, and they are substituting the workers.
+And so this guy Apple being like, uh, kind of supervisor of these machines.
+So basically it's kind of like an analogy of how you have to be, uh, always evolving the technology.
+So they might be you might get substitute even program like in short, the pilot is like not a new thing.
+Like we can be substituted very easily just, oh, you just have to be on your team because I have all this, you know, we all can be substituted.
+Should be ready to adapt. I mean, so my job, my job can can be replaced.
+He's only within the next five years. To some degree, I think.
+We'll see. Oh, yes. Oh.
+Oh. Yeah.
+Oh. So part of part of that discussion is you guys are young and this is all ahead of you.
+And you have to contribute, I suppose, in how the world will be restructured.
+It will have to be restructured. Why work when everything can be done by.
+Not everything, but most of the stuff can be done by machines.
+Maybe that's why some people talk about that.
+They have been here the way they like.
+People talk about the the dirty, um, like this looks like.
+A singularity, right? Yeah. People become one with machines or merge with machines.
+Yeah. This won't happen in sci fi, really.
+But. Uh, the point I'm trying to make here as a byproduct of this conversation is that 20 years or 30 years ago,
+when you're talking about AI, it was this horizon in the future.
+Oh, yes, I can do this little task here. Contingent recognition.
+All right, everybody, this is this is this is not a big deal.
+Now, we're actually past the point where we're where we could react and control it.
+In my opinion, I was just kind of channeling it more than anything else.
+Uh, but that's just not give AI all the credit.
+Let's talk about some AI blunders.
+How many of you are familiar with Microsoft? Tay? This is over the length of two.
+It is. I think that's that's the one.
+That's the one. This is this is this is a first stab at that, I think I think global chat bot made by Microsoft in 2016.
+It there was it was a Twitter account, a Twitter account that learned from, from interactions with human beings.
+And it was taken down within less than 24 hours.
+I mean, that's that's what it's called, poisoning because of the trolling.
+The yes, people were trolling, trolling the bot, and it just quickly became a, a fan of a certain German leader from 1934 ago.
+It was Rick Days and things didn't please you.
+Oh, here you go I hate him. Don't die in Berlin Hill.
+And that's a, that's a that's a mild one. If you go Google you'll find some really, really nasty stuff and stuff.
+But. You won't see blunders like that anymore as companies are very, very careful about releasing.
+Uh. Thing model of that kind in the wild without any supervision.
+This, however, in my opinion,
+was a spectacular success in 2016 and therefore what it was designed to do it just with whoever designed it and was not ready for levity, I suppose.
+However, this is not an NLP related, but I'm sure you've heard about.
+Tragic accidents involving Tesla parallel Teslas.
+So that's that's one out of many messages that that we'll show you that, uh, the IT field is not immune from something that happens.
+I don't know if, for example, construction work laws and regulations are constantly updated because someone got hurt
+somebody due to not thinking about possible consequences of doing this and that.
+Uh, you said some of you brought up issues of that nature is early, early GP3.
+This is what those canyon people are for as opposed to that.
+Um. Of course.
+These. These are hand-picked examples because media likes those.
+But. It happens. This is one of my favorite.
+I think it's true. I think it's true that this just.
+I saw it just like just after ChatGPT was released.
+I know it's funny, but. What's going on here?
+So one of you mentioned mentioned companies are using synthetic data right during training.
+This is synthetic link generated by ChatGPT.
+It's funny but imagine feeding it back to the model or training.
+It would learn that. Well two plus five is age and that it would perpetuate in the model.
+And if you look around, you will see that those big companies are struggling to get good data.
+Significant body of that that is fresh and useful.
+It's not like you can go on Reddit and grab everything and train the model on it, because the rest of this.
+Is more chance to this thing. That would be a horrible precedent for data stores.
+How about AI and orphan?
+This is this is not going to be all regulated.
+I cannot be regulated. Heavily regulated.
+In fact, you're in you're subject to cyber warfare all the time.
+Is that real? I would say yes.
+But like our art water, they use the right.
+You will never learn what what is exactly going on.
+Because those kill. If there's an accident, it will be swept under the carpet and attributed to something else.
+But, uh, I'm cynical, but you have to think of the war and there.
+As a as a as a test ground for all those military companies.
+Right. Oh, we have this nice little board squad.
+Let's try it there. We'll give it to you for free. Oh.
+Someone died. Yes. Or it was.
+It was someone else. I think it will look like a nuclear bomb.
+To do something like. Can you be able to do it? Because.
+So then you said some something, but just.
+I think. The area.
+I mean, we're diverging from LP a little bit here, but nuclear warfare is something horrible, right?
+It's you can't make one. You can make a bomb at home, right?
+This is impossible. You can have a facility. It takes a while to set it up.
+You need scientists to make that happen. So it's not easy.
+Let's. Just, uh.
+Can you get plutonium or uranium? Yeah.
+So you only need that the other the rest of the world.
+You can put it on there. I agree with that.
+But you still need quite a bit of uranium or plutonium to make it happen.
+And also remember the is of Europe. Um, there is a lot of very, uh.
+Yes, I'm from there. Know it happens everywhere.
+They have it, but they have no clear lake in South America.
+We have the question, but I don't think it's too late.
+Look, it's Eastern Europe. Look, whether.
+It's the Ukraine, really, if we're talking about it. Because Ukraine has had, uh, part of the Russian arsenal and things like it's disappeared here.
+Let's blame Eastern Europeans for that.
+There's there's truth that I don't I'm not denying, but at any case, you can't build that at home.
+It's not even. Or if you can, you will build one right and not build a drone that could hurt someone.
+You could buy components right now. You will have it at your door within an hour.
+The software is probably floating somewhere in the in the internet.
+I mean, if you're a good coder, it will take you a couple of hours to modify it.
+Boom. Don't deploy to that position. I'm not giving anyone for legal reasons.
+I'm not giving it away. Yeah. Uh.
+Are you. Are you a citizen? No. Think about it that way.
+No, I'm not saying I won't make it. Go ahead the way I like.
+Well, I don't know if you, uh. But if there was that, you would like me.
+But read the book. All right. Um, so they're not using that digital book for, like, as the future because people and, uh, uh, you know, uh, yeah.
+So they abolished all of it just stops.
+And now they're, like, mechanical, like, they could be cool, but it was like, kind know,
+like, yeah, it's like a future kind of, uh, thing that they predicted, I guess.
+But yeah, I just wanted to share that, uh, so is this is this is this is.
+Part of our reality. I don't want to name another conflict going on somewhere,
+but there has been one of the sides of the conflict thing, uh, using, uh, invitation for the.
+I do recognize that that's the I is one thing, but there is what what do you call it?
+It's an electromagnetic weapon that just kills electricity and everything.
+Yep. Yes. Do you know the theory that it's not true?
+Because you can. And you need a very big one.
+And it doesn't. It doesn't. It doesn't fit on that plane.
+Uh, no. It's, uh, you can control the IMT because of the form of the atmosphere.
+Let's go back to Arnold. No more. No more bombs.
+You have lexical bombs. Um, here is something.
+This is an interesting article that you looked at.
+What's interesting for me, from my perspective, the summary of that article, it was very like it was published in.
+Last year. After the first first few months of Chatham's first semester of ChatGPT the
+existence and how what happened in academia and the summary is essentially,
+um, but this is a well, I believe the homework is right, I do it.
+Everything's working for people. But what should matter Indian is if if the person sent the work.
+Um, it's like, uh, the student is approving the company.
+So what they are doing is they are just using the AI to do that.
+Like, if I show you my work, um, it's wrong. It doesn't matter if I use the AI, if what I'm approving, like, uh, like signing, uh,
+you can see that, you know, because some someone has your secretary, you know that.
+So that's the value. Well, the at the same I agree.
+I mean, you're saying, well, you understand the other perfectly.
+The idea is to have that person do that, you know, but maybe, maybe the future is going to work with them.
+Yeah, but what I, what I find fascinating,
+I don't know if you remember last year that was the moratorium on from people like Musk and another people, you know, he let's let's.
+Pause the AI development. Right.
+That was this was nonsense to me. And that was probably a second bottom.
+Some companies trying to you know, you guys pause and we will secretly develop it.
+But similar stuff has been happening in academia.
+What do we do about this Chuck G. And then there were there were universities.
+Where were it with the networks? Uh, staff?
+The networking stuff would just blog ChatGPT pages.
+So why? That's crazy.
+Don't ban. Don't bend that. As you said, you're signing off on something.
+If you're not smart enough to take responsibility for that, you're probably in the wrong place.
+But look around. I think the the so typically one.
+Was more about because I didn't want to get in trouble for the copyright of the work.
+Oh yeah. That's, that's that's definitely a part of it. But a similar idea wasn't floated in academia.
+What do we do about it? Let's just stop. It's impossible.
+Number one. Number two, explain to us what it's like telling you to not use calculators.
+Use abacus. It doesn't work.
+Uh, but the once again, the summary of this article is, is that, you know, students, 100, faculty zero stand no chance, absolutely no chance.
+And things have to be redone. I feel for, uh, high school teachers, all your humanities, all your humanities work is based on essay.
+I was just. Either you have a student in front of you writing in for you authors.
+What's the point? No.
+Remember when I started with this, uh, initial plot where a GPT was doing so well with tests?
+Well. Has anyone ever read any articles about IQ tests?
+People. People who are smart and score high on IQ tests even frequently question the idea.
+So again, there's still a lot of people who are bright. But I like you this and that.
+I'm better than you, right? But if you look closer at under the hood of an IQ test,
+or even in standardized tests that your high schools are providing, what are those tests tested?
+Uh, they are like. Okay.
+They're testing your ability to pass that test. That's what it is, right?
+So in other words, if you're applying GPT or any AI model to so you're training it so that that's like that,
+it means that you train your model well to solve that task.
+But that doesn't mean that that model, that model is intelligent or it's not a measure of much room.
+Have you seen that video? Ever. Let's let's not play it.
+Some people get offended by it.
+Well, long story short, it's an early, uh, Gpt3 based video where someone, uh, made two instances of GPT three talk to each other.
+And then there was a conversation generated, uh, it says, do I talk about becoming human?
+Human? So there is a fallacy. It wasn't exactly said, but let's destroy humans or something.
+But there's funny talk along those lines.
+And what's crazy is about, I don't know, two minutes and or something.
+The one is a male character and the other one is a female character.
+I'll let your imagination go wild here.
+Where does the conversation go in the middle of it?
+Tyler, we are talking about being human. And two minutes in there to say, get a room, right.
+So, uh, this. It wasn't that bad.
+But there is. There's just the the topics are changing very quickly.
+But do you remember I was in other words, it's generating one word at a time.
+Right? So I'm sure there was a initial sequence that sparked some some mood change.
+And it just went with the flow with whatever humans are.
+Using in the conversation. Pretty funny that it says a lot about.
+Oh, yeah. Absolutely.
+Uh, go ahead and start that.
+This section is mostly based on vision, but it applies to NLP as well, so I will breeze through it if you want to check it out.
+There's video links in there. And the bottom line is there, just like with image recognition or image tracking or object tracking,
+there's ways of fooling AI because as you said, AI is not thinking that.
+Can you example it is not connecting the dots, it's just following symbolic rhythm.
+You can you can easily fool it. All right, here's something.
+Can you see that? Well, do you do you, uh, respect academics?
+People with Ph.Ds? This is a published paper right here.
+Any introduction? Certainly. Here is a possible introduction for your topic and went through all the scrutiny of, of of whatever that is.
+I can't I can't believe it either.
+But it happened. So it says two things. I absolve the others to some degree because they're clearly Chinese and may not understand English.
+Well, it's not an excuse, but to some degree I have some of them.
+That means that whoever is in charge of all.
+Of that, it never really looked at it first.
+And that [INAUDIBLE] like there was more is what you read.
+Oh, how would we do that? You would do that?
+Most people would. But apparently this just went through.
+Someone caught it afterwards. Here's another one. Uh, I don't have a link for it, but if you want, I'll find it for you.
+Crazies and. Uh, along similar lines, here's something that is a little dated.
+This is, uh, something that. People created before large language models using context free grammars.
+You remember those set of rules? They they started they created the model that produced scientific papers, bogus scientific papers.
+Okay. One of our papers was accepted to a conference in 2005, and they went to the conference like.
+Crazy. Now the best stuff, right? Have you heard? That kind of stories.
+By us. Bias in data happens all the time.
+That's that one. Have you heard about Amazon Recruiting Eye, which was favoring male candidates versus female,
+which make a lot of sense if you think about it, because it is predominantly male oriented in 2020.
+And if it's not an AI, they didn't. Think they could.
+The male thing that they've received and even even, um, like, uh, went with a veil thing, like they voted, I guess.
+Whatever. So it's like, it's not about AI, it's about like, um, so even women are like, yeah, yeah.
+It's again, it's like a reflection and there's there's more of that.
+Uh, this is uh, so there's an article about what you just described it.
+You can find it online or but there's there's some silver lining to that that we can learn something.
+I can help us learn something about ourselves, which I'm sure not everyone would appreciate.
+Uh, it's not, um, it's only a result, but, um, with the news.
+And that is like a very, very using a company to recruit people, uh, because it's used all this.
+This is data which is biased for men.
+And just so. Yeah, tell the joke you, uh.
+So it's it's just paper men, and they didn't even notice it until, like, some women get into this software code that she wrote.
+Thank you. She knew it. Um, but just. Yeah.
+You know, happens all this time. All the time. I mean, guy, I'm not here in America.
+There is no love or hate discrimination in at place in the community.
+There is and there is no, no, I'm I'm not talking about, uh, uh, fair process.
+I mean, is there any regulation about let me not ask you some questions,
+because I remember he just said he cut like somebody gave to those those not policies for the military.
+Is there something similar for the program?
+So I guess it's not explicit because you can get sued.
+A company can get sued for for free.
+I imagine if, uh, if a young lady shows up for a free interview, uh, this is, this is something that would still fly, I guess, in Eastern Europe.
+Uh, this is not here. Imagine a young lady showing up at for any interview, right.
+For a company. And the question is, are you pregnant? Right.
+Or that's another thing that happens I'm sure you're familiar with at Eastern Europe.
+Sure. Like, hey, Hmhm, let's take a look at that. Right.
+Because it makes sense to us. It's a it's an ugly question.
+It shouldn't be has, but it makes sense from a perspective of someone who is hiring, uh, an employee.
+Right. You'll be gone in nine months. What do I do next?
+Right. That that kind of question would not be no one would ask that kind of question here.
+And, um, I don't blame them. I think it's more, you know,
+the whole the whole litigation system in this country just prevents people from
+from doing asking that kind of question is there is bad and good with that.
+Oh, so it's kind of like holding yourself, I think that you might have to deal with later.
+Um, and I think like looking at the, like, stakes here,
+it it's like a game where you're trying to look back and say, these are, well, we are not different.
+The first example is we can't have babies, right. Or whatever.
+So there should be like adjusted, I don't know,
+like the rule whatever we did not like oh we're not going to like make it's like it was based on a mail system.
+I don't want to be treated as a male. I want to be treated emails.
+So like just adjust your policy not to hit me or um, that's also like an issue I.
+Yeah. This is this is a very, very difficult situation.
+And you can imagine the AI systems doing the recruiting, right.
+Uh, it's a can of worms. Nothing there in time, so I'll stop here.
+We could go on and on and on about issues of that nature.
+Um, but I'm assuming you are concerned about it, and you should be concerned about it.
+And if you're not concerned about it, then you will get a job that involves AI or LP.
+Specifically. Your company will be probably forced to be concerned about it.
+Otherwise the customers will turn their back on them because, hey, you're not being fair.
+You're not being transparent with your data.
+Da da da da da. So it it it has to be a part of it.
+Slowly. It is becoming that. Okay.
+Two more minutes. So any questions I'll just leave it at that.
+Okay. I will fulfill my promises.
+You have a one minute missing lecture. I will post the recording.
+And this is not going to be anything ground breaking, earth shattering.
+So you're you're free to ignore that. But I will provide that, um, one extra topic.
+Otherwise, it's our last lecture. So I would like, well, first of all, ask questions.
+Not yet. I will, I will do that. I don't want to make empty promises.
+I will not put a date on it. But I will be next week for sure.
+So you'll be. You'll get it. You can do whatever you want, and then you can follow up with me.
+I will, I will work with you to expand that.
+That sounds good. That. Sorry for me. No, no, no, nothing is for great anymore.
+No, this is for you. We haven't had a chance to do a lot of with large language models.
+It would be art. Really. So I want you to have an experience on your own if you're interested.
+Does that make sense? For the model you have for this will be some something similar in the shape or performance of ready made.
+You can use it, adapt it to your whatever you want.
+Okay, so that's what what is going to happen?
+Uh, you mentioned that maybe you would like to change the grading system.
+No, no, I already have, uh, like, everything that is going to happen to your grading will happen in here.
+Once I see everything, all your assignment grades and all your exams.
+I will do my adjustments if I feel like it.
+And I usually do feel like it. I never make adjustments.
+Uh, I always make adjustments in students papers that favor as a group.
+I never don't rate, but. So whatever you see is the whatever you will see once your exams and everything is content is,
+is, um, is the baseline you can go up from there, not be.
+That's how I. Handle things very well for any extra credit, or I don't think you'll need an extra credit.
+I was. I think you said something about, like, the art.
+It. So that was I was I was going to be, uh, your your last written assignment was something, but.
+Yeah, but doing a great it's like it's a great perfect.
+Trust me, I will. I will not hurt the ones who did the job.
+There are some who never studied, but that's a different story.
+All right. Great. But we're out of time. So let me quickly. Thank you for taking the course.
+I, I said what I said at the beginning on the day one, I was kind of roped in into teaching that course.
+This is not my area. I will tell you that about 70% of the material and everything that you were exposed to, work was created during the semester.
+Uh, for better or worse, I make mistakes.
+I get some submissions here or there, and that's it.
+I apologize for it. Um. Um, pretty sure no one got hurt point wise by my mistakes.
+Nothing. Nothing of that nature. So, uh.
+Well, you're here, right? To judge me, or the evaluation is open.
+Uh, I'll take great criticism. Um, hoping to develop something better for next semester.
+I don't think I ever promised. I looking back, I would like to do, uh, quite a bit more with you, but I have four courses this semester.
+Not an excuse. 350 students. That's. That was.
+That was a lot. So I did my best.
+I hope you've learned something. I hope you will be using it one way or the other.
+You know where to find me. I will let you know what day I will be in my office next week with your exams.
+Grateful for your review, for, uh, any conversations?
+Um, that's about it. Thank you so much. Year round.
+What do they do for the semester?
+C.S. 581, which is advanced.
+I am teaching Casper 81, which is and natural language, understanding what the understanding look like a half, half of this, half of this.
+And then she is for 80, which is introduction to I. That's for undergraduate.
+Yeah. Grad students take it to. And then.
+This again, uh, she is writing again, which is introduction to AI, and she is to a one, if you're interested, which is the programing course.
+All right. Enjoy your weekend. Look for messages from me.
+Thank you. And good luck on your program.
+I'm assuming you still have. Right. And.
+I don't know that. But I can help you that.
+Oh, okay. Good bye.
+Okay. That's right.

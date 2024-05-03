@@ -1,0 +1,617 @@
+She. That's a huge.
+Okay. I think.
+Questions. How does that work to that generation?
+Understand it. Let me show you one more thing that might help those who are not convinced.
+Hopefully this will be useful for some.
+So. I.
+I was. Last time I was trying to show you have really all the diagrams that I used to justify prices, higher diagrams that we use in 2D space.
+But I'm not sure that it was the most convincing way to represent that.
+Let's do a 3D representation right now. What do you see?
+A bunch of vectors. Right. And an airplane. Now, is there anything special about the target vector?
+Lower target is the word that we're trying to find the plane for actually the boundary for.
+Yes. It's just a neighbor chasing us.
+Okay. It has it has two neighbors. Yes.
+It's normal to the plane. It's perpendicular to the plane.
+Does that make sense?
+That that target vector representing some the word that we're concerned about right now actually defines that plane where it is located?
+Does that make sense?
+So I the reason I'm bringing it up is, well, I was showing you a line in to the club before, and I said, this is the word representation, Right.
+Where is this word in this space? That was no target word on that space.
+So this illustration might help you better understand all those vectors.
+There's only four of them. There should be many, many, many more. But there's those four vectors representing words.
+Okay. The target word happens to be the one that we're concerned focused on right now.
+And this one defines the boundary between the three once neighbor neighbors of the target and not neighbors red.
+Now, what I was describing to you last time was the process of generating those word two back representations,
+which would be just those those vectors, those perpendicular to the plane or hydroplaning vectors.
+We were trying to find a car that we start by randomly picking those vectors.
+What does it mean if I start with that random vector for the word, I don't know, airplane turbo or something like that?
+Right. Randomly, though, the boundary that this vector will define will not be separating its neighbors and not neighbors.
+Correct? Right. So I can't do it right now, but I would love to grab that that blue vector and just try to move it around to locate the plane better.
+Does that make sense? Now, this is something that I would do for a single work.
+Now I have to go to another word, pick another vector in that space and see if it corresponding plane is covering the word space correctly again.
+So which which would mean to say that I'm looking at a neighbor to vector.
+Neighbor two is my target vector that I would have to grab it and start manipulating it to put it in its right place.
+But. Wouldn't that change?
+What I did wouldn't affect what I did for the Blue Factor before.
+Now its neighbor is not where it was before. So I have to adapt again and again and again and again until those.
+This mishmash of plans is oriented with the minimum amount of factual error.
+Does that make sense? Now how do I decide what is the minimum amount of error?
+How to how do I fix it? I know, I know.
+For any any target vector, I know what my neighbors saw as I can and what which ones are not mine.
+I can try. To move all my neighbors close to the mall because they think they're there should be similar.
+If they're not my neighbors and I have to get away from that, a clearer explanation of what's going on.
+But we're to that. Okay.
+So much design A little. Interactive.
+To once. How was your.
+Neural network understanding. Yes.
+I don't understand. Why is it better than elevator?
+Why is it always suspect or perpendicular to the plane going into the compound?
+I don't think there's anybody that you can actually even make an angle of.
+I think what those things maybe.
+Why are we trying to. So we have two neighboring vectors.
+Let me try to rephrase what I think. Why are we looking at them being perpendicular to to predict a target that's perpendicular?
+Yes. The target is perpendicular to the plane because the target defines the plane.
+When you. When you. When you define a life like this, right?
+This is really. Two x.
+Minus one Y plus B.
+Equals zero. Okay, let's let's assume that these zero let's ignore it because it's not cheating.
+And so this is this is delaying the learning of.
+Left to right the light equation. What is two minus one spectrum.
+Perpendicular to the line. Does that help?
+That's right. That's why I write.
+One two.
+So our line was Y equals to X, which would mean that it goes this one, right?
+Do my best to go through. But.
+More or less. Okay. What about.
+Two minus one lecture. Two minus one.
+It's right here. So facts are going.
+Perpendicular. So do you see why the relationship between the normal vector and the plane are aligned?
+Let's go back to your question of why are we. Why are we not all right?
+Why are we not comparing two vectors by looking at their angle?
+Was that your question? I guess we are looking at maybe my and then they come back.
+I think they were looking for a doctor. People are looking at two neighboring sectors in the word group.
+Yes. I think instead of it being a particular game, we might not like that.
+And we think that. But what's the angle of between those two vectors and device, basically?
+So essentially you would. Try to hit the target here, but.
+Let's do it. So. We would have ended up with a plane.
+We will go back to here. So our target goes here.
+Right. And then our plane, more or less.
+Oh, yes. They're going to.
+But what if I have more than two? More than two paper vectors?
+If I. If I place my money.
+Normal. That they're like that? Well, yes, I guess I'm capturing the distinction between neighbors and not neighbors,
+because this is what I'm happy to have this feeling oriented in such a way that all the neighbors
+are all one side of the plate and all the non neighbors on the other side of the plane.
+I suppose if you're technically looking for something like that, when you're trying to orient that point to having,
+having a multiple is this is just for a demonstration to an actress, you can imagine then you will have quite a few of them here.
+So I guess, yes, you want to put the normal vector as close to me angle wise to every single one of them.
+So they would be sort of a list, not a by section anymore, but sort of a center of mass in a sense.
+Does that. Yeah. And you have a point. Yes.
+You're doing it by comparing everything.
+The north while the target vector to every neighbor vector one by one, and trying to adjust it little by little.
+And then at the same time you're comparing your target vector with your not neighborhood
+vectors and you want to push them up apart from each other as far as possible.
+And this in this iterative process is is slowly placing the target vector in the plane itself,
+where it should be, where it should be, when and where they were.
+The error is classification error is less.
+That is your question, but. All right.
+So most of you know this stuff. Given that.
+Quite a few of you in this class, not necessarily in this in this room right now have not at this point.
+Or or I don't know what your background is, but so indulge me and suffer through this lecture about the basics of neural networks,
+because after the break, we'll move on to Transformers, large parts language models, which are based on neural networks.
+We will not be talking about transformers. It's just just a general idea.
+So hopefully this will level the field for everyone. Is that okay?
+So what do you know about neural networks? Those works are based on how the brain supposedly has information among neurons.
+Absolutely. It's a model of our our brain. Not imperfect, definitely.
+So I guess a good starting point is visiting our friends from the artificial universe.
+This is the basic unit of of. This is the basic of the basic units of of every neural network and as a sort of summation point.
+That ingests multiple signals, multiple sources of information, multiple data, holds multiple feature values and is trying to.
+I can make sense out of it based on what it is trained to make sense in that decision.
+They're an Asian kind of way. So here you can see we went through it.
+A basic perceptron is the way that some of it signal nothing more, nothing less.
+And the basic approach to processing what is coming into a press restaurant is to sum it up and then decide is it greater than zero or no.
+If it is bringing zero in for whoever is on the receiving end?
+Yes. What? Pay attention.
+That's what the what is happening here. Just like your neurons in your brain are doing it.
+They get excited enough past a certain threshold.
+They pass an electric signal down down the path to other electrons who will pay attention to eye neurons,
+neurons that process visible signals, and then they're passing through.
+You should get interested in whatever I just saw to whatever parts of your brain that I did take cues from from right in.
+Visual signals. So.
+We talk about the bias we talked about why is why is this little extra piece added here as opposed to the basic artificial neuron?
+An extra an extra component. Why?
+Why are we adding it? There is no bias here.
+It's just some wait time input, wait time input.
+And then plus B, why are we doing that? Because your neural networks are going to be written out in the neural network.
+We'll have this additional dangling, dangling component bias.
+Why are we adding. Okay.
+Let's say this is our perceptron. It has four inputs.
+Fine. Always. All right.
+No inputs x y equals 2x2 equals three, x four equals five.
+And let's just assume that my inputs are always going to be positive.
+For some reason, this is this is the kind of data we're working on.
+X three equals six. One.
+Well, let's just wait two or three for.
+Okay. Weights are not changing.
+Inputs might change, but they're all going to be positive. Do we have a problem with our perception?
+It is trained to have four positive ways and it always has a positive influence
+on the plus five because all have negatives and will always be positive.
+The output will always be positive. It will be above, above zero.
+So always say yes. Yes, yes, yes, yes, yes, yes. I'm excited.
+I'm I'm excited. It will never say, you know, what kind of use is that?
+There's no decision making. So the bias here is to offset that.
+So if if our outputs are always above zero in this range, right.
+You want to shoot it down a little bit. So that middle point crosses through the middle of the output.
+Thermal bias will take care of that. And now we have some decision step, function, base decision, but let's not.
+All right. Have we used any other activation function?
+This would be the activation function. The activation function decides should I be interested in path that information alone or not?
+Should I activate others? If is greater than zero?
+Yes, Less than zero. No. Right.
+Have we looked at other activation functions so far? Yes. Sigmoid.
+Sigmoid. Right. Sigmoid. It looks a little different.
+Hmm. We'll get to some other activation functions that there.
+There's a whole family of those. We will not be discussing.
+There will be policies for a machine learning class, but I'll show you some.
+Okay. So let's forget about other activation functions.
+For now, we still have binary output zero one right from our perceptron, even with bias included.
+It's a binary outcome, which, if you remember.
+Logistic classifier and logistic classifier.
+We have arrived at the conclusion that the logistic classifier does more or less with the perceptron given an input vector,
+but I don't know how our case.
+This would be a vector with four features passing through a perceptron and you will have a decision is it on one side of the boundary or the other?
+Zero one. That was that was what the logistic regression would do for you.
+Linear separation. So.
+What's the problem? It's a pretty good, pretty easy tool for a player or a binary classification or with a linear separator.
+Yes. And so it can make complex classifications.
+Like if it's not a straight line, then we can make a decision, for example, if we have X or Y do.
+Exactly. So. This perception right here, even if we have the sigmoid activation function,
+which is essentially squishes, the range of outputs from minus infinity possible zero one we.
+I can only do linear classification as a spine for a problem like Pez where you can easily draw a line and separate two parts of of of the problem.
+Actually, not in this case because we have a mix of having spam on post.
+Yes, this is fine or bad stamp.
+A nice clear separation. And I separate those with with a single loving.
+Not at all. Or a perfect example.
+If you've ever studied machine learning,
+this will be probably the first example of where a linear separator as linear classifiers will come and set x or these are logical functions, right?
+Some draw all and falls through and through or to whatever.
+You can easily mimic that with a linear separator.
+Given two inputs, true or false values, you can create a classifier that will do the logical function behavior for you and or.
+But not exclusive or. Does that make sense?
+You can draw a line that will clearly separate falls.
+Or true here. In other words, our perceptual approach is out of the window right now.
+It will not work.
+Right? Anything that requires us to think about it as a polynomial or something wiggly line or something to separate two sections of inputs.
+Not just a line will require something more.
+What would that be? Alex Okay, so we had a circle or an ellipse, right?
+No. Three.
+If we grouped a bunch of these more than one interconnector, could we approach what you described some some elastic or nonlinear boundaries?
+Absolutely. And I apologize to those for that have seen that already.
+But I like that little demo.
+Here's. There's something to to explore.
+For anyone who hasn't had too much experience with neural networks called playground doctors or flown out there, it's pretty.
+But. Without going to much detail, is there support data sets where you have two classes of all of.
+Sample, boys. Blue and orange. Those boys are located in to this base.
+But you can see that well here it would be easy to linearly separate those two clusters.
+Very easy. Here. Impossible.
+Impulsive. Oh, let's not even go there.
+So let's create a perceptron.
+This little demo allows you to build a neural network.
+And train it and see on the screen right here what the actual boundary is built by the network.
+Right now I have three layers.
+Here are two of them, but then they rotate.
+We'll talk about later. Let's just hope that.
+Consider this to be our. Summation point.
+And then we have our points are two D points.
+So two coordinates, X, one and X do consider them to be x, x and Y.
+Training. We'll talk about it a little later.
+It means showing the network a lot of examples from from from from the training operation.
+So 50% of whatever is is here is being used for training.
+Examples are being shown to the network. Hey, you're getting this one right here, Orange.
+It's orange. Pass it through. If you if you say that it's a blue point, you're doing something wrong.
+Update your ways and so on. All right.
+So let's. Let's drink. Oh, nice little one.
+Right. This is this. This will suffice.
+Let's switch the. Problems, by the way.
+Insecure keep but very dropped.
+Ultimate leaders. The training is still happening.
+There's nothing changing. You can't do it anything better?
+Let's try it right here. Would you like this classifier to decide whether you should get a credit line at the bank or not?
+Definitely not. This is this is horrible.
+Classified it. Oh.
+Oh. How about this one? No go, right.
+This is simply not going to happen. If you think about it, this is a very basic perceptron.
+It's not going to cut it for any. Any problem for you.
+We need know when you're ready. So why don't we.
+Multiple Perceptron school all use that term a loosely neural neural node.
+Let's add some more. So why don't we add a layer here?
+Throw in the more. Oh, by the way, what do you think those sort of images represent on every every note mean?
+So different inputs. And again, it's just combining them all.
+You can you can go ahead. You can.
+You can think so. 1%. Yes, it is pretty obvious, but 1% is imagine one perception being being like a person.
+Let's say it's a film buff. Right. That person is excited about certain movies or not exciting at all.
+Right. And you can ask that person and other people giving an input.
+Who's playing in that movie, how long it is, what it is, And that person will just give you yay or nay for that movie.
+Just a single. So think about what one of those heroes does.
+This guy is. This the it is responsible for analyzing movies.
+This was the music in the movie. This one is for stage set or whatever.
+Right. So they're all it's a stretch to say that.
+But every every note in the network, even if you have billions of them,
+it's kind of responsible for paying attention to some aspect of the problem and getting excited about that particular aspect.
+I see something. Image recognition, right? You see cats or dog face recognition, right?
+Eyes, noses, mouth with a neural network behind that will help you.
+Walls that are your eyes that are kind of responsible for eye recognition, nose recognition, different different components.
+And they will say, Yes, I see eyes. The other one will say, Yes, I see a no, I don't see a lips, no lips.
+It's not a face. Right. That that sort of approach.
+But let's see if this helps us here.
+Okay? This is no longer a line, right? There's something nonlinear happening, but it did a pretty good job.
+How do you think it will manage here? Not too bad, right?
+I don't think it's misclassified. So let me take out some of those rights and try again.
+You know, it becomes a little more problematic.
+The more neurons you add, the more variation you are able to pick up on, the more little details, little specific aspects of that problem.
+Okay, How about this one? Pretty good, huh?
+All right. What about this virus? I to try to solve that problem.
+I keep adding more neurons or layers.
+Notice how everything is interconnected here. More layers.
+Let's see how to do now. Well, I have a hard time understanding what like, how is more neurons legislators allowing it to.
+The question is how? How adding layers in euros is helping us to build a better classifier.
+Oh, well, let's go back to face recognition.
+Example, if you hired if you hired a number of people, Right.
+Two people. One person who is just. You're handing the same photo to two people, right?
+One person is responsible for telling you. Yes.
+I see eyes in it. The other one is responsible. Yes, I see lips.
+Right. And then you it independently.
+They received the same photo from you. They look at it. One will give you information.
+Others eyes it. There is in their lips. Nothing about a nose or ears.
+Right? So it will it would work, right?
+It would work in terms of human face recognition to some degree.
+Right. But what if I just left one of those people?
+Just ice. All right, I'm giving you a photo.
+Find me eyes on that. On that photo. Nothing else.
+That little neuron or that person is incapable of discerning anything else.
+It's a very it's a linear classifier. It's telling. I know us, right?
+Would it classifier would this classifier pick up on, I don't know, something, Ghost Casper.
+No mouth, no ears, no nothing but eyes. Right. Oh, a human being, I see.
+A human being. A fox. Oh, I see a human being.
+A bird. There was on its right a fish. Everything would be a thing that has eyes would be classified as a as a as a human being.
+Right. Let's bring back the other guy. That was. What was it?
+Let's. Right. So now we're looking. So I will Tell me.
+Yes. I see eyes, Lipsky will say icily silly.
+Casper did not have lights, Right. That's part of those horrible things it designed for sure.
+So while one one of those guys will say, Oh, I see, I see.
+It's a human being, the other one would say, I don't see any legs. It's not a human being.
+So now Casper is out. What about foxes or dogs?
+Both would say, Oh, I see a human being. Their lips. I guess foxes smell as life.
+The more specific neurons or people I could use to the fall, they will be able to pick up more nuances and give me a better, better answer.
+Does that help? Yes. So you're saying the neurons are the people putting in effort?
+This is again, once again, it's a stretch to think about it this way,
+but it's close to thing as every single neuron being trained to pick up on the very specific aspect of whatever it is in the training data player.
+So what would you compare the layers to? The layers is?
+I have a nice example here, but the layers, you can think of layers.
+All right. You have this first line of of of neurons, people that recognize eyes, noses.
+Lips and whatnot. Second layer, we'll just put it all together.
+I see. I see eyes, nose and ears. Let's.
+Let's make a face out of it. Is it is it a human face?
+As every layer aggregates little details into into a bigger picture.
+Because you could have the first layer would look at a photo.
+Of someone in a ski mask wearing a T-shirt with a face on it.
+Right. And they would tell, Oh, it's a human being. A human face, right on a T-shirt.
+The second layer would lag. What is this? Is this really a human face or is is this some sort of a print or something like that?
+Does that make sense? Yeah. So think about it.
+Think about this. In the nature of fitness, could we say that maybe one neuron is this single dimensional?
+Want each other's. I would not say that you can think of us as leaders as being matrices of numbers or
+sort of multipliers that will dampen or or amplify the effect of what's coming in.
+I guess the layer is sort of like a big filter that will at the same time dampen certain effects, amplify the eyes.
+Yes, amplify whatever coming out a tail lets down, but it's not a human plane.
+Plane really vector at times matrix multiplication and the numbers that come out are sort of filtered through that.
+That kind of help. It's one one €1 is not going to be one dimensional because you can see that this guy receives inputs from two two sources to you.
+Right? Right there you have two dimensions to look at.
+This guy right here is interconnected to then everything you run in the previous layer, which has eight neurons.
+So eight dimensions coming into this guy, into that guy.
+Not a single dimension. A single aspect represented by multiple.
+But data in multiple dimensions, I supposed. That helped.
+All right, How do we do here? Yeah, well, we could keep adding new roles.
+Actually, you can. You can see here how every layer is sort of aggregating aspects of the previous layer here.
+Pick up on, on, on filter out. What's going on here?
+So if you were tasked with finding a classifier for this little spiral here, would you keep adding layers and neural?
+You know, we could change the training training parameters out of the system.
+But I want to do something else. You might not have noticed, but there's these are not highlighted here, which could be your additional inputs.
+One says x one squared, x two squared x1x2.
+What do you think those mean? Is we we are currently feeding.
+To the point erred in its as input as a feature vector.
+Those are not highlighted ones. Ah. Well somehow related to those x one square it lets the square x1x do this.
+This is pretty important right here. What with me turning this on you are, What kind of information would that node?
+Half true. Something tiny something.
+It would still be just one number.
+If you multiply that, you're we're adding a third dimension to our feature vector and that we're adding a third feature to it,
+which makes it a three dimensional vector. But that feature is really some sort of combination of what we already have.
+It's nothing new. So it's like hair color and eye color and then the hair color at times I maybe it means that.
+Look at X1 and x2. They're being fed independently.
+There is nothing about. Are they related? There's nothing about it in right here.
+If I turn that guy on that,
+I have my mouse pointer on our wall to some extent captured the relationship between those because if they both rise, this will also rise.
+Let's let's try doing that. Okay. So now our our neural network became more and more like.
+But you're doing any better right now. But. About.
+We planned all these. Try again.
+This is a very difficult problem, obviously.
+Okay. T-minus. Or that don't.
+That's not bad, right? We could add another layer.
+But. I will not teach you in this course how to take the size of the network.
+How many euros worth? That's that's absolutely beyond the scope of that.
+Of course I will. I don't want to say a lot of it is trial and error.
+It isn't like this, but it's like there are some conventions, but like, we're always just going to try to.
+A lot of this is just rules of rules and stuff, court show.
+All right. So let's go back to my previous question.
+You said, let's keep adding layers and euros. And this is a good idea because it enables us to capture more nuance if we can capture a more nuance.
+This is not doing better because we capture more nuance.
+We can we can be better at classifying.
+You wouldn't want to be judged by just one feature of yourself, Right?
+It's like you were saying that, you know, so. So what's the danger of.
+Of adding more layers and more nuance.
+What's the consequence? Increase the action over the Internet?
+Absolutely. Increase. Computation time. Increase, increase.
+The amount of. Computing power that you need for it.
+So it's no longer going to be just one computer. Most likely this is a trivial example charged between billions.
+Billions of those connections right here. Billions.
+You can't easily do it on a computer.
+You're on your own computer no matter how good it is. So that's that's a problem.
+Overfitting How many of you are familiar with with the term overfitting?
+I don't remember that little bad photo that I showed you which the person cut out that's overfitting.
+You're too attached to to the input data that in your model, the classifier is not too gentle.
+Anyway, the message here is if you want to create a nonlinear boundary between whatever you're trying to separate,
+you will need a group of a network of individual neurons or.
+Percent drops like that. Not just one. Many of them are now a little naming conventions.
+This really is this really represents a single layer of a neural network.
+You can think of it as a single layer neural network.
+You have some feature. Vector input later.
+In our case here, this is our input layer, first layer, second layer, third layer, and then the output layer.
+This is how layers are called in neural networks.
+I believe some people disagree with you here.
+You're counting. How do you count the number of layers Some people will count the output of when they're counting, the number of layers.
+Some will just contain a number of hidden layers. Doesn't mean.
+Layers of dirt, layers, nodes, weights and other layer nodes, weights, those waves and then layers between input player and output layer,
+everything between the input player and the output layer or any layer between those two.
+I told you that there are some more activation functions.
+Hyperbolic tangent. This looks familiar to something.
+Looks like sigmoid, but it's not a sigmoid. And you can see that the range of output values is different.
+It's from -1 to 1. If you want, if that's something that you're interested in, compressing your range of values that come out of a No.
+Two minus plus one range around you.
+This one is sort of to weed out the negative negative values.
+You don't always want that. The degree of value that allows slight negative.
+Some negative values. That's not that's not the thirties.
+There's dozens of them. Typically you you will you will see.
+Somewhere here after after every hit. And later. Output.
+Later, we'll have something else at the end, typically something that is called soft max bottom, but clear here and close.
+Right. I guess we talked about most of this stuff.
+One thing, too, that's not super important, but you may see the term multilayer perception being used when someone is discussing neural networks.
+This is an old name for a new multilayer perceptron.
+Multiple layers of perceptron. Okay.
+Is it clear how neural networks are being trained?
+We always have a training set where we have data points defined by some numerical values and there is a label associated with it.
+The official neural networks are an example of a super unsupervised learning supervised
+because the network is being told this is an example and this example should be labeled this.
+Let me see what you do with it. Right. By the way, this is true.
+Those of you know that this kind of network structure is called a feedforward.
+Network, and it's called Feedforward Network, because we're feeding feeding the data through it.
+It's like pushing, pushing something through a sponge and seeing what comes out on the other end.
+That's what it is, straightforward. Start here at the input layer, feed the data and magic happens inside.
+Something is being output outside.
+Who's generating training data. Yeah.
+Yeah. Usually. Usually. Usually. Usually.
+It has to be human.
+They had though you on on Monday you so that training data for the for the work to that logistic classifier was was done by by machine
+you didn't have to do it but if anyone wonders why are you clicking on all the little things when solving CAPTCHA you're helping?
+Companies to train their model models better. All right.
+That's Why am I showing you? Why am I showing you.
+Anything image related in this part? It's a natural processing force.
+Why would I even bother showing you neural networks that deal with with images?
+Picture a classroom picture in the of image that has for a good multi-model let's that's called multi-modal classification
+for example daily world there is a stable diffusion all those all those models are actually trained at on two pieces,
+two types of data at the same time, image and text.
+So what is being fed here?
+It is just that it's all numbers, it's a vector of numbers, but that numbers contains the actual image and the text, not roll text.
+It's going to be embeddings of words together.
+This is how models like that work.
+Another thing that they will use a little bit that we use.
+Absolutely. Absolutely. So. So, yes, you are a visual language as well in the use of way more than.
+I agree. Another thing that I wanted to use this example for is to give you an idea how how a
+structure that is not necessarily by design ready to be fed into a network is treated right.
+This is this is a very simple bitmap image, right?
+28 by 20 pixels, a matrix of pixels with values.
+I don't know anything, I suppose 0 to 2255 for grayscale.
+Right. But your neural network can only accept a vector sweater.
+You make it a row vector or calling vector. It's just a vector.
+It's not a matrix. So every thing that is being fed to an artificial neural network has to be spread out and made into a vector.
+No more matrices. Same with words. Words are even more difficult to to to handle that way.
+But for them, that is going to help us. Now, one thing that I would like to point your attention to here.
+There is a reason why I spend a couple of seconds talking about why.
+Why would we turn off our on these.
+Specify specifically this one which which I insisted on carrying relationship between two two pieces of data.
+Representing some sort of relationship. Do you think so?
+What? What? This network on the right is receiving is just pixel by pixel by pixel by pixel data.
+Are are some of those pixels related to each other?
+Are the relationships between them carrying some sort of information context?
+Absolutely. That network right here is not capturing that.
+Right. Great point here. Great point.
+But that's all on this network. It will do fine with something very basic like digital recognition, but it can be done better.
+Another problem here is this input layer here, the size of it.
+Yes. Fixed or not? The size of the number of inputs.
+Once you train the model, let's say this one accepts what, seven 784 long vector.
+Canon, an 785 long venture. No.
+So any image that is larger than that. Right. Will not be directly processed correctly.
+It will have to be scale first and what not.
+So this is not a huge disadvantage of a neural network, but you have to be mindful that that thing is not adaptive.
+Once you train it, once you decide that this needs 784 input inputs and then into layer, it stays like that.
+If you need more, you need to build another aligned or actually there's techniques where you're X when
+you can pull out certain nodes nowadays and reduce the size or extend the network.
+But it's not that easy. Okay.
+Yes. So this is kind of random, you know, like coloring books or like they have like the number, any color and everything like that.
+Show the pictures and they like they rehearsed it to this.
+And I think they know. What kind of color are you asking?
+Would that be possible? Absolutely. Oh, yeah.
+You could train, you could show and a blank or just happen without colors and drawing like that,
+and then the completed one and figure out what color it should go, where it would easily.
+That would be easily. Develop. Okay.
+Training. So feedforward networks, we see examples.
+We see what comes out to. Typically it's going to well, there's two tasks that are typical, for example, for neural networks classification,
+which means just what you did with May is a logistical regression, logistic regression.
+Tell me if this is this class or that or another one or a regression,
+which is essentially give me a number that given all those inputs, what's the predicted number that corresponds to those?
+I guess classifying is easier to understand. So given some input, feed it forward through the network, see what the network tells you.
+Is this a dog or a cat or something else?
+If it was originally labeled as a dog and the network gave me a cat and the network is doing something wrong,
+there is an error in classification behavior.
+Hiding something here has to be communicated to all those note back words, and all those notes need to know should I adjust my weight?
+Should I adjust my behavior? That process is called back propagation.
+Is people back propagating in their.
+And. Some of those weights or most of those those weights will be adjusted based on the.
+Why do I say some or most are? They aren't going to be adjusted in the same way.
+Remember what I said about hiring two people to discover our eyes and nose, right when looking at an image?
+I've seen ads. I felt an image of the computer due to my network.
+Right. And the eyes guys, that, Oh, there is eyes in there.
+But we're looking at a photo of my lot. Right? There is no eyes on the lips, guys, And no lips.
+Right? Classification came out as a human being, but after being shown, a lot of it was absolutely wrong.
+This is not a human being. So now who was more wrong that Lipsky, the less known, who said, no, no lives are the hijackers?
+Oh, yes, there was. I think for some reason the nice guy is more wrong.
+Right. So that neurons should receive more, quote unquote, spanking.
+You did wrong. You have to you have to adjust.
+You should take. Do more adjustment now that.
+LIPSKY The Lipsky is mostly full time, so the back propagation will all squeeze the air back and it will tell.
+There's another there's a whole technique for that.
+Adjust the weights accordingly to whoever is more to blame for that incorrect classification.
+All right. Are you familiar with soft Max?
+For those who are not familiar with this. So, Max, imagine that this is.
+Let's replace logistic regression classifier with a neural network.
+Right. We would have one one output note that would set C one or zero for positive class or negative class name or however you like, just one number.
+But if you have multiple classes, you end up you'll end up with multiple results.
+For every class you'll get a number. Would it be useful for you to I mean, let's say you get a making of 200 from this guy of three,
+three and a half from that guy and then 2005 from that.
+Do those numbers mean anything? Well, it's larger than the other and the and the other.
+So that's probably some information. Would you would you would you rather it take in some probability measure here?
+Instead. So much death that it will take those three numbers, though, how many are there?
+And it will create essentially a probability distribution out of three numbers that add up to one.
+And you will have some measure of probability.
+All right. On the a more pure.
+So here are some choices that I haven't tapped into.
+Learning Rate Activation. This is where people choose the activation function.
+One of those that I mentioned here, you could swipe right around.
+I wasn't playing with whatever and some other parameters, design or network classifier.
+Do the regression, Let's play around. But what about learning rate?
+Is learning rate a hyper parameter when it comes to neural networks?
+Yes. What about weights right here between those?
+Are they high propriétaires? No, they're just parameters.
+So let me make sure that everyone understands the difference.
+Hyper parameter is only used during the training phase to guide the training.
+Once the models train, hyper parameters go, only parameter is state.
+So weights Weights are a parameter of a neural net for the number of layers,
+the parameter of the of the network, the number of nodes for layer parameter that's.
+That's what should be called parameters here. And if you read up about GP or Gemini, you will end up in statistics about the model rule.
+One of the first things that you will see is the number of parameters in the model, billions of the belts, mostly weights, but also some other so.
+Does anyone read a text book on neural networks?
+Ever? Just what you're missing on the phone.
+Some of you might end up reading, being forced to read one or read a paper about neural networks, or even look at a tutorial that involves math.
+And this is this is just my personal experience to save you some grief spam.
+If you end up doing that, spend quite a bit of time understanding denotation in whatever source you're using.
+When I was learning machine learning way before chat,
+you could use I have free textbooks at home and every single one of them use a completely different notation to represent the same thing.
+And it was a horrible experience to measure forth representation.
+My instructor obviously completely different representation.
+And then you go back home, What is x x does that look like?
+Maybe you could write a book with.
+No, you will not want that.
+It's actually quite a few great, great neural network books.
+And I mean it. Great. Not the ones that you will you will see recommended as a textbook in machine learning courses.
+But there's there's I mean, I have two or three which,
+which explain everything more or less with things like that other than here's a formula have added.
+Right. So no, I'm not writing any type.
+Okay. So notation. Anyone not familiar with what the term term deep learning means,
+because everybody says machine learning and then deep learning two completely different things.
+As so many of you are absolutely clear on what deep learning is.
+All right. It's a buzzword, really, and it is what it is deep learning means.
+I'm going to exaggerate it a little bit, but it means that your model is relatively large.
+That's that's what it means in terms. Deep learning does not only apply to neural networks, for the most part, those related to neural networks.
+What it means in terms of neural networks is how deep is the model, how long is the processing power in the network?
+So a single perceptron would be would be a shallow model because it has a very short, shallow path from input to the output.
+Deep learning model will have a longer path between input and that's that's more or less what deep learning means.
+The bigger your model, the, the deeper it is.
+All right. By this time,
+is it is it pretty clear or it should be pretty clear to you that that artificial neural networks are really representing some some function?
+Right. You get inputs and outputs of Y equals F of x,
+but that F is not going to be your plane quadratic function or sign something that is easily
+defined is going to be a mess and is probably the only way that I could think of that function.
+Being mathematically represented would be as a huge piecewise function that that's the only way I can think of it.
+All right. Deep learning. This is what I wanted to show you how this is.
+Again, this is not the best. This is not perfect representation.
+But you can think of layers.
+If you flip it upside 90 degrees, if you flip that diagram right here,
+you can think of layers progressively as layers, as progressively capturing more and more.
+Elaborate aspects of whatever you're analyzing.
+Okay. We have 4 minutes and it's time for neural network sync.
+So we'll come back to it. But I want you to see one thing.
+So long story short, everything that works is the basis of all the large language models.
+And large language models are.
+Bigger sisters and brothers of such a basic neural network as here.
+And it should be clear right now. Why do we need Americans?
+Why do we need numbers? Because a neural network will not accept words as they are.
+They have to be represented as best as possible as numbers.
+So understanding embeddings and having a way to embed your text, turn every token, every word into its own vector is.
+Super essential for for a neural network is zero. Okay.
+Besides, besides turning words, sequences of words into numbers, is there any other challenge when.
+Applying neural networks to text.
+Your your current assignment is to build a naive base classifier that takes in whatever dataset data you chose.
+Right. Let's say that some reviews, right?
+If you eyeballed your data set, you will see that some of those samples or some of those are reviews are going to be short.
+Some are going to be longer. What did I say about the neural network when I was discussing this little eight digit image?
+Our input layer size is fixed. You can't just take any length of of text and feed it.
+No, that's not going to work. By the way, with that I don't want to go back that that.
+Image recognition network. Would it handle a video?
+Well. To classify what's in the video.
+Why not? The election of it is a collection of images.
+And what about those images?
+There's context. There is there's a sequence and whatever follows matters.
+It's related to whatever came. Actually, a couple frames might be very related to each other.
+Right. Does that remind you of text?
+Sliding window. Few words. Few words. Context. Context.
+Context. Context. Same thing here, same problem. So we will have to address that.
+Worry not. Everything will be explained, but essentially due to a just apply an artificial neural network to text,
+you have to do quite a bit of work upfront other than just turning it into numbers.
+You have to build out quite a structure. I mean, it's already built for you.
+All sorts of Python code, but I'm out of time with any that useful to anyone.
+All right. All of us have a nice spring break and we'll come back to this gibberish after the spring break.
+I will not be writing that book. Trust me. I'll let you know what is here.
+Your exams are graded. I should be done this week. Maybe early next week.
+I'll do that. Okay. Okay. Oh, and your assignment for the assignment.
+All right. I think we'll be posted today.
+I think already. Okay. So, Inspector SEO.
+Go through a paper, for example.
+I have. I'll let you.
+Okay. Let's look in the hall.
+I thought that the temple. It was okay when it came to minus man.
+That so they would be like a vector.
+Well, since you only like the one for male, for maybe one, it's not gonna work.
+It's going to be just another position. Taking something back towards the back has nothing to do with every position corresponding to you.
+No, no, no, no. You want to go all the way.
+You find that group for that work?
+Well, this we talked about it. A lot of the work that I do.
+But actually, you know, unless you want to bring it.
+So I actually feel like, you know.
+This bling Right here is Man's Dubai workspace.
+And the two sections. One section is where the neighboring wards, no neighboring wards of some target ward are.
+The other part is not neighbors. Okay. This blue vector represents the word in question.
+So I'm trying to find an embedding for some ward. Let's make it a dog.
+This vector is perpendicular to this point.
+If I move that vector, the plane will move along with it.
+The idea is to position planes or hyper planes for every word in the space in such a way that that does division into neighbors and not neighbors.
+This is. As private as possible.
+We know which party they were supposedly working backwards,
+so every word will have its own vector representation and the perpendicular plane or
+type or plane to it is going to be the boundary between neighbors and not neighbors.
+That vector right here, defining that point is the actual embedding for or somewhere down.
+Every other word will have its own place and its its coordinates will be its own embedded hole that we calculated.
+So you're trying you're trying to you know, I know the position.
+So the only words I know the words that I want must start with random positions for every word.
+But you know that this word, donkey and mule, should be close to each other.
+It should have similar vectors. Right? Because that makes sense.
+Donkey in a more an airplane and an F and a fighter jet race, they should have vectors that are very close.
+If they're not, your task is to slowly bring them together.
+But at the same time, other words, word will be pulling those of you in every other direction.
+So it's an iterative process and you're.

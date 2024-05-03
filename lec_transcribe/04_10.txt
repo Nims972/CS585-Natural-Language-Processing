@@ -1,0 +1,690 @@
+And. Well, if.
+Was a. Morning, buddy.
+Questions? Oh, has.
+I will send you a list of topics either today, tomorrow or on Friday.
+Friday. The latest topics for those for the exam.
+Um, one thing that I can tell you is that while the midterm exam did not, I don't think.
+Did you have any, uh, multiple choice questions? I don't think so.
+Right. There will be some because some of that material is such as?
+What are we covering right now? It's not not something we can have a serious hands on mathematical example to work with, though.
+We come up with something, but there will be some multiple choice.
+Or give me, in short answer to the question. Um, kind of questions related to the latest parts of the material specifically.
+Okay. So how do you feel about Transformers?
+Do you understand what's inside?
+If you don't fully understand us, I wouldn't be surprised.
+It's. It's a lot of stuff in there. And there's a lot of details when it comes to what is happening inside.
+So how's that? Transformers? A little shaky.
+Well, I'm not surprised.
+In any case, my my hope is that once we're done with this.
+Yes, sir. You'll be able to. With a little help to build your own one.
+Not necessarily so from scratch, but using. Components.
+Layers. Activation functions. Just putting it all together.
+And hopefully everything will be what's going on inside. So today we'll we'll go back to the topic of Transformers.
+But before we get in there specifically different kinds of transformers.
+Different. Okay, let me rephrase different kinds of learning.
+Large language models, some of them being Transformers. And one of the things that we'll address today is something called mast cell attention.
+And as anyone heard that term, we already have a pretty good idea.
+Imagine about what self-attention is. How about masked self-attention?
+All right. So we'll cover that. And then we'll talk about large language models in general.
+What what's going on under the hood.
+Um just basics. If I have more, I won't have enough time.
+Next week I will come back to that. All that stuff. All right.
+So everybody knows GPT, right? GPT stands for generative with trained transformer.
+Does anyone know what pre-training means? It's it's pretty easy to unpack that, right?
+Someone trained it already. And it's for training. What does it mean in practice?
+We'll talk about it. It's.
+It's a transformer. Not seen. Not completely accurate description and you will see why in a little bit.
+It's an auto regressive language model. So out of those three words, language model is something you should be familiar with, right?
+What is it? Technically speaking, what is the idea behind the language model?
+Auto regressive. So it was just, you know, that's a it's learning from itself.
+And it makes sense because it's learning from what it has seen before, but not in.
+Well, in, in a sequence sense. Auto regressive.
+You did, uh, you made an auto regressive language model yourself in your program, number one.
+Guessing the next word based on what was before.
+Is that the only approach? By the way, just look at what was before.
+We already talked about it on multiple occasions from different angles.
+He says. The only way to approach I'm guessing modeling just will look at the past and predict the future.
+That's not probably not the best way to put it. Look. Look at what's before and look what's after.
+And that's a better way of putting. We can do that. We can do that.
+Except GPT doesn't not do that. It just goes one by one.
+It's very good at it, but it just goes one by one. Basing what?
+What's going on? Um, on the past. There are other models that look at the wider context here, not necessarily better than GTI.
+So we'll talk about some of those, uh, concepts today.
+Uh, here's a GPS for definition.
+So it's it's based on GPT three obviously, but it has some other components to it.
+It's pre-trained to predict the next token of Bert. Alright.
+What about fine tuned. The terrible thing to.
+Go ahead and do better and better.
+Make better with something, right? So we already have something pre-trained.
+Now we can make it better with a little massaging.
+Fine tune. Just adjusted a little bit.
+Uh, any any any thoughts or would that be made?
+Yes. Thank you. Can you give us a message here?
+Yeah. This is the wrong message. Thank you. I should the next time.
+When? Yes. If that's the question, I would probably give it to you.
+So for those who didn't hear that online, the answer was ChatGPT gives us an answer.
+Or someone evaluates that answer and helps improve ChatGPT.
+That's one aspect of fine tuning. This is called fine tuning with human reinforcement learning.
+Humans are just giving directions to the model.
+This was good. This wasn't good at just or so.
+But there's other ways of fine tuning. Uh, the model, more or less the same thing happens to you.
+Uh, how about human alignment? Have you heard that term?
+So said, I can do a point like protecting humans from not hurting themselves or not like getting information they're not supposed to.
+Doesn't have anything to do with protecting humans, right?
+With against whatever ChatGPT or GPT in general, especially as a layer on top of his could could do he?
+Yes. Among other things aligning it to so it's.
+Use a mental shortcut so it's more human, right? More reasonable and more empathetic or whatever it means.
+There's this a very large bag of of terms related to interactions.
+Whereas unless everybody is intuitive and less harmful, obviously more ethical, this is hard to achieve.
+But once again, if there's a human being that is that is working with GPT models or GPT agents and say, I don't know.
+ChatGPT produced a racist comment, and the human being will try to align the model with humans by saying, hey, you're not supposed to say that, right?
+This is not good. So there's a lot of that happening.
+All right. Language model. What was the language model? What is a language model?
+Yes, it makes sense of text and can generate text.
+Pretty much it makes sense of text and can generate new text.
+Right. So in practice, it means that it captures statistical probabilistic relationships in the language specific language it's working with.
+And it's able to use it to generate new text, just like guessing.
+Next word is a probabilistic task where you're actually calculating conditional probabilities.
+What is the probability of this or it's following that sentence.
+So whether it was an N-gram model or a GPT,
+they're doing essentially they're trying to capture the same kind of information in a completely different way.
+Relationship probabilistic and statistical relationships within the language.
+That does not only mean words, it means, you know, phrases, uh, grammatical structures.
+You've seen all that. This is what the language model is trying to capture in terms of actual probabilities.
+Just to remind you. Work with a language model.
+If it's done right, we will be able to capture or joint probabilities or conditional probabilities
+like your language model was doing both for you for giving assignment number one.
+Now this is this diagram that I have already showed you a couple of times.
+This is a transformer architecture. On the left we have an encoder.
+And on the right we have a decoder use.
+So that sort of architecture when we when I was describing recurrent neural networks.
+Right. So.
+Transformer encoder decoder. Do you think every model that.
+Every language model that is available on the market and being used by all those beautiful, rich companies is is using all those components.
+Nothing. Oh. First three theories of how those components can be used or not used.
+What is the autoencoder? Which is essentially just an encoder part.
+Burnt. Has anyone heard about dirt? There's autoregressive language models.
+Okay. Autoregressive. You've heard this term today already.
+What? What which what was it? GPT was an auto regressive model.
+Those typically just use the decoder part.
+And then there is transformer encoders. Encoder decoder is modeled.
+Google's T5 is a model like that one that has both components.
+Any. Any hunches, intuitions, thoughts about how that would that affect interacting with the model or the structure or the data it needs?
+If not, that's fine. One thing that all those three approaches have in common is.
+That those decoder and encoder blocks.
+This one. That one in the end.
+Produce. And this is, this is a I guess one of the most important aspects of, of what's going on.
+They produce embeddings.
+New embeddings. You know what it is.
+It's a vector of numbers right now. What is fed into those models?
+Right. You can see words at the bottom, but technically speaking.
+Are those words a direct input? No, we're feeding it.
+And word embedding. Right. Correct.
+So the input is a set of vectors representing the words or the sequence of words.
+The output is another set of vectors representing the same set of inputs.
+Why bother? This.
+Oh, this stuff that is highlighted here with this red box is really just a bunch of new vectors.
+There is no direct answer to what is the next word right here.
+There is no direct answer. This is a positive comment. There is no direct answer.
+This is this is I don't know. This is the caption for the image.
+We're turning one set of vectors into another set one instead of it,
+possibly smaller, but it's still one set of vectors versus the other set of vectors.
+Embeddings. What's the point?
+And let's blow it up. Yes. The other vectors of the lower dimension.
+The new ones? Yes. Most likely they don't have to be, but most likely that it will be.
+Lower dimension, a more compact version. But that's not the end of the story.
+We spent an hour or so talking about self-attention.
+Right? There is a self-attention block right here, actually, multi self-attention said Multi-head self-attention.
+And it does affect what comes out. So somewhere in those blue boxes there is a self-attention component that is affecting what comes up.
+So now what does the self-attention do. It says right here contextual embeddings.
+Right. I have a word for.
+I have a word that here it will have its own embedding.
+Word embedding. On its own individual.
+More than that.
+No relationship to everything that follows or no relationship to anything else in that sequence after passing through that transformer block.
+You sew it yourself? I mean, you would have to see it in action to be actually fully convinced.
+But I think all those diagrams that I showed you kind of show you that some of the information is being highlighted,
+some of the information has been diminished in in importance.
+This is what contextual vectors, vector embeddings are.
+They include. Somehow mathematical transformation makes that information about the input text
+embedded with context information and actually position information as well.
+And we can feed other stuff into it.
+So I guess you could say that this this block right here enriches the original information, provides that context to begin with.
+But you can add other components too. But in the end it's just a bunch of vectors.
+Does that make sense? Okay.
+Now, do you remember how the encoder decoder situation worked for the sequence to sequence model with attention?
+Let me walk you through it. Right.
+So we we had a full set of encoded vectors, value vectors from the encoder that were passed to the attention mechanism.
+And then context very context query, context query or sequential decoding of what's going on.
+By the way remember that it's a sequential decoding one one token at a time.
+Let me go back. So.
+This structure right here. Let's, let's just focus on on the on the encoder decoder for a from on this structure it does exactly the same.
+I mean conceptually speaking encoder encoder will produce a bunch of context vectors that will be provided to the decoder part and the decoder.
+I know it, it's hard to imagine that, but that decoder really does something like that RNN decoder one token at a time.
+So it just cycles through cycles through cycles, through cycles through.
+Okay. I'm getting to my points slowly, but I'll bet I'll get there.
+Now notice where were that output from the encoder, which is a bunch of contextual vectors from the input.
+Where is it going? It's going to some intermediate self-attention layer, right?
+Not to the one at the bottom. If anyone has lost, it's okay.
+I hope this will become clear. How are they different?
+The two? Well, just so you know.
+That's a very good question. Probably it would be different. So a very high level answer is this.
+The bottom one is. Dealing with the output text processing and the output is output text processing.
+This is output text being generated right here. A sequence of outputs one after another.
+In our encoder here. The sequence is that as it is on as a whole to the encoder, but the decoder is producing a new sequence one token at a time.
+It's it's very hard to see on on the diagram like this.
+But that's what it is is, is happening inside. So that bottom block self-attention block deals really.
+You know hopefully this will become clear. With calculating self-attention for that section right here.
+Those previous input and previous output as an input.
+Previous output as an input. This ends up being the the the input sequence to the decoder.
+That first self-attention layer takes care of that.
+Does that make sense? Yes.
+There's a specific name for for that middle layer.
+It's called cross attention because it's trying to.
+Apply attention to to two sequences, two different sequences.
+The one that came from the encoder and the one that is being processed by the decoder.
+Now this bottom layer deals with decoder decoder sequence.
+The one on the left here in the encoder deals with encoder input encoder input.
+Self-attention self-attention self-attention.
+This should really be called cross attention because it's working towards with two sequences at a time.
+Uh, I think I showed you something here or.
+There you go. I was showing you this alignment matrix for a translation.
+Right? I have an original sequence in French, and then the output decoded sequence in in in English.
+This is what is happening in that cross attention layer.
+That kind of attention happens with at the encoder input layer and at the.
+Decoder input layer. Same sequence across attention to differencing sequences.
+It's a little complicated, but. Thank you.
+This has maybe something to do with how the sentence is translated like because in Latin German the words will be structured differently,
+like into one. The ayahuasca will be made like a different sequence.
+This is, this is, this is what will what why? It's called alignment.
+Because it shows how how the words are according to the attention mechanism.
+How are they should be aligned. Here we have a very good 1 to 1 alignment.
+Right. The. The lighter the pixel, the lighter the sell, the more attention it has between the two.
+You can see that everything else is black. So this is this is this is our alignment.
+If you move on to the here, you can see that the the attention mechanism, figure it out that okay there's different ways of,
+of aligning actually those four words for words here in English and French.
+And one of them, well is going to be much, much more aligned than the other.
+So far so good. Two things that I want you to remember.
+I brought up this RNN encoder decoder example once more to make sure that you understand that the encoder is doing everything one by one.
+GPU producing new token based on past tokens.
+Okay. There will be for one. For a minute.
+Okay. And this is the attention matrix that we discussed last time right from the encoder.
+The encoder looked at the input sequence of words at once, and it figure out that word is related to that word and not to some other words.
+Is that clear? Is that part?
+Part clear the relationship. So I have a let's let's just do this.
+I have a sequence of words ABCd whatever they are. Right.
+Encoder can immediately look at the whole thing and produce a tension matrix for the entire sequence.
+Right. Correct.
+Now, let's say that our decoder. Is producing based based uh, what what came out from the encoder, the context.
+It will be producing some other sequences of x, y, z. Right.
+Y will be related to X, right? Which it has to be if it's a good word choice.
+Y should be related to Z as well, right? It should be related to x.
+X should be related to z one. Is that one way or the other. And all together those words should be somehow related to the context.
+Okay. So there is a tension going produced here.
+And there is attention this cross attention between. Encoder output and what what the decoder is trying to produce.
+Right. Am I losing?
+Yes I am. You're pretty close.
+Just. All right. Um, but.
+Um. On.
+Yeah. So if we're training our model on on examples in two languages.
+Right. Same sentence in two images. This is this is how a human would write in English.
+This is the equivalent in French or vice versa. Doesn't matter. Right.
+And now the model once trained if it's trained properly.
+If. The AI will provide a sentence in English, a new sentence.
+The decoder will start producing its equivalent in the French or vice versa again.
+I was just wondering, what is this yellow box for output?
+How about information provided by the computer to the right, on the right, or multiple output to output text?
+Yeah, so I thought it was like another. Right.
+Oh. Very good question because it might get confusing.
+Remember, I ran an encoder decoder in the decoder worked into in two modes training and inference.
+Training means that I'm providing it with a source sequence, say, in English and and target sequence in French.
+Training input sequence in English. Training expected output in French.
+The other mode for an encoder decoder setup is once it's trained, I will not be explicitly providing that sequence right here.
+It will be just generated by beating the input from previous cycle.
+I'm sorry. Output of the previous cycle to the to the input of the next cycle.
+And the decoder does that all the time.
+Encoder did its own thing. Process the input sequence and now the decoder is doing the cycling until the entire sequence is produced.
+Does that answer your question? Okay, so two modes one.
+This is why those diagrams are pretty difficult to unpack immediately.
+Yes. So this whole process, Adaline, is basically part of the encoder process.
+And then whatever was happening in the encoder goes into output takes in position embedding for the decoder.
+Okay. Now can you guess. An encoder is setting up the stage.
+Is packaging the context for the decoder. Hey I have this input.
+Let me try to compact every piece of information that I can gather from that input a sequence of words.
+And we talked about self-attention the last time self-attention will package in along with some information about the input.
+Not explicitly those words anymore, but their numerical representation.
+But it will mix it with attention. This representation of that word also contains its relationship to all the other words.
+It's packaged into vectors. Those vectors are being fed to the decoder.
+And this is where the decoder is starting. Okay. One word token token token token token token.
+Does that make sense? So I'm understanding, um, this type of thing.
+Right? Oh, so this or this one. So, um, the encoding encoder work as and what kind of it works, right?
+We're looking at the whole sequence at what's the decoder.
+And that's inference phase. It will work step by step step by step in training.
+And we'll do the same step by step. But it will before they even start.
+It will to know what the expected sequence is. Right. Because it's been used to train it.
+It will process it in sequence anyway. Yes. So the next.
+The signals to move this to self-attention will be related to the two sequences of English and Spanish.
+And we'll take both vectors. So this will be basically the new code.
+Okay. So what's going on there. This is why the encoder is pointing to the second step.
+So yes. So the entire takes in wrote text without context information without the relationship information without even barely positioning
+information packages it with positioning information context and all and attention information passes it on to to the decoder.
+But at this second level, before we get to that second self-attention level, cross attention level in the decoder.
+The decoder is also doing the similar thing on its own input.
+It's trying to find alignment and attention within what it has produced already.
+Saying that we gave the. This would be the.
+This would be the French words that it keeps generating.
+I don't know, you know, but you. No no no no no, I'm just because.
+Because we traded. Okay. And then we just started reading.
+Where is that? Why why why bother generating stuff.
+Right. Very good question. So okay, let's say I have context.
+Let's say that it's I'm not going to write numbers, but um.
+Mary is having great encoder wheel packages one way or the other, and will send it to the decoder of the decoder.
+We'll start with some. Start simple, right?
+Okay. We're starting a new sentence and let's make it, I don't know in Spanish in one hour alone with then after after the encoder produced this.
+This is available to the decoder right now, just like it was in a slightly different way with the RNN version of it.
+And now our, our, uh,
+decoder will start producing a new sentence that will try to find the best equivalent for Mary is happy for the start of memory is happy.
+It will not be doing the mapping 1 to 1. What's the word for Mary and Francis?
+Probably Mary. Right. But maybe in French we're writing everything backwards so that it.
+It should know that in French, hypothetically, we would write happy as Mary.
+Was it that it is backwards. This is where those attention.
+Weights will come in because additional weights will tell you.
+Tell me. Okay. In English is precedes happy.
+In French happy will proceed. Yes.
+It's really hard to explain because it will happen. In unexplainable way.
+But attention will try to counter.
+Does that help? A little, little question. Yeah, I.
+Um. Of course. Not there a row there therefore that the conditions from here to that one.
+Uh, not necessarily because that bottom layer is used to produce attention, um,
+vectors or context for that French output without looking at that, the English input.
+If you like. Oops. That being there. I understand what you just like, but still help.
+Okay. Okay.
+So once again let's say we're translating from English to French.
+That's right. Okay. But they they're already finished.
+Mhm. And then they put it on. Ignore this.
+Yes. So why didn't I throw the angle like that.
+Well uh let me just write those.
+Actually let's do a. Am I going to pay?
+No. No. No.
+You can blame me, but really those those diagrams are very high level and they're skipping on a lot of things.
+But let me let me try. Keep up here a little bit.
+Short. So we received content content here.
+Right. Okay. Let's let's actually pull that off.
+There it is. The decoder knows that it's. It's time to decode.
+What's going on? It's not starting with the actual word.
+Oh, it will start with some magic token that represents start of a sentence or go whatever it is.
+That makes us. This is a signal for it to start.
+Going through the procedure? Yes.
+Will go through the layers here. We will need the context.
+The context will dictate what should be.
+The thirst of water and. Okay, that first word will be generated and then fed back here.
+And now we will have the first word. Mary. Mary.
+Need context. Context with Mary means whatever was the word is is coming up.
+Lindsay. Yeah.
+Me? Okay. Uh, so what is going into the first multi self-attention?
+Like if, if it's just go. How is it going to produce uh, do you think winning.
+This is what I was getting to know. So you just thought it goes to all the words, right.
+So self-attention needed the entire sequence. Right to to to to work.
+Right. On the encoder side. When we are doing the inference, we don't know that entire sequence when we're doing the training though.
+I will have that sequence. Right. So they will be go.
+And then Mary is happy, right?
+This is my expected sequence in English. I think I'm confusing languages, but you understand what's going on.
+So once again the training will go here and will with the go token will make the context.
+It will try to produce Mary. This is where the error will be measured.
+But let's say that our training is well along and we're processing correct stuff.
+Right. And then word get it back as Mary okay.
+But I already have the entire sequence. Could I could I calculate all the attention values here immediately?
+I could. Why not?
+Like, but. I want this block right here to learn what should come after Mary rather than telling it.
+Hey, is is your probably best bet? Does that make sense?
+So I'm not really interested in producing a full, full blown attention matrix right here.
+Even though I already know that I want the the decoder to go through the motions.
+Yes. So it's likely that the first of all self official show was just wrong.
+Like, I guess, uh, waves in the beginning because it was 91%, but I wouldn't use the word incomplete.
+Incomplete. But the you're that you're on to something and then it goes to the second episode is like, oh, okay, I have this,
+but the encoder is telling me that this is the context, the problem, and I just say, okay, given the first results that I have from the first one.
+So this is probably very, um, and if it's not, maybe just.
+And then I go back and now you have two words to build the attention matrix from another word,
+three words that add another, and that building the attention actually helps adjusting the quality of what's happens.
+One level about. Yes. So from go the decoder is able to produce very pretty much solely based on context.
+The context. Yes. So is it like the context was like formed from like.
+Texts, often having Mary in it.
+Yes. Because, well, let's say, well, I wrote Mary's Hospital.
+I say that this is some French version of it. Right. I'm starting here with Mary is Happy in English, right?
+I will package this entire Mary needs English into the context.
+So within that context will be a very highlighted.
+Mary is first. Right. This is the most important word in that sequence that I showed you over here.
+Yes. Is it starting to make?
+Makes sense. Now let's go back to what is actually happening on this first attention level of incomplete attentional level.
+So the bottom line is when we are training our decoder, we don't want to reveal the whole thing to it because it would make it's like way too easy.
+We want it to sweat. We want it to predict.
+And if we want it to predict correctly, if I give this the small piece of, well, the whole decoder,
+if I give the entire sentence expected sentence, it will start immediately predicting correct words, right?
+That's not what we want. We wanted to learn how to predict that that works.
+So the solution to this problem is called.
+Oh. Mast self-attention.
+So instead of producing the world worst, we're still talking about this bottom layer self-attention layer work.
+Instead of producing the whole thing when we don't have all the words, we will mask.
+What's what I did with the decoder should not have any awareness at the moment.
+Does that make sense? Technically, it means putting into practice infinity minus infinity.
+There, there. Us as attention weights. It's.
+Body language here. I know in this, in this case.
+In this case, uh, we would be working with the same language.
+French. French but French sequence being built.
+So I have one word. There's nothing I have.
+Well, we have an example in which I was doing.
+I have just like this was the first token afterglow that was produced.
+Right? Go cycle life start, right.
+And then before I get to another, uh, another word, I, I, I had I don't have another word here, so I cannot calculate attention.
+Let's, let's let's let the decoder predict. Yes. Which is the equivalent of the, um, which word classifies like you represent us?
+Uh. It doesn't really.
+But they are still light and valued.
+Ignore the one on the left. Right. This would be the full pension matrix.
+The one on the right is the is the mask. When we're started with the word life, it does not have to have anything to do with ordering it well,
+but it doesn't have to be, uh, have to do anything with ordering.
+This will reveal the final ordering. Does that make sense?
+The alignment. So mask attention.
+I just have one word like. Let's go back.
+Decoder. Token processing.
+You. Feed your own output to do your own input and start building the attention matrix.
+But I only have one word for it.
+Once I add a second word, I can keep expanding and expanding.
+Finally, when I have the full attention, I can produce a full matrix for.
+Does that make sense? This is specifically important during the training process because we don't.
+We don't want to reveal those numbers. Do it.
+Let's let it go through it on its own.
+So masking just limits, uh, the stuff that the self-attention can see.
+The birthplace of a. Yes.
+Essentially, it disallows the decoder from seeing the future it's not supposed to see just yet, even though it's during training.
+It's available to it. Let's not let it see, okay?
+Let's let it figure it out. That's the idea.
+I do this so like it produces a new results each time.
+That's the goal. If I have two words now, I have like I can in my sequence in my output sequence.
+And I can produce attention values for the three words tension between the three words.
+Keep going, keep going, keep going. That makes sense.
+Yes, the next citation. The previous but sequence could change.
+Uh, possibly. That's not likely.
+All right. Masking. Masking. Self-attention. Is that clear?
+What is. What is it doing? Is it clear? Where is it happening?
+What about, uh, um, attention, which is one level above where encoder encoder context means the output of the decoder being a like produced.
+This is really pretty much what an encoder decoder did.
+Okay. That's like the second layer of self-attention. That's what that would be.
+This cross okay. Yeah. Where? Encoder input and decoder.
+Processed output is mainly it meets and then we're okay.
+How how is this alignment going on right now? Is it?
+Let's see what's happening. Everything. Does that make sense?
+So honest opinion. How much of that stuff and stuff is clear right now?
+What's in that diagram? Right.
+Pre-training, fine tuning and transfer learning. So now we have our.
+We have our architecture. We can try, um, building it.
+So can you build a GPT at home? You're better off mining bitcoin, right?
+You can't. Right. It's too large. Actually you wouldn't be able.
+I don't think you would. No it wouldn't fit on your computer anyway memory wise.
+Depending on which one. But the older ones say um let's say you have this.
+You have the infrastructure to to train your own model, right?
+You have a huge data set. Are you doing whatever well, everybody else is doing?
+You're sucking the data out of the internet. Right.
+Um, so when you have the interesting infrastructure to hold something like, um, GPT four is this thing is huge.
+No. You just.
+Well, I'm sure you obviously you are familiar by through your interactions with ChatGPT
+that if you asked a question about something that happened yesterday or a month ago,
+it will not know what you're talking because it's not part of its training data.
+So clearly you if you wanted to run your own GPT at home, you would want it updated pretty often.
+Right. Or retrain.
+Right. He think that training process is long and potentially expensive?
+Very much so. So just just the electricity bill for sure.
+I would just. Think most of us broke.
+Very quickly. So we don't want to do it. We. We want to keep it retraining.
+Right. So we have some base version of it. And then we can play with it.
+Play in multiple ways. One would be fine tuning in.
+So okay. Someone gave me a GPT. Let me show it a couple new examples.
+You sort of nudge it in the direction I want it to.
+Yes. So is that what Jupiter four is doing?
+When? When you ask that, just search for the latest information online.
+You can ask that okay. Give me the latest news for the day uh, and search it up on the internet.
+It actually searches it up. And maybe it's like by getting its information by, by itself and then it gives you some.
+Okay. So. I don't think there is online online training happening is it is actually like it says analyzing is going online.
+So apparently something is going on. We don't know what it's not pre-trained.
+Cannot be. So let me look at, um, I don't know how they're doing that exactly.
+Or the books or me. What I think fine, but fine tuning that.
+If that was actually the case, it would be fine tuning.
+Right. And showing in new examples to, to to nudge it a little bit.
+One other thing I might change.
+I don't know if everyone was trying to fine tune it with the same kind of input over and over.
+It went through pretty quickly. Tuned itself to the point where the error it produces is almost zero, so there's no learning.
+You wanna mess up this thing? The answer to that.
+Question. But yeah, that answer becomes becomes, uh, under a new.
+Part of the model. Part of the model. Not in the explicit sense, but just like the model that you wrote for endurance, right?
+Let's say that probability of certain new words were added to the model.
+And now there's that question.
+You know, fine tuning would work. Say, uh. If I want Gpt2 to respond to me in Polish.
+GPT is clearly an English based language, right?
+Will do now, and that's including other languages.
+But first versions of GPT was pure English language, right?
+Do you think? That I would have to feed most of Polish internet into it or start from scratch.
+Or just show it a bunch of examples in and polish.
+Because. That's a that's a very important company in common.
+It's a different language, right? It's a completely different language, different grammar, different structure.
+Da da da da da. But and yet you don't have to start from scratch.
+Yeah. Pretty language. But do you guys remember I showed you I asked you to build plots for your language models.
+Right, Frank. And and and. The frequency for words, right?
+If you did it for, um, I don't know, Polish and English,
+you would end up with very similar curves, even though they're completely different languages.
+And that is not the only one commonality between languages.
+Different words, different sounds, different grammar.
+And yet we're using we're talking about the same things more or less, so that English GPT already has what human language as a whole includes.
+Now you just have to nudge it a little bit towards the language you want to use it for.
+The more distance from Polish to English or Swahili in English, the more nudging you will need and more examples.
+Does that make sense? Okay, so go ahead.
+So in the training process, the model means getting pre-trained for you.
+They use all the information in every language or not.
+Because when I use it in Bulgarian it's it's not that good.
+I actually like it. It sounds weird.
+It's like not not how I guess it's great, but it's not how people say it.
+Like if I search it up,
+it's almost like it was never trained for both your information is that the case is totally that is just using this is probably AI.
+Well, the GPT short includes some some multilingual language data.
+GPT three does, if I recall correctly, does not.
+GPT two does not. But if I where I were to guess, it would be Chinese or Spanish, not Bulgarian or Polish or more obscure languages.
+Just give it some time or let it let other people take GPT and fine tune it
+at home and they will just keep novels in Bulgarian published over and over,
+and they internet and it will become better. And.
+What I just described is also, um.
+Called transfer Larry. You don't start from scratch.
+A very good example is taking a let's say you have a French GP, right?
+It would be relatively easy or better yet,
+Spanish GP and turn it into a Portuguese GP because those two languages are very, very close to one another.
+It would. You can take the Spanish GP2 and almost instantly apply to to to work in Portuguese.
+That's another aspect of it. So this is transfer learning.
+We already have learned some basics. Let's take it and not start from scratch.
+Fine tuning means let's show some examples from a different domain to nudge it towards recognizing what is being used.
+Does that make sense? Conceptually.
+Yes. So we did.
+We created a classifier. We just had like one arm.
+So with training. Like with selected show early designs on stage.
+But somehow, like that part park has to.
+Um. Like I love it. Yeah.
+So they've got an opaque 78 or 50.
+Or like. Um. Do you understand?
+Let me try to. Throw away the bat back at you and we'll see if we understand each other.
+Are you asking whether ChatGPT has little components that are solving different problems or different tasks based on the same model?
+Is that more or less the question? The question answering or translating even to solving math problems.
+Da da da da da da da. Absolutely. So what we are talking about is is, um.
+One of the reasons why we have we started with this pre-trained model or foundation model.
+This is the rough one. Not not not really. But this is what we capture in, um, on the internet, right?
+And this is why I was highlighting. Let me go back to you.
+I was so desperate to highlight it for you that those decoder encoder blocks or transformer blocks are producing embeddings,
+different sort of embeddings. Now, I never said anything about what happens above or above it.
+Right. Think about.
+This contextual these contextual embedded contextual embeddings as raw material.
+Everyone can take the same robot through a hole, whether it's iron, whatever it is, right?
+Different companies will turn it into different things.
+So solving different tasks is like placing somewhere here.
+Placing a specific specialized company that is responsible for question answering.
+A company for translation. A company for a calculation.
+It's not as compartmentalized as I describe it, but technically speaking, um.
+It's sort of like this multi-head self attention where each head is concerned with different things.
+Although technically I'm just a dialog. It's not like just, you know, because we're a high level college, so it's my father.
+You feel like that there are other components.
+How are they interacting in exactly? I will not be able to tell you because it's proprietary information, how they how they make it work.
+But in essence, you can very easily.
+Take this pre-trained basic model and put something on top of it.
+Or sometimes it's called a head in a different sense that.
+Single self-attention.
+And like you're putting here, you're taking the output of of of the pre-processed language model and you're doing something else with it.
+And usually it will be another neural network that is, I don't know, use for classification or, or question answering.
+Any anything goes. Does that make sense?
+So this is this is where you will see all. All different applications out there based on GPD.
+Or you will see variants of GPD that are fine tuned or trained, actually not GPT in the public domain.
+Language models that are just adjusted towards your, your um your task.
+So the sky is the limit here. The language.
+The language model will just output a bunch of vectors that carry meaning.
+Now this is why it's so good. This is why it's so good with all of this, uh, fine tuning or even transfer learning.
+Because those embeddings in English. Right?
+For a sequence describing.
+I don't know why, like Kitaro or something like that, are not going to be that different from embeddings that are output in a different language.
+We're talking about a vector space that means nothing.
+And the and the points in that vector space that are related to each other in a similar way, in English or Polish or Bulgarian, doesn't matter.
+Those words or those tokens will be more or less in the same spaces.
+Yes. What part of the model is the black box like?
+What can I see and what can I not see? From where can I start building the new one?
+Uh, what is a black box when it comes to language models?
+Uh, the part that I cannot see. So when it comes to GPT, everything is a black box to you.
+Actually, GPT two is public domain, so you can pick it up the code and build yourself.
+But GPT as an online service, it's it's it's a black box to provide it.
+Uh examples. So you can fine tune it yourself or you can just use it as is, but you will not see what's inside.
+There are models that are public domain where you can see what's going on.
+There are models are already pre-trained and you can look under the hood yourself, but not the commercial ones.
+I had them all like that.
+I made changes to that model to get a new model so I can cannot make changes to the existing.
+Oh, you could have an, you know, commercial instance available to you, but which you will fine tune with your own data,
+but you will still not be able to see what changes were made to your instance.
+It makes sense you wouldn't want to make it available to people.
+In fact, uh, for those who are familiar with Python libraries and and more advanced, you know, matrix model manipulation,
+neural network layers, packages, something like GPT is not going to be longer than 300 different lines of code.
+The structure of it. The word is being.
+What is actual model as in weights and parameters is going to be huge, but the code for for maintaining that structure and learning is just that.
+It's some form of representation of less right layers after layers stacked, stacked on one another, plus the data.
+All right. Questions? So we could do, uh uh, uh, language model training with, like, today's class.
+Mhm. Um, it will start. That's what I want.
+Yeah. So you could take a, you could take GPT if you had a, it, had it available.
+Take the transcript of this class. Fine tune it.
+Have I, I don't know question answering had on top of it.
+I think well it would summarize things for you.
+It would make up stuff as it goes. Because the transcript of today's lecture is not going to be terribly long.
+There's going to be problems with because my accent is different that right.
+And so the transcription may be incorrect. Some words the blah blah blah blah blah.
+But technically, actually it looks like one of you wants to build something like that.
+So that's. That's what it does. Yes.
+Just take the the the model. Yes. Yes.
+And especially. Yes. So imagine imagine.
+I mean I have a slight we'll get to it probably next week, but I think uh, it is, it is, it's here.
+It's easier to understand. To put this like for, uh, stabilization because.
+Right. The people that understand, uh, if I just left this one, but then people and I tune in because I feel exactly the size and and same principle.
+Yeah. So basic model of stable diffusion knows how to paint.
+Your version of stable diffusion will be like trying to paint like Monet.
+Yeah. Because you showed it enough examples of of on his paintings or your or your cousin's paintings.
+And that way that that is the beauty of pre-trained model because.
+Apparently the patterns are not so different than adjusting it.
+To learn a few new tricks is not. Starting from.
+It does not require starting from scratch. Think about it this way.
+Wikipedia. It's it's not terribly scientific language.
+Right? Come on. Come of age. A lot of GPT is trained on Wikipedia right now.
+If so, if it if it was only trained on Wikipedia, it would speak like the Wikipedia.
+But let's say that you want to adapt GPT for your in law firm.
+You don't want your law firm GPT your assistant, to respond with common language.
+It should be more sophisticated writing using legal terms.
+So you would fine tune it with some legal documents and so on.
+Actually I wouldn't, I advised against that because if it starts hallucinating, you're in trouble, right?
+But that's that's the general idea. If you want if you want your GPT, GPT just to sound like a rapper, he did some of the hip hop lyrics into it.
+It's just a matter of how much you do. You'll have to fine tune it for it to come true.
+And the amount of data that you have. All right.
+1235 how about we leave the. Details for all birds and games for Monday.
+That works. Was that interesting?
+Like let's go and Beltway. Not not in this class, unfortunately.
+All right. Any questions? Requests. Would an.
+I think. I'm working on it.
+A worst case scenario, it will be a very simple.
+Not necessarily very simple, but relatively simple. And then encoder decoder.
+If I will try to give you something else.
+But you know between teaching and meeting all of you, I don't have much time to choose to to work on it and actually make.
+How many of you coded in Python and struggled with stringing together libraries and making sure everything works?
+If the if you experience that. I'm not different.
+Okay. I have to make sure that everything works for you so you will not come back to me.
+Hey, this is garbage. You don't know how to code, right? I would be embarrassed to say that.
+The idea is that I will give it to you. Maybe it will be late in the semester, but you can keep it and play with it yourself to your heart's content.
+After the semester, I have learned it from a conceptual that is really complex.
+And yes, I will. I will try to make it happen here in season five.
+Anyone you saw already? Uh, models that I posted, right?
+Exhausting. So I will try to do something similar here. Okay.
+Thank you. I thought that was, uh.
+I'm. Going to.
+Do the presentation to the viewers. We just have to show the the demo work on your presentation.
+You are working with your laptop. Show that your demo ready and have your T.A., uh, ask you, hey, type in this.
+Let's see. Nothing more, nothing more. Maybe 2 or 3 samples.
+Okay. So do you think I can make a better plot of this space?
+So is my implementation like this space picture for, uh, entity recognition?
+Because I worked with, um, uh, with the model, this space it gives me, and I just it's training,
+but it's more like fine tuning it so that it recognizes new entities.
+But, like, I was not satisfied, and I was thinking, well, is it possible that it's just not good for this, for entity recognition specifically?
+Like, is it possible to just build a separate model as well?
+The challenge with ignition is having enough data.
+With enough information. This is an entity, right? Yeah. And then and then actually that's for reference.
+Right. Is it worth better data set with a large data set with a lot of samples which would help quality by using specifying instead of.
+Okay. I mean we could try that. That's it. There's two ways to go about it.
+Make a larger model that captures more. You can have more data.
+And yeah, know one of those works better.
+Uh, there. But word is like harder to implement for the data that I'm working with.
+Um, but yeah, uh, it would probably be okay.
+I, I think like, you can make, uh, but then find.
+A way estimate say something apart from internet data analysis, something that comes up and if you like.
+So. But is it actually like, uh, I highly doubt that that would be helpful on something.
+It has an online component that does that.
+So it is just the outer layer which is like okay for a particular user.
+Uh, yeah. Yeah. I would imagine that they, they, they collect what happened and then they will bounce across the human feedback loop.
+Yeah. Um, yeah, that makes sense. But I, I don't think it will change because but then again, I don't know.
+Right. Uh, okay. It makes no sense to do that one because if it directly, uh, you know, get stuff, I probably I update the base or something.
+That model becomes social over time.
+It becomes public. Everyone's talking, uh, in a larger context.
+So does it make no sense to guard rails against anything?
+But they might have some, you know, experimental side of it. It's difficult to say.
+Yeah, I know, until they regulated religion, I wouldn't do it if I were open, I highly unlikely.
+Yeah I'm ready. Yeah.
+It they have a very really tight. Screw there.
+Yeah. And also think to getting that better of us.
+I think we're gonna have to stop.
+I don't want to. Yeah. Not enough time.
+You have time to look through them all.
+Oh, I know there are some language translations from Java missing from any particular language that that holds a particular language that,
+uh, that you don't take your pick.
+Right? Yeah. You think you just asked questions of something as simple as that?
+Hi. My name is GPT, and the immediate next question I ask is what way you're going to be able to get this?
+Thank you. Uh oh.
+Well, so when, for example, we complained, maybe just based upon this discussion,
+there is a large number of people who keep asking the same thing again and again.
+It becomes about, I guess, your colleague.
+Mentioned here. This is very unlikely that it is an ongoing process.
+I imagine that some of that data, some of the interaction,
+users and tragedy are being stored in the language for a trade, but so I'm sure it's irritating.
+As if it makes no sense.
+Fine tuning is more in into more of an intentional process.
+I'm going, do I have an extra data set? I'm going to feed it into the model.
+Uh, it could be it could be happening to me online, but that you don't have any if there's if it's open to the public, you agree you have no controls.
+But what if you don't? Yes.
+So a couple of months back, I was actually talking. To people.
+So if you used a bunch of API didn't that for them, you know model you are interacting with for your API only that model and not the public key.
+So my idea was that fine tuning is all this is pretty good.
+Okay. So that's that's the intention.
+I see nothing nothing wrong with doing online community experiment.
+You don't care about the end result that much here.
+That's a commercial product and have to obey certain rules or.
+They have to keep it. I think I would, I would never I love if it was fine.
+I have an instance, a smaller instance, or a single user churn, or even a very short live instance of one one session.
+And I think got it right.
+I think it's. Not the main one.
+Okay. So I guess my question would be where exactly do we draw the line with this fine tuning.
+But this is just something which is which it has like my name is so-and-so.
+That's definitely one fine tuning, but something else.
+So how do we draw that line out or out of the model from you know, how I open this information did.
+You sell the diagram for transcode and transform, right.
+And there's not to complain. Why don't we spend over three classes?

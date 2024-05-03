@@ -1,0 +1,633 @@
+Good morning, you.
+Three questions. Yes spring break, but knows said no to office hours.
+Well, I don't plan to be here, but if I will be here, I will let you know.
+Probably will be your exams. Anything from takes or from business.
+Mail me during spring break time.
+Programing Assignment number two. Has anyone looked at their dataset thoroughly?
+Any challenges in. But here's a couple of tips for you.
+I'll just leave it here. You might need to do some data cleaning.
+You might need to do some removing.
+You don't need certain aspects of your data sets for classifications.
+Well, I'm working it. All right, let's go back to the metrics.
+So last time we talked about here, IDF, which is another way of writing a document, a document as a whole.
+But before we started talking about the IDF, I told you that we will be representing words as as as vectors.
+And if you remember, I showed you the term document matrix.
+That was a matrix where we weren't counting amount of words per document and then amount of words for document as a as,
+as a vector attached to a word, essentially count count how often a certain word appears next to another one.
+Right. You think this is what.
+Words to that. Yes. Which is our back to our representation of a word that I mentioned.
+Counting the neighboring words, probabilities.
+Very good. Okay. Now, before we get to that, the idea of oh, actually, though, the mechanics of building a word to that vector or a set of vectors,
+let's bring back a couple problems that we have with factors such as.
+Lack of words or a tough idea. If I have a lot of words in my vocabulary and if I want to do that, if I hear correctly per document,
+I will have a very large factor and feature one cell or one element for every word.
+And there is going to be a lot of zeros, right? We talked about sparse and dense vector.
+As we know,
+we don't want large vectors to begin with and we don't want sparse vectors to begin with because sparse vectors are not carrying a lot of information,
+but they pour in a lot of resources to keep it in memory process.
+But it's not the best idea. So why don't we go for something that is smaller, more compact and denser?
+And one of those representations, a very popular one,
+is saying that word to that exact word to back is not made in the same way as def idea or bag of words for word counting things.
+We will actually run a little trick with the logistic classifier that you are already familiar with, and I find it pretty interesting how this works.
+So let's start to get into it.
+But before we do that, how many of you ever use the word representation?
+Okay. Without looking under the hood.
+Right. So the vector gave you how?
+There are existing pretty print pre-trained or two vector vectors dictionaries out there.
+I'll show you all. I'll try to make another Jupyter notebook for next lecture.
+Then you can. You can tap into existing. I guess you could call it a dictionary where you, in a word, you could vector back on a certain size.
+But what's important is that we will be using predictions.
+That's a very important aspect of work to make,
+is not the only representation vector of representation that is actually in use of use in a sense in a neural and LP sense.
+Neural networks of transformers, everything that is being.
+Top. Interesting aspect of an LP right now.
+It uses that sort of vector. Such just today.
+There's other other ways to do it. If we have time, we'll come back to our club for a moment.
+Bert is something that we will definitely cover. So what's.
+We talk about work to that credo.
+Do you remember how you were predicting words with your large full language model that you.
+Covered in your first programing assignment. You were predicting words, right?
+What? What did you do? In previous work, if you looked at previous words, you actually looked at one previous words, really,
+or that really you could look at more than one, but it just makes things a little more complex.
+And then you were estimating the probability for every possible word in your vocabulary and picking the one.
+Or listing the top couple ones that were the most interesting.
+So what you weren't doing was exactly this an income language model where you were trying to estimate
+a conditional probability that a certain word will follow a sequence of already seen words.
+That was the idea, given what happened.
+Predict what will happen next. That's more or less the illustration of what you were doing.
+The words and then missing missing spots for the new work collection.
+It wasn't too difficult. But was your language model capable of filling in the blank like this one instead of predicting?
+What is the next word after tomorrow is try to figure out what should be.
+The word between tomorrow is meant to be.
+Was was your model capable of that? Would you be able to.
+Twist and turn it a little bit to make it work that way.
+Using the same approach. How.
+It's a bit like probability of previous work.
+Given this, do we look. Agree.
+Well, you could. You could do that. So So now you're probably actually would have a lot of you would be.
+I guess you could call it like two probabilities, right?
+One would be probability that some word follows tomorrow is.
+And then another probability that says to be will follow whatever came before or this entire sequence.
+Right. But you will have to make some changes to your model and to the whole algorithm would be you wouldn't be out on that.
+I have a question on this work.
+If let's say the probability or alert point tomorrow is is somewhere a and that what we're being referred to is going to be like that,
+what do we do that will repeat that look like it was just probably different words because they'll
+have different probabilities for what following tomorrow is and for the world where before to be.
+So what is the thing? I just understand.
+So one way to do would be to split it into two pieces, right?
+One is if you forget about to be right, this tomorrow is something is exactly what we did, what we did before.
+Now, that's one probability, right? And then to be is the word that you're technically you're trying to predict, Right.
+Using our previous approach is to be, Oh, let's just make it two is something that follows, right?
+Okay, So be based on what the probability was after we come to work for tomorrow is something and then we use that word for,
+I think the probability for this word, for it to be an academic excellence does.
+So if you take a look at it this.
+We have, we have we could look at it as two probabilities probability that.
+But given the moral, it's right.
+That is something that we know how to calculate. And then we.
+Let me know. Our train.
+Right. Or even. But let's not make it too complicated.
+Right. So we have. Two probabilities.
+What is the how would you pick and how would you decide which words to place instead of this red section?
+In such a way that it would be the best word.
+It would lift a sentence because it could.
+Like, are you are you changing the meaning that we're just finding the word?
+Yes, you could. But if you flip the sentence, you have B to.
+Something is tomorrow, right? Are you go if you're using the counting approach.
+Right. How how many instances of be do something is tomorrow will you find in your corpus
+as compared to tomorrow is going to be the thing that's a different sequence.
+It's like saying morning Good. Yeah.
+If you're using content specifically like it like use for the language, What what is that?
+You're you're not in five words. You're counting words.
+Right. But you're also bringing it back. This was this was the approach, the approach that we used.
+Count all the sequences. Our word at the end over count of all the sequences that include what came before.
+So here we have count tomorrow.
+What was the sentence? Tomorrow is.
+Here. We're counting how many hours tomorrow is here.
+We're counting how many. Tomorrow is whatever word you chose.
+Right now, if you turn it around, this would be.
+Or yo yo B to your word.
+Right. Comes to see.
+Just the to your word is best.
+But yes. So further to the. Because we are calculating two different things.
+One is tomorrow is football and the other is work.
+So they are different. Okay.
+But you're trying to guess what this word will be.
+Which which part of that which which aspect of that word is more important than what came before or what?
+What is going to come after it? Or are they both equal?
+I don't have an answer to that question.
+You have to think about if you flip that, flip the sequence and you care about the sequence that you're going to get,
+as you said, completely different probabilities and you may not capture the best word.
+But go away. The best thing is to be cool.
+Can we define the word loser? Is the word that goes there, depending on what is done there before and also what is.
+So now, now you're onto something. So now you're saying, well, why don't we try to find this word based on what comes before and after?
+So the entire context. Right. Does that make sense?
+Okay. Your idea is not bad.
+To flip it around and try to try to try to find the resource of it using the same mechanism that we used before.
+But how about this? About finding those two probabilities?
+What? What kind of art? If we.
+If underscore is our best word, is the product of those two probabilities going to be maximized?
+If I picked the best words for for this and that I have one probability,
+two times another probability, and that word maximizes this expression, Right.
+So using the same approach, we don't have to flip anything, anything around though that idea is actually.
+I'll. It's not not not without merit.
+I guess that would be. This is supposed to.
+I want to play both of those words with Girls Aloud.
+Yes. Well, that's a lot of what you say.
+You know, if you expand the expressions, it's not like we like you.
+But tomorrow is divided.
+The. This has to go.
+I mean, if you really factor in a large sequencers, right, using a chain rule and whatnot,
+then you you will keep multiplying the same, same conditional probabilities.
+But if you use a union group or by gram approach, I'm sorry, then you're just looking at two words and this is not going to do both.
+Nothing's going to cancel the castle if you have lower sequences.
+Sure. But then you already have those probabilities.
+You can just multiply them, right?
+If we're maximizing the probability and there's going to be different words, that phrase that we're actually looking at.
+Well, fine. Find me a product or a specific word that goes into those empty spaces.
+When I'm calculating both, I'm looking at the same order. So we just pick a word.
+Pick a word that will maximize that product.
+Very good point. Otherwise. Otherwise, yeah, it wouldn't make sense, right?
+Because it would be you would be you would end up with two words.
+And that's not what you want, but. Okay, So we have the technique and we have the idea.
+Let's look at the entire context. Right. Once again, we we talked about it before, how large that context should be.
+So here I'm looking at two words before and two words after tokens.
+If you want to be specific, should I expand that to three words before and three words after?
+Or can the words. He's been in the Palm Springs.
+What's that? What are we? What's the benefit of extending that window?
+And what is the disadvantage of it? Yes, get more context.
+Gets more context. But you're paying with processing power.
+Right. And then there is a threshold behind which getting more context is actually going to be detrimental to you and to your.
+Processing. All right. So. Here's the idea work to like is going to predict.
+Yes it should. Like for example, on Audible, there is a console.
+There is a separate type which are different contexts.
+When we say that we want to increase the window, we are considering it by this previous sentence here.
+Yeah. So let's say we are considering violence before and don't want after predicting or know what we are trying to predict,
+have the context of previous incidents. Yes. So we'll have like to say, oh, it's a doing that.
+We don't have this scroll. Okay. Oh, there's at least two ways to think about it.
+One is, okay, I'm going to accept that because at scale.
+I'll be looking for some more. Let's say tomorrow is.
+Use it for something, right? You will have a lot of examples that you should have a lot of examples in your car.
+Tomorrow is, as you say, or something similar.
+Even though you if you have something here and that is really it is it is not out in important context for that word.
+That's fine. Statistics probability will take care of that.
+Or well, if you want to be super specific, you know how segmentation works.
+Let's not include anything that comes before the period, but then your processing becomes much more.
+You're now, you know, you have to look at periods, columns and all this,
+the semicolons write quotation marks because that might be changing your, your, your what you're doing here.
+But I don't think it's this is is to think about large language models the bulk the
+scale it is it will just take care of of of all those little instances like that.
+Yes they the period is before that tomorrow and then say there's like eight words after me to
+be in your ten gram auto which you still take but you also wanted to be aware of the series.
+Would you want to do it the two words before tomorrow?
+Absolutely. Absolutely. Two words after. Absolutely.
+But then you would have to sort of create an adaptive window for what you're doing that your mechanism
+for for that protection is going to be now a little more sophisticated and more more difficult?
+Well, not not not terribly difficult, but more demanding in terms in terms of if what I'm asking is like,
+is there problem is one side is or it's another side.
+Here's a view. So I'm not sure this will answer your question, but your you know how neural networks work, right?
+Give or take. Neural networks have a fixed input size.
+That's a new thing applies to NLP neural networks.
+So whatever you're feeding into has to conform to a specific size and typically one.
+I'll show you an example later of what you've managed to get there.
+Not, is it? When you're processing images, right?
+You feed one image to a neural network, you're done.
+When you're processing text, you're you're going you're reading text window slides through your text.
+Right. And that window is preset to capture X amount of words are talking before some specific words and X amount of words after that.
+Does that make sense? So if you start monkeying around with that part of the window before and part of the window after,
+you have to what whoever is taking the work from you has to be capable of handling.
+And neural network is not necessarily well prepared for constantly switching that window.
+So, yes, you could do that. Yes, it would require a little more work.
+You would probably extract more meaning out of it. But I don't think at scale it's not worth it.
+Let's just put it this way. Does that answer your question in practice?
+It's not that. Okay, I'll take some garbage in or something that is possibly relevant.
+I'll find the scale will take care of that. All right, So what do I mean here by predicting how are we going to predict that missing word?
+Yes, we're trying to predict well, what? We'll go there.
+And this does not change from the from your programing assignment language while it was predicting,
+but that prediction was based on counting rate bound probability,
+conditional probability estimates based on counting, narrowly predicting it will be based on something else.
+So. Do you remember logistic regression, how it worked?
+There was a linear boundary separating one section of data points and another section of data points.
+That division line separates. It's a binary separator.
+Okay, So it could be separating anything you used spam and but it could be pretty ugly.
+Whatever. What if. What if we took this approach and.
+Build a classifier. For neighborhood order.
+It's not neighborhood word's. Let's see a little mental exercise right here.
+Or give me a word. Something simple.
+Good morning. Okay. Let's just make it more right.
+And now. Neighbor words.
+No NeighborWorks. Let me explain what I mean by neighbor.
+In that neighbor words. Neighbor words would be words that you frequently see before or after or just you two words away from from the word morning.
+Let's just make it one word before or after. So good, of course.
+Right. Nice, happy, happy.
+All right. Blah, blah, blah, blah, blah. We could go on. What about not NeighborWorks?
+I Okay. Bobby was that lucky.
+Good morning. Parking. Parking.
+Parking. Okay. Did I get it right? Is it okay? I did not see that donkey.
+Right? Actually. Morning, Donkey. Look at him.
+I don't like the food. Doesn't like this.
+I knew you're onto something, so I would not rule out barking.
+We'll close to morning. Right. But now a question is, how long is our window for defining the neighborhood?
+If we as morning barking. Well, that could happen.
+Barking. Morning. Probably unlikely, right? Barking in the morning.
+Right. This is going to work. But we will have to set the window a little wider.
+But you get the picture, right? So now can you can you can you see that separation here?
+Words that are typically showing up next morning and words that are definitely not or very rarely that make sense.
+With what? What kind of. So let's say let's go back to.
+Do you think there is a word? But that would more or less splice some vocabulary space, a very large space.
+And this.
+Nebulous of words that would cut that space in a very similar fashion to who are the let's assume that we found a separator for the word mourning.
+Is there a word out there that could split the vocabulary space in the same or very similar way?
+There is none. Is there is there another word?
+Let's make it easier. And nothing comes to my mind when it comes to, let's say dog, right?
+Dog will be, you know, neighbor words. Be where being ranked level, whatever.
+No labor words, no talking delivery, whatever.
+And some random words, Right. Which is to say that the word canine would separate the vocabulary in a similar way.
+Because it's a synonym of dull.
+Right. But they just because you read the thing were the same synonyms.
+Not exactly the same, but very, very close.
+So they chop the vocabulary space in them in a very similar way.
+When you're in a logic, say, okay, if that separator is more or less inclined in the same way, are those words similar?
+Close to. I didn't get the point of finding all four of them.
+I'll be using regression using numbers that disappear.
+So I'll go ahead a little bit. So the remote.
+What was this boundary? In our logistic regression.
+I mean, actually go ahead and. Right.
+This was this was at Woolworths. W and B, let's just forget about B, which is just an awesome What was it W that is that it was a vector, right.
+So it gave you some orientation of the line.
+Actually that w is a perfect word that perpendicular to the line, but it's a vector defining this kind of numbers.
+Now if I give you another line that is close to it is vector vectors will be very, very aligned to each other.
+Right. If I have words that are completely.
+Differently. We have dog and canine here.
+Let's say clock and. Trash can, Right?
+They're going to separate the vocabulary in a different in a different way vocabulary and
+separate vocabulary into words that frequently show up with clock and words that never,
+almost, never show up, very rarely for asking the same thing.
+Okay, so the idea here is to find.
+That line or that plane or that Piper plane, it will be a hyper plane where every word.
+Can you see how having that line, that line is defined by a vector?
+This will be actually how we're embedded this W and that B will be our embedding.
+It will tell us, okay, this word, if you throw it at the word space, it will cut it.
+And that's the way it will leave all the neighboring women on one side, all the nonmembers or rarely neighbor words on the other side.
+If I find another word that splits the word space in the same way,
+those two words must be related or very close to each other, according to our word semantics.
+So let's go back to it. How how, where we training the logistic classifiers?
+Oh, when we were doing spam. How how were we?
+We didn't go through the process. I just gave you an idea. But how were we finding that line?
+We had spam and ham samples for. We were calculating finding a new line position, calculating the error, and then adjusting the line.
+Keep going, keep going, keep going until we're Our error is pretty small.
+But we had samples, training samples. We had a document labeled as spam and a document as labeled as have many, many now.
+We will have neighboring words, actually neighbor reading the words that are we capture within the window that we talked about.
+Said Shut down the window for our enemy and start capturing the words that our neighbors are not neighbors.
+Actually will not be touching not neighbors because they're not in the neighborhood.
+Okay, though. Spam or Ham was label one as a positive example.
+The other one isn't negative here.
+Let's label the neighboring words as positive examples and the words that an almost never or never show up next to our example,
+work with our negative examples.
+If I give you a corpus, let's say Wikipedia, entire Wikipedia, how would you find positive examples, meaning neighboring words?
+Go ahead. I think this one should be defined the window.
+Okay. There is a donkey. Smart donkey. Unhappy donkey.
+Da da da da da da da. Scroll to entire Wikipedia.
+Find. Find the words that are very often there next to.
+These are positive examples. Set them aside.
+What about negative examples? Can I use this approach Sliding window and see?
+I don't see that word. I don't see that word. I don't see that word. But what kind of world would that be if you never see it?
+Unknown word. But what does it does is that the world is very close to the Hollywood life.
+But even though it's outside of the window that it's there, Right?
+Darling, Absolutely. You could have an example. I don't know.
+Let's say our target work is. They're using your your tech expertise to get the most out right.
+And or occurred. We had many around and you see polls on.
+Look around. All right, let's say I set up a window with three words.
+So on the ground, right side around and use it right or turn is absolutely a word that would go together with Apple.
+Right? But not according to our window.
+And let's say that our corpus is unlike in that sense that we don't never have apple or earth next to each other.
+So if we keep a narrow window, we might miss that.
+Even though this is absorbing a neighbor word for Apple, you might miss that, but that's not the worst thing that could happen.
+So in other words, we could label Orchard as a negative it.
+That's [INAUDIBLE]. This is not going to cause a terrible trouble here for.
+Give me a sec. Could I just pick randomly number negative words from the vocabulary and make them negative examples?
+Absolutely. Or even even better, pick random numbers and check whether they're they're already in the positive samples.
+Even if. Yes, in the positive sample, find another negative value for.
+Does that make sense? Okay, so.
+Finding positive examples in a corpus easy slide.
+The window lookup for the words are next to it.
+Pick them, pick them actually. Good. Count them as well. But let's forget about it.
+Negative examples. We're looking for something that is never in that window according to our corpus.
+Even even if we will miss something like an orchard.
+That's fine. Let's just miss it. So look for words that are not positive examples.
+Pick them randomly. The vocabulary is large. Pick random examples.
+These are our random words. These are our negative examples, as I said.
+Okay.
+Does anyone have do so for spam or have right data sets or any data set that you are actually dealing with for Europe for your programing assignment?
+Someone had to sit down and label for the most part and had to manually label samples in that dataset, right?
+Do I have to manually label anything here? Positive and negative.
+It's a positive example. No, let the machine just scan through it and find neighbors.
+These are positive example. Negative examples. Have the machine take randomly something that is not a positive example done.
+Or actually you could just grab the positive example as well and throw it as a random one.
+This is not going to work. So this is an example of a self supervision and no one has to label anything.
+It's just a matter of processing the data.
+Which is which is where we are heading with Nhlbi.
+We don't want people to waste time labeling things.
+We want that machine discover everything on its own. Okay.
+Here's the process. Okay. So I explained how would we find positive examples?
+How do we find negative examples? And then step number three is use our logistic regression.
+This is exactly what you used for spam classification.
+Now we will do a classification kind of we don't really need to classify anything,
+but we will build a classifier that will divide the word space in such a way that all the positive
+examples are one side of the line or or a plane and all the negative examples are on the other side.
+This is our task cuz once we find that border blowing, that border line is our vector embedding or a word for a target word, does that make sense?
+We will not be even classifying anything down the line.
+We will find that line or that plane or the hyper plane and this will be our word of that.
+Now that makes sense as an as an idea. Okay, So for those who might not remember logistic regression, we had input samples.
+We got weight vector that defines the line and we had an output in ultimately of sigmoid function.
+We had a output number between zero one.
+And then using another threshold, we will be able to apply one for a positive sample, zero for a negative sample classification.
+That was our approach here. Okay, So this is the problem we are looking at.
+We have a sequence of words, right? Depending on the size of our sliding window.
+And in the middle of that sliding window is the word that we're trying.
+She predicts. There's two ways to go about it when it comes to purchasing problems.
+They're the opposite sides of one another. One will be what is called placebo or continuous backwards approach.
+And the other one is a key program model.
+Let me show you what they are.
+See is given the context, words, words, this is similar to your language model that you did predict the word between them.
+The scheme. Graham has given the target a word.
+Try to find the most likely context words for.
+The opposite. Now, how do we will focus on that, on the skip crime approach?
+So how do we pick the best neighboring words or.
+Our target award should be placed here.
+I will consider a very, very famous statement right now.
+Shalt not bear false. Witness.
+Let's just focus on the sliding window of size. Two on both sides, right?
+Finding a knot should be relatively easy, given how well known that treatment is.
+Right. So we already we already talked about what do we need to do here to find.
+Well, we were focused first on finding them. Were they in the middle of nowhere given the world?
+No. But how do we find the neighboring world? It's the same approach.
+Probabilities times probabilities. Times probabilities. Times probabilities.
+So what do I have to do? What if I had the following probabilities?
+Probabilities that. Well early for that.
+We have a sequence, including our target word, followed by some other word,
+some context word and probability that it's a positive example and the opposite of that probability that it's a negative example.
+Can we find those? Or let's let's take a step back.
+If I had those, can I can I get a pretty decent prediction here?
+Welcome to all times and other conditional terms. Another term is another time, Maximizer.
+All right, so. Some context words, some selection of context words when maximize that product of conditionals.
+But where do. Where am I getting those? Probably plus as in positive given not the decision boundary.
+Right. Our logistic classifier will help us get dogs.
+What do I need? I need. I need some.
+I need a vector. I need that line vector or this plane vector or type of playing vector for the word.
+No, because I will decide on which side of that line.
+Thou shalt bear and false will be on the positive side or the negative side.
+This is the approach right here. Okay, so let's do some preliminary work.
+First, we will need that classifier.
+We will need that lot. So how do we do that?
+We need to train it. Classifiers. Right. Once we have a classifier, let's find those probabilities.
+Conditional probabilities that we are after. Target words, some context.
+We're. As a given. And then whether it's a positive or a negative, this is this is how.
+We're going to go about it because we will need we will need a lot of logistic classifiers for every word in our vocabulary,
+every single word, because if we ask a question like this one.
+Starting with the target a word not what are the most likely context words I
+might as I might be asking question What were the context words for a donkey?
+To answer that question, I need a decision boundary for donkey or actually embedding.
+So every single word in our vocabulary has to have its own decision about our logistic classifier, memory, or to be specific,
+it will be that logistic boundary regression boundary that the line, that plane,
+that hyper plane forming or the vector defining it is going to be the word embedding for the word.
+So in other words, in the in the in our entire vocabulary of all the words that we're using will have to be encoded as the vector.
+Those rows here are going to be vectors representing boundary lines.
+But that's not the end of the story. The notice noticed one sign that I one aspect of it that I haven't I haven't mentioned yet.
+Embeddings nice size of the vector or in other words,
+this the number of dimensions of the space in which we are creating this hyper play
+line is not going to be even a plane is not is always going to be a hyper plane.
+We're talking about. Hundreds and hundreds of dimensions.
+So that is going to be hundreds.
+Now, let's stop here. Take a guess what are what is going to be for your GP or Gemini's?
+Millions. That's it would be nice.
+Maybe. No, it will be a terrible job to process all that.
+Thousands. Few thousands. It's.
+It's what it is right now. First versions of Egypt.
+It was. I think. I don't want to like. 500 something or some vectors of that size.
+And it just keeps on growing because it's allowing us to be more precise.
+Now we're automatics millions would be nice.
+Although if you want to express a word in terms of our other words, I don't think millions, millions is a little too much, right?
+Because we don't have millions of all the forms maybe.
+But there's always a computational tradeoff when you consider all that information, all the languages.
+Very good point, then. Yes. And I didn't think about capturing all the languages.
+This is a very good idea.
+I don't I don't think there is there is going to be a charity that is capable of dealing with all the human languages any time soon.
+That's a lot of work. That would be a great idea.
+All right. So we have a matrix for our target words.
+What is what about the context? Matrix.
+Why do I need that? It's not all impact prediction, right?
+It's the law. And it is important to have that because this we're always comparing things, right.
+Or trying to find things that are close and far from each other.
+201. So I guess you can just use cryptography in the end.
+In the end you will be the target in context.
+Once was, once the embeddings are trained, it's going to be the same, but the start at the starting point.
+I will explain how.
+Well, let's let's focus on another target worthy thing.
+How how is this matrix initialized? Remember, every role in this matrix represents the decision boundary.
+We are never starting with a ready decision boundary for any problem.
+We have to let it wiggle a little and until it falls into its place.
+Right. So how do you think that target target matrix is initialized?
+Random numbers, right? Random factors.
+He said this right here. Let's just use that one.
+Okay. This is a final position.
+This is in memory. But we never know. If we knew it up front, we would would not be searching for it.
+So the searching process means that we start somewhere here or here, and we're trying to address that position.
+Now It's position. It's really encoded here.
+A lot of say not we were dealing with not so this is this is a numerical vector right here and that's it starts by being a random vector.
+Now not will have its corresponding entry in the context matrix, which will be another random vector.
+Now, art can be a target or it not can be a context for it for some other.
+No problem. Or even you could have a not. Not.
+It's not impossible. Context vectors are.
+We'll show you something. That's what this might.
+Went along with. Stack stacked those mattresses one on top of the other.
+And. By comparing the factors in the target.
+That would be the green matrix and the purple one, the context matrix.
+By comparing them, we are deciding are they are they close to each other or not?
+They're close to each other. Perhaps we should just move them.
+Close to. I and as an.
+Manipulating that boundary line. Let's try to align them.
+If the if, if if it comes to a point where you're looking at a to a target word and the set of context words, they often come together, right?
+You see them, the probabilities for them coming together are very high.
+Let's just make sure that it's reflected in the in those matrices.
+Does that make sense? So like,
+I'll be comparing numbers and finding a dog and then it be really good talking
+to you about you're trying to estimate how likely are they to be aligned.
+This is exactly what the logistic regression did, because we took a vector and another vector we created the calculator, the dots product.
+Right. Which was ended up being a number from minus infinity to plus infinity.
+Reflecting minus infinity means that those are going in totally opposite directions.
+Right. Pleasantly and I mean that somewhat in the same direction, but they're not aligned.
+And zero was perpendicular. And then on top of that, a logistic regression gave us we added sigmoid function,
+which squished minus infinity plus infinity to zero one, and we had some probability value.
+This is exactly what is going to be happening here.
+Okay. When should a context word be considered?
+A context? Words for a target. Well, let me let me rephrase.
+Where should a potential context for it be considered an actual context word for some target word?
+So my target word is not right, right here.
+When should and any word in in my vocabulary be considered not just a potential context word, but a context word for.
+Or up. The Stargate was sweet, but the boundary, which was actually in the positive context.
+And so it once again where were splicing those forth space if the two were similar to each other?
+Then they will splice split the word space in a similar way.
+If I find shot, that child has a very similar.
+Boundary vector as not or close to each other.
+Does that make sense? So.
+Think about it this way If I discover that there is a similarity between my target work and context work expressed by this DOT product, right?
+I see some similarities there. Kind of a line going in the same direction.
+So bottom line, amazing. People like this, we are randomizing entire vector space.
+We start with a random. Positions for every line.
+And then we're going to target word, target word, target word, context, words, context, target work, context worth.
+And there will be a push pull relationship between a specific target word and specific context word.
+And that push pull will be just adjusting the positioning of of boundary vectors for each after many,
+many of iteration iterations of target word, context,
+words, target words, context, word, repeat, those boundaries will fall into place because negative examples will be pulling them in one direction.
+Positive examples will be pulling power lines in another direction.
+Does that make sense? So we're trying.
+Overall, when building those matrices, we're not really answering as we're not really solving a single problem like this.
+We're trying to solve that problem for every possible target and context worth.
+Sequence does not make sense. We want to set the boundary lines in such a way that will maximize or minimize.
+For a negative example, maximize those products for every target context.
+Sequences now that make sense or not? Not yet.
+Think you can think about it. I think you have a pretty good idea when you're when you're training a neural network, Right.
+You have millions, millions of ways to train, and there is millions of connections affecting those ways.
+So one one connection, one connection will be. Will be probably.
+Pardon. The language is not going to be very technical right now.
+But one connection is to say, Hey, you before me, lower it down.
+The other connection will say, Oh, no, no, no, no, no, bring it up.
+And no, there's going to back, back, back and back and forth,
+back and forth until everything settles on the air or of the overall network is going to be minimized.
+Same thing is happening here. So imagine the vector here to being this.
+Actually, there are weights. Every cell in that matrix is a weight, so we're trying to adjust them.
+Oh yeah. The word charge says not bring up everything now, but the word aardvark says, No, no, no, no, no.
+Dampen it down. And it's going to be this back and forth, back and forth until things settle.
+And once things settle, we we have nice little boundaries encoded here.
+And these are our word embeddings. That makes sense. Hopefully.
+So how what are we doing here? Actually, okay. We are trying again to find similarities between target words and context words.
+The words that are similar to each other should be brought closer to each other.
+The words that are not similar to each other, which have boundaries like that should be separate.
+And let's keep doing this. Let's keep doing this until our error is small.
+So what you see here really is just one one word embedding for one specific word, whatever that word is.
+That makes sense. Positive examples, negative examples.
+Try to find out a line. But by that line, this case for the word Africa is not does not exist in a vacuum.
+The word Africa is being might be a context word for some other words.
+So that would force that line to move around as well due to some other adjustments.
+Okay, so. The idea was to find.
+Let's. The idea was to find those probabilities.
+Probability that a targeted word given target word and some selected context were it.
+We have a positive example or a negative example.
+Those. Can actually be estimated using our logistic regression approach.
+The same thing that we did for the spam app few weeks ago or two weeks ago or something.
+Probability that the target word and the context word are a positive example,
+given that given the boundary and the context where we are landing in the positives on the positive side of it.
+Probability is estimated using sigmoid applied to the product of target and context works.
+If this ends up lending on the positive side of the. Boundary defined by W then OC.
+This is what? Let's say above 8.5 probability, right?
+Whatever. Plus, you can safely make that assumption.
+If not have a negative example. Right. One minus that.
+Yes. Also, assuming that you have seen the word not I mean, not in our vocabulary, not is in our vocabulary to any word that is not in our vocabulary.
+We got predicted. We can.
+Let's say the happy dog in the garden.
+Right. And then let's say that donkey is not in our vocabulary, but our vocabulary is already nicely represented by buy by word embeddings.
+We have this those two of those that target a context matrices figure it out.
+But if this is if this is, let's say.
+Two three were three were window on each side.
+Right. If this is your. Input tax that you're giving to the machine.
+The machine? I don't know the word donkey, but let me see.
+Are there any words that would produce the same kind of.
+Neighborhood context easily. If I can find any other words.
+Donkey must be similar to it. Not the same, Not the same, but similar.
+It can be a monkey. Could be a monkey, depending on how how your corpus is structured.
+Right here.
+Monkeys in the garden often. This is the beauty of word embeddings that you don't need to know that word to kind of position itself in the word space.
+Using word embeddings word is a following in that word.
+Word space. Automatic space. How close it is.
+Which words are the closest to it? Okay, Donkey is close to monkey.
+There is some some relationship going on.
+You can't say that's a synonym, but from the perspective of a computer, there is some meaning relationship going on.
+Would you agree that the word peach would have a similar word in bearing to Africa?
+That's the idea. Absolutely.
+We're great. Probably something wildly different.
+Okay. So let's say that our target and context matrices are all set.
+You could use a gradient sand to set all those values in every little cell here to maximize probabilities.
+Once we have that, we can start estimating probabilities and once we have probabilities for individual words.
+Let's put it all together to make the.
+Prediction. So. Would you agree that this is this is something that we would be after?
+Is our target words surrounded by all the context where given the context words and the target word?
+Is it a positive example? Ah, let's calculate this probability.
+Based on what we have covered here, that our individual.
+Conditional probabilities. Words are good word and context word can be expressed by this sigmoid of a dot product.
+This could simply be estimated by a product of individual.
+Probably four of them in this case.
+What's the probability that word C one, which is tablespoon and the target word probability is a positive example.
+Oh, and Africa Jam and Africa and Africa calculate this entire product sequence and the sequence doesn't matter.
+Which is. Is that a good thing or a bad thing?
+Because we're missing something, right? But if your window is small.
+This is a decent approximation, but I think you raise a very good point.
+This is not capturing the sequence. If you were to capture the sequence, then you would have to work on it a little bit.
+But it will make your finding the exact probability is a little.
+A little harder. Okay, so.
+Can I calculate the same probability but for a negative example now?
+Same, same context words and same same same target word.
+Okay. What if the negative probability is higher than the positive, than a positive probability that it means that this is not our target word?
+Or if these are not our context words for that target word.
+Let's look for another one. In other words, same context word and keep going.
+I'll take my colleague here. I have a product. By this time you should know.
+Why would I switch to a log?
+They like the days. But the longer flow, the computational under flow are just essentially easier.
+Calculation sums are easier them than products.
+But yes, under flow in computer science is going to matter here.
+All right. So there was a lot of hand-waving when I was trying to explain how the target and context were matrixes are being created that really.
+This is a machine learning problem. You have a bunch of parameters to set.
+Those bunch of parameters are corresponding to two.
+Positioning of those lines. If those are those hyper planes, let's be specific.
+If those hyper planes are not in the right spot. Clearly the positive examples are negative examples are going to be misclassified by that boundary.
+So we have to fix it. We're machine learning, problem adjusting the weights of every single word boundary,
+calculate the error, adjust, calculate the error or a loss function value, adjust, adjust, adjust.
+And nothing different here. If we take this log approach right, we're going to use our loss function.
+But we're trying to minimize is right here and gradient descent.
+Does that kind of make an assumption that you guys are familiar with gradient descent?
+Do you want me to go back to it at some at some point?
+If anyone needs that, let me know if I get enough responses.
+I will just talk about it some more.
+One minute. Is it is it understandable? Give or take.
+What what word embeddings are are being created.
+The key aspect.
+Look, there's a couple of key aspect of the first one that I would want you to retain in your memory is that we're not no longer counting occurrences.
+How often this word occurs with that word, no, we're just creating something completely different where you're representing words.
+Well, just a classifier boundary. That boundary, a vector.
+Defining that boundary is the word embedding for the word.
+So words close to it will have a similar boundary in the in the vector space.
+And I think so we're out of time.
+One thing that another thing that I want you to remember is that I'm showing you right now two words represented by both boundaries, right?
+Those boundaries are represented by vectors, perpendicular vectors, right?
+But also this and that are a point and a point in some vector space.
+So whatever defines that line or actually those two vectors are going to be points in some different space.
+We'll come back to it because we're out of questions. All right.
+So here's the plan for Wednesday.
+On Wednesday, I will go over the basics of neural networks for those who are less or more familiar with it.
+And once you come back from your sprint, spring break will move on to Transformers and smart language models and all that stuff.
+Okay. Thank you. Well, what I heard the thing about Cal.
+Love. Take him you.
+So this is the third work we had this business.
+This is one. You know what?
+It was? Those heroes. So if you're let's say not right.
+If the word embedding is just two elements face to face, do two dimensions, then not those two dimensions will be representing the line a X plus.
+So these are the this would be a B, and the effects of those would be the current, the coordinates of the vector that defines that place.
+Think the values of that is the vector.
+This is, this is well, actually this is a minus B or whatever right there.
+But it's a Oh yeah. Okay.
+So these are all this argument for a very simple one for 3D space.
+I can throw it. Then you have a 100th space for the contents.
+Same thing, plus what we put in inside.
+So if we're starting, we're starting with random.
+So this is your target and this is your context.
+So more like not right? I'm not a cross.
+Okay. This equation divides the space into parts.
+Okay. Yes, same here. But we're starting with random numbers, so this one might end up this one might be left to right and you will be okay.
+This is the words that are neighbors and they separate.
+So neighbors of the words same thing, but they start randomly.
+Eventually they should align. No.
+And when they seem like this, this represents the separation of the world or the neighbors and not just in here.
+If we use the same thing when we start with random values, now we have more words.
+And let's say this is the word to write and to be heard as a target word to context,
+not right and based on the example in looking at these because well,
+what just recently said here is for one look, although this set of lines here,
+the set of row in row word of vector embedding for a word and a vector embeddings for a.

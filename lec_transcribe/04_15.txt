@@ -1,0 +1,657 @@
+You. Yeah, yeah.
+I don't. To.
+Good morning. Questions.
+It is just not worth it. Yeah.
+We'll stop today. Okay, so speaking of exam, your exam is next Monday.
+Uh, urge people in this section to enter.
+Enter in that section. You contact Mr. Scott as soon as possible.
+I imagine most of you will be here. Or if not, all of you will be here.
+But still, we have no, uh, one update to the rules of the exam.
+Not really rules, but the logistics of the exam with respect to the midterm, uh, will not be giving you any scratch paper.
+You will have additional empty blank sheets of paper attached to your exam.
+That way, I will not be seeing multiple cheat sheets on your in front of you.
+So fair warning, if I see more than your exam paper and the one sheet of paper on your desk in front of you, your exam is over immediately.
+I'm not going to tolerate that.
+It's actually pretty, pretty, pretty shocking that every semester I actually implement more and more policies to police people for exam.
+I don't know what's happening with the world. That's what it going to be.
+All right. Another. Yes, ma'am.
+Okay. And then we're not allowed to touch our property.
+That's what it means. Okay. Uh, I mentioned reading assignment number five a week and a half ago, but I decided against it.
+It was. I figured it would be more busywork rather than calculation or, um, or, um.
+Practice problem solving. And my idea was more related to ethics problems, researching NLP problems.
+So let's just I'm sure you have better things to do, so let's just drop it.
+We'll talk about those next week after after the exam Wednesday if anyone is here, uh, programing assignments.
+Still working on it. No deadline?
+No. No requirement to submit. It's. I don't think there's of any rush I want to make as best as possible.
+Uh, a lot of you clearly ignored the demo situation,
+so I'm going to give you just this last week if you haven't visited the and grading to to demonstrate your programing assignment,
+this is the week to do it. If you want to do it by Monday, you're good.
+You're not getting credit for the demo part, you know, how does that work?
+You just got into it and you set up a meeting with your T.A. because there's maybe other people, so, you know, no one's waiting.
+It shouldn't take more than five minutes. Or you can talk to me, but no scheduling for that Wednesday review session.
+How about that? Is there anything that you already know that we should go over again or.
+It's a serious question because I know that I'm expecting comments in my course,
+an instructor review at the end of the semester that he never responded to our questions.
+He was unavailable. Okay, so if anyone has anything specific that comes to your mind after the lecture, email me.
+I'll be. Well, it's better to be prepared that than just improvise.
+Just not the best in the worst thing. But, well, it would be better if I knew what would be.
+What exactly? All right, let's go back. All right.
+We just do the demos any day. Or does it got to be of great interest?
+Yes, ma'am. We have to. We will. As the building days are different.
+So people that who like you shouldn't take what you don't have to go together or do it.
+Just just assuming that that you submitted the same thing.
+Right. Are there easy way to figure out which there is.
+Uh, link in blackboard. Grading assignment.
+So we're here in the syllabus. This is where you're creating a.
+Yes. But what we're talking about and this is this is the moment for you to bring up.
+Hey, you forgot to respond to my email. Or you have some issue that needs to be resolved before the semester is over.
+This is the time to bring it up. If I forgot to respond to why you're doing this, I'm really trying, but it happens.
+Bump it. Okay, I'll I'll. I'll respond it. Right.
+Or is it clear, more or less, how a large language model works?
+Bye bye now. I'm not going to ask you to build one, but we went through the most significant components.
+Everything else is just stacking them up, spicing them with additional little pieces.
+Uh, adding so-called had not the multi-head self-attention that I had that does classification of whatever whatever task is expected from the model.
+But your basis is a pre-trained model, right? Is it clear what fine tuning is?
+No. I have one more comment about fine tuning.
+So there is a. Uh, uh, obviously um, before was is is always something that people strive to improve or get some microseconds or nanoseconds of of.
+Asian shaped, uh, whatever is happening is that there is, uh.
+Uh, very fine tuning that you should be aware.
+I'm not going to teach you how to do it. This is sort of the beyond the scope of that class.
+But there's something called parameter efficient fine tuning.
+That means that you're, uh, restricting the the set of parameters that you're actually fine tuning to, uh, selected group.
+Of course, you would need which ones matter in this case.
+So once again, this goes beyond the scope of this class.
+But keep that in mind. This is if you have a couple of billion parameters it pays to just focus on the ones that matter.
+Right. So what happens there is you fixed or free certain subset a larger subset of
+parameters are that those are untouchable when you're doing the fine to keep them,
+uh, untouched. Okay.
+Yes. What did you think? This. I.
+That would reduce the cost of computing the time of computing the from a time of finetuning
+the processing power if you're using if you're doing it on something like an eight W,
+this obviously happens. Every computation matters and you want to avoid that.
+So that's a technicality practicality technicality.
+Thank you. We're not going to talk about it. But yes it's it's an option.
+All right. So by this time, it should be pretty clear that.
+What is the encoder decoder architecture or transformer encoder architecture?
+Right. Self-attention. Normalization.
+Two components. One does the encoding, the other one does the decoding that encoding.
+Now, the truth is that the the models that you're familiar with, such as chip BP, are not using some models.
+Some really popular models are not using an entire architecture.
+For example, GPT three will only use the decoder model.
+There is a Bert model, which is historically one of the first pretty popular, which is not using the decoder at all.
+It's just an encoder that requires some, some, uh, interesting, uh, ideas.
+And you can see, uh, the first sign of it here.
+Input sequence includes something called a mask.
+We'll talk about it in under. So full blown encoder decoder.
+Um, architecture. Google's T5 uses that.
+We'll talk about this one. Uh, um, a little bit just to give you, um, you should have a fairly good understanding what is happening.
+Behind. Those designs. What's the reasoning?
+What is the task behind those design selections right here?
+So just to give you an idea, uh. A decoders such as a GMT and let's let's repeat that is just predicting the next word.
+No matter how you slice it, it's just a I'm giving you a preview sequence.
+Guess. Predict the next word. That's what it's doing, no matter how fast the output is.
+This is the. That's the basic basis of such a decoder only model.
+Now, we talked a bunch of times about how what that word should be really depends not only on the preceding sequence,
+but also the followers, the context, and so on both sides.
+Anyway, this is here. This is where Bert comes in.
+It is trained on. And iris sequences with some pieces left out.
+I'll get to it in a little bit.
+The end of the encoder decoder, and it's essentially a translating job.
+I'm going to give you one sequence. Give me another. It could be anything you saw, right?
+It could be translation. It could be question answering. It could be translating.
+Uh, it could be translating. Um, I don't know, words into sequel commands.
+Translation one sequence into another one, at least not exactly what is, but sort of 1 to 1 sequence to one.
+Does that make sense? Right.
+So of course you remember Ward to the right.
+Well was worth to look. What it's worth to that.
+I'm looking at the numbers. I'm looking into it.
+Converting words to vectors of numbers.
+Right. Is there anything?
+Special about Tibet. I love the very loaded questions, but maybe you guys can answer when.
+When we were talking about of back then, it seemed like those were two.
+The vectors are fixed or a one word, a vector.
+We train them. This is how we keep them. He has more or less remember that.
+So we would have a sort of a hash table in this regard, the analogy, but it kind of works like that.
+A word you're getting a single word to like, well, that word could be anything.
+And right. Bang is a word with multiple meanings, right?
+Word to back. Would give me the same vector, regardless of the context for back.
+I was on the right bank of the river.
+Right. Same word to that vector. I'm going to the bank.
+My bank? Same word to that vector. Is that a good.
+That's not the worst thing in the world, but it's kind of it is definitely not capturing everything about the word surroundings.
+It is telling me something about the words neighborhood because this is how the vectors were produced.
+We're looking at similar words, but in the end there's one individual vector per word, regardless of its meaning.
+That's suboptimal. Now with something called contextual word embeddings would be better than just word embedding.
+In other words, embeddings that represent the word itself, but also pays quite a bit of attention to to the context.
+Like it's hard to make a distinction because word to vec takes into consideration context as well.
+Some words will be friends with a word to work, right?
+But. Contextual word embeddings.
+You or we're looking at a we have been talking about contextual contextual word vectors for the last two weeks.
+Whatever those encoders, decoders on encoder decoder structures are producing as an output of attention.
+And other layers and layers are really contextual, contextual word embeddings.
+I have a word and there will be a vector after passing through this encoder that that will be spit out and of course corresponding to that word.
+But if you remember the self-attention mechanism, right.
+That output vector or context vector will also contain information about everybody else in that sequence.
+Bless you. So dynamically created word embedding that also captures the context within and within exists.
+Sounds better. So I'd like you.
+I'd like you to to think about it. Um, because all those transformer encoder, decoder.
+Components are doing just that. Do single word and contextual word embeddings, which are later used for something else classification,
+predicting the next word, whatever the task at hand is.
+But the raw output of that, upon that, that and that part is a contextual word embedding that better captures.
+The relationship to other words than than worth to back for a day.
+That makes sense. Now this all gets a little further than that.
+Especially when it comes to. Unknown words.
+So we met unknown words when we weren't doing, uh, for example, Naive Bayes.
+Right? What did we do when we encountered an unknown word?
+Is. Apply smoothing or just ignoring, right?
+But applying smoothing means that every every unknown word will be treated the same way, right?
+Or we could just simply. Well, that also means that we are essentially providing providing a special token for any no word here, right.
+It's usually called out of out of vocabulary token thing.
+This is something that we don't have any vocabulary. Let's label it that at plus one smoking.
+But what if we were to use this approach, uh, for word embeddings.
+So I have this of reserved keywords for every word that I haven't seen in my life, where it's a mess.
+And this mistyped word, uh, some new word or some mashup of two words.
+Some oil is being created. Tons of opportunities here, right?
+If I choose this out of vocabulary tag as a representative for it.
+Right. In other words, I will put up out of vocabulary tag in place of an unknown word, out of vocabulary, out of vocabulary.
+What it would this received the same word to that vector every time.
+If we had one. It's like a special work, right?
+I don't know. Let's have a sort representative for that.
+You don't want to ignore that word. Especially when it comes to advanced large language models.
+Nobody thought of an unknown word word because it might mean something of value.
+So how would we capture that meaning that we have no clue about?
+Yeah. It's not like you don't have to because you have the previous words.
+So maybe you can stop cooperating. But don't you can you can deduce relationships with other words if you keep it as it.
+Can we do better? Yeah. So we could deduce.
+We could. For example, typically after words I'm going to I don't know.
+The typical word will be to the bathroom or something like that.
+Right. So and no, the word would have a similar vector to the bathroom or whatever I'm just describing.
+Right. All right, let's kill the suspense.
+You're here. You're familiar? Fram is being frequently used to solve a problem.
+Tokenization used by many, not all large language model is a little more sophisticated than that.
+Just, you know, whitespace distinguishing between that or just word tokenization.
+Remember, they're encoded bytes.
+Baron-Cohen is actually used by large language models to, to take care of of unknown the words.
+For example let's I don't know what this word is, but maybe it's made up of something I know I'm familiar with.
+So less chopping to chop, but I have a need.
+A new vocabulary in this.
+If you remember, this is what they're encoding did established a new vocabulary that goes above just ABC characters encoding,
+and it works with little sections of words which are typically end up being, you know, in under those prefixes and suffixes.
+So viper encoding is used or something, something called a, an alternative of words.
+Peace. Bert. Dusk is that word pieces are little sections of words.
+So more or less what they're encoding with do I think, but pretty fine.
+Does that make sense? Uh, another thing this is this is not something that I want you to remember.
+Uh, especially for the exam, but. This is worth checking out.
+Elmo. Or embeddings from language models. Are those contextual, uh, word embeddings that are generated by encoder decoder structures?
+Those are better for the medicals. Okay.
+Does that make sense? How do we use by for encoding word pieces instead of just regular word tokenization?
+Okay. The perfect model. How many of you? I already asked it because you didn't have experience with birth.
+And 1 or 2. And. Here.
+Is that so? This is just an encoder. Let me show you how how it's being trained.
+So here at the bottom you have, um, a Bert input.
+Special tokens that those with the one. Um.
+What about this token? This is something that looks like what we just described.
+Hashtag. Hashtag being a word piece. Play in.
+Separator. Mess. This.
+This one is super important here.
+Mask. What do you think mask means? Or better yet, let's let's let's.
+Before we go there, um. If you were to learn to predict the word in the middle of a of somewhere in the middle of a of a sequence.
+If I gave you. If I gave you a sequence with that word mask, and I gave you the actual expected sequence,
+would you be able to learn to predict that word in the middle in the long run?
+Would that be supervised or unsupervised learning?
+So. But I feel like supervised because I'm giving you the, the, the actual example.
+But it really is unsupervised because you're getting a piece of text from the corpus and a sentence from a novel.
+Right? And instead of feeding it as is to Bert, you would just mask a word or two, but you will know what the expectation is and the that's it.
+This will help you trade. So it is unsupervised in the sense that you don't have to set up labels or your examples yourself.
+Examples are already in there. You're just degrading them for training, masking some parts of it.
+Does that make sense? Do you see how it is different?
+Different from predicting the next token? By the way, don't don't forget about, um, the fact that, uh,
+those models require you to include positional embeddings when, when sequences are being fed.
+Otherwise, they would just have a bunch of words without ordering preserved.
+Segment the segment embeddings. This is just a way of informing Bert that these two pieces are considered to be separate.
+For example. Question, answer or. Logical conclusion.
+Premise and conclusion. Logical. Um. Due to Simpsons history.
+Okay. Does that make sense? Questions. This is specific for birth, not not GP.
+Now how do we choose those? Okay. Her training.
+Most of the time we would mask a random token. And feed it to to the, uh, to the to the model.
+You can imagine having an entire sentence fed into the model multiple times with different tokens.
+That's great. To get a better training. This is very interesting.
+The second part, instead of masking the word let's.
+Feed the random word in that in there, and tell the model that this is not supposed to be here.
+So the model will learn with a random token. The model will learn okay.
+This is an unexpected token. Could we, by accident, actually randomly pick a word that that would be a match here?
+Absolutely, yes. This is applied multiple random words and used to elicit those words.
+It's not. The statistics will take over and it will learn not to put the wrong or it's in there unchanged.
+Unchanged. Labeled token. 10% of time. Well just keep what was supposed to be there.
+Repeat. Repeat repeat repeat repeat repeat. Otherwise, everything that happens, um, is no different from from what you have seen before.
+Self-attention embedding. Contextual embedding vectors produce further encoder blocks,
+and then at the top we will have some additional layer that actually performs the expected task.
+Measure the error train. Repeat.
+Does it make sense to call Bert an auto encoder? That.
+Something that. On a trains itself.
+Really? I'm giving you a sentence, Bert.
+Right. Learn from it. The bird will take it. Okay, I'm going to mask some words.
+Feed it. I already know what the expectation is. Error.
+Repeat. The training phase does not involve a human being doing anything special unless you have to clean up the dataset.
+Autoencoder because it. It's trying to recreate the input at the output.
+Is that clear? Mass input.
+If the Bert is working just fine. It should predict exactly the word that was here before masking.
+Right. Autoencoder. Those who have seen, uh.
+Um. A bit of a, um, a section on generative AI in 581.
+Know what an auto encoder is or a. Same saying more or less same principle here.
+I'm giving you the input. That input has to end up as an output.
+Otherwise the model is not working correctly. But even if I give you the input as is, well, it's very easy.
+It's trivial to learn how to predict what's going on.
+I'm going to mask a word in my input, and I will expect the model to produce what the original input was.
+This is the reason why I use the word bank in our, um.
+Discussion. This is sort of a by the way.
+Um. Illustration of how.
+Word embeddings work. Those contextual word embeddings.
+Depending on the context, right? Let's say we're talking about a bet like an institution, right?
+I went to the bank. The bank loan was, uh, not granted.
+Different input sequences, right? Including the same word.
+Do you think that the embedding vector for the word bank somewhere here would be the same every time?
+If we're using different sentences here, but with the same meaning of the word bank.
+So I don't know. The bank was closed, right? There will be an embedding for the word bank.
+The bank was open. Different embedding. This is a good back right?
+Different embeddings. But this is to illustrate use that as vectors in some vector space.
+This is reduced to d obviously but in some vector space financial institution.
+Notice how they're clustered. So those those are vectors for the word bank at every every time the encoder is working will be slightly different.
+But they will be close to each other.
+Contextual word embeddings. What type of clustering is used?
+Is it? There is no clustering actually going on here.
+This is just determined that this embedding of blood bank in the bank is open to all the different points in the different dimensions,
+or the bank is closed, how to determine which is belong to the same cluster.
+So um, you know, when you're this is a result of training, right?
+You're feeding sentences that you know the meaning of the word bank ahead of time.
+So imagine that this point was generated hypothetically, right.
+The bank. My bank. It was close today. This this point right here.
+This is already kind of relabeled for for illustration purposes, just to show you that the financial institution cluster is sort of appears by itself.
+Right. Because the encoder works and those contextual word embeddings are close to each other.
+And that's, that's the idea. Is that clear? It's your body.
+Here's a year of some illustration of what's what's going on.
+When we swept up the task at hand, the at the top of our text classification, right there is just a sentence and then classification.
+Good. Bad. Positive. Negative. Uh, text based classification.
+Text entailment. This is this is. More common than you think.
+Is this sentence? The sun shines logically following inference.
+Yes or no. Classification. Does that make sense?
+That's one of the possible tasks for for large language models to print to train it.
+For that purpose you will need a special. There's nothing special about it but this this.
+Classification hat and a specially preferred data set.
+Premise. Conclusion. Premise. Not conclusion.
+Expected label. Does that make sense? No.
+Okay. Okay.
+So we have a premise, right? And we will have a label for it.
+Yes or no. So the example would be a premise.
+It is so. I want to go out.
+Right. That would have a label.
+Yes. Right. Right now. And you have.
+It is sunny. Uh, welcome to stay the [INAUDIBLE].
+No. Right. And then you feed a whole lot of Paris like that into your bird.
+And as you feed it, you mask some of those and some of those words, because this is how it works.
+And the classifier head right here will produce.
+Yes. No. Yes. No. You will compare it to the label and train just like you would have the regular neural network.
+Named entity recognition. Do you remember what it was?
+Location. Date. Time.
+All sorts of. Part of speech tagging.
+Same thing. Question and answering.
+So there's tons of applications. You just you the structure is the same.
+Nothing to change the glitter as GPT or third or any other model.
+The structure is going to be the same. The year data set has to be prepared specifically, and you have to set up your, uh, task.
+Yeah. So far, so good.
+All right. Is it clear how it works? High level.
+Auto encoder grabs the whole sentence.
+Most of the time it will mask some of the words. Some of the time it will replace words.
+Some of the time will keep the words as they repeat. Repeat.
+Train, train, train. And it will learn how to fill in the blanks.
+GPT. GPT is a decoder only model.
+Which means that it will. Not take the input from some context.
+Input from from from the encoder.
+It will auto generate context for self-attention, and its task is to predict the next word.
+No. Let's imagine that this right, this right, this section, this is our GPT.
+Right is pre-trained, fine tuned, whatever. It's ready to go.
+Joe Biden went to New York shouldn't always predict the same next token.
+I mean, I'm not asking, is it always predicting the next token?
+I'm asking should it? It's a it's the same game that you played with your first programing assignment.
+There is always going to be the most likely word that follows.
+Nothing changes here. The model is not being changed well while it's being deliberate.
+And so if if it's pre-trained untouched.
+If I feed it the same sequence Joe Biden went to new, it should produce York as a next word, right?
+And yet everybody in this room knows that when you're conversing with ChatGPT,
+you're asking the same question over and over, and it will start producing slightly different answers every time.
+If you do it long enough, you will see recycling of batteries, especially for some shorter sentences.
+But it's not the same war. And if if when two is not new, it's not producing new, it will produce another word.
+And that's based on that word. A completely different sentence will be derived.
+Right. So what do you think is happening right here when when you're actually usage of GPT or ChatGPT?
+It is producing different words. As it goes.
+Yes. I think there's a lot of, like, highly probable associated foods that it chooses from those.
+That's good. You would you would pick, I don't know, top k suggestions and you would roll with it.
+That's that's one possible, uh, way to not do what you said.
+Have it on screen right now which would be greedy decoding. Always take them the most likely one.
+Do you want to make your model a little more realistic?
+This is not being done. What is being done?
+This? There's a couple strategies here.
+So three of them. Three possible ones.
+Random sampling okay. You pick. Some.
+Top words. Talk predicted words and randomly pick one of them.
+That's one way of doing that. Top case sampling.
+This is slightly different. We're still taking top pay.
+Uh, top. Most likely.
+Okay. Most likely. Words. But we're not taking the randomly from them, but we recalculate the probability distribution.
+So third, taken from all words in the vocabulary distribution.
+Now I take let's five. Let's take five words and I recalculate their probabilities.
+Does that make sense? And then I do a random sampling again.
+So I'm rescaling the probabilities for those.
+Top sampling. This is. This is a variation of that.
+Instead of picking top. Top five.
+Let's pick all the words that are above a certain probability threshold.
+Rescale the probability distribution. Randomly pick a word.
+Does that make sense? This is an interesting illustration for you.
+Um. Let's not forget our our GDP is producing those context output embeddings just like Bert did.
+There is always word representations. Here's an interesting, at least from my perspective.
+Uh, this realization of embeddings or part of speech tags.
+So what in this case, GPT two was doing what it was used for part of speech tagging.
+It would take a word and it would produce its part of speech representation.
+What you can see here is that words that were attacked, for example, as towards ERPs are blown away here in greenish.
+No. Okay. No. Keeping close together cluster for the most part.
+The greenish cloud right here. Okay.
+Again, my point is to show you that those those context word embeddings worked pretty, pretty well.
+When produced by large language models. All right.
+Here's another. Um. Idea for picking the next right.
+So I told you, let's pick a word right and roll with it.
+Is it possible that if, hypothetically, if I, if the gen GPT depicts the next word, right, regardless of the strategy,
+but there's some randomness involved and it starts producing that a sentence, a longer sentence.
+Is it hypothetically possible that that sentence, after a few more words become becomes nonsense?
+An unlikely sentence. In other words, you, you you took your, your driving somewhere and you took a random turn.
+It felt like a good idea. But after a few more turns, oh, I'm going nowhere with this, right?
+So what do you think? What would you do here?
+There is no backtracking. I mean, let me realize that I.
+I painted myself into a corner. Let me go back a few steps.
+How many steps? To solve a problem, uh, GPT or GPT would.
+Another models would use something called local beam searching.
+Those who are in CSE 581 use so local beam searching.
+It was mentioned at least for a little bit. What does it mean?
+Imagine a search tree for all possible sentences that could be, uh, derived right from some years of beginning of sentence.
+Right? Millions of branches immediately come to thousands of first words.
+Right? So that's new. This is obviously not very, uh, useful approach.
+Instead, beam searching means or a local beam searching means.
+Let me, instead of just following one branch, for example, I start I and then blah,
+blah, blah, whatever comes next, whatever the word is generated, let me following it.
+No, let me do it. Or up two options.
+Let's narrow my search to several options that I consider as I go to be my best choice.
+Let's say this. This looks like okay, point nine probability.
+I suppose that's such probability. Whatever it is. So anyway.
+Sure. But let's say that these are two best options.
+I'm going to keep one as a as a as a as an alternative.
+The further I go remember language model produces a sentence probability.
+Right. It's capable of that. I'm adding more words I can update my sentence probability.
+The more words I add the. Two comparable sentences, their probabilities might.
+Jump one over the other, right? This is where I switch local beam search beam as in sort of a flashlight beam.
+Let me narrow my search space in this in this direction.
+This means pick instead of picking. Sticking to one word, let me pick a couple words.
+Um, I'm going to show you the best one.
+But as I go, if there was an illustration of word by word by word generated by the as I go, I may switch to a different sentence.
+You might have seen that right?
+Where when you're doing something similar, but when you're doing something and you're typing in a search in Google, right,
+then at some point you add another word and the whole sequence changes a little bit more or less the same thing here.
+Beam search. Okay.
+Question. It's not clear what local search would do here.
+All right, transformer models. Uh, this is not something we will spend a whole lot of time.
+Encoder decoder structure with. Uh, both sides of the story.
+Uh, the most prominent example in in this area is Google's D5,
+which is text to text transfer transformer, text to text sequence to sequence encoder decoder.
+Uh, and what's interesting, uh, in this model is that every task is really considered translation, just a different slack.
+Typical translation right here, please. Um.
+This is this is sort of, um, a logical conclusion.
+Oh. That's so. Sequence to sequence.
+Longer sequence translated to a shorter sequence.
+And hopefully now you will want. When you look at the diagram like this, you will see how this business all works.
+There is a data which is structured in it according to the task at hand.
+Classification. Just that x and and some label for it.
+Transformer. Outputs. Entailment.
+Premise. Conclusion. Output. Similarity.
+Two sentences. How similar are there? And so on and so on.
+Different data structuring. Different.
+Different task at for the transformer. That transformer itself is staying the same.
+Most likely. Most likely you'll be using the same pre-trained model, maybe with some fine tuning.
+This will change and the data that you will use will be structured differently.
+All right. So. A question for you then.
+What are those models trained on? DPT birds.
+What would you train them for?
+We spent quite a bit of time talking about Bert, which is an autoencoder, and I told you that in the end it's an unsupervised training, uh, model,
+which means that I don't have to label anything, and we'll just look at the text and local stripe, assuming that it's a mustache, but accordingly.
+But it will figure it out, right? Here's an input sequence.
+This is my expectation. I'm going to mask a word in it, feed it to the model that will be awaiting for the model to reconstruct that sentence.
+That's that's how it would work, right? But where is that data coming from?
+The internet, of course, I guess, um, uh, there was like the list of the different entities and how they were trained.
+Then, for example, OpenAI's OpenAI, I end up with status from the internet over several books.
+And like there was like different sources. So it depends on the the model.
+Oh, there you go. That's, uh, here's here's a couple ideas and see, uh, different models, right.
+Defined internally based on web pages.
+Makes sense because it's like Google. Google. It rehearses websites all the time.
+Uh GPT three some theory, but you can do three right here, 16% books and use the rest web pages.
+Alphacode entirely trained on code.
+This is for for for those who. Are interested in getting all of your.
+Your data set to look at Wikipedia of course book purpose.
+This is just going to be books. That's just GPT three.
+GPT four goes even farther than that.
+Is there a problem? We'll talk about problems.
+Do you see a problem? Just scanning the internet.
+Grabbing whatever you think you can. Collect data.
+Oh, lots of incorrect data. A lot of a lot of garbage things.
+We don't. Yeah, just go on.
+Go on Reddit. Right? You're, like, missing information.
+Probably not in trouble. But you. Not everything will be accessible or that it was not even.
+Thought of as a as a source, even though it could be very useful.
+How about plain old stealing? The intellectual property, right?
+I don't know the Wall Street Journal Journal. I think it was Wall Street Journal or New York Times here and there.
+They still litigating or are they don't. Yeah.
+Up. I think I think the golden days for large language models, where it's true,
+allows to just grab everything and say, hey, it was there or soon to be over.
+Yes. Also, as long as you don't ask.
+Okay, give me this answer. Based on the information from your tax updates, consider copyright the same way.
+Like, if you ask you to generate an image of Mario, like Super Mario, it will generate.
+If you say, okay, uh, generate a cartoonish Italian plumber with some monkeys that generate Mario, which is fine.
+That is not copyright.
+Well, but this is something that we talked a lot last time where people step in and out little tweaks or retraining for for the model.
+So certain responses are not allowed on day one for GPT three.
+I remember, I remember um, it was early, um, early after the deployment.
+I think that was a big deal because someone's I don't want to say I don't want to use a name of was either a big Korean,
+um, electronics consumer electronics company or a big consumer electronics company in, in in Germany.
+I don't want to name any names, but I thought it starts with an S, so someone was trying to cut some corners and I think they.
+It was Korea, South Korea. Uh, I think they said classify classified, uh,
+documentation on some top-secret internal project into Gpt3 to get some summarization and some response or I don't know what it was exactly.
+And guess what? He learned from it. And it became a part of it in the end.
+And it started responding using that data, classified data to the other people.
+I would have to find the, the the article that talks about it.
+Their job. I'm sure based on that for you. This is.
+This is new territory for, um. For you.
+Really? So would you be happy if if judge GPT or any other language model out there without a note?
+Wrapped your novel and started using and or your or your preferred newspaper articles without your permission.
+Are you are you Facebook conversation?
+Anything? Any of your clever ideas?
+Like Google is not crawling in your email boxes.
+Hey, uh, that's a topic for, for, for for, um, next week's conversation.
+And that was the idea for later personally for your written assignment number four five.
+That will not happen to kind of look for those. Yes.
+But first let those models run out of data to be trained on,
+because that's what they announced from OpenAI that they were struggling with finding more data.
+And data, as you know, I was just [INAUDIBLE]. Synthetic data.
+It's not the best solution out there because if it's synthetic, it's bound to be incorrect.
+Okay. It will make the model worse. There was there was like research showing that.
+By the way, I will show you this thing. But, but.
+Really? Shocked me because I have seen at least five instances it this time.
+Has anyone ever wrote a research paper that was accepted for a conference or a journal?
+Okay, so you know how the process works, right? You you submit your papers that there is a review or is reviewing in the higher quality journal.
+It is the higher quality conference it is the more scrutiny your paper goes through.
+So typically. Three or 4 or 5 reviewers.
+Look at it. They judger da da da da da. And then there's someone publisher who puts it all together, who looks at is supposed to look at that.
+And I've seen. I've seen papers published in reputable places.
+Are you just home playing in your face?
+You have some. You have a chunky puppy output, including those little ChatGPT messages.
+Oh, I don't know how to respond to that or something in the paper that went through all this process.
+Reviewers looked at it and the whoever published it put it all together, looked at it, it went through.
+I've seen at least five examples over the course of the last few months.
+That's funny. Well, you know, I'll bring them next week.
+Yes. Well, this specific example I saw something similar is from this Chinese research team.
+And they had like the research earlier, they get the information in the paper, but then they figure it out.
+And basically those Chinese guys didn't know English and the paper was in English.
+So they just put in the information. I was like, okay child, translate this into English.
+And this is why it was in the paper, is not because the research was not made properly turned out,
+but that there's there's someone speaking English who is reviewing it later and uh, and language model evaluation.
+So we talked how to build a language model. Um, you have a high level idea which we have not built in.
+If you're disappointed with it. Hey.
+You can come back for another iteration in full on teaching it again.
+I already have, but I guess I just can't.
+I will improve it though. I don't want you to come back with that language model evaluation.
+You have an idea how it works? What? What what's inside now?
+How would you know that your model is doing any good?
+When you were working on your Naive Bayes classifier, right?
+Or using some classification metrics, basic ones, but still the.
+Work well, right? They give you some idea when it comes to classification, but language models are really what they can be used for classification.
+But they need to use so much more, right? So they generate new text.
+So how would you know if your language model is generating? But there are those metrics where they play to the backend and proficient at this thing.
+But, uh, I think they do that. They also do the throwing blue lab.
+Uh, no. So there is I don't know. I think like, do you get feedback from the users?
+So maybe. All of these approaches are being used.
+Absolutely. First you would want to quantify that.
+So I'll give you an idea. First one you've already seen.
+This is a basic, uh, measure of language model.
+Any language model all of the perplexity. The best model is the one that gives the highest probability for for for for for for a given sentence.
+And if you look at a bunch of sentences that this is not.
+The best approach here. Here is probably something that you should look at if you are going to work in this area.
+I don't even know what it's number or really. But this is a benchmark for the.
+Actual measure like perplexity, but it.
+Addresses a bunch of, uh, different tasks and benchmarks of a language model based on that classification.
+Right. Uh, grammatical structure.
+Similarity. Entailment logical.
+The following one from another is the question answering.
+Or. Finding a target of the problem.
+Okay. And.
+This is this is this is not recent, but it shows how how models.
+Trying to bypassing humans in in that benchmark.
+As in they produce better responses than a human would would do to the same two same tasks.
+Uh, on average, of course. Here. So if you're interested in more you, you can just read the paper here.
+For architecture of the bunch.
+Uh, okay. This one. Is important.
+I'm sure you've seen comparisons of language models where they worked.
+Uh, or or two shot or three shot tests are being conducted.
+Is anyone familiar with those approaches?
+You will see it if you start looking at impressions of a large language model.
+Number one, we talked about transfer learning.
+Oh, I was trying to convince you that pre-trained models are pretty good in shifting from one task to another.
+And those tasks were relatively close to each other, from Spanish and Portuguese.
+Um, when translating um, oh my god, zero shot learning is is a test.
+To Russia means I'm going. Let's consider a classification.
+Right. There's a classification that outputs good or bad.
+Okay. And now you you.
+I'm oversimplifying it, but let's let's roll it yourself.
+Means I'm going to show the model an example of a completely new label.
+Little bad. Or let's let's make it up next word prediction instead of just your classification intention.
+And from different let's stick to good.
+Bad means a completely new label. Let's let's say average.
+Well, will it be able to classify it correctly?
+Uh, what is good is your intuition telling you it's a machine learning model.
+It has not seen an example after.
+How would correctly classify it? Or how would it correctly predict the next word?
+And yet the Euro shot. Can be pretty, pretty like if it's not going to be perfect, but it's going to work.
+How how would that work? This is going to be.
+Related somewhat.
+Yes. Similar to the contextual embeddings used and produced by the models are useful, usually capturing clusters of similar stuff.
+I think about it. It's. Yeah. Not so.
+It could be the case that it's his. That's in sentence.
+He's just never seen it before. But it knows that it's probably following this sickness tags.
+And maybe by combining this with its knowledge about, uh, bigram trigrams probabilities, it's kind of gonna assume what the next one is.
+Okay. This is this is a, um, a model, right?
+That does produce what's. Once again we have output embeddings, right.
+That will be produced by a model. I imagine that I'm feeding the model with something it has never seen in its life.
+Right? So far, so good.
+Will it produce some output embeddings?
+It will. Those embeddings will represent some point in some space, in some vector space, right?
+If the model is well trained on a lot of data that point in space will be even though it will be.
+It will not be named by the model. It will be.
+It will be close to close to something else that the model has seen.
+I'm going to squint your eyes.
+This is not exactly how it works, but let's say that the model has been successfully producing good, bad, good bad responses, right?
+And now it sees this new example that will produce a vector pointing somewhere close to the word average,
+even though it has never seen an example yet. Does that make sense as a zero shot learning?
+The model is given an example to classify identity as with a label that it has never,
+ever seen in its life, but it has enough knowledge about the language in itself to relate the output.
+To something new. Kind of.
+This again is going to be beyond the scope of this class.
+So that's zero shot that you shot. Learning means. Okay I have a pre-trained model in German.
+Now I'm going to show you. Okay. Shot with the let's make it three shot.
+Right. I'm going to show you three sentences in Polish. And after that I will test you.
+How well are you retarded to respond in Polish.
+This also works. The left.
+The higher the K, the better it will be.
+Okay. Okay.
+How many of you heard about reinforcement learning from human feedback?
+Many of you might have. Okay, this is how your GPT are getting better.
+There is. There's human. Evaluators.
+Talking to judge a special version that will produce multiple responses to questions or
+whatever the task at hand of yes and the human being will evaluate it and then score it.
+Okay, this was good. Use it. This was not good. Don't don't use it.
+And retrained and retraining the model. So this is happening.
+This is an ongoing, um, process.
+Here is something that I want to add to our conversations about, uh, encoders.
+Decoders, Transformers. Before we finish for today.
+So far we have been talking about, hey, let's speed a sequence, typically a sequence, a sentence of words into the model and train it to do something.
+Or is it a process? That does not mean that you cannot fuze your words with additional information that would help with the task at hand, for example.
+Linguistic features. This is a word.
+This is a part of speech that caught this. This is a word.
+This is a named entity. For that word makes it all together.
+And this will improve your model. So that's William.
+Little bit how those models are being moved and moved and tweaked and made better.
+All right. We have one minute. Any questions? Review Wednesday.
+So we will finish the slides. Um, and uh, yes.
+So, uh, whatever. There's a couple few more things I left out.
+I'll finish that on Wednesday night. Uh, thank you.
+Um, to. But I will finish, um, with on Wednesday one of them.
+And then if you have specific questions that I would like me to address on, um, on Wednesday, shoot me an email.
+Otherwise, you're probably here. As I said, no written assignment number five.
+Though if anyone wants to score some brownie points, send me some articles or links to two fairly recent from reputable sources.
+In cases of, you know, ethical, uh, issues or technical issues, all sorts of problems that arise from using an LP right now.
+So that will spice up our conversation next week.
+Sure. But if you want to also. Thank you.
+All right. Everything fine? Great.
+I'll see you on Wednesday. Yeah.
+You know, for the demo. For the program.
+Are we allowed to show it to you? Yeah, but not today.
+But, yeah. You're still alive. Yeah, because I just found out my creditors.
+I'm sorry about your office hours.
+Thank you so much. So, uh. After the exam?
+Yes. You know, it will be a loose discussion about the future of the 1211 ethics.
+Oh, executive business, non-technical people.
+That is related to it. Please. Okay.
+Thank you. You're welcome. I have the same questions. And so again, ESPN starting next week after USF.
+Well, I want to have that programing assignment ready and released for you this week.
+If not it will be next week. Uh, once again is I will leave it with you.
+You can do whatever you want with it after the class is over.
+You're welcome to interact with me after this. Just so that you can play with and ultimately healthy adjusted weeks, or even when learning something.
+Well, like I said. Other than in this business.
+I'll give you a working covenant which is not going to do anything spectacular.
+But hey, let's get you interested. That works.
+Optional, not for credits, so you don't have to do anything. So both original and programing assignments are optional.
+Uh, yeah. So there's really no written assignment.
+You have to have something to share. Just share with me. Uh, there's no expectation.
+And like I said. Next Wednesday that we will have an exam on Monday and Wednesday morning here.
+And we'll be talking about issues, future ethical problems, technical problems, whatever, whatever you have seen.
+So let's just have an idea what's going on. What do you have to pay attention?
+You don't have to be here. You don't want to come to the exam, but I'll be here also.
+Um, uh, I don't know if it's my impression, but this semester, we haven't done the algorithm right.
+It's more like. Yeah, so the exam is going to be more.
+Uh, so, uh, we we have to, like, learn the, uh, details of the victims because the the layers, uh,
+the flow of information that we should have at least some basic understanding, especially when it comes to attention.
+So attention. I'm not going to ask you to build a neural network model during the exam.
+Of course. Okay. Um, could it be, like some code problem?
+What? I'm done. Uh. I wouldn't I wouldn't be surprised if that happens.
+Nothing serious because I can't ask for anything.
+Especially something that I did not know fighting for, but.
+There is things that are so simple that if you understand that concept, that you don't have to practice that reality.
+That's that's my understanding. But there might be a question, if you like,
+that there might be some multiple choice questions are answer a single answer short answer question precisely because we haven't done.
+A lot of those. So I think we've done enough to keep you busy for an hour.
+I think the first class after the midterm.
+But what we're starting before the text classification, this is where we start.
+You have.

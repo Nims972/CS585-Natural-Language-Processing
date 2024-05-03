@@ -1,0 +1,575 @@
+Let's make it easy.
+I think that's true.
+Take it to the press conference.
+Let me ask you this other.
+Just looking at it.
+No warning about.
+More questions about what the system is doing right now that will fix that for the final test.
+What about to? Should they go away?
+Also, what you've read 20 pages of it.
+She. It just blows my mind sometimes.
+Like, what are people thinking? No questions will follow.
+No, No replies. Oh, we will slow down with written assignments a little bit right now, as you will be done with your programing assignment number two.
+So depending. I'm still waiting for you to decide and crew and whatnot when it comes to as long as I have a full picture how the group is split,
+I will decide what are we going to do about presentations?
+How is this going to be whether there will be presentations to begin with?
+It's a relatively large group, so let's wait and see.
+So I would really like to. Do a pretty good job.
+Summarizing your experience with leftovers without a programing assignment has been gathering your thoughts, results and conclusions in one place.
+Ways that that will be a third programing assignment.
+The third one will be probably much, much more, much less demanding than not that this one is demanding, but less demanding in a sense that it will.
+I will just walk you through it. Okay. I want to I want you to do a little work with a large language model yourself.
+Your own computer is interesting.
+So we start last time talking about.
+Back door semantics. Let's continue doing that and we go back to it.
+Let's just read it. What are the ideas?
+So the only the only vector representation that you have seen in this class so far was the final work,
+which was before we know any relationships between words.
+But obviously that's not the best way to do it, is to preserve some sort of structure in their relationships.
+And why not define.
+Relationships by who is your neighbor in the text.
+This is a classic. And the second idea is, and this is probably even more apt now let's make that a word or a document,
+because we can represent the entire document as well using embedded.
+Let's make it a point in some vector space which enables us to do what?
+If I'm able to put a word in, then in an organized fashion and point in some mostly dimensional space, what what is the benefit of that note?
+We can know what the neighborhood is. So how do we how do we know what a neighborhood is?
+We're working with numbers.
+And this is better because even if we have wars that we've never seen, if you their numbers or the back of what we've seen so far and we can.
+But at the same time. Yes, make the relationship you're working with numbers which enables us to apply mathematics to it.
+Pure world text is not. Easily subjected to that can multiply things.
+We can add things, we can subtract things. We're dealing with vectors.
+Right. That doesn't mean that there's going to be an integral of a vector.
+Right. But some mathematical operations are applicable here and we can take advantage of those.
+One of the ways of taking advantage of it is what common sense is right now is we can put any point in space,
+even in any word in space as a point, even an unknown word.
+Well, if if this whole structure, this whole vector semantics, representation is correct and valid,
+we will be able to extract some information based on that position of that word space.
+Are those the names examples of words not working?
+And when you talk about the example that I keep forgetting.
+I mentioned something similar, but you can, if you read ever read about it, it's not.
+That's fine. You probably. So something like that.
+All right. Man equals queen.
+That's a very cool example where when embeddings are being explained, essentially that sort of thing.
+What this example shows is that that sort of. Mathematical expression is now possible.
+You can if you take if you have the word king, the word man in the word.
+We represent that as a point in space, as the end points of a vector.
+You actually just do this vector of subtraction called minus men.
+You will land. You should land the more close to the word queen.
+Not necessarily exactly where it is, but very close.
+And it is actually working. So how would you build?
+Lectures like that. So.
+Structurally. Yes. So we have a two dimensional space to.
+Or as a vector can be, can either serve multiple dimensions.
+I guess this is going to help us.
+Plus the word like in some a higher or general category.
+So. You used. First.
+You know. Different ideas.
+But how would you go about it? But it.
+Oh, I think like you're explaining like earlier in the last like somatic it or like that could be like, like part dimension, part of really like.
+Yeah. And then so somatic too could be like, I guess you could say that once you create vector vector embeddings,
+the semantic field will be a byproduct of natural because that makes sense.
+You will see people words related to each other and close to each other in the vector space.
+A new common motion classification. This is actually going to be a key aspect here.
+So how comfortable are you with logistic regression classifier?
+With understanding it now. There's a reason why we went through knife pass as an example of a baseline classifier, just a primitive one.
+And then I spent quite a bit of time explaining the logistic classifier because it won't be used now.
+We'll see it. And before we do that, I'll take a step back to show you an improvement,
+a slight improvement improvement over a bag of words in terms of document vector representation.
+One thing. So here's the definition from what a word embedding is.
+This is our target destination that we will arrive at or the embedding representation today.
+Does that make sense? Having a word being encoded as a vector and its meaning being represented by its position in space.
+Access. Oh.
+Embedding is your bread and butter representation of words in model and I'll be posting,
+mapping, mapping words to a vector space of hundreds of dimensions.
+Now. Here is a starting point to our.
+Bag of words improvement first. So the idea is, is is is the same as the one we started today.
+Today's conversation, let's try to come through the neighborhood of the of the world as opposed to what was in the bag of head.
+So just capture the words and count them, but leave out all the relationships.
+Well, let's try to capture it. This was not the best approach, just looking at words in isolation.
+So here is here's something that is called a term document.
+It's. This is based on Shakespeare's works.
+This is an example from one of your optional textbook drafts.
+What is what is Shakespeare famous for? So he was a writer who wrote these dramas and comedies.
+So. So what? What can you can you make a distinction between a comedy or a tragedy in terms of what's in it?
+The word was probably can.
+Right. So here's.
+Here are some very simplistic vector representations of these works and as you like it, 12 930.
+These are Shakespeare's words. And here's a selection of just four words, as you can see.
+What do you think those numbers mean? Now, many times it's just a row frequency, right?
+You learned to count them many, many times.
+Now, if you take that.
+Every column and treat it as a vector.
+What do you what would you expect someone lying months between those funny works and.
+Drama works. If I have a plot, if you if you plot those two vectors, I guess you can clearly see which ones are belong to which category.
+Right. And this is just a very basic approach.
+Term document maintenance. But that's where we're going with that is is a slight improvement over her bag of words but.
+Once again, what I want to do is this is just using two words as dimensions, obviously.
+Obviously, those factors are in four dimensions, so it's impossible to throw them, but to keep it simple.
+Two dimensions it is. Right.
+So can we compare? Can we derive some conclusions from just you just by looking at those factors which you're painting?
+There is some relationship going on.
+Now let's flip things around. So this term document matrix create a column vectors for each which each column vector represented a document itself.
+If I flip it around, just. And use word row vectors to represent words and the entire corpus of Shakespeare's work.
+Can we derive some information from from this approach?
+So now I'm not looking at documents. I looked at the documents here separately, and now I'm looking at words.
+So you can see, even if you're not catching that yet, you can see a slightly different a more sophisticated approach to a bag of words.
+A bag of words. I was just counting how many words do I have?
+Overall in a document. Now, I won't be doing ads or word like documents.
+This entire term document matrix allows me to capture the distribution of words per document as well to dimensions as a single word.
+And. And with respect to adoption.
+Now, what about replacing documents with.
+Words. And instead of counting how often a certain word appears in a document, let's count how often a certain word is seen next to another word.
+Does that make sense? So now this would obviously be a huge, huge matrix here.
+There's just a selection. Sure.
+Cherry is never seen closed in zero currencies.
+Digital computer dating, right?
+That would make sense. Cherry pie trigger, Right?
+This is this is the basic idea behind behind the madness.
+Let's just take a look at the neighbors. This is a very simplistic approach, Right.
+Right here. But can you see yourself that, Oh, something's up here.
+Something's useful is visible. Does that make sense?
+No. If I have a document. Document that includes words, computer data and digital art, computer data and information.
+And in that with that computer and the neighborhood in mind, a document that also includes a digital or a document that also includes information.
+Does it look like there are similar? They're pointing in the same direction, more or less.
+Right. So what kind of similarity measure would you use to say that these two are similar?
+Because the same similarity. Right. The distance Euclidean distance is not going to be very helpful here.
+Super helpful is going to help us. But, you know, the distance is still pretty pretty hard.
+Size similarity can be used to say, okay, I have a document that includes computer data and digital learning,
+and I have a document that includes computer data and information.
+And if I look at the vectors representing both.
+The cosine similarity is is is going to tell us how close are they.
+Okay. So vectors dot scalar product, you already know what it tells you in terms of two vectors, right.
+That your product will tell you later. Two vectors are aligned.
+Which means. Which means what?
+The product line. If they're perpendicular to each other, the product is zero.
+If they're aligned and they're pointing in the same direction, it's going to be a positive number.
+If they're going in opposite directions, it's going to be a negative.
+This will be important. So here's just a reminder for you how to calculate the cosine similarity.
+The science similarity will tell you the following minus minus one vectors pointing in opposite direction pretty much what the DOT product does,
+plus one change direction zero or double perpendicular.
+Okay, so let's go back to our of word similarity vectors.
+Can you see how I can use cosine similarity to tell that two factors are close to each other or not?
+Something close to one eye similarity posts, something close to zero.
+They're almost perpendicular to each other, so they're apart.
+This is a very useful measure. And now, before we go to.
+Something that is called work to vex. How many of you have heard that term works to back?
+Word to back is something that is commonly used.
+This is this is probably the most use for them getting out their tea at half i f is.
+So it has it has some application.
+It's an older way of embedding vectors, embedding words I'm sorry,
+used in information retrieval for many of you to obtain information or to promote class.
+So you have seen it already. Word to back is much more carries way more meaning that an idea is an easier way, easier to produce intentionally.
+It will give you some information. It will carry information that that can be used in searching for documents.
+It's not going to be very useful for large language models or that precision in identifying relationships between words is is necessary.
+Now DFA, RDF, as you hopefully will see that is this is as far as representations.
+What does it mean that it's a sparse vector representation? It's a lot of zeros.
+So if you have. Martha, explain.
+Well, it was just to do an example, so. How many of you understand how JPAC works?
+Image compression. But think about it.
+Think about it as a a bitmap, an image.
+Write a white image with a single dot in the middle of it.
+Right. That's an image with very little information.
+There is a dot in the middle. The rest is just what it could be, easily compressed.
+There is a lot of light and just put the dot in the middle. That's that's what it is.
+That would be a representation of a sparse vector with very little information carried by a lot of data.
+Because a bitmap with those all this white space, a little dot is going to be this huge bitmap work.
+Really, all you need is to put a point, put a black point at the center.
+That's what that's the same thing from the information that you need to reproduce this image.
+Does that make sense? You have your phones have how many megapixels in your in your cameras?
+28 or something like that. The image that you will produce.
+It is huge in terms of bits, right?
+If you took a photo of a of a of a white page with a single dot on it, this is going to be I don't know if it's comprised,
+it's going to be still probably a couple hundred kilobytes or something like that.
+If it was an uncompressed image, you will have probably a couple of megabytes to just store this.
+Put a dot at the center. For me, that is a representation of a.
+Sparse. Data format.
+And does anyone have an information theory background?
+We should probably get over that somewhat.
+So in any case, as far as the vector is going to carry relatively little information and it will cost you to produce it,
+to fill it with zeros, and it will cost you to store it and it will cost you to process with all those zeros.
+You know, you don't want that word to back.
+And there's another one called Glob. Or the inspectors.
+So there's very little zeros. Every every position in that vector actually carries some valuable information.
+Okay. So.
+Let's talk about to the IDF. IDF, IDF, is that an improvement over a bag of words that I mentioned at the beginning of the lecture?
+A bag of words. We were just counting. The word is there are no.
+Now let's factor in oh currencies right.
+So we were looking at. Or it's car as before.
+Let's see which which words are frequently seen together and try to interpret.
+That's one thing that we will be looking at. And then.
+We'll try to somehow harness that information.
+What about very frequent words, though?
+So if I'm I will if I'm capturing the relationship with council of the broken something of relationships between good and more.
+Right. This is this means something or bad weapon.
+But. Bad weather is probably what will have more counts than bad.
+That scan or that badge, that paper that's.
+That is not going to have a huge. So we have some that frequency can you can tell us something about how often that needs to go together.
+But what about a the words that are very.
+Common. You look at those. You don't get any good remote support.
+Very good idea. But before we remove the stuff, what is it?
+Think about a factory. Let's. Here, we're looking at a vector.
+Right. Well, let's throw in that right here, and you will probably have a large number of four digit goals throughout virtually any work really,
+that will be close to it a lot of times. Right.
+Does that make sense? Will this if this.
+We have that here and a large, relatively large frequencies.
+Isn't going to call a word lecturer and that dimension a lot.
+Well. Right. So it will be a heavy. It's like it's going to be like gravity, Right?
+Those frequent words are going to skew the vector towards that.
+This is not necessarily a good effect. For us.
+So yes, one way could be removed a step towards fine.
+But can we. Can we do something else instead?
+Can we offset? There are fact.
+Yes, do it in smaller ways. So even smaller waves.
+Right. So if you find. If you find that something is very common, this is a very good idea.
+Give it a smaller weight. Make it more or less.
+Right. And if it's a very common word, change its effect.
+Try to dampen. Now we're able to do that with a bag of words.
+Not at all. That was impossible. So how would you how would you change that?
+You know, the frequencies of both of those words.
+You know how often they appear in the cartoons or in the document.
+You can count it very easily. And then you have information about words, relationships as well.
+So we have those. Brought back to us.
+Right. And then we have individual or it comes in a document.
+We've done that. You've done that for for your language model. You're doing it for it.
+The main thing is just simply counting how many times that word abuse.
+This approach that you describe, just try to add a lower weight to.
+It is at the basis of the types of energy.
+Vector representation approach.
+Now, I told you already that that is heavily used in information retrieval with Google search to be considered information retrieval.
+Absolutely. We're trying we provide a set of keywords or a phrase, and we want Google to find all the documents that are relevant to us.
+We're not asking Google to summarize it for it. You're not asking specific questions about what is in those documents.
+This is what a large what. We're just want to find the most relevant documents.
+Right. Or our search, really.
+So now think about it this way.
+We can just do it for a couple.
+I've been there, so.
+Okay. If if our search wasn't smart,
+it was just looking for what will be the most trivial and dumb approach to searching for documents that are corresponding to this phrase.
+Baseline approach. We're not nowhere near clever about it.
+Let's document the most of appearances of those they were.
+Yes. So in that case, would would any document with a lot or a large amount of that, the bubble up to the to the top?
+Not necessarily relevant to our discussion.
+This is why we do to dampen that.
+And we want to know essentially or we're looking at a phrase like this, we want to mark our ways every term or every token in this phrase.
+In a way that indicates how frequent that war is.
+In general, we want to use that information. So.
+Okay. High frequency, Low frequency weights.
+If you were to dampen the word word's effect, then you have the frequency of value for it.
+How would you structure the way? And we're dealing.
+We're dealing with a situation. Wait.
+Turns out some cult.
+If I want to reduce the effect of the weapons so that.
+Work. I want to reduce the effect of this specific word on our research.
+How would I? What will they have to do with the lake?
+I'm thinking maybe if we have the frequencies, we normalize them and we multiply the world by the people.
+So let's say the weight is 76 multiplied by 24.
+Basically, if the opposite problem personal is inversely proportional.
+Do you guys agree? Exactly.
+It's going to be won over something. Times specific words.
+So that's totally equal to what? Like all the words kind the.
+So Well, let's let's take a look at the definition of that.
+I guess this will give you give you the answer. So we're looking at two things, right?
+Term or word frequency in isolation, how often it shows up and and then inverse document frequency,
+how often it appears in in my corpus in the set of documents, the term frequency applies to a specific document.
+For example, I have a printout right here, and I want to decide how relevant this document is to me.
+Right. So and I see that or Brown is 200 times in this document.
+Now, just by looking at this document, I don't know overall how how heavy is it there and how happy is brown,
+what kind of impact it would have to look? Well, this is no longer corpus, but imagine that it's an entire corpus.
+And I will look through every document in it and look how often that shows up here.
+And brown individual document term frequency, corpus frequency.
+Now we'll take this number and inverse it to affect how the words in here are going to be treated.
+Does that make sense? Does that answer your question?
+So what is more like a, I guess, a decimal number, but it doesn't go like, what have you had like rankings of this sort?
+You can use rankings. Oh, frequency is related to ranks, right?
+You could use rankings, but those direct frequencies are going to be even better because those the the
+gradation between certain words in a word will have a well documented frequency,
+very low right down that will have a high frequency if you rank it A you're in 581.
+Right. So generic algorithm, if you if if you're just use rank and not the actual frequency,
+I don't want to confuse that that rank is going to destroy that the spacing between words or the frequency much more than just keeping row frequency.
+So it is, it ends up being frequency but you could use right.
+Yeah. So far, so good.
+Okay, so the idea is here. This is kind of like like human human behavior.
+I know a lot of you are a shy, Right.
+You know, shy people, very brilliant, shy people that do not get to voice their opinion because they're shy.
+They're overcrowded by people who are loudmouthed and whatnot.
+That's right. You know, people like that. But you would in the ideal situation, you would like them to have a voice.
+So the equivalent of those shy people are words that are distinctive to to to to that have distinct meaning.
+They're going to be rare, but they might have a huge effect on what's inside the document.
+How should we interpret this document? And then there's going to be loudmouths such as that.
+And they're right, common words that are not really contributing to the meaning of the document, but they're overshadowing everyone else.
+So we want to keep the loudmouths down and raise up the shy voice,
+specific words that are going to be one of the kinds some were buried that this means they will mean a lot.
+We don't want that to drown out the specific words.
+Okay, so. Two scores.
+This is why it's called TFI, the F, because it's using two different metrics.
+Frequency of an individual word in an individual document to term frequency and the measure of.
+I guess this is a good word for a rating of a certain word across all documents.
+So specific document. In Oracle's specific documents measure the term frequency or count the term frequency corpus C how rare that term is are a word,
+if it's very frequent in the entire corpus.
+Okay. We have to dampen its effect. They say that it's a very common word in the caucus.
+The opponents of that, if it's a very rare word in the caucus, let's bring it up.
+So there is going to be turn to two factors at play.
+All of it. Hello? Hello. How are you?
+Right. How often do I see you? How shy are you now?
+So you like. Yeah. You say like the most rare word is this would have the highest rate That what you say.
+In in by inverse things. So if I only see a word once right, it would be one over one or twice one over 2.5.
+If it's a loud mouth and it says that it's one over 5000, for example, the effect of that is going to be dampened by that.
+So say let's let's say document what. Right. One hour.
+And I don't know the word ideal.
+You know, don't count three terms and the word that we have ten or let's make it 50, 160.
+Why not make. Oracle is going to do that.
+I imagine I might just like deal perhaps five.
+So now we're looking this this will correspond to the inverse document frequency of one over frequency.
+Kind of there's there's there's new ones, too,
+that we're going to see in just documents went or whatever frequency an entire corpus and so we'll have one over 600.
+10503 It is one fifth though, now.
+And this is a mental shortcut because there is there's new ones here.
+But essentially what we're at and what we end up doing here is one over five or I deal and 150.
+Times Square. Is this going to dampen the effect of of of that right here and bring up the ideal a little more.
+So like with this, like the words in the middle would have, I guess, the highest.
+But it it like the fear a lot.
+But they also have a high rate. It was words in the middle actually carry, carry the load.
+Write the distinctive distinct words are going to be the spice that gives them the scale.
+And there is something that I, I don't I could remove that most stop work removal button.
+Perhaps. It's too much work, right?
+Imagine this. If you're doing information retrieval, you're doing a Google search.
+So you're scanning document after document right here.
+We're counting how often that appears. If you threw in removing stop words to the mix.
+Right. That's an extra preprocessing step, right?
+You don't need to do it. So we're splitting hairs like make them like example is also supposed to get rid of the work.
+But this is part of the stockers, you know, does this have to do.
+Well, as with any any other process that we were discussing in this class, there's always layers of, okay,
+I could use some other piece of the algorithm make work or another heuristic to help my algorithm here.
+Just let's just use the real metric here.
+I. I will try to compile that information for you at some later point.
+But all those preprocessing steps that we discussed limit possession,
+the removable stop or even lower casing have distinct effect on different and LP and LP applications.
+Sometimes to say one may be detrimental for classification when it is good for a question answering.
+So I'll try to compile that for you. I don't have it memorized right here.
+So yes, you could remove stop words, but I think this is this is this is better if you great, because you're not removing anything.
+As you said, you're keeping the words. But there is a very simple mechanism to to balance their effect.
+All right. So here's one possible way of doing them.
+The term frequency is an easy call. May ask what is the law doing on the right side?
+The short answer is there is multiple ways of of of calculating or both term frequency and an inverse document frequency.
+Using the log is just one of them. Probably the most popular one.
+Helpful. I have a little take people waiting for you in a second.
+When those are summarized, it could be just one over.
+Frequency. Right here. Let's. Let's just go there before.
+There you go. These are most common ways of playing pass and idea of factors of scale, broken down frequency and log normalization.
+In the end, they all perform the same task.
+The most common is, I think, some frequency and inverse to, you know what I mean, you through an example here.
+So. Deft or frequency.
+Just a simple case. Inverse document frequency is going to be of to be a log of.
+Number of all documents, all seen in the car, plus over a number of all documents, including a word.
+Would that be a good measure of how popular the word is?
+How often? Enough years in the corpus does this essentially what is.
+And then to calculate it here by the value of a word in a given document.
+Can a given purpose tell you find the count, increase the frequency within a very specific document?
+An IDF. By looking at the entire corpus.
+Multiplied. Now, where is that IPF number going?
+So. Yeah. Cool. We we calculated. To what of. A vector.
+So go back to the bag of words. Approach a bag of words.
+Is it in the document or is it not zero one or just the code?
+This is what we did. Now replace that free entry entry in that bag for one sector.
+It will not be a bag of words. That competitor will replace every enter with a t f idf VAT and it will give you a much better.
+Much more accurate information about the content of this document is no longer
+going to be just a binary zero one or an integer counting fractions there.
+And does it sound like a more accurate way of Victor representing a document that.
+So you would do that? Say, I'm analyzing a document.
+Remember, in our naiveté as an example, I was giving you those lectures of, I don't know, Rolex, blah, blah, blah, blah, blah, blah, blah.
+Let's keep the same vocabulary for every word in my specific document.
+So calculate the IDF. IDF. Put it in that vector under that vocabulary.
+So I'm doing here by IDF or drawings in my first spam document.
+And then I'm also looking at an entire training set that I have to give the IDF same
+approach only and completely different way of calculating the values for the vector,
+giving you now a much more precise location of that vector that vectors that document would be much better.
+Represent that namespace, do it for all the documents and now you can see that you can compare them, right.
+Cosine similarity. I have a spam document with the following year by year vector and another document that I don't want to classify.
+How close are they? Cosine similarity. Okay, this is just a oversimplified version of that, but.
+That's all there is to it. So here's an example. Very crude. I have a corpus made of two documents.
+Okay. Document that you want and document.
+I am analyzing document one, which includes just a small sentence.
+This is a sample document, too.
+This is another example. Very, very easy. So now let's do t t if idea of calculation here.
+I have. The word counts my documents.
+So this appears one one time as of years, one and so on and so on.
+Now let's do the corresponding calculation for the IDF.
+Metric. So now I'll be looking at the entire corpus.
+My word. Range is higher because I now have another example added.
+So this appears twice is. Here's twice.
+All right. This is. Both those words are are they contributing a lot to the meaning of the document?
+Not so much. Kind of like that, but probably carry more information.
+But you can see that even though there's just one difference of one unit, you can see that those two are starting to overshadow others.
+If I had a larger corpus, he would see the counts for this is a much higher than the sample in other example.
+So let's try to do something about it.
+T f for this in document one is using the code approach.
+It's going to be one, right, Because we only have one appearance of this illness.
+What about TFA idea of ideas for this in the corpus?
+Two. Okay. And then over.
+So number of all the documents in Corpus. See, that's two over.
+Number of all documents, including this. This is to.
+And we get to zero. And so on.
+And so on. And. Let's do one more.
+Okay. This one sample. Okay.
+One tough one, because we have only one difference in my document, one in my purpose.
+There's also only one. But we have two documents.
+All so two over one. Love to one.
+One. Time's one one. The bottom line is our basic word count approach.
+This. This is essentially a bag of words. Representation right here becomes.
+A different vector. And you can see that this is are given much less value here.
+Of course, we end up with zero. So it's going to be a very tiny number or something like that.
+This is just a toy example. But do you see how what's going on?
+We're taking something that we used in the past, a bag of words approach.
+We made the assumption of wait a minute. Okay, we cannot Some words have more meanings.
+Some are some are not necessarily noise, but they're contributing way too much than they should.
+Let's do something about it and balance it out. Use the TF idea of calculations and recreate the vector.
+This is a new represent vector representation of mate document.
+Do you want.
+Which is meant to amplify whatever is rare about this document and specific you don't see obviously here, because it's a very, very easy example.
+That's the idea. Is it clear what the IDF does?
+Yes, it's. It's worth living things around here.
+You have a number of documents and of course, over the number of documents that include for just.
+Right here. Miners long outnumber of up here as of the word in the caucus over the same time.
+Just this. Numerator and denominator.
+Look. Can you see it? Yes. But it's a binary binary.
+It's essentially. Bag of words approach.
+This is going to be very like this approach is not going to be the best.
+But if you don't want to do extra calculations and whatnot, is it there or is it not there?
+Any questions? So do you see any problem with this approach?
+Perhaps we'll do it once we have you boys we haven't seen.
+We cannot really say the level or No, we cannot.
+We'll be zero because you won't get the documents right. We will end up with those.
+Zero here. Which is something that you don't want, right?
+So what happened? What have we done in cases like that?
+You could add smoothing or just simply. The law that we put a zero.
+Smoking would help solve the problem here.
+One of the main words in the fiction book in all we have are the virtues of the title, but in this case, the role of judo.
+If you do judo at the end, which is not going to work in our book, was a compliment.
+So it's really good that we play it on paper instead.
+So the question is what if? What if we have with what the word appears in every corpus document, right?
+And then we end up with a log of love being zero.
+You could. Well, here.
+Here is your solution for 440 counts.
+That's more than I do.
+A scrape that probably you could count. I suppose you could count how many times total.
+The word of yours is not just. It is in the document.
+But it appears five times in this document, three times in that optimism and some up.
+Double property. But we're once again, we're looking at a very, very synthetic example in practice.
+In your spirit. Do you have a huge corpus with a lot of documents?
+There's going there's going to be documents where you don't have a word.
+Right. It's. 1228 I have about 10 minutes and I don't think I can cover board to work in 10 minutes.
+So you guys want me to start over or should we call it a day and restart on Monday?
+So we started on Monday. I mean, so report me for it.
+All right. We don't ask for a refund for the last 5 minutes.
+All right. Thank you. Have a good weekend. I won't try to grade your exams for next week.
+As in May, the middle of next week. There's 350 of them on my desk right now.
+So it's going to be a long trading time.
+One thing that I can tell you about the Derby approach, if you did not if you did not finish the Darby problem,
+I think you're pretty far along and everything else is done.
+And I will probably give you half complete or almost complete paraphrase right here in the report.
+So what they. Why do we do passing that?
+We wouldn't do it without, you know, what are we going to have to think about?
+Okay. So if you have the right word, right or right, you go back and look at it.
+What we have is we have the mobility space, but then we have a grandma which said, you know, the first race is made up and the third grade.
+So. To use this. We need those folks.
+That means if the sentence is longer, it is made up of other words.
+Maybe. Maybe these two should be paired. Right?
+Or maybe these two should be paired on the phrase grammar person.
+Which which one should I go for? And then, if you may end up grouping something with make up.
+Right. Needs to go to the first thing they decide.
+And then with a larger scale, the phrases lower than listen to two words.
+This will help you identify subjects that activities.
+Stopping what he was doing was the question.
+And that's. Okay, I've got one potentially not coming back, but maybe it'll be time it's going to to use it in correspondence.
+But so it's a mystery as to how you get there.
+And I know that some statements here associated with that aspect of this, but is that the document and how many times how many documents this quarter?
+I think a lot of people even that didn't go along with it.
+And I think that.
+Unique in this case. I could use this.
+I don't. If you don't mind, has fun that's in the morning and the mood demands,
+you're going to have a good 100 times and the rest of the document each each document once, so it makes more fact.
+A few of us do this much more compared to I think you have to talk to them.
+Absolutely. But then the document is it it has the binary present in an open letter.
+You absolutely can evolve this process as the most basic.
+I want to have a wait a minute.
+Multiplayer. Multiplayer the product of this and that to make it better, you could adapt that model and make it more suitable for your application.
+No problem. So I don't think it's worth it at this point.
+I think it's more than letting carry more me.
+If you're just looking out how important that work is for your document or you're looking at, you bring up a lot of words.
+Some of them don't matter a lot, but the extraction, we want to extract the answer period.
+So things like attention mechanisms will be better.
+A better idea is just a precursor.
+Words that have that it by all means you can improve is that I don't think it's something like work to go.
+We'll talk about it on the code personhood in Florida so they only want to do one more audio playback.
+Do you also have maximum spam as one?
+Yes, the best, but most of it I have.
+Let me pull that chart before anything here or.
+Or should I go for it? In addition, what would need to do is.
+And quite tidal popular.
+So you'll be comparing two models, right?
+I feel good about for a moment.
+I ask you to build two models, one of which will be based on 80% of your training set being first,
+80% of of the data set, and then another one specified by a common label percentage specified by a color like argument.
+Let's say six. Year you will create a naive base model, which is based on 80, 20 and 64.
+You're just discarding part of your trains and these will be your two models for which you will create matrices and RC curves.
+But I want you to confirm with your own eyes how how is that this current discarding of a part of the transit
+affected your your portfolio makes it okay and how your perspective on that could be a separate model?
+Yes. And if you have more than two categories in your dataset,
+you would have to build and and and a 90 basis points environment plus carefully ask all of them.
+But in addition with getting in album from you.
+Well, once you build one, you write code for one model, just for one to end the same event.
+And if it's not on it, it will just take more time. And your confusion is our are going to meet in a different way.
+But overall, there's not a whole lot of difference.
+The probability of which might be higher, the probability to do probabilities, which is, Oh, I don't remember, I don't want to lie.
+I think they were the same. Yeah, they were the same. But we prefer one plus one because the depth is more something.
+In practice, in practice with much more sophisticated grammar and the lower sentences,
+it's very unlikely that you will have pastors with the same probability that you will always have,
+almost always will have one, where if there's two variables, but then flip a coin or just keep both, if it helps your application, keep both.
+It doesn't what? It doesn't do anything.
+So when you put doing to put that, I think I hope that it has less to do with it is going to last less.
+2440. So we put it on something. No, no, just as you read it, if you want to play around with it, I'm fine.
+But do it on top of what I said. But if you do that, you can have a letter somewhere.
+Okay. We all know this is nothing, but we start with what I asked for.
+And you said, like we find the ideas unlimited and use anything free we build or than they say
+it's classified and ideally nothing for a contributing interest as this can.
+And the lesson that you're mentioning, we have to create two classifiers, right?
+So it's a binary classifier, as many as if it's a non-binary classifier and classes that only and niveis classifiers.
+Oh, they make a normal edition probably for one specific plus number of darkness divided by some of the predictions.
+Should you that if you were because we'll get to the answer 3 to 0 Google inductees so will be like proper percentage with you.
+But don't expect here your answer is to add up to one.
+You know, obviously, if they are to submit as well as the them or defeat combined of just this list,
+all the probabilities coming from every single classifier and pick the one that is the highest.
+And in the end, it will be the same thing. Right. You don't have an intensity.
+You don't you don't have to do that extra. Don't just pick the slightest point.
+Yeah. It's like I'm just really confused about what you do on the applications.
+Thank you for the touch. We are not a strong place.
+I'll try to do this. This is such a huge.
+This is such a huge area. Yes, but yes, we have some standards over there are as a programmer, we have to decide like on this thing.
+We know this. Give me some time.
+Will come up with it. This is I told you on day one that this will not be my area.
+I don't spend 24 hours a day doing it, so I.
+I have some idea about certain aspects of picture, but I promise something I will definitely try to deliver it.
+So by the end of the semester, she will have some information.
+Part of the answer will be will learn it. It will depend on the problem.
+The name the problem depend on your data, but that will depend on whatever you exist already,
+though it's a very difficult question to answer and there is no standard to apply law.
+There are certain rules of times already that I will get.
+Let's get Delores language. Well, because what we're doing right now is it I, I don't know what your impression is,
+but I think it teaches you pretty well, or at least the list of topics.
+It gives you an idea, what does it do? What kind of questions are those techniques that are showing you the best ones to answer those questions?
+No, but it started somewhere, right?
+So by the end of April, you you should get some sort of I would try to have a bit of a cheat sheet for you here.
+So we play on your old woman. I mean, I'm not saying the Internet, so it would be a very different approach.
+So in that we are removing this stuff by so that's really Yeah.
+So here also in the back of which we try to remove these fragments by straight.
+Okay. So listen I am I, I feasibility think is by the name of the bank manager.
+I started with Toby and I. But the thing is, since I was, we had the last.
+So what they thought was that the answer is split apart.
+So what I did is I do a mistake, but I think Max published it, made me nervous.
+And then you go back to that. That is it. Let me.
+Great. And I mean, why worry not?
+I want to see what it is that you write.
+And then there is a big picture. Okay. So if if ever if no one complete of the terrible.
+Right. Everyone stopped. And then halfway through right after that, I would give you all, all credit for it.
+And but if it's all correct, it doesn't know if there's a lot of within that timeframe.
+I'd be worried about other stuff that that the problem which.

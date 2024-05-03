@@ -1,0 +1,639 @@
+You know. Yeah.
+It was up to you to do it.
+But what if it doesn't work?
+How do we extract to take it go and not people come up with technical or prayer worries.
+Think about something that you would not use in a casual conversation.
+Like we have to extract it from these two for us.
+If it's not there and you have a00 power.
+So we come up with the text. Yes. Okay. I thought we kept like, Oh, okay, this is for you to see what was in it and what's not right.
+You would expect something casual to be there, in certain words, to not be there at all.
+Zero counts is absolutely fine. Right.
+Good morning. Questions.
+So let's go next. And it's an assignment to Thursday.
+Programing assignments do that.
+Oh, yes. So. MODERATOR So and so.
+Uh, so this is the flight algorithm, right?
+So do we, do we consider this space after the words you're.
+You're carrying. An extra character.
+Write an end of word character or.
+To your vocabulary write to indicate the end of the word.
+That would be kind of your space, right?
+Okay. And is that because you say that you only want to change the vocabulary without showing policy changes or public?
+It's much easier to change the vocabulary.
+Well, what we call the purpose today, I think you can add as much detail as you want.
+All right. So that means whatever makes your day work.
+Degrading easier than I by any other questions related to China.
+So much to do around. Okay, so one thing the last lecture was about which might not have been obvious.
+I'm pretty sure I mentioned that we built or we were building a very simple language model.
+Right.
+Which is something that preserves probabilities of or enables us to extract probabilities of words or expressions or phrases, all sorts of things.
+But what was that language model built on?
+Was there any meaning involved in generating that language model?
+Has that language model learned anything about Samantha?
+Absolutely not. It was just counting tokens.
+And in relation to other tokens, the simpler the model and the more relationship information was preserved.
+We focused ourselves by Grams. The window of our interest was very small we couldn't expand it to.
+But still we are only observing where is a certain token to be seen.
+Most of. Everybody agrees. It has nothing to do with meaning, nothing to do with responses.
+Yet even though it could be used to generate some mediocre response to us.
+Right. So how would you.
+Improve that model, knowing what we just said.
+What would you add to ensure that those probabilities are, even though they're they're still not reflecting the actual English language perfectly?
+How would you make sure that that that those probabilities aren't getting better and better.
+Yes. Maybe that some rules that some rules.
+Good about syntax rules perhaps.
+Right. Then make sure that this sentence or this phrase is good or valid or not necessarily valid, but still used in in fact, people might.
+Think about it for a second. And in the meantime, here's another question.
+How I know the model is based on the same corpus you build in other model based on the same corpus.
+How do we decide which one is better? Do we have to?
+Lester? Yes. Okay. So what?
+What are we looking for? It was the accuracy of the model.
+Okay. After all, we have some training set.
+We can have a test set. That is whether you're doing that with your assignment a little bit.
+You're throwing sentences at the model, Most likely sentences of the model that it hasn't seen yet.
+Okay. And. Accuracy.
+Well. It would be one way to gauge the quality of a machine learning model.
+But here is more classifier related.
+Are we currently labeled true positives as positives and whatnot?
+Right. Are we dealing with true positives here?
+After all our language model, all it does is I keep I give it out a sequence of tokens.
+It will give me a probability or it will give me the next word.
+This is where classification could kind of work.
+So here's a here's. Here's a couple ideas.
+This is not easy. Okay? In general, we want to capture.
+How good is our language in assigning higher probabilities to actual valid
+English sentences versus gibberish or something that is syntactically incorrect?
+Or if if that model is doing a semi good job, it should.
+Separate the two Right. And ungrammatical sentences.
+Low probability grammatical sentences. Hi.
+Hi. But how do we do that?
+Okay, so your accuracy is a good approach in general.
+Here's a. Very.
+Crude measure of language model.
+Quality. Something that is called perplexity.
+Which is essentially an inverse of of probability or a sentence.
+Since we want to maximize probabilities, remember that this is a rather crude measure of how good a model is.
+You will not be using that to evaluate Jeopardy.
+But for ours, our purposes so far, this would be a decent measure.
+Throw some sentences. At the model sentences from a test set, meaning something it hasn't seen before.
+It doesn't. It is not in the corpus. Calculate probabilities in the universe and use that to compare it to models.
+Right. The model with higher perplexity would be better or worse than the one with lower perplexity, but better, right?
+That's that's. That's the idea. You can extend the testing into different domains if you want to.
+Well, after all, a language model is something rather general given to use it in different contexts classification,
+sentiment, analysis, translation, all all these things.
+That model can be used and some models will be better for one task.
+Some will be. Better for others. This.
+This information right here. Holt or any language models.
+So, you know, we can keep that for the future discussions.
+For now. Complexity is a it is.
+One thing that I don't think I touched last time is.
+Completely is the problem with unknown words.
+Right. What? What? What happened when our language model encountered something it has never seen?
+Possibility of zero probability of zero zero counts. Right.
+So we had a way of avoiding that. But there's another way of handling that situation, which is not necessarily much better, but it can work.
+The idea is. Have a specific.
+Token and no word token in your vocabulary, which will cover everything that the language model has not seen before.
+And count those individually.
+Is that a good approach? Every single unknown word would be lumped under one token.
+And so all that counts for unknown would be aggregating counts for everything.
+Everything that the model has not seen.
+What it's like for them is they will look for the noun in an adjective in the same category, which I don't know how good it is going to get.
+Was like. Very, very bad approach.
+Right. Well, guess what?
+It was an idea 20, 25 years ago. Nothing better was available.
+Okay. Modern large language models have a much better idea to end the letter or will get it if you stick to something that's simplistic.
+We can. You can take that approach. Okay.
+So. Back to my original question.
+So how do we how do we improve our language model?
+Even even even in the simplest sense. How do we make it produce better, more accurate probability counts for sentences closer to reality?
+So you set a bunch of rules, Syntax rules. Right. If.
+If, if. I don't know. Check.
+Check the syntax as well. Writing the syntax is great. Bump up the probability a little bit.
+Right. Why not? It's an idea.
+How about trying to wrap every token or let's say worth every word with some
+additional information about that word and factor that in into our calculations.
+Know, like putting it down in like the larger category or something, what kind of category it belongs to, Right.
+Or what part of speech it is. That's part of the information.
+What are its brands making?
+AK You know, synonyms, antonyms, well, word words that are related to it.
+If for every token we had a little graph that tells me this one, this word is related positively to this or not that one.
+Right. Would that help heart Potentially.
+Can you. I don't I'm not giving you ideas how to tap into that kind of information just yet.
+But if I had that extra information, would it help me produce better results?
+Potentially. Absolutely. Okay.
+What I'm asking still understand what that word means after I give it.
+Hey, why don't. Why not attach a definition, a dictionary definition of a word for every word?
+Here's a definition. Why not? I couldn't do that.
+With the machines? No. What kind of work it is dealing with?
+I think that the machine is just a bunch of strings, if you just put it that way.
+Right. But you will. You will see progressively through the semester that.
+That blob or its neighbors add extra information about the word that that blob of information can actually produce much more accurate results.
+Once again, it's tapping into additional pieces of information,
+especially about relationships between other words, and still doesn't understand what you mean by that word.
+But it produces pretty good results as far as answering as far as summarization.
+So let's try to build our block about around every word.
+Okay. Let's start with introducing the concept of a word sense as an alternative definition.
+Right. Would that help? Yeah, we're we're talking with them about predicting their next word, right?
+No, we have multiple, multiple meanings of a word.
+Only one meaning Wealth should be present in that context of rolling rolling the other one out for help.
+So if we knew those additional senses, additional meanings, why not?
+Why not tap into it? Okay. How would you do that?
+Where would you get that information from? Okay, So this is this is a this is from from from others.
+Some online deserts. Yes. What if it's like we see in the same sentence in previous cycles the word computer or mouse?
+Very, very good. Very good. But again, this will be realized by Americans.
+We have a it will take us a couple of weeks to get genetics to do more of it.
+So. Okay. Very, very good.
+Just by using the next bit of knowledge, like if it's a plague, probably.
+Right, right, right, right.
+Very good. Or even even better.
+You. You have to click a mouse, right?
+Mouse will have, as in its definition, probably a word computer or something about computers in its definition, as you said.
+So we can match that click. There will be a sense in a dictionary, I'm sure I haven't looked that up.
+There will be a sense of of a word where it means clicking a mouse.
+Right. Same thing. You can so imagine.
+Imagine those senses as being a little balance of words, defining a word that you can connect to a token and extract information from.
+Right. But how do we how do we get that? Someone has digitized that.
+How someone had to make a digital dictionary, right, with all these sentences.
+And there has to be a way for you to free from it. Plain and simple.
+All right. We talked about corporate, right?
+And I wouldn't be surprised if some of you are still thinking about work report as it's a data set for the text articles,
+Wikipedia pages, Yelp reviews, anything.
+Just. Just just that. Very specifically, like addressing a certain issue.
+Right. But there are other corpora which are actually sort of auxiliary, including pieces of information that are.
+Can be extracted for a certain. Application.
+You will see a corpus today that keeps information about part of speech packs.
+Every single word in that corpus is packed with the corresponding words.
+Someone sat down and made that quick. Someone sat down, or probably it was much easier than just be typing it.
+Someone created a corpus that includes that information.
+That corpus, as far as an old decaying package is concerned, is called a word that I'm not sure if I already.
+Post that that. Are you glad it's not?
+Will you have with all these already?
+Do you have access to that one? Probably.
+Yes. This is this is this is this is of value for you, for your programing.
+Yes. I think that the one that I want to talk about right now is for anyone.
+Notebook 11. Now, Dickie, left or left.
+Okay, So we're not is this very specialized?
+That includes. More information about meaning.
+There are some mapping and relationships to other words, senses, antonyms, synonyms, whatever you can.
+Think of it comes to a single word. I will show you how to use it.
+I don't think we'll be using that specifically, but you might find that useful.
+If you want to both boost the performance of your model by extracting that additional information.
+All right. So imports is the thing here.
+So we set up. So the cardinals.
+Let's pick apart part.
+From our word list terms, we can access so-called it's.
+Synonym sex in this case for every particular word, if there might be words without any synonyms, of course, but heart.
+There you go. How do you process that information?
+Well, that's up to you. But it's going to be a list of synonyms in a structured way that you can.
+Um. Use. How would you use the list of synonyms if you're a child creator?
+Or some sort of a jackpot. I'm sure you've seen that.
+Well, most of the time it will try to respond in a slightly different way.
+Right. Just a very good approach is replace words sometimes with their synonyms that this is not enough, but it would do us a starting point.
+Definitions since that definition.
+Definitely don't have to memorize all that. Absolutely not.
+Just be mindful that there are corpora that have that piece of information.
+There are so many definitions for the word. Examples.
+It even has examples where context the word hard appears.
+Lemons. Hey, Anthony. And so on.
+And so on and so on. Mirror names.
+Maryland's HoloLens. Have you heard those terms before?
+We will talk about it. This is actually antonyms, synonyms.
+This is probably very easy to understand. There are other relationships between work that you could potentially happen to.
+I don't know. I might not have that information. So let's talk about other relationships right here.
+What do we have here? This is not covering everything.
+That was homophones. Same pronunciation, different meaning and regress, different stretch of spelling and different meaning to.
+To. To move. Right. Literally different sound and meaning.
+Desert. Desert. Right. So not naming and telling me everybody knows what it what it means.
+I punish me. It kind of describes embeddedness.
+Something is a part of something larger wording that I can tell you that can show you this relationship of object oriented programing and programmers.
+Class A has A. Something, right?
+This is this is kind of that that whole lot of me in the Murano me relationship between an object and its parts.
+This word describes a part of something larger, Right?
+Or this word can have the following parts.
+There are certain words to describe its parts. You think after that?
+Can you give me an example where you would use a high polynomial on me or Mitt Romney?
+In language processing. Stalking information about particular culprit starring videos.
+We can find out the meaning of the word. Yes.
+Our relationship between entities or or there is a sentence where someone mentions a tree.
+There is just another sentence. Is two sentences down the line or something?
+Someone is mentioning bark. Right. Oh, a tree was mentioned here.
+Bark is a part of a tree. It's probably not a dog barking or something like that.
+There's a lot of that that can be extracted.
+It will depend on your application very much whether you need it or not.
+Guess what? All this stuff will be more or less embedded in in embeddings and embeddings when you're
+using deep neural network models so you don't have to worry about manually extracting that.
+But sometimes sometimes you may. You may just need to do a little tweaking and access that kind of information, in other words.
+It's good for you to be able to capture and extract it no matter what the technology is behind that.
+All right. I'm giving you right now the olden days way to do it.
+There's a corpus which includes all this information. Read the information for a particular word.
+Habit. And. All right.
+So. Let's take let's go a little deeper.
+How do we kind of. Ways, whatever.
+We are actually only good to capture.
+But we're thinking about meaning. So there's a branch in the linguistics.
+That deals with that and studies and tries to capture two types of.
+Two perspectives on semantics Formal. And that captures the logical relationships between words, logic, nasal spray and lexical.
+Relationships in and I guess.
+In a graphical graph, kind of the relationship model that that should be appealed to a computer scientist for the formal definition.
+Bottom line is there's a lot to. This extract from.
+The text in terms of words, their individual meanings and their relationships.
+How do we do that? That there is different ways of. Doing that.
+What about challenges? Context and context will always matter, Price told.
+This will all matter. Should I use this in a name in this particular setting?
+Maybe not. The tone is the. It's too casual or not casual.
+All done by. Or H2O?
+Would that be a bit of a challenge for for a machine to.
+Capture the relationship, maybe big and large.
+You want to be careful here that that's not the only example.
+Right. Where? Where you have to be careful.
+Context. Context. Context. The good news is you as a designer will not have to worry about that.
+This will be already cultural and bearings once again.
+So you. It's unlikely that a model language model will confuse the two right here.
+But before we get that, get there. Be aware of that.
+Okay. When do we substitute the words? Should we?
+Always substitute words. They're kind of synonyms, but in.
+Necessarily completely. Here's one thing for you to look at.
+If the form differs, the meaning might be different to write.
+Once again, these are linguistics linguistics concepts, and it's too early for you to see that.
+But. 60, 75.
+You wouldn't go very far with and anything else related without linguistic knowledge.
+20. 20. You can dive in and build a model without even understanding things like that, but it pays.
+Similarity. And we would it be good to tap into that?
+Cohen Or at Sure. Something in common, right? It's not obvious to us.
+It's obvious there. For example, farm animals in a machine will need something better.
+But ultimately we want to have things.
+Of that nature. Because that helps us. In very, very common use on an LP question answering.
+But what do you want your church, to paraphrase?
+Something for you to avoid plagiarism. By all means, write.
+Summarization. You will do that all the time.
+And understanding relationships between words correctly is something that the machine has to do, that that ability has to be processed by the machine.
+Otherwise, it will not do a good job here. That all matters.
+The technology for that already exists, which is a good omen.
+If if the technology wasn't there, specifically the embeddings that I'm talking about, all of the ways of capturing relationships.
+Between the words in a numerical fashion a bit better. But if if it never existed, how would you captures where the similarity?
+Like you're starting from scratch. You're here at the university in 1980 or 81 or something like that.
+You're working on that problem and you're trying to.
+Being able to capture the similarity. Any thoughts?
+Here is a crude approach. Okay.
+Well, if we see the same sentence and this is just the only one, the word is different than we might think.
+That is the same meaning. It's the same word. And I wouldn't.
+That's a very logical conclusion. Absolutely. Yes. And embeddings actually are capturing that.
+Any other thoughts? Look at the meetings and compare them or the meetings.
+But you would have to do it as a as a human being. Right. How close are those two meanings?
+That that's when you go out and buy them.
+So let's hear it.
+This would help with the Cowboys championship. A lot still happening.
+I mean, it's sort of like graphical representations of relationships or ancestry.
+Right. That's a very good idea. Here's something from.
+This was published in 2015, so less than ten years ago a data set were.
+Words were compared. This is just an excerpt from it in a sign and number on a scale of 0 to 10.
+Does this give you an idea how hard an LP was and still kind of is that people had to resort to that kind of approach?
+Let's have some people and score worth bearings and this is probably average across multiple judges, right?
+Yes. If you have a lookup table like that for any you two words, it helps to.
+Fine then. But then every time you were and show up, you have to do it again, added compatriots.
+This is not sustainable. And yet this is how it was done.
+What you describe or is sort of related to the concept of a semantic field and the frame which are related topics.
+What? What does it mean? A semantic frame as as a structure that is trying to capture the relation between two concepts without knowing.
+So this is this is something for a machine.
+The machine does not understand the word or phrase, but it has to have a way of capturing some form of our relationship.
+Semantic field is a set of related items.
+So building something structurally is definitely helpful in following your way of approaching.
+There is some relationships tree or a graph, whatever it is.
+That captures that. In a structural way.
+Okay. Here's how that typically is being used.
+Semantic fields are used to group words that typically go together based on some notion, based on some domain,
+based on based on some application, hospital words, restaurant worlds, semantic fields.
+These words go together for better or worse.
+But let's not put numbers on it. Whatever these.
+Let's just group them. If that be what you describe.
+You know, Samantha killed doctors. A name for it. Is it easy to build out of a structure like that?
+By hand? Probably not symptomatically. Difficult.
+All right. Of all days.
+Someone sat down and annotated everything worth their whatever nowadays, and bearings just extract all this pie by themselves.
+There's more to it than that. Q What about going beyond direct meaning?
+What else? What about the connotations? How do we capture that?
+Because you do you want to capture that sentiment analysis.
+It's all based on what kind of words are being used.
+Are the nice, polite words, positive words?
+Yes, it probably means it's a positive review or something.
+But how do how do you know that? I would imagine, after all that.
+Yes. We used this Castro good categorization thing.
+Essentially. See the word happy for happy birthday.
+Then maybe we put in ways we can relate to the category.
+I don't know. Positive label. Right. You know, the label should have a label data set right there.
+Actually, there are actually datasets with positive words and negative words that you can use to not necessarily the best way to approach.
+Hey, some some people would have, but came up with a way of scoring words in that regard using three categories.
+You're not going to use that trust, but all the approaches, right?
+Valleys. How pleasant is the stimulants? Right.
+Arousal, the intensity of emotion, whatever it is, a focus of dominance.
+Sounds like too much when describing words.
+We talked about software design. Both require a lot of manual voice, but it used to require a lot of manual labor.
+This is this is way large scale, very fast, very efficient.
+Large language models were not possible before something.
+Uh, some, some of you are aware of that. Something that is called the attention mechanism.
+You'll learn about it in this class. Learn to use it.
+The attention mechanism is long story short and over oversimplifying, it's doing all this labeling for you based on a whole lot of data.
+But I don't know that at least 50 years ago.
+And backwards. Yes. You had a corpus and a list of words with numbers to them or labels to them.
+And this is how things were being done. All right.
+So. Things that you have to have at least.
+A decent idea about as words have sentences such as you can extract them from hoarding or just know that they they have might have multiple senses.
+They have relations, different relationships to each other. They could be used.
+There's all sorts of relationships. The word that.
+I showed you how to tap into it. If anyone ends up ends up using ordnance or your personal projects at work, I'd like to hear.
+Okay. It probably won't. Okay.
+So. Does this give you a pretty good idea of what kind of information we would like to extract for every word or have access to care?
+It's. It's progressively easier to to ignore that part of it because it's done automatically the machine will find it and extract
+those relationships or just know that they will be buried in the deep learning network weights somewhere in the embeddings.
+But in the past it's all manual labor, annotation, whatnot.
+Okay. The other aspect of the language that was heavily on the annotation site is part of Speechdat car.
+Okay. So I will not be quizzing you. Watching what?
+On what each specific part of the speech is.
+This is not only linguistic course, but you have to be aware how those are being used.
+So the basic classes are now the verb pronoun preposition, right?
+There are some more elaborate ones and there's there's tools that actually showed.
+This was the left. And so. But.
+Whatever I'm showing you today and it's already in Blackbird will be live for today or tomorrow.
+Oh, here's number 14, part of speech tagging with kids.
+So. LDK Tan contains a couple taggers and other python packages will have a tiger is built in that you might not even be able to directly access,
+but that's okay. Let's see how it works.
+In here. Topics segmented into two sentences.
+There you go. So. This is our next.
+That's the first sentence. Know it shows up here, the futuristic special.
+Blah, blah, blah, blah, blah. This is the first sentence right here. But instead of individual words, we have Paris, right?
+Word. It's part of Speechdat car.
+So really, it's just you're running a piece of Dextre through a tiger and it will just spit this out for you will always be correct.
+Probably not. Okay, So why why would it not be correct?
+And how would you approach the whole tagging business?
+What is it related? So we have a sequence of words or tokens.
+Let's talk words. And at the end, that sequence is tag.
+This word. Is this part of the speech. That word is that part of the ordering matter?
+As a matter. Absolutely, because it has to follow the language syntax.
+Right. So word the word airs and what form it has dictates a lot of you're provides a lot of information about what it is.
+Corresponding tag. So how would you go about it tagging if you were to build your own?
+Tag. Again system. Let me give you a hint.
+You already have. Imagine that you have any corpus that you dealt with or thought up.
+It's already annotated with part of the speech stacks. It's not just rote text, but everything is already annotated by a human being.
+Someone sat down. This is a verb. This is now. This is a preposition that I did a lot of work.
+Right. How would you build your own tiger?
+You see a word book, right? How can you tag it?
+You can take it as a noun, right? It could be to book a flight, which would be a verb.
+You have to make that decision. Contextual matter, of course.
+Right. But just looking at the word, you have two options.
+Which one would you choose now or. You don't have to be very, very sophisticated here.
+I'll get back to them. I find what I'm looking.
+Here. Here is a here's the most primitive way of tagging where it's possible.
+I give you this corpus with all those statistical information and all that information in there,
+or the book appears is tagged with a verb tag a thousand times in that corpus.
+Or the book is tagged with the word with the tag.
+No. 2000 times.
+The most primitive way to tag things is okay.
+It's much more often than not tagged as a noun.
+So I'm going to assume it's a known primitive, very inaccurate.
+But that's that was one of the first approaches.
+In English. We have somewhat.
+Non problematic and problematic work when it comes to tackling.
+Some of the tags belong to a closed class as an end.
+You're not. You are not. You don't have to expect changes to that class.
+So that tag will be valid for. Will not change over time.
+Statistically speaking, there will be an open class where, well, things change a little and you have to be a bit.
+Careful verbs are the only thing or even numbers where you share closeness and openness here.
+Nothing that you have to specifically worry about because Deep Learning Network will target for you pretty accurately.
+But we don't have a big learning network here. This is how more or less the sentence looks like.
+I showed you a Python version of it where, you know, Paris wore that tag.
+In the end, you end up with a tag for every single.
+For every tiger will have its own specific accent and are not going to differ much.
+But when you're picking it up for some reason,
+when you're picking a tiger from your item or any other package, this is something to look at some more.
+Some will be more varied and more in detail than the others.
+Here are some typical ones. Here is a list of.
+And this is. This is included with an object and tree back.
+This is a corpus that's a core part of speech that are already adopted.
+And there's quite a few tags.
+I will not be explaining all those. If you ever need it.
+Okay. Or do we need that? Passing.
+Is that and is that sentence correct?
+Syntactically correct. Absolutely.
+It's to speech. When in doubt.
+Which which version of the word should either homophones, for example, I.
+Okay. Let's finally get to some technicalities.
+So you'll be doing that. So here's the general idea.
+Here's what a tagger will do regardless of the underlying technology.
+It will take a sequence of words tokens.
+And it will try to map it to a sequence of tasks.
+Now, are all sequences of tags equal for that sentence?
+You can't just blindly assign tactics, right? So.
+Would you say that statistical approach would help your. Let's say that we already take this one and this is and now what should follow, right?
+Sometimes will be more likely than others based on the purpose.
+There is ways of doing that.
+This is, of course, the modern era. New role models, large language models.
+They have all that stuff built in already. But why don't we try to understand?
+How was it done before? All right.
+Hidden Markov model. How many of you are familiar with that concept?
+Do you understand how to use it? All right.
+For those. Don't know how to use it.
+Will. We'll go through the first. Here's the idea.
+So conditional probability is that.
+We used that last last week to estimate probabilities that a word follows a word or a sequence of words.
+How about this? If I give you the word, given the word, what's the probability that it belongs to a certain part of the speech category?
+What's the probability that it's a noun? Simple conditional probability.
+Formula. I will tell you where to find me in the joint probability.
+Word of a word being flies and being tagged as a noun.
+And divide it by the probability of the word being applied.
+Do you know how to find the. That bottom probability already?
+Yes. Both. It should be lysis either no more or so it should be the node plus the probability of one being a third.
+So I guess so.
+How about this? Yes. The amount of flies in.
+The murder, all the words. Yes, that would be our way of estimating how likely the worth flies in the in the corpus.
+You already did that. This is part of your assignment. You just scanned and counts.
+Count the corpus in counts of this. This. You already know how to do it.
+Back to your question. How about we ask two questions at the same time?
+The probability category is a verb given a word slice and probability category is a noun given word, slide and probability.
+That category is a preposition and go through all the packs, calculate the corresponding probability pick.
+The tag that maximizes the probability, right?
+Do it again for another word. And another word and another word.
+This is this is how the tagging happens.
+Of course, this is a very easy situation.
+We're just looking at the word in isolation. Right.
+That's not necessarily we're reading reading ourselves out of context, but that's that's the general idea.
+Oh, this is what I was talking about. The most frequent class that this is the group crudest approach ever find.
+All right. The probability. Conditional probability for a tag that has the highest tag, the highest probability tag, and use it.
+But that's not going to work. That's also ignoring the context.
+But I won't need the base role. Probably. Right.
+Okay. So what I showed you a minute ago was just a simple conditional probability that maps a single word to a single tag or multiple tags.
+And based on that, you're thinking, okay. But what I said, the goal is we want to find a sequence of attacks that maps to a sequence of words.
+That a sequence of words carries the context, carries the syntax.
+Sure. Right. So we want not just this individual mapping, which is not going to be the best idea.
+We want the whole thing. So how do we go about working?
+Three things. First the sequence of words.
+Second sequence of acts or categories.
+And third, something. The probability formula that maps them together.
+With that probability right here. Answer the question.
+Probability of a certain sequence of attacks.
+In order given a certain sequence of words.
+Order. So probably that makes sense.
+I'm giving you a sequence of words. This is a given target for me, right?
+And now I have a range of possible arrangements of sequences of text for every single one.
+I should calculate the corresponding s sorry, estimate the probability of this sequence of attacks being mapped to the sequence of words.
+Pick the best one, highest probability. What is it always going to be?
+The best is will it always tag correctly?
+Not necessarily. It will depend on the corpus a lot.
+And still there might be some ambiguities. Okay, so based theorem right here is here for a reason because we can use it to calculate the probability.
+Of that conditional converting to Vegas theory.
+The paper written the spreadsheet right here where we have another conditional which is flipped around.
+What is the most likely well,
+what what's the probability that this sequence of words would be generated by that sequence of of of attacks that were generated as a as a.
+There's a reason it's here. Well, I'll get to that. I'm or I'm giving you.
+I'm giving you a sequence of attacks, Right?
+How likely. This sequence of tag tags can be mapped to the sequence of words going backwards, essentially.
+And two other joint probabilities in this case.
+How likely is that sequence of attacks to appear in the corpus essentially?
+How likely is that sequence of words to appear in the service?
+So you should be already familiar with calculating the bottom part, right?
+My apologies. Estimating the bottom part and not even being able to calculate.
+Now, what about the rest? Right here.
+By the way, we spent quite, quite a few minutes last time talking about how difficult it is to find out from probability,
+especially a good, good, good estimate for a long sequence of words.
+Right. It would be nice to have it.
+But. If you have a corpus, right, you build a language model, right?
+For better or worse. For better or worse, perplexity of that model.
+Is this going to change this probability of a sequence of words?
+Is this going to change? You read a corpus, you're not changing it.
+You established you built a language model based on that.
+And you're asking the question, what's the probability of the sequence of words appearing in in you, inside of you?
+Is that probability going to change? If I'm not changing the carpools.
+This will be fixed. All right. I loaded the corpus.
+I built a link language model which includes all those probabilities or is able to generate those problems.
+Estimate those probabilities done until I update the corpus and redo it.
+This will not change. Okay. And.
+My task is to find.
+The highest. Probably.
+Here, the sequence of words will not change. Right now I'm looking for the highest probability.
+But this as a moving piece. Sequence of attacks.
+This is my this is where I'm moving things around.
+Sequence of words is fixed. The probability of that sequence or it's appearing in the corpus is fixed.
+This will change. That will change.
+Now. If this never changes.
+And all these numbers are positive or zero, right? Is their probabilities 0 to 1.
+If I want to maximize the whole thing, wouldn't have been enough for me to maximize that.
+The numerator. Absolutely.
+So ditch. Let's ditch the denominator.
+If I have it. Great. If I don't fined, I want the least amount of competition possible and I don't.
+We already agreed that that probability right here, that estimate might be a little shaky.
+So. But digit. So now we're left with a product that makes sense.
+There's a lot of those shenanigans, probability related shenanigans when it comes to do and LP be at least in statistical one.
+Okay. Two probabilities to be left.
+Probability of us of a sequence of tax, probability of a sequence of words being generated by a sequence of of.
+Right. But if you. I'm.
+Well, you had a couple days to catch up on your probability refresh, your train roll and whatnot if you haven't.
+This is another opportunity for you. Take a look at it.
+Drawing probability of a sequence. Of tags can be broken down into a product of conditional probability.
+Right chain. Right writing. Yeah.
+And. I do the same little trick that we did last time for the language model, which means I will use the mark of.
+Assumption. I can deal with Big Brother by grown categories.
+Right. Which will make my my life easier because we will be.
+We're dealing with the same kind of problems really here. Using the same approach.
+Can I approximate this conditional using the same way?
+So no longer a sequence of words given the sequence of both had but a product
+of t probabilities of a word belonging to a certain category given a category.
+This makes my life much easier. Notice that of course this is not equal, right?
+Or will be fine with just cutting corners here and.
+Speeding up our estimation because we can't do better.
+It would be much, much harder to do that. The things in place.
+All right. We are moving from this.
+Traction right here. Maximizing that fraction to.
+Maximizing that right? Is that clear?
+Where this mathematics came from? What kind of steps we made along along the road.
+Simplify, simplify, make an assumption, simplify, simplify, because we this is the best we can do.
+But this little product right here. Can we take more or less the same approach as we did with the language model?
+We are assuming that we have a nice little corpus where every word is annotated with attack.
+And words in that corpus come in sequence.
+And so we have also sequences of tags showing that we can count.
+Okay. This is where.
+The hidden Markov model comes into play.
+To give you an example, how would you go about estimating?
+All this stuff or maximizing this stuff. Let's let's assume that we have a corpus where we have only four attacks to keep things simple.
+No verb, particle and preposition. Let's try to find the definition of Mark Ruffalo before we proceed.
+All right. Because the market models for those who've never heard about them.
+Our kind of state machines, or we have a list of a finite list of states.
+Transition probabilities that tells me how likely a might transition from one state to the other and a of probabilities.
+How likely I am to omit something from a state.
+If this sounds like gibberish, it will be become clear pretty soon.
+Why is it called a heathen? The mark of moral. Let's try to focus on this particular context here.
+Here's the deal. You have a corpus annotated with tax write.
+Word, slash the next word slash that that corpus includes English writing or speech, whatever.
+Right. Someone wrote that. Which in. Let's assume that it's legal.
+English people talk that way. Right. Now English language.
+You can think of English language in terms of building this structure as a generator.
+It generates sequences of words. Right. Or this or that.
+Or it actually generates parts of speech sequences.
+Right. For now. Da da da da da da da da da.
+You see, the end product?
+English language is producing sequences of words.
+A case of parts of speech.
+You're observing that.
+See, this is what you can see, right? But you can make the assumption that underneath all this.
+Projection that you see there is a little engine chugging along and speeding out things in a certain way.
+Some sequences are more light than others, of course.
+Right. So this is built in into that model that you don't see.
+This is why it's called a hidden model, because you only see manifestation of what it produces.
+It's a black box that produces sequences. If you look at those sequences long enough, you can start imagining, okay,
+there is a system that is more most more likely to generate that sequence than the other.
+Let me try to try to not guess, but sort of approximate what that generator inside is.
+Does that make sense? Okay, we have 3 minutes.
+I'll stop here. I'll go back to the example. Look, look, let me ask again.
+Is there idea of a hidden generator that you don't see inside?
+Generating sequences for you with batteries. And you like looking at those veterans long enough to be able to deduce how.
+What are the back and forths within that model?
+There's that kind of ring about. Maybe that's that's the idea between this hidden Markov model.
+You only see what it produces.
+You're unable to see the actual the actual structure of it or the actual transition probabilities, because it's probably the most important thing.
+We will show you how to build one based on the corpus and then how to use one on Wednesday.
+All right. Questions. Yep.
+Yes. Well, how accurate is the probability that if we have a given taxi, do we get what I like?
+I don't get how we get this probability. It's going to prevent this on this flight.
+You know, especially not we all, you see.
+Yeah. The last. The last one.
+You know, I just don't know. How is the station making that?
+The the assumption is that previously last week we were using a Markov assumption.
+This word follows that word. Right. So that window of two words sliding in here, we're swapping a word for four for a.
+If you could. If that helps you, you can look at the text.
+Um. Example here.
+Tag following a word. Think of that tag as an extra word.
+Except it's not a word. Does that kind of help to understand what's going on?
+Yeah. This makes. Okay. Any other questions?
+Very well. I'll see you on Wednesday. Thank you. Was.
+There's just no way of winning this place.
+You got like, oh, no American troops or not less.
+That's nice. Way above that thing with space between the wars.
+Was that intentional the way you left it on purpose? Like, for example, this space, that space and some other work?
+Like the reason I'm asking is because if I use this space so I can create a new world for my desk, spaces are there.
+You know, this is an indicator that there is a separation.
+These are words. Right. So what you need to do is, first of all, we have a vocabulary, right?
+You know, this is our vocabulary.
+So the first thing that we do here is let's rewrite much.
+I'm going to add another step, character based tokenization.
+So this split everything into characters, right?
+And then let's add an end of words into the word agent and space.
+So this could be a button right there. Okay.
+So that's why because one of the papers or like instead of frequency or which was I could add it to the vocabulary.
+So that's what and I was wondering if you can do this.
+So this could be merged? Absolutely. If it's the most common one at the moment.
+We have we absolutely have to merge that. So this this right here kind of allows you later to generate something like this.
+Right? It will be close and you will have that.
+And then or and there's nothing that you have or could be an already that has read as in reference.
+Right. That this this is to indicate that this already right here is is a is a is a token that ends the word no.
+Okay. So I think we don't like.
+I'm going. Why are you so sure?
+Which which one?
+I mean, now we are basically are state and local laws heading the state's claims and are producing better results when compared to the law.
+It is very obvious based on what a lot of the court said, if if you if you can build a model with Markov assumptions.
+Right. Where you know everything already probabilities are given,
+this model is likely to be better than the hidden market, but always trying to estimate what's inside.
+But I wouldn't say it's always going to be the case because, you know, probabilities.
+I'm not saying only that the probabilities are sometimes based on someone's experience have find that number,
+but I don't know, insurance or something like that.
+People know that. Okay. Guesstimates right that that was used to build the model.
+But if you later try to rebuild that model based on flawed data,
+will that probability will be changed and the hidden market model is actually going to be better.
+So I wouldn't make such a drastic statement that one is.

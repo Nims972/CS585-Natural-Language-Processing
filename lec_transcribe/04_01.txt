@@ -1,0 +1,644 @@
+Oh. Prime.
+Until. My.
+More. Questions.
+Thanks. Yeah.
+Whatever was in there. Pay attention. Uh, I'm planning a last written assignment for you.
+Not a whole lot to do in there. And I'm still working on a little programing assignment for you, but.
+Deep learning stuff in there, probably Thursday or Friday, just to remind you,
+it is not going to be an assignment where you have to dig a lot out on your own.
+It'll be just given instructions. You can play play with it.
+And that's. Okay.
+Where where did we stop with the long, long term, short term, long short term memory unit?
+But he remembers. I don't either. Let's quickly go back to it.
+Uh. There's one thing that's missing from the list.
+Sequence to sequence networks. Are you familiar with the term?
+Sequence to sequel. What do you think that means?
+Right. You'll see. First, a couple of reminders.
+So we started, uh, we need a memory to cover sequences in machine learning and neural network machine learning.
+Regular neural network did not provide any memory.
+So any any input. There is no relationship between two inputs or three inputs.
+There is no history whatsoever.
+So we started talking about something called recurrent neural network or unit, where we had, uh, a little memory for keeping past state.
+And there were some technical issues with that. With that approach mainly mainly was.
+What was the issue of recurrent neural networks?
+How the multiprocessing does it. Um, it's templated to previous database like Wall Street.
+Okay. Good. You can't easily parallelize that kind of network.
+This problem is solved by Transformers, which we will cover soon.
+However, there's another issue that recurrent neural network exhibit or two issues really remember about vanishing or exploding gradients.
+That was the problem because those three component, those three matrices here.
+Are fixed. You know, remember? Exactly how does that influence, uh, mashing or exploding gradients?
+Go back to it. I don't want to spend time talking about it again, but these are books.
+And the solution to help things a little bit is to sort of make their influence adaptive and for that purpose.
+We started talking about long short term memory cells where where we have a bunch of additional components.
+And I think we went through most of it last time. Specifically, the components that matter the most are.
+This or forget it. Input gate.
+Output gates which control which essentially act in a very similar fashion to those three matrices here.
+Those gates control how much information is being passed through the unit right here.
+It's always the same amount of information. But if you think about it, we're multiplying input and the previous state by those three matrices.
+Right. If those matrices stay the same, we're multiplying by the same numbers over and over,
+meaning that every aspect of the input and every aspect of the previous state are going to be left in the same at a same rate.
+Does that make sense? It's like having having a bunch of vowels in front of you, right?
+Is your setup? You say you have four valves, right?
+One is responsible for one aspect of the input the second, third and fourth.
+You train your system by setting those valves and they stay that way no matter what kind of input goes in.
+If they're always going passing through the pipeline the same way, that same amount, same flow.
+Does that make sense? Art does not allow once trained does not allow to manipulate those valves at all.
+The idea with long short term memory is to whatever we see, whatever input we see and whatever a previous state was.
+Let's change those valves a little bit, because we want to adapt to what's coming in versus the previous state as well.
+Does that make sense? So gates.
+Those three gates are really those plants that are on their own, turning back and forth,
+back and forth to decide, okay, what are we going to forget from the previous state?
+What are we going to let through from the input? What are we going to let out as an output?
+Hey, this is a neural network. So I mean, every single one of those gates is a neural network in itself.
+So I won't be able to tell you that, okay, this particular aspect of the input is going to affect the gate in that way.
+It just. It's based on how the network was trained.
+Hey, just the idea. This is pretty hard to illustrate, I guess, but the point of those three gates is to keep things adapted.
+There is also, um, this little component here which essentially decides which parts.
+Uh, uh, of, uh, previous state or the previous state, because we have, um, additional state here in our memory,
+which values of that state are going to should be preserved the most this place kind of together with, uh, the forgetting ultimately.
+But the point is that if we have those three gates to adaptively control what passes through.
+At what rate? Through the through the unit. Do you remember the distinction between the hidden previous state and the cell state?
+I ran right here and only the previous state.
+It's easy to think about it as the previous previous just time minus one state.
+It kind of covers a little more than that, but it's essentially a short term memory.
+Everything that is but way back in the past, in the sequence that we're analyzing,
+it's kind of being forget and replaced or overshadowed by one recent stimulus.
+Recency. Well, that's kind of a bummer if we want to consider longer sentences.
+This is why Lstm has this additional state in their cell state.
+It's oversimplification of the two cell state and the hidden state work as long term and short term memory.
+You can also think of cell state like as latching on to some long or reaching aspects of the text,
+or the Unicode in general, and the hidden states, something quickly changing between individual pieces of the sequence.
+Does that make sense? All right.
+This is not a deep learning. Pourcel will not be making those.
+But that's essentially his structure.
+And just to remind you, what's inside those games is it's a neural network and neural network, which is important.
+A fully connected neural network that kind of takes in more data and returns less
+outputs less as and it takes a longish vector and returns a shorter that you.
+What does it mean? What does it mean that you guys remember? And not to mention.
+The fact that the input, the input layer of of the network on the right has way more inputs, well, more inputs than it has outputs.
+What does it mean? In practice.
+If you ever ask ChatGPT to summarize this for me or shorten that for me.
+I'm not saying that this is exactly what is happening here,
+but taking a vector with a lot of informations aka dimensions and shrinking it into a shorter aka an actual with less dimension is,
+you could call it a reduction in knife and shell analogy. Also, you could call it summarizing with less data.
+What was in that bigger vector? Distilling.
+Extracting what matters the most. Now, if that network is well trained and I'm not going to define what it means,
+well, but that essentially means that it doesn't produce a lot of error.
+If that network is well trained, it will be pretty good at summarizing what's going on.
+Now, as you can see, the outputs of those little networks are just being inputs to another aspect of that cell, right?
+You're not actually outputting anything to the outside world as in a specific X.
+And for some this is for internal consumption.
+This is there is a great example where.
+We are right here. We're taking the input gate output.
+And then this candidate that values output as well.
+And we're mixing it up. So we're summarizing sort of two two aspects of the input and the previous state and trying to mix it in.
+Huh. The difficult part is here.
+I can talk all day about a diagram right from as long as you, until you touch it and start playing it with the map behind it, arranging everything.
+It will be kind of hard to to understand what's going on, but that aspect of summarizing things, you.
+I told you that already. You will see it elsewhere as well, even today.
+Okay. Summarizing or even what?
+What is this X little piece?
+What do you think it is? Do you remember? It's a bitwise multiplication of two vectors.
+If you're multiplying two vectors, think about one vector as being some sort of information that you that matters the most,
+the other vector being the vector of weights.
+You get to use it to regulate what you got, what gets amplified, what gets dampened in the final multiplied vector.
+Don't. I wouldn't try to put a special meaning on what this vector means exactly.
+It means, I don't know, part of speech tags or something. Don't.
+Don't do that. Just think about it. As do vectors.
+Makes a one. Decides how much of the other will will be passed on.
+Not in this size, but in and in values.
+Does that make sense? What about those teenage and secure.
+Pieces of our network. What are those? Activation function.
+Activation function. Sigmoid and hyperbolic tangent are not the only ones.
+The gospel to use those. Those are probably um.
+Hyperbolic tangent is probably less and less used in a context.
+Okay, but you remember RNN cell.
+I at the beginning of today's lecture, I told you that there are three matrices that are fixed.
+They have to be trained, right? They represent connection weights in the neural network.
+Same here. We. Except now we have five matrices like that.
+Each one of them has to be trained.
+And there are some biases as well that need to be trained or they're not shown here but they're in backpropagation.
+Everybody understand how backpropagation works, at least in principle.
+Yes. You find a lot of data in, uh, but a linear function of the gradient of the function.
+Uh, did the weights of them in?
+Yes. You start with a loss function. You when you're training, you're calculating the error between expected output and whatever,
+whatever it came out, and use that error to back propagate it in effect.
+Well, in this case, all those weights and all those bias biases, these are the parameters of the model right here.
+Uh, for for most of those, um, structures that we're talking about, loss functions are pretty clearly defined.
+You don't have to rediscover the values. Even when you're using a Python library.
+You will have a dedicated loss function for for Lstm or R.
+And then depending what you're doing, the problem start.
+Once you start building your own structure and piecing together little components,
+then you have to probably you will have to change your loss function.
+But typically this is already set. Nothing.
+Nothing terribly difficult to um g are you?
+Has anyone heard that term? Gated recurrent unit?
+I don't I will not spend time on it is, uh, you can think of it as a simpler version of Lstm.
+Has one less gate. Uh, consider at the height of, by the way, information.
+Okay. Now, once you understand how wholly, at least in principle, how this Lstm cell works or are,
+and then recurrent neural network still works, we can build structures around them.
+Vectors meant to solve the different problems.
+These are four typical ways to use and apply recurrent neural networks, which means RNNs an Lstm.
+Jerry, use whatever they are, whatever you choose. 1 to 1 is really your regular artificial neural network.
+Nothing important to it. One to many.
+One. One piece of input. So we're not dealing with a sequence.
+Just one piece of input and a sequence of outputs.
+Think about it. As in, you get one word and and a description, for example.
+No. No one would use an Lstm for for providing you with a definition for a word because you have a dictionary for that.
+But technically you could think of that as a.
+I'm giving you a key word. Describe it for me.
+Write a poem. Poem about it. Why not a haiku?
+You know, not make much. But this is this is.
+This is one possible approach. There is another one.
+And I will get you for this one. Too many structure that is very, very, very useful and very, very colorful.
+Let's leave that for for a moment.
+Many to one. So I'm giving the network a sequence of inputs like words, paragraph, whatever.
+And I get one piece of output. Can be a number, can be a word can be anything.
+Whatever. The network was trained so many to one anything that in your history in with this course that resembles that.
+Even Naive Bayes. This time he gave it a sentence and gives you a prediction.
+Positive or negative, right? By the way, there should be a law describing how how technology fails students on on the due date.
+There's something about. Nature.
+Computers start dying. Network disappears just a few hours before the deadline.
+And. There's a Nobel Prize waiting for.
+For someone who will discover. How does that happen? All right, nature's does it just.
+It. Just as I know. I know.
+All right. Many. Too many. This one is probably the easiest one to think about.
+Many? Too many. I give you sequence of the network.
+Gives me a sequence of outputs back. Us any applications.
+Go ahead. This is a more complex version of one tomorrow.
+What are you thinking? Yes. The equation was rephrasing.
+Right. Okay. Some arising.
+Why not? Those just. Just to be clear, many to many does not mean that the input sequence is of the same length as that of the output sequence.
+Both are sequences. Very good rephrasing.
+Summarizing. Can you build a chatbot using that way?
+Typing whatever I want to say.
+Let the network respond. Translation. Absolutely.
+Question. Answering question as an input.
+Answer as an AI. As an output.
+I'm pretty sure it's it's easy for you to to grasp that that's sort of structure with memory handling sequences very well.
+And remembering something about past input is much better than than your naive Bayes.
+Right. As a as a classifier. Right.
+And because we can preserve information, uh, about words and even and use it to make connections that are kind of far apart in text.
+Or Naive Bayes would not be liable for that. What about do you guys remember named entity recognition and reference?
+For reference, was making sure trying to figure out the two words not necessarily the same or tied up to Prime Minister,
+and then working somewhere, several words apart, trying to make a connection.
+Hey, this this Prime Minister, is that he in that in the in the description.
+Okay. One thing that I was not too explicit about it, I when I was talking about LSD and I realized I just,
+I kept using visualizing for you the general structure inputs, outputs, whatever.
+But when you think about words, you cannot forget about embeddings, right?
+You can't just put a word as it is into that system.
+You have to look at embeddings. This is actually very interesting scenario here because you can use a recurrent neural network such as this.
+Um, not this particular meant for word prediction, but a structure like this.
+Many to many or even one to many, one to many would be better to generate your own embeddings.
+Does that make sense? I give you a word?
+One word. Participants. But let's. Let's make it a word.
+Give me a vector of of embedding values.
+That it can be done. This is, this is this is more sophisticated.
+Know where to that we have time. Before your example, we'll get I'll get back to it for a second.
+But there's there's upper level higher higher level embeddings available which are getting rid of that.
+Prediction okay. Sure. You could use an Lstm for a prediction.
+Give it the first word. It will guess predict the next word.
+Then use that next word to predict the next what?
+What kind of structure kind of concept.
+Use this approach in this course before. Predict the next word.
+In other words, a base of Navy base like we would be Turkey.
+We can predict the next Viterbi. We would predict a sequence of patterns, right?
+This could be a sequence of words. Even one sequence of words predict another sequence of words.
+But what about the plain language model?
+But you started your programing experience 100 and gross, right?
+That was a language model. I'm giving you a sequence of words.
+Predict the next one. What's your.
+What's your thought? Would that be? Would that be whatever you wrote that post?
+Definitely. So word prediction.
+You can build a simple language model that way. Translation.
+We already talked about the classification we already talked about,
+and the one one to many application that I was referring to before that is pretty popular is image captioning.
+I'm giving you an image as any input and I'll add a sequence of words.
+Uh, I don't know, uh, what CNN here, it's not the TV station.
+I'm going to show you convolutional neural networks. Right.
+So here's a perfect example where you're just putting together like Lego blocks to build a system.
+Right? I have an image as an input. I want words as an output.
+I have to do something about it. Convolutional neural network will help you do that.
+Essentially, it will take an image and it will distill it to as a as a vector which this.
+RNN here you'll recognize in the word great sequence to sequence vectors.
+So I'm pretty sure.
+That sort of scenario comes to your mind when you're thinking sequence to sequence, many to many.
+Right. That would be in indeed sequence to sequence are kind of many to many.
+Uh. Networks. But they have an interesting structure and.
+When are you? Will see in a second. Is. Pretty.
+Pretty important when it comes to, uh, understanding of Jimmy and all those are Covid models.
+Not yet. Just the building. Building blocks that were there with, uh, and also with with sequence to sequence.
+We are we kind of moved pretty close, uh, on the timeline to modern days,
+because sequence to sequence networks are something that was kind of developed slightly more than a decade ago.
+Oh, it's it's old, but not that old compared to everything else that we talked about.
+All right. So sequence to sequence. This is our starting point right.
+Uh regular RNA in many to many approach RNA and unfold it.
+We have some six inputs and some six outputs and make that separation between those sections of protein.
+Uh. Cells with input and output.
+I made it on purpose. Here's the fundamental idea.
+Comparing a sequence to sequence that would divide it, divide the whole, uh, structure technically into two, and it works.
+For the first one. Ignore, discard or completely remove outputs from an.
+Now. What space is this? Brownish hair.
+You remember what it means. What it corresponds to.
+State dummy will be passing states forward.
+And the remainder of the of the structure will actually produce some output for you.
+All right. So we got rid of this initial section.
+Uh outputs. What makes you want to move things around.
+So it will. Essentially it will resemble what you can see in other in textbooks or online when, when that sort of structure is represented.
+Nothing more, nothing less. Hey, you were miners, actually.
+Uh. Oh.
+That was. Okay.
+Does anyone have enough experience with the networks to see?
+What are we? What are we going for?
+Sure. But those were those set with that separation of those two structures.
+If not, that's fine. All right.
+Inputs, embeddings, outputs, embeddings.
+Word for text. Really hidden state in our states.
+Nothing. Nothing new here.
+But what if. What if I call whatever being is being passed from this less input output, less left output, less structure to the one on the right?
+That's context. This is a very broad word.
+Consider it to be a name for any kind of information that helps.
+That section on the right. Make predictions.
+Does that make sense? Because this section on the right will be producing a sequence.
+And I have if I don't.
+If I didn't have everything on the left here, this context in this leftmost structure, it would just get the first the input and try to guess it.
+But instead of that it will instead of just having this first input in the second sequence,
+it will also have some form of context, some so of what have we seen so far?
+Does that make sense?
+The most primitive way to represent the complex is just to keep that previous state or hidden state passed along, if you remember.
+Yeah, I spent quite a bit trying to explain where what is being captured by the state, what is being captured by a cell state like.
+This is the stuff that will be passed on some sort of summary.
+What has been what was seen before, some sort.
+Right now this should look familiar, for you are the words at least.
+I'm sure you've heard about encoder decoder structures.
+This is an RNN recurrent neural network based.
+Encoder decoder structure. The left section of it is going to encode something.
+That encoding will represent context. Think about it this way.
+What encoder is? This is someone who was who was reading text, right?
+I don't know. Two. Two people are writing. Writing a novel, right?
+One person wrote chapter one. Here is a little summary for you.
+What else? What I wrote. I'm not giving you the entire chapter. This is a little brief, right?
+Start chapter two. Does that make sense? Decoder would decode the context and try to generate new sequences based on that.
+The point I'm making here is that this context is a limited version in terms of information, a limited version of what?
+And the encoder sort. Does that make sense?
+A reduced version, more compact.
+Is that a good thing that we're. Shrinking things.
+It's good for processing, right? Is there a bad.
+Anything bad about it? Uh, I feel like when they call it.
+We don't really like the look of this.
+I do, I see it as more like. Yeah, this is the most important thing that's being said here.
+Was not really capturing everything. Yes, I think, but.
+So we're not capturing everything. Some nuance must be Mike may be lost.
+Right? Once again, just just to be clear, this diagram suggests that both the encoder and decoder part are working with the same length sequences.
+Not necessarily though, and this is a technicality that that I don't have in my slides.
+But let me, let me, let me um, kind of highlight it for you.
+There is going to be an expected maximum sequence.
+Like. Is it understandable that someone would put a hey, listen, you can generate sequences of of text.
+Let's say we're dealing with text here. So sequences of text as you wish, but you cannot x exceed x.
+Does that make sense? After all, we're dealing with a computer where everything has its limits, right?
+So let's say that, um. Someone set up, tap on that.
+The amount of elements in that, in that sequence. Um.
+That we can generate. Let's say Bosch and I have.
+I'm not good with languages, and nobody publish here, I imagine.
+So that will not help you. But let's say that we are doing the translation right.
+And uh uh uh.
+The maximum. Maximum allowed.
+Sequence length five point. But I'm translating some sequence of words ABC right or ABCd.
+So that's it. Makes sense. Let's say that in some English non-English language that sequence is translated into just.
+They have a better, shorter, shorter expression for the same thing. Right.
+So what your decoder encoder would produce here, it would actually create a sequence.
+Now I'm oversimplifying things here, but there would be with something like this.
+It will be a special, special character for Paddington.
+Why is that? Well, is it easier to work with structures of of of a fixed length for a computer, for algorithms?
+Or is it harder for a certain degree to work with fixed structures versus variable length?
+You guys are programmers. If you if you know that, you can expect that the vector that's coming in inspired by elements long,
+this is much easier to handle that hey, it could be a million, could be two, right?
+So this is one of the reasons why this is a technicality.
+There's there's a special vocabulary that comes with decoders encoders there handles that sort of things.
+And there will be other um, characters like that, sort of the quiz or sentence.
+As you wish. Oh, no. Just be mindful.
+Wait, so you add for the amount of words in the video, know how well the original could be padded as well,
+and we would have part here, but it's mostly about the output.
+The output has to have have a certain length expected and if it's it's not reaching that like everything else will be padded.
+Padding can come in front. At the end.
+That's a that's a technicality. Once you start building models like that, this becomes an issue to understand what they're doing.
+It's really not that important. But what is important is that this this diagram might be a little deceiving and
+maybe suggesting to you that both we have always the same length as an input,
+same length as an output. No, that's that's not the case.
+All right. So we have an encoder and context and decoder.
+In more practical terms. This very structure, and the more general and more practical sense will be represented as follows.
+We'll have some surface source sequence of text. We'll have an embedding layer that I'm not showing here.
+Embedding where every every word will be turned into a it's embedding.
+Now we'll have a hidden layer which is this part right here that will produce context.
+The context will be fed to another hidden layer on the decoder side.
+Notice that the decoder takes in some input as well.
+What is this input? Is that interesting right?
+After all. If you look at this structure right here.
+Right. I'm kind of passing that context and I'm expecting something to happen on the decoder side.
+The decoder takes input. Where is this input coming from?
+What is this? Okay. Any any thoughts of this whole layout?
+If not, that's all right. But before I continue.
+Source sequence. Target sequence.
+If you were given your experience limit or not with machine learning.
+Neural networks. Source sequence.
+Target sequence. What would that resemble?
+Roughly speaking. Go ahead. Training and testing.
+Right. Or perhaps. Very good. Target sequence is something we will test.
+Test? We could test the network on, but we could also use it as a sort of a label or an expected output.
+Right. Or also a training input.
+Source sequence. This is a no brainer. This. This. This should remind everyone of a feature vector for a feed forward network, right?
+If you feed it in, something comes up. This target sequence, it's loop.
+It's a little weird here in this context because it seems like we're pushing something first,
+and then at some point we're also pushing something in addition to it, right at a later stage.
+Does that make sense? Don't worry.
+So I'll explain it. Fully connected layer.
+Everybody knows what it means. Softmax.
+Everybody knows what softmax means. Who doesn't know what softmax is?
+Correct. All right. So let's say fully connected layer outputs.
+Two numbers, a factor of two numbers, let's say 109 hundred.
+Okay. If for some reason remember.
+Do you guys remember logistic regression? We used sigmoid to turn a number at on any scale into A01 number.
+Sigmoid one number comes in A01 range.
+Number comes up one number. But I have here two numbers.
+Softmax is there's more or less the same.
+But to a vector of numbers. This it this is easy for me to calculate.
+This was this would produce a vector both zero one and zero.
+Nothing. And that makes sense. It just normalizes.
+Normalizes the output. I have a vector. If I have a vector of three, let's make it I don't know another hundred.
+And this 800 is with produce.
+It's a typical output activation function or not.
+It's not really an activation function sort of normalization notion.
+And after that, we'll get our target output sequence.
+We we should get our target output.
+Also doesn't matter if you're doing well, it matters in terms of performance, but you could use recurrent neural networks or LSTMs here.
+Doesn't matter. They're working for the same goal.
+Okay. This is a neural network, right?
+So it means it needs to be trained. Correct.
+Once it is trained, it can be used to produce some output.
+So this is this is the moment where you should kind of look at it, pay a little attention, because the way the decoder works for training and.
+Testing or inference is different. So training or training?
+I will just I will take this target sequence that I have in my data set, a training target sequence that comes together with source sequence.
+They're a pair like feature vector and label source sequence.
+Target sequence. They're coupled together. I can use it to feed it the decoder.
+Notice the difference source sequence goes into the encoder.
+Target sequence goes into decoder. Translation.
+English sentence as a source, it's, I don't know, Polish or Spanish equivalent as a target.
+Where would you get those pairs? You need a corpus, obviously.
+Right? With those pairs. Right? Where you get it? Famous novels, right?
+Someone translated. One from one language to another, right?
+There's magazines, articles, online, written Wikipedia.
+Same thing. More or less is written about common popular things in different languages.
+Take it right. Nobody would want to write a corpus like that from scratch, but that you could.
+Okay. The training for training this will be given.
+And this will be fed one by one into the decoder.
+Notice this little gold tag. This gold tag or startup sequence.
+There's different ways of labeling it. It's actually added to your training set to indicate this is where your target sequence starts.
+So no training sequence.
+We just receive the context from that. The the encoder.
+Right. And as a first first input in the sequence to the decoder we'll put go like this is the indicator okay.
+Let's start. And. Our decoder will produce an output for the next.
+Element in the sequence. It will take it.
+It will take whatever is in is a certainly is in the target sequence and so on and so on.
+Did we get the correct output target sequence? Here.
+This is this target output sequence. Match the target sequence.
+If yes. No error if there is an error loss function.
+Back propagation. You guys here in this hidden RNN recurrent network.
+You in this fully connected layer. You in this hidden network.
+You guys have to adjust your weights accordingly.
+Repeat repeat repeat. All right. Our network is trained and we can now use it for inference or just general use.
+What is going to happen here is that we will not be feeding those inputs from our data set anymore.
+Those will be subsequent outputs.
+Go in our case. Produce a word.
+Take that word. Use it as a second output, producing a third word.
+Da da da da da. This is how, um, the actual operation of the encoder decoder network will unfold.
+Is that clear? Training.
+All the inputs to the decoder are coming from the data set from a expected target sequence, inference or regular use or deployment.
+The. The output from the previous previously generated item as a as a, as a second or third, and so on.
+Incorrect. All right. Deal words about technicalities.
+When it comes to, uh, pre-processing your, um, data set or that that kind of sequence to sequence application.
+So I'm sure I know that many of you spend some time massaging your data sets for a naive Bayes classifier,
+and you have to clean up a thing or do this actually, that sort of, uh, application or requires, uh, a bit more work.
+Well, first of all, you have you have those source and target sequences mapped together upstairs.
+Once you have that, you have to mark the end of the source sequence, which is usually marked with some end of sequence token.
+Whatever it's called, it could be something else, essentially something that everyone in your system knows how to understand.
+Uh, and go or sometimes you could see S.O.S. as in start of sequence tag before the target sequence.
+Uh, this is where you would do, um, the padding as well that I mentioned.
+So everything comes in in a, in a very rigid structure, even though we have two words in a sequence.
+Let's pad it out. Or. What about words that are unknown?
+Not in the vocabulary. There is a special tag.
+We talked about it in some other contexts weeks ago.
+Unknown time. Okay, a little clean up, a little preprocessing, and you're ready to train your encoder decoder.
+There's an error back propagation that just waits.
+The usual thing. Okay.
+So here's here's how translation would look.
+I use my rudimentary Spanish.
+I like all right input sequence in English with iOS at the end.
+Translation if our if our, uh, encoder decoder is well trained and shouldn't have a problem to generate,
+megastar with iOS at the end should be a closed time when you get the picture.
+So. S.O.S. doesn't go.
+I used go before. Same thing. Start of the second sequence.
+Produce the word met. Use it as an input for the next round.
+And this one should gas Coaster as the other.
+That's the second one. Does that make sense? Those.
+Those tags are kind of important. Uh, and I have a couple of slides where I see where those tags are not exactly present there for lack of space.
+Think about them being here. What about question of answering?
+This is an example where I don't have all the tags in lined up, but you can imagine that they're there.
+What's up? Right. Question sequence. I'm good.
+Right. As an output signal. Same process except your your your network your your encoder decoder structure
+has to be trained on not on not English Spanish floors target sequences.
+But now question English question source English.
+Answer target the your corpus has to match obviously the task at hand.
+Chatbot same thing. You could build a simple chat bot.
+When that structure as well. It's not going to anywhere close.
+Well, actually, now as a chatbot, all RNAs are not going to be.
+True to good trivia question.
+I don't expect you to know the answer, but maybe you have an intuition. This this this encoder decoder concept.
+Uh, by the way, the whole large language models that you use frequently are using an encoder decoder structure as well.
+But the underlying system is slightly different.
+But forget it for a moment.
+Do you think that, uh, something like a charge typically is more or less complex in terms of parameters training, uh, than that more or less frequent?
+More? That's all. But is it going to be always better, Chad?
+Not necessarily so. It will depend on the problem, but you can easily get for some applications for some work.
+Um, the, the range of possibilities is that for some work, yes.
+I'm not saying chat, but specific reason for translation.
+Right? A smaller, much smaller network like this built according to this strategy is going to be better and cheaper to build.
+Scratch that, I'm withdrawing the cheaper one for a second.
+Then then ChatGPT structure.
+It's going to be better. Smaller model faster.
+Any equally accurate, equally good or even better.
+Keep that in mind. So it's you don't always have to go for the largest and biggest monster in your garage, right in your toolbox.
+Another trivia question. We'll come back to it, but I would like to probe your intuition.
+Which one is easier? That's a loaded question.
+Yeah. Which one could be fair?
+Oh, that's. All rights cannot be paralyzed, right?
+He agrees on that. With that. I cannot parallelize the system.
+Then I have to kind of train it up as one, right?
+If I could parallelize it, I could split my training set into ten sections and do a little training here,
+here, split it up across multiple processors and have training done quicker.
+So one of the main reasons for why something like ChatGPT is so popular for transformer architectures in general is that they
+do the same thing as that kind of encoder decoder structure without the need or without the parallelization constraint.
+So that's one key benefit we'll talk about. I.
+Now my question is like but let me just lay it out for you.
+So this may be simpler in the end and faster than the transformer or ChatGPT and even performing better.
+But training it may take a longer time than ChatGPT.
+Now GPT is going to be a larger network, so that larger network requires more time on its own.
+This would probably balance itself out,
+but we looked at two models with the same amount of parameters GPT or an engine builder decoder or an encoder decoder.
+It would probably take longer to train on the same data. That makes sense.
+Kind of. Yes. Oh. You were.
+I just don't see how it could be better than lower.
+And it's more like chicken because. They won't make it.
+I don't know. They're actually better, so I have.
+I didn't even include it here, but there, there there are some benchmarks where, for example, uh,
+I think it was Google Translate mechanism based on, um, this outperformed uh, GPT in translation test.
+I'm not saying in all tasks at all tasks, that's not the case.
+I won't get back to it. Question answering chat.
+Uh. All right. I problem here, I hinted on it.
+We have this contact section right here where we're we are taking the state right now.
+We're taking the state of the encoder,
+which is supposed to summarize everything that thing encoder itself before and we're feeding it into the decoder.
+But we already agreed that this is not going to capture everything.
+The nuance will be lost. So also another thing is that once we pass on this state, this state, this sort of the change.
+Out H5 and whatever came in is preserved as it was throughout the decoder operation.
+So that context remains the same. Here.
+Here, here. It doesn't strike me as an inconvenience.
+That's fine. I'll give you an example.
+Or I will give you an idea what I've done here, and you will decide whether this is going to be better or not.
+Imagine that this is a vector. This is our context vector.
+This is the state that the encoder generate a single vector text size.
+This is all that the decoder gets. Next.
+Let's link on that. You can trust me on that.
+That if, if, if we kept all the intermediate states and passed it on to the decoder.
+Do you think the decoder would have a better idea about what?
+What? The encoder. So. If I've passed on all all the intermediate states and then states.
+Probably nothing. Nothing is forgotten. Really.
+If the sequence is long, everything is kept there. So that's one step towards.
+Improving the idea. And the second step is something that you've heard about.
+Attention. To understand how attention works in an ChatGPT or Gemini.
+Look at paying attention to specific parts of text.
+Mhm. And ignoring and giving less weightage to a level.
+We'll expand on the whole concept of attention. Today's attention is a is is a is.
+Uh. Like, you can call it the first stab at attention mechanisms, not as as elaborate as the ones being used in church, but useful nonetheless.
+A lot of people explain attention using images.
+As it's probably easier to relate. I'm going to take this route for a second as well.
+For those who are not familiar with the. Um.
+Ideally when you're here in this classroom, right?
+You have to screen everything.
+And this ladder in the corner right here in your view.
+Right. But ideally, your attention should be on me.
+Right. That's not it's not to say that I'm so, so, so absorbed.
+You expect that. But. But for the most part, your attention should be here.
+I'm holding a little debt, so your eyes are probably bye bye design are following me, right?
+Everything else is kind of a balloon. That's how our brain works, right?
+We're seeing a lot of things, but we're heading your way towards something that we consider as the most important.
+Given the context. Right given the situation.
+That make sense? Same thing here.
+Imagine that I was able to keep all those hidden states, actually.
+To keep it simple, imagine that I was feeding word after word after word into the encoder.
+Right? And this is not what is happening.
+But imagine that instead of those hidden states kind of summarizing what the encoder is.
+So let's say that I have the entire sequence of those of those words that came here.
+Yeah. Here's our little translation. Translation?
+Um. Example. Very simple.
+Two words. English to Spanish. I like versus medals.
+What? So if you have if you somehow this is this is the decoder side.
+Right. If the decoder somehow has access to the entire sequence here I like.
+And the word that matters the most right now to the decoder is Matt.
+Right. Which is high in English.
+This is this is sort of. Okay, I'm I'm focused on this word right now.
+This is the center of of my interest.
+I'm not going to use attention right now.
+Now, if you had two words I and like and you understood both languages well enough, which word would you focus your attention much more on?
+Like or I it. Uh, right.
+So what attention will do it is trained to do it.
+It's part of the backpropagation training. It is trained to latch on.
+Aspects of the of that input sequence that resonate the most with the word in question at the moment.
+And it will amplify the effect of I given right.
+And dampen the effect of light. Now, once we move to ghost.
+Right. Things will reverse. Now it's the light that is that should get more attention.
+Not I. That is that common sense.
+More or less. What's happening in terms of the death of machine work is it's a it's a vector.
+It's a vector multiplication. Pointwise multiplication.
+I'm going to multiply that vector above that by buying weights to make sure that the effect of AI gets up to five and light gets dampened.
+Remember from the beginning of this lecture when I was showing you Lstm and I and I told you here's a little little network that that acts as a gate.
+It is also sort of summarizing and focusing on something specifically more or less the same concept here.
+Yes. What do we do if we have, uh, words in one language that need to be translated?
+Is this an entire like and to do words in another language?
+It's not going to be like long term. There is not going to be a 1 to 1.
+But then you will, uh, if if those words are.
+I can't think of an example, but you have a point.
+So let's say that our encoder cell, a sequence like a, um, a longer sequence in Polish, for example.
+Right. That can be translated to something in English with two words right or one word even.
+The attention would take all the words that constitute that sentence, that expression in Polish ignore everything else, and it wouldn't have.
+Focus their attention on multiple words at the same time, not just one.
+So what? I'll stop here today. Come back to you.
+Attention on on Wednesday about what the attention will do.
+It will it will essentially produce the factor. Hey, this word matters.
+High value. This word matters. This one does low value.
+Same principle. You can see that principle in everything that we have been talking about for the last few sessions,
+in different contexts, with different application vectors and some ways to amplify or dampen the effect.
+That's what attention will do. But you know what?
+I don't want to. How about we stop right here?
+Because at all, I won't be able to get too deep into attention for five minutes left.
+We'll pick up. Is that okay if we pick up on a Wednesday?
+Is that. Was that interesting? All right.
+Uh. Any questions? She has 581 people.
+This will be today as well. We will diverge and see us 581 starting Wednesday.
+We see a spike. Maybe one will go towards, uh, more image generation and that kind of thing.
+We will be working on Transformers for NLP here moving forward.
+All right. Thank you. I'll see you on Wednesday. You're late to the party.
+I just wanted to know what can be the same as in accounting, where I get that representation in the code, which is the code to convert the sentences.
+I think that's a good idea. All right. And, uh, within the program, Simon Peters coming up, uh, that you said he would be giving us,
+would it be due before the finals or the after the final?
+And probably I'm, uh. I will tell you everything about it.
+I would probably not expect, like, complete completion if you don't have time for it.
+We'll see. Uh, this is the third one is going to be the, um, lightweight in terms of your work and in terms of my expectations,
+I would I was more interested in you playing around with that sort of structure than just spending a lot of time.
+So it will have a lesser if it's going to be greater,
+it will have a lesser weight than than the other programing assignment because I want to do everything step by step.
+So. If I lose quantity of topics after the all of it, it's it's not cumulative.
+I'll give you a list of topics. But essentially whatever was not on my midterm is for a game on on the final.
+And I'll text in verses but it's in my head.
+I don't know. We don't have time for that.
+I would love to you to present about like, what's going to be different.
+Yeah. Just just let them run your code and my office hours, like I'm going to do it.
+Okay. Let me make sure. He has a question, uh, for, uh, for you to present to the audience for you to submit the recording.
+It's best to vote. So presentation is one thing.
+You're showing your slide be recorded yourself. Your team will review it.
+But. But demo. Demo requires that you're DEA or me.
+I would prefer you like to be. Able to give you a sentence.
+Otherwise you could just come up with, you know, a sentence or article of and a response.
+It's not like you will be graded if your classifier is great or not.
+Don't worry about it. Okay, but but I want to see how your your program responds to some some some sample text.
+They will be short no more than five minutes. You should have heard them already.
+Just hey, they give me your sentence, your team will look at it.
+And that's all. Very much so. Uh, how can we get into that?
+Just your your grading. He has office hours, right?
+Okay, just we'll just. So we can go for any of the key is right.
+You get to work. If you are working together, you are going to pick one week, one grading day.
+One of you can go. You don't have to go together completely.
+Just one. I would catch your grading because you know it's going to be a walk in and a lot of people walk right.
+Like the same approach on the same day.
+You're going maybe get one five minutes here, five minutes.
+There might be much easier input in vehicle.
+You may be looking for some great pretty content.
+A recording is a different thing. So you're you have to do both.
+Yes okay. Yes. Because you can do demo on your day.
+You can do demo but without any interaction. Right. So how will that interaction, that interaction or if your work with the.
+Also we have this thing coming up this week. So could we just do this demo next week or maybe before Wednesday.
+This. Yeah yeah. Your demo doesn't have to be today okay.
+Your presentation should be recorded. Um provided.
+But the demo you have the next few days, just make sure that you're using the same code as you submit that.
+That's that's that's all. There's nothing to worry about.
+It's just curiosity more than anything else. Okay.
+Thank you. Thank you so much.
+Okay, I did, I think I said, uh, the cuts are great, but the format, there's some silly mistake like this, or they're just falling asleep.
+And I think the some of the. Points, like the format of the output was not one question.
+That points. I was very, you know, possible for the process.
+And yeah, I was pretty specific about that. Let me take a look at the I sent you an email that I also did a follow.
+Oh. Wait, wait.
+What? This is not I think like you're great, right?
+I think everybody I was I have a little but at 10 or 20 points that I was and I don't want one 150.
+Yeah. Did you know that by the end of the day, I mean, I remember about a.
+Week or two. I don't think of it.
+But.

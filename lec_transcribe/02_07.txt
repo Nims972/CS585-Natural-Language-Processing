@@ -1,0 +1,615 @@
+Oh, my God.
+Well, I was not happy with that.
+Oh, well, it has to be.
+They can. Good morning, Sean.
+Okay. Any questions? All right.
+Well, I apologize, but as for an overlap with your assignment deadlines, but you might as well will not be happening often, if at all.
+Now, my reason I'm kind of pushing for for especially for written assignments right now, is to do some preparation for an exam situation.
+Okay, So what do you remember from last lecture?
+Grammar. Oh.
+I have an answer for you that you like to shoot up in my face right now.
+So I play the derby algorithm, and everything is clear about how it works.
+So you're really a very good idea.
+We tried to draw it. That in this B-to-B matrix, right?
+We have columns and we're always multiplying the previous value who are going through every single path and multiplying the previous.
+The Viterbi cell values times the transition probability, times the emission properties.
+And since we want to maximize everything, your idea was why don't we just let's say that there's this cell as floor.
+You won't be for it, for this will be point left.
+Okay. So the idea, which is a very good idea, is to why don't we just if we're maximizing work,
+why don't we just always focus on the max and then do not even process that?
+Right. Makes sense. But imagine that pure transition probability is one.
+Okay? And here transition probability is zero.
+It has to be right, on the other hand.
+And so we travel through all a bunch of columns and we arrived here and not only here,
+the mission probability from here or a certain word, let's say, is.
+Doesn't matter. Would be zero.
+And now here in mission probability is I don't know what time.
+So no matter. No matter how we slice it, passing through this, Max right here is a date.
+And discarding this option cutoff.
+Anything that does that answer your question. Okay.
+Thank you. Good context.
+Three grammars passing. Mm hmm. So do you understand the idea?
+Why do we need a grammar and a set of rule that sort of rules that we can map our sentence to the first part of each stack,
+that we cannot map it to the grammar? That it's not grammatically correct.
+Okay. So we went through a bunch of things describing what a grammar is.
+What are the production roles? Lexicons terminal symbols, not terminal symbols.
+What is a concept aspect of it?
+And then we talked about building the truth, right?
+And this is where we start, actually. Chomsky Normal form, right?
+Okay.
+How many of you were in my C is creating a handful of if you don't if you remember the knowledge based agent, the logic, propositional logic thing.
+Okay. There was something also with an acronym, CNF, a special form of propositional logic.
+Correct. But it was still propositional logic.
+But everything had to be framed in a certain way in the version of propositional logic, if you please.
+Now, framing it in the certain way that allowed us to automate the processing ultimately.
+Ultimately, the idea here is the same.
+So if we have any any grammar that is defined like that, we can turn it into a different form of the Chomsky normal form.
+But why would we do that? Okay.
+We all know the answer. The challenge here is, well, let's let's see that we're doing.
+The bottom line passing, right?
+We're given awards and we're trying to match words with rules, production rules.
+All right. Let's say we have ten words we may have here.
+We have a rule that involves two components.
+Right. So we need to map two words rule.
+Here we have a rule that just maps to one component.
+This is not a perfect example because I'm looking for something that a rule that has three or more components, just like in this grammar,
+for example, here we have verb phrase could be broken down into three components, could be four, could be five, anywhere from 1 to 10.
+So there is variation and with that require a lot more work here.
+If we're trying to match it to bottom up, let's look at all the rules that are merged, that connect to the words.
+Then all the rules that connect three words and four and five.
+And this is getting complex, right?
+The number of possible trees. Well, girl, what if we had a grammar that is confined to rules like that one or that one?
+There's two components or one. There is not a production rule where you have more than two components.
+This is the idea being behind the Chomsky law or so every production rule in that.
+Grammar will be based out of.
+On either a two non terminals or a single terminal symbol.
+Makes excited. To come on.
+It's always there is.
+This is not something that I will expect you to understand and memorize.
+You know, you will probably be forced to learn that in other classes.
+There is a procedure for converting any grammar to the Chomsky.
+Normal. This is how.
+The transition would look like this. So on the left you have a standard grammar with a production rule that involves three components.
+This is how conversion to Chomsky normal form would look.
+Now, what does it mean that the grammar is equivalent?
+I talked about that definition last time. It was a little boring, right?
+But it matters if I convert one grammar to another.
+Do I need to make sure that it produces the same language?
+Otherwise, that conversion doesn't that doesn't work, right.
+If I'm not able if I converted from this grandma to that grandma and with that grandma,
+I'm not able to put as every single sentence this grandma produces.
+Something's wrong. Okay, so Chomsky, normal form is preserves.
+That equivalence is good. Now, do you see a potential problem here?
+It's not really a problem, but what's going.
+It does. And I believe to us it's one of the like.
+But if it's just a bit like this.
+Would it lead to a different sentence? Yeah.
+We want to make it just an example.
+So it's a word in the lexicon.
+It will be that set of signal that one single roll on the left will produce the same sentences as those three liberals on the right.
+But as you can see, those three rules versus what I had one rule, now I have three could be more.
+So I told you that, hey, we're using this Chomsky Normal form for a reason to it to, well, increase performance or make something easier.
+Now this looks like I'm making it harder for myself right now.
+I will have morals. And the grammars that you saw before are just easy.
+The actual growers dealing with real life is are going to have way more production rules and more complex rules.
+So I'm adding myself more complexity, but I'll benefit from this.
+Here's an example. Example with more rules. All right.
+You can see how how it grows with through the conversion process.
+This is inevitable, but there is a benefit to it. Okay.
+So I will not be proving that Chomsky number reform will be able to produce the same language as the original crime.
+That is what matters. See, you know, grammar and grammar in this form is usually used.
+That conversion step is used as a pre-processing step of passing the actual passing.
+In other words, we can do the bottom up to get them our streets or we can build a past tree and try to map it to do a sentence topped up.
+CnF will be used usually for bottom up passes and you will see the moment.
+Why so? Here's the bullet point at the bottom.
+Tells you what? What matters the most.
+Generating a strain of length and will require two and minus one production.
+That's true. And comes from the fact that we're always living in two at most verses three or four or something.
+So. Let me show you an example of an algorithm called c, k y, or sometimes it's called C White K.
+It's about or three names. It's a passing algorithm that uses the Chomsky normal form approach to pass.
+And the bottom up parsing algorithm.
+It's once again a dynamic programing approach.
+And. Of its complexity.
+Sort of cubic. That's not super, super, super, super efficient, but it does the job.
+Okay, here's here's the idea.
+So we went through part of the speech, that part of the speech that ended this this some input sentence packed with part of speech that.
+Makes sense. Our previous processing step was part of gene tagging.
+Now let's. Let's use it. On the right side, we have a simple grammar that we make.
+Doesn't have to make cent much sense in practical English sense, but there is a relationship with a bunch of production rules.
+Are those rules being Chomsky normal for? That's most two components from the production room.
+It is. Okay, So one more matrix for you.
+Let me try to explain what will happen.
+We have our sentence broken down into words as well as prose and columns.
+I column's Jerome's words are indexed, starting with zero here.
+But that doesn't mean we're building our past tree bottom up.
+So how would you go about it? Bottom up.
+I have words and the grammar. Words.
+Park Street from Park Street.
+Let's start with a single word. But before that, I will explain what each cells represents here.
+Each cell represents a combination of surrounding cells.
+So, for example, this cell could be made up of whatever, you know and what follows below.
+Or. As first.
+This right here would be some sort of combination of what came earlier, which is not clear right now.
+Let's go through an example yours. So we have the word Joe, and we map it to a noun.
+Yes, that's a no. It was tagged as a no.
+So let's look for rules that match.
+Okay? That match backwards.
+I have a noun right here, and I like to something else.
+We'll be using that. First, let's just put those tags in there and.
+That's so. And now a combination of a noun, an adverb, a verb can be turned into a single phrase and now can be turned into a known price.
+Right. So no.
+Starting with a noun phrase this I can replace with it now.
+Now a phrase verb phrase.
+Yes. Okay. I found a match.
+I can see how we're populating the Matrix in a similar fashion to the human at
+a distance and literally just the neighboring cells and trying to produce.
+Something that matches the rules.
+Right. So what's it? You know, you have a fur and no, no can be turned to.
+To an outrageous burp and an arms race.
+We have a purpose. So far I've been I've been putting just one single value in every cell.
+Is it possible that I could have multiple options right there?
+Okay, What about this parrot? And now the preposition.
+We have a rule that matches that. If it was the opposite, we could do the prepositional phrase.
+But it's. It's not. I don't have a rule that matches just this pairing, starting with a now following by a preposition.
+So no, go right here. That's okay.
+We can we can work with that. What about the preposition in a nutshell?
+Now we're getting this rule that I was talking about one second ago.
+No phrase, now known phrase, requisition preposition, non phrase, prepositional phrase.
+Okay, we have a match. Let's keep going now.
+But now things will become complicated. All those cells that I just populated in this first iteration were based.
+There was no variation here. And it's just left. Bottom.
+Left. Bottom left. But however.
+Now. I have multiple options to look at.
+This right here summarizes what happened before.
+This right here summarizes for you.
+I can. I can take both routes. Do you see why?
+Chomsky Normal form is helping me here. I always have to do children to look at blessing no more than two.
+This allows me to have this dynamic, to use this dynamic for a programing approach because I only have two cells to look at every time.
+If I had those roles with more than two components, I would not be able to pull that up.
+So two options. Technically, it means that that I'm not showing you that here,
+but but clearly I have a match here right now, noun, phrase or phrase that start with the sentence.
+And then for that combination, I don't have a match.
+So technically, something that I'm not showing you here is there's two two values that go into don't say s and empty.
+These are my two options here as they will be important.
+This is this is like in the Viterbi and minimum at a distance.
+When you're going back following the back pointers, you may have two paths to go through, or just one or not possible.
+Does it make sense so far? Right.
+Another was burned and an empty seat.
+There is no rules for or for that said verb or phrase in the prepositional phrase.
+The rule to match that. Now the phrase this is an old phrase built another known phrase.
+In a role for that. However empty and now no go.
+Can you keep going? Until you reach the upper right corner.
+And as you can see, I have quite a few options now to consider.
+My parents, only one of them produces the ESS, as in the start of the sentence.
+So what does it mean? Mm hmm.
+Why is why is that creativity? How did it get to.
+Let's go back. Get out.
+Price. Have a verb. Oh, I see. It's another option to create an arms race.
+Might as well rephrasing it because it's more correct. So I have the PDP empty three options.
+Okay. Oh, okay. Now, what does it mean that I have a start of a sentence symbol right here?
+At the end of my. Processing.
+You got it? Yes. I was able to arrive at a build a tree by matching a roll.
+This didn't work. Doesn't work, but this work. This work. This work.
+I asked at the end, I was able to go from the bottom to the top and produce the symbol at the end.
+If any of those combinations here were not able to produce an asset or it would produce anything other than the.
+Yes. We don't have a grammatically correct sentence.
+What else do we have here? There's only one way me.
+There's only one way that a scientist here at the top level, there's only one.
+Because if we go down, there's options. Thank you, Lord.
+Which means that the categorization of the sequence of goods is fixed.
+Which means that only a solid you may to happen at the top level.
+Yes. That's been ambiguous.
+This would be an ambiguous update.
+Well, that grammar would be ambiguous, but because we are able to produce more than one tree out of all of this process,
+which is fine, we have a way out of that to.
+What would back pointers help me with here?
+We don't see them right now. But apart from every possible.
+Path to the top. Yes. Okay.
+So this is something that you ought to know if you have a net if you produced a net in this upper right corner or however you arrange this matrix.
+That means that your grandma can produce that sentence, which on the flip side means that the sentence is grammatically correct using this grammar.
+This is a very important answer. You have a grammatically correct sentence on your hands and you can produce a pass through.
+Can you go back to the end? There's still colors on that.
+So say you chose for the BP, the green BP, the other option of the empty to get us all.
+You're asking me if we use the different options that we had?
+Yeah. Would you still be able to result in the best?
+At least that's what I'm asking. You have to go all the way back to how this was created to the BP.
+That that the one different of the piece.
+Both are valid options. So right here, this is.
+This is where I'm creating two different trees.
+I see. This is where the ambiguity kicks in.
+Because I will get down to that VP or something coming from the top again.
+Well, I have two options here,
+so I have to build two separate trees where this is either broken down into the carbon price or broken down into the first place.
+And I prepositioned those. Yes. So when we come back, you didn't ever use some kind of probability to choose what to look.
+Get to that. So. So, yes. Now, that's pretty obvious, right, that you have two trees or three trees or how many trees you have to choose from.
+You need a mechanism to decide which one is best for you, which one is the best match for that.
+Yes. So, you know, when you were showing the right time earlier, is that how you multiply it by the amount of parts of speech?
+Is that the different degrees of the ambiguity of the approach to estimate the probability?
+Is this what you're asking about now? You know how you showed the right time earlier where it's like the number of string
+to two times the amount of parts of speech is the amount of parts of speech,
+the different trees that are being created.
+I. Like this string.
+So length of string. And you have you have an array, Right.
+And so this is where the in the square comes from.
+Now, you're also going backwards, right?
+So that's what I do. So I'm asking what is I guess what is the G.
+G is the size of the drummer. How many rules? Because if you look at it every time, every time when I'm trying to figure out what.
+Oh, I see. I have to go through the list of all the rules and match it.
+Okay, So. And kind of and times, end times g.
+Okay. G is the length of that.
+Okay. Back. Pointless. So I'm here now.
+I can start building the tree. So at the start, I don't.
+I only have. I only had one option.
+It's a noun or a trace. What went through that?
+Now. Now is the end of the road. Now and then we will have to show.
+What struck. So we have an answer from as we're going to and now.
+And the first place.
+Correct. No trace?
+No. This leads me to do the work, Joe.
+Cannot be broken down at any point.
+So here I have multiple options.
+I can break this leap into a verb and the proposal price or break it down to a.
+Or phrase and not mix it up in a known phrase.
+So in other words, this is this is where I start building to trace.
+You see that? It is quite possible that you will not have a tree at all.
+And there's no asking for impossible. You might have just one tree and you can have multiple tree.
+Okay. Well, let's talk about resolving the ambiguity.
+Any questions about let's see why or see why gay or Singaporean?
+That was the question. Mm hmm.
+So when we're putting the tree back together, we go through the cholera outbreak first, and then we just go down through that.
+You don't have to go all the way down. You follow the pointers.
+So here I splinter into a now that I was very proud of.
+So I have to follow up. And none of that was easy because it just leads to the word itself.
+And then I follow the path.
+What was the phrase? Of course, I have two options.
+So let's focus on the first verb.
+I have a verb right here. And what else?
+I have known friends. So.
+Our verb is already known. That would be. Boston Globe.
+So every cell, you just splinter. You don't have to go at the beginning, all the way down.
+Just follow the hunter, which leads you to another section.
+The verb cells that I landed with.
+There is nothing to do there. But. And no trace.
+I have to break it down again. So the impossible three would be for phrase and is all great.
+Yes. So it's the alternate dream would be instead of verb here I would have a word phrase and a prepositional phrase right here.
+But it's a completely different tree. Could you show that or at least show where you would go from from the boxes?
+Or is this do you want to build the entire tree?
+No, you don't need to do that. So, like, say, where we can.
+No, I feel like that's too much time. But okay, so you have the phrase, every phrase.
+Branch. Allow it. Go to your phrase.
+We go to her. And another phrase, that's one option.
+Noun phrase would break into a noun phrase for the prepositional phrase that we would have to pass that and then prepositional phrase,
+which is made off of the preposition with. So you just, you just follow it until you get into this middle of the diagonal.
+Okay. If, if in other words, if my pointer goes all the way to the to the bottom or to the left, then this is the end of the road map to the words.
+If my pointer is stops somewhere in the middle, such as here.
+Right. I have to break this too. Okay. Is that clear?
+What do you think? It's a pretty clever algorithm, but you need to have those part of speech tags.
+Well done. Mm hmm. Like an empty space at the bottom or not the bottom bottom here.
+Oh, that would mean that we would have a null assigned to one of the words that.
+Mm hmm. Suppose that one of the boxes had more than one.
+As in those initial boxes which are which we are dealing with the tags that came
+from the previous step in the middle of the middle boxes should not have tags.
+Specific towns like that looked like the workplace could also be.
+It has a direct mapping to it, to a word. So, like, for example, if we were running at school.
+I mean, Jane, you are right. I think, you know, carrying those things.
+Could it be that that box could have more than one box?
+Yes, it can. How do we put this?
+This is I want to go back. I hope I understand your question correctly.
+So when you're running this part, this is a good example.
+So I have two possible verb phrases going into that cell, right?
+In most cases, yes. But it could be a noun phrase or something.
+It could be just a very simple grammar, very simple example.
+But you could have that. And in that case, we just didn't even know.
+You're just build a different tree. Oh, that's a completely different breakdown.
+Break down, different parsing outcomes. Any, any cell that is not in this first diagonal, any cells is made up of two components.
+It's kind of linked to a single language. And this is once again, this is why the Chomsky normal forum is necessary for our grammar to make it work.
+If we have three options or four options this low, not that.
+Okay. So.
+I guess it's clear now that you can easily have.
+You can easily be in this situation with two different pastors for the same reason or three or four.
+What do we do? Yes. Your approach do.
+Let's do some probabilistic approach.
+This is the way to go.
+And once again, we will not have a real probability that this tree is real in the sense that it perfectly maps to English language.
+It's just a number relative to other numbers. So how would you go about it?
+Mm hmm. You can, like, compare to probably just ten of our friends going with preposition Praise for two, but very good.
+So, in other words, how about that? What if every production rule has its own probability?
+So, for example, we have three options for the verb phrase, right?
+Believe that this is this is .6.2.2.
+Right. Would that make sense?
+This this is the approach which is called probabilistic grammars.
+And where would I get or would I get those?
+Numbers from that group.
+But I don't I'm not looking at the tree right here.
+Well, let's just. Get to that.
+Okay. This is this is what I'm talking about. There will be.
+There will be a probability associated with every protection group.
+Where where am I taking those numbers from?
+How am I estimating those? They will be and they will not get a precise good.
+This is an English value for. Remember, how do we get the part of speech tags assigned to our sentence number of utterances, right.
+Certain. Certain. Certain tags went together.
+Insurgent attacks were more frequent than others or given the war.
+How about this? How likely announce rates, how often enough rates is just a single level, how often?
+And now rates is determined there and no and so on and so on.
+So you have this an updated corpus from which this will be extracted again counts pounds of this over a comes of that same approach.
+This is an imperfect but. I want to know.
+Do you not know? Are you noticing anything of interest on this colorful slide?
+Even if they're not the same. The top one and the bottom one.
+Why are they one? Because there's only one way to to to to process that.
+Right. So you have no other options. So you always process start into and you will always pass a prepositional phrase as a preposition.
+And then no, there is no other options for for the other two.
+Noun phrase can be broken down into three different ways.
+Hence you have three probabilities that add up to one.
+And those numbers are estimates of.
+I arrived at this X symbol.
+This is a given. How likely? What is the probability that given this symbol, I will expand.
+I will produce the expansion using that given rule.
+Conditional probability. Okay. Let's go back a little.
+What does it make sense that, okay, we need some estimate of probability.
+That a given sentence produces a certain sentence is a given.
+This is something that is fixed. We can pass it even using c, k, y, and we can come up with two different trees.
+Given the words, given the sentence, how likely is that true?
+That is that this is the conditional that we want to calculate.
+Estimate. I'm sorry for both. And then take the one that has a higher probability.
+Well, the basic conditional probability this would be.
+But what is the probability that we have this tree?
+That the tree is key and our sentences this as over the probability of that sentence happening?
+This one. You already know how to estimate the right. What about the other one?
+And do we really need that probability of a sentence?
+He suspects. Right. Probability of a sentence is fixed when we're analyzing the difference between the two.
+And I'm only concerned with the answer. What which tree is maximizing that conditional probability?
+Which means that I'm really this part right here.
+But then I'm going to order is fixed. So I'm only concerned with finding.
+AP the tree maximizes this part.
+In other words, we're looking at something proportionality, many of you.
+This is not infinity. If you've never seen that symbol, the smallest proportional to the I'm.
+I don't really care about calculating that.
+I'm fine with just going with this joint probability estimation and finding that tree for which it is the highest.
+Does that make sense? Okay. There's a little theoretical term.
+If that tree, if we're going top down and our tree ends up producing the sentence, we are.
+Looking at that sentence is a yield of the tree or.
+If our sentences are you of the tree, we can. To find our way to decide which tree is better.
+It's enough to to find the probability of that tree happening.
+After all, both trees or three trees will generate the same sentence.
+So let's just look. How likely are we to generate that this tree versus that tree?
+Does that make sense? It's another little computational shenanigan to simplify things.
+Right. So we went from probability of tree and sentence over probability of sentence to just probability of trouble and find the tree that maximizes.
+Do we really care about the treatment?
+We do not have a grammatically correct sentence in the books.
+Exactly right. Right. What's a zero? Okay.
+There is not much to it. Really? If we have this nice little probabilistic context free grammar, we somehow managed to find those numbers.
+All we need to do is to break down the tree into individual productions.
+Every production has its own probability and just.
+Multiply all the probability of a rule being applied.
+This is this has nothing to do with English reality.
+Once again, it's just a trick. But I do it.
+So the girl yellow, well times purple too.
+And so on. And so on and so on. You'll get a number.
+And then whenever you're forced to make a decision which way to go in that order, tree building, pick the one with the highest probability.
+Does that make sense? We're not going to ask any questions.
+Yes. So when you say that probably would be rule, because we all know folks who do that.
+But I wanted to know because from what we found out, that no one in the region is going to get a lot of funding to do that.
+Almost everybody is like Rosetta Stone went to use that to reach out to which one to use.
+What exactly do you do?
+A lot of a lot of work. I've not wanted to do the kind of.
+So when you reach one confluence got to introduce me so is that any.
+So as far as As far as that, well.
+There's two approaches to that. At least one would be have a sort of a benchmark English corpus and a benchmark English grammar.
+Stick to it, use the benchmark language corpus to write those numbers.
+And then. Use a completely different corpus for your MLP work or whatever user inputs are
+just based on the are you doing whenever you're dealing with a new corpus,
+for example, you want to corpus those specific to the circle field,
+then you can rebuild that up or build your own grammar, pick a different grammar, rebuild that people.
+And again and again I would go with the first approach because this, this is, this has already been done.
+The context for grammar from this does establish this.
+This is not going to change. I'll anticipate that there is a lot of base based caucuses that actually I'm pretty sure that somewhere
+you can find those numbers etched in stone that they're not going to change much either thing,
+which is not involving grammar wise that much.
+But does that answer your question? I would not go with applying a specific purpose to Bill to find specific numbers for that caucus.
+Just English is English. Okay. When it comes to language models, when we were doing the probability of a word appearing later,
+this is where I would absolutely focus on the corpus that that matters the most to your application.
+Oh, English has rules, right? But like we know in literature, the rules are broken.
+So, like, what if we just, like, explore its specific purpose based upon a specific purpose in life?
+It is a sentence based on what the corpus for this job is like.
+I'm sure. I'm sure I can in literature, I can write a sentence that everybody will understand, you know, and yes, according to the English family.
+And so I honestly I don't I don't know what the precise linguistic answer is to that.
+And what would you do? I would imagine you would have some some.
+Is it more flexible to just use the frequencies and get these problems instead of straight up guessing?
+Well, yes, you could.
+You could you could use a corpus with some not necessarily proper English legal sentences to build in a slightly different grammar.
+Yeah. I'll do a little research.
+I'll give you an answer on that. I'm not a linguist, so that part is a little foreign to me of really understanding.
+Also. I can imagine passing like this being done by the Deep Learning Network, which doesn't doesn't rely on that specific grammar it will build.
+It's all because I'm excited.
+That's how it that's how I would go about it. Then you take the next to compute the probability tree or or each tree or even each subtree really.
+So you can you can compute those those probabilities as you go as part of this.
+So you can see why crosses. So it's kind of like dynamic.
+It is not a problem. Yeah. So in the end, you could just have all those.
+We, we started with just populating this table and putting non terminal symbols in there just to match the productions.
+Right. But we might as well if we have a probabilistic grammar,
+if we have those numbers we might add an extra step when populating every cell to calculate corresponding probabilities.
+Okay. All right. Completely different.
+So let's just let's just summarize. We did some preprocessing, right?
+We extracted and we chopped our text pieces.
+We standardized it, normalized it glamorization, whatever we need.
+We extracted the word relationships in in the fourth census sense so we can find items in the names and whatnot for every word,
+whether we will use it or not. We can tap into that that we did the part of the speech that was part of speech that we were able to parse,
+which parsing helps us do group some sentences or phrases together.
+Perhaps there's. There's something. Like.
+Like. San Francisco then has to go to a better person who will help us find it.
+Perhaps there is an expression that is common in English.
+Or the two words. Ow, ow, ow, ow, ow, Ow!
+A lot of expression towards someone like buckshot or something like that.
+Okay, so we have them. Now, the tricky part is I showed you a bunch of statistical methods to extract that sort of information.
+At the end of the road is your own application that taps into that.
+I will not tell you what to do with you. This is.
+You have all this information. This amounts to some sort of language understanding.
+What are you going to do with that? Depending on your application, things will change right here.
+Okay. One of the possible applications with the information that we have here is.
+Tax classification. What what what comes to your mind when you think text classification?
+Yeah. Okay. Very good.
+So categorization like this belongs to sports.
+This belongs to news, right? Like some deep sentiment on this boat.
+By all means, yes. Looking at text and labeling.
+It reviews sentiment analysis. Okay.
+So most of you, I imagine, if not everyone here, knows how Washington works and in the context of classification, Right.
+In the end, we have a machine learning model, whatever it is for classification,
+the throughput data you get an information does belongs to this category.
+This is this should be labeled this or that. Happy, unhappy, spam and whatever.
+There is two levels. Two classification binary is easy either or multiclass.
+You have multiple classes and you will have some number associated with each class.
+This in our case, this that belongs to this category with some likelihood that it or a multi label
+classification which is a little different multilingual equals a text model at the end.
+I think this text belongs to just category and that category and that category, but not this one multi label,
+whatever, whatever goes between the input text and the classification output can be a lot of things.
+Most people probably think neural network immediately in many models won't do that.
+And so classification is based mostly on the supervised learning and of machine learning.
+This is what I'm I apologize for partition.
+Some of you have noticed stuff already, but the idea is we have for supervised learning.
+We have a training set of against labeled sample and now this input label input label.
+This is going to begin to model that black box between the model and the algorithm, real work,
+some function that that function is going to be an approximation of reality, right?
+So I don't necessarily perfect, but as close as possible.
+So. What is the machine?
+The learning and the machine learning process is capture the reality to.
+Measurements. Measurements. Input label.
+A lot of them. Use them to approximate whatever generated that set of input label things.
+And later on use it to classify new input.
+What is the label for? As the process, you are responsible below the text classification model for.
+Building that part when it comes to images or numerical data.
+How many of you build a neural network model? Okay.
+What kind of data went into it? Two images which were represented by all these matrices of numbers.
+Right. Would you be able to put words into a neural network when you look at it?
+You need an extra processing step, right?
+So in the end, when it comes to machine learning models, specifically neural network models, you have to, as an input, have a vector of numbers.
+Well, is that a problem for for for a text?
+We need to do some embeddings of some victimization.
+Right. So we cannot just feed the attacks, document into a neural network and train it.
+It's just not gonna work. Words. I don't know what those are.
+Now, another difficult aspect when it comes to neural networks is you have a predefined structure.
+We'll talk about neural networks more, more along down the line,
+but you have a predefined structure so that the input layer of that neural network has a very specific number of anything that's not changed.
+So it's going to be a vector of, say, five numbers or 100 numbers.
+Now, how do you how do you how do you marry that?
+With my input is a five word review from Yelp or there's an essay in The New Yorker about the same restaurant for two pages.
+Both include information and sentiment analysis information, a little tweak or a little Yelp review.
+How do you take five words in a document and evolve over a thousand words?
+How do you turn that into a single vector that has the exact amount of data in it?
+Is that a challenge? Or even a review.
+I don't know. I imagine a return Yelp or I, A.B. or whatever reviews.
+Great. Just one word. Not impossible.
+One word versus a thousand words. How do you standardize that?
+That's the problem. So you have to do.
+Quite a bit of feature extraction in in MLP based classification and general neural network approach of machine learning approach.
+You have to do more processing in the end.
+You need a vector of features that can be fed into our machine learning algorithm.
+So this is this is a tough part.
+Embeddings is is the top dog in this in this situation.
+All right. This is this is state of the art. This is what you should do.
+Turn your text into embeddings. But there's things that came.
+Earlier. Okay. So to get to that.
+Show me something that I really like.
+When it comes to machine learning, your goal with machine learning is to find a model that fits the data.
+Right? But you cannot overdo it.
+I think everyone who did a machine learning model probably understands what you see.
+Frame is that is a good, bad, bad, bad.
+But a machine with learning to build a bad like that, it did.
+If it only had samples of very small samples from people who just happen to sleep like that every night without moving.
+So you don't want to do that when it comes to your model, right?
+So you need, you know, want small datasets. You don't want heavily biased datasets, you want a large dataset to train your model.
+Okay. I mean, of, you know, the distinction between training, validation and test sets.
+Mostly. Okay. So for those who don't know.
+Well, supervised learning is not to have any experience with that kind of thing.
+Supervised learning is kind of like you were. Taught things as a kid, right?
+Your mum or dad would point to a cat and say, just as a cat's input label, it gets stored in your life.
+The more cats you see, the better you are at it, actually.
+Here we can catch up pretty quickly.
+So that aspect of your mum or dad showing you a cat is is.
+That batch of those cat experiences is a training set.
+Training set. Input with labels.
+Cat Kappa Kappa Kappa Kappa Kappa Kappa. Training set Now.
+Later on in life, you will be exposed to something that is in machine learning terms.
+It's going to be a test set. You're looking at something and it has no label cat on it.
+There's no moment there. Next. Are you saying that it's a cat?
+You have to decide. Is it a cat or dog? Okay.
+The training, a lot of data label for you to process and learn what you're looking at.
+Task set. Set in practice is going to be labeled as well, but labels will be hidden for four.
+Evaluation of just. Okay.
+Validation set. This is if you're new to the machine learning this.
+This is not essential to understand right now, but validation setting is a.
+Let's just make it clear. I don't want to confuse people.
+So you have some data labeled.
+In the easiest approach, you would think the larger chunk is training.
+Leave the rest for test. Use this to show your model what you're dealing with and then use that part without labels,
+without showing the labels to the machine to decide how you machine classify what's here for me and I will compare the notes.
+How good are you? Are you? Did you classify it correctly?
+This is the basic approach. Typically this is 1828 or something like that.
+Sometimes people will chop that dataset in different ways to build multiple models simultaneously.
+And this is where the validation set comes in because it will be used to if you compare the individual models that you created.
+Take the best one and then expose it to those tests.
+Is that clear or less?
+Okay. So here's an example of any.
+Training set with three labels. This is a data set.
+Colors are labels. Is, are there any patterns in that data right here are groupings.
+Absolutely right. So if you were to choose a training set or your for your model, how would you.
+Let's say I want to pick 80% of those points for training purposes.
+Should I pick those on only?
+That would be a bad idea. This would be this would mean that this would lose points are side sleepers and only I'm not showing IKEA.
+I'm sorry IKEA how other people are sleeping.
+So my training said in my training said you want to include variation, everything.
+Everyone should be represented as equally as possible.
+Right. But we can come back to that later.
+Okay. How many of you are familiar with the term confusion matrix?
+Okay. You will work with that.
+So this is not just an empty slide with words on it.
+You will be doing that yourself. Don't worry if you are not familiar with that concept.
+But in the end, you're. We are actually building the model, right?
+There is there has to be a way for us to tell that this model is better than some other model or that this model satisfies our some some expectations.
+There's multiple ways to evaluate the model.
+One of them is the basic one is to use a confusion matrix,
+essentially measure using the tests that measure how many true positives our model generates,
+how many true negatives, how many false positives, how many false negatives, and then throw your conclusions from.
+Okay, we'll get there. Now, when it comes to tax classifications, oh, you can summarize it.
+We have a document, the we have a set of labels for it.
+This could be just to label spam, not spam. It could be one star, two star, three star, a four star, five star review.
+Give it to the model. And the model is expected to tell us to predict what is the most likely class out of these that maps this document.
+D All right, so why would we do that?
+Regardless of how touchy the subject of gender is, Do you think you can you the machine can recognize who wrote a piece of text.
+Absolutely. It has been done 20 years.
+And the models, not the learning models, is just simpler models.
+We're used to to to extract.
+Apparently one gender writes in a slightly different way than than the others.
+I think it makes sense if you read novels. Right. So there's there's different vibe to it.
+Machine can tap into it. And I'm not judging either either either side or any side.
+But you can do it. What about the other ID?
+There's so many ways where this classification can be applied.
+I mean, three letter agencies listening to your texts and phones, they're doing that all day and trying to figure out what is it?
+Is it something bad or evil? With that comment, I'm going to leave you today.
+Any questions? I will do so naive based classification just to begin with.
+Next, you need anything. You know where to find me.
+Otherwise I'll see you next. It's all about, you know, constantly being like negative focus on the first.
+How do you figure out the reason I consider this a black hole?
+You know I hate it. In love and I do not the it.
+It is hard to more than one of these.
+I mean, the original value. Not so that most negative is zero.
+And really only a project that we want to get out of the loop yet.
+All right. So if I wanted to make a statement, you know that you know the way it works.
+Anything was okay. And how were the one or two or three?
+This is this is your sentence, right? Someone types them. Okay.
+What you need to calculate. And the end is this sentence.
+The probability of a sentence will be definitely probability that words to close worth of ability that were three.
+Yeah, I like those words too. Right.
+Well, then let's. You don't have to add that normally, but there is going to be a start up at the start.
+I imagine it's there and there's going to be an imaginary.
+That's right. Which corresponds to complete or one following Word three in this case, I'm sorry,
+end up with something, you know, and or three and I you could find those numbers from the court case.
+But I am making your life easier by making this point 25.
+So really, you have to find that and multiply it by point 25 twice.
+I mean, that's all I think about, because what I would say is that somebody needs to follow up.
+So here you have a zero, right?
+Yeah. So you can either you get here, you can either go that way or that way or across this would be substitution.
+I mean, we need a substitution. I do because it's a and E, so to get from A to B, I need a substitution.
+If it was I, this would be zero. Okay. I mean, yeah, that's the same.
+So. All right, this I already have one right here that would require a deletion.
+Right. Or oh, insertion y plus one, two plus one and two maximum.
+Very.

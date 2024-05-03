@@ -1,0 +1,484 @@
+First. Good morning.
+Albany happening today. Which.
+Reminder you're coming with us and that link is extended.
+I will not be extending it or added up or has issues.
+Go ahead. Did you fix it? Well, I haven't looked at it since today.
+We'll talk about something. Well. I guess what I think at last,
+less stages of processing and then I'll be really a to what we're doing is
+started talking about neural models and these two topics are very much related.
+They're realized nowadays usually also before we dive into how it's being done with each other to transform those.
+Let's talk about how it's been done before and what's needed to successfully extract information and how to
+successfully build or at least start building jobs around conversational age and without involving something such as,
+you know. Okay.
+So what do you think? The term information extraction would mean.
+Imagine that. Well, you don't have to imagine. We went since the beginning of the semester.
+We went through a bunch of stages of processing from very simple, splitting the sentences with the sentence in towards tokens.
+And then we did some tagging.
+We're past that. What? What do you think information extraction is right now?
+But go ahead. Being able to put words in subcategories, I guess is very good.
+Very good. So the tagging essentially event but different.
+Do you guys agree this is a person this is a boys.
+This is a date. This is exactly what you're always doing when you're typing a text.
+And see next day is the greater the more highlighted for you.
+And I'll try to schedule a meeting or something like that.
+That's information extraction.
+It's easy. All right.
+It is that kind of. The key idea is like having a database or a spreadsheet where you have everything neatly structured,
+looking at a paragraph or a text or anything that you are interested.
+And there is no structure to it, at least not in the files or like something very clear cut.
+So information extraction is a task where you are essentially converting unstructured text, text and.
+Possibly something like an Excel spreadsheet or something of the structure doesn't always have to be fully staffed, but.
+The better, The more structure the output is, the better you're off.
+So here's a basic sample paragraph of text and information extraction would try to find in that text oh,
+words or phrases or clauses that represent some piece of information.
+In this case, there's an organization where it's location or anything else that you can see here based.
+Here are some other ones. Of course, brand name is what you'll always be interested in in the same setup.
+Imagine that organization and location are our attacks.
+They are very specific attacks applied to words or phrases or qualities.
+Are you are always going to use the same set of such attacks for every application.
+No. Right. You're building an assistant that is trying to schedule meetings for you based on what you said or what you wrote.
+Dates and times and everything and places. Probably people.
+Who are you meeting with? This is probably you. So it will depend, although on probably.
+And this whole business is sitting in our pipeline just after part of speech that.
+There's two stages. They're typically present there.
+One one is usually called name entity recognition.
+So identify something, some entity that has a proper name, its own name, and the other one is relation extraction.
+Company X issued this on that date, that name which is the CEO of Company X.
+Sad. That's at a conference somewhere.
+Who said what and where. But those are the relationships, relations that you want to make up of one entity relation,
+another entity keeping the part of speech tags are going to be helpful here.
+Part of the speech. That's not the organization, not the location, not now, not those information extraction.
+That's just just part of speech text to perform that name entity recognition, collation extraction.
+There's all this stuff that you did was part of speech tagging and even parsing building.
+Or is that going to be is.
+Remember when we were talking about horror stories?
+There was there were different ways to pass a sentence, and sometimes certain words were grouped under on the rule.
+It's a verb phrase or noun phrase in things.
+Recognizing those would be helpful. The verb phrase.
+Write something. Or someone did something.
+Something else. Joe Read it.
+Mary Right. Entity.
+Relation. Entity. This is definitely going to be helpful,
+but this is a little more work to make it happen other than just looking at the part of the speech that is parsing passing.
+So here's a couple ideas for you.
+Why would you need that entity recognition, sentiment analysis, do you think?
+Recognizing entities in your own data sets would help you improve the performance of your neighborhood classifier.
+Let's say you have some magical additional features that you could come up with,
+but you have to know how to recognize who said what, who did what, other than just looking at real text, counting words.
+That's the only question and answer. And you won't be able to answer a question.
+Did you not recognize that part of the question?
+Anything else that comes to your mind?
+So I've used it for extraction of entities from large medical texts, like let's say it's a 50 page video file and I only need some information.
+The summary summary, for example,
+what dosage was used from this medication Instead of like searching for this specific part of the docs about the dosage,
+the I just finds that says, yeah, this is a document that just gets it the paragraph.
+So you definitely have some relations there, right?
+Entity, a drug dosage, something else, Right.
+Anything else. How would you go about?
+It's a bit kind of like like command or control, a bit like computers kind of deciding what to search for.
+This is set up like a search by the computer at the site with a search term, as I guess.
+Yes, but multiple multiple searches at the same time. And not only.
+Okay, search for most important pieces of that text.
+That's one stage. And then the second stage, connect them. That would be what, relation extraction and then that entity or machine does.
+In the training process, and then we had to show it.
+What what is the right thing that would be considered, for example, dosage and what would not be considered?
+And also as a result, that I would differentiate between different paragraphs, because sometimes if you don't tell it what it's not.
+Sometimes you just pull a random piece of paper.
+So this is talking about this, but it's absolute gibberish.
+So you needed some labels and a little supervision.
+What did you use basically is. So it's like you're asking like, how would this be done?
+I feel like maybe this case, yeah, the parts of speech tagging you look for maybe the number of by the numbers.
+Definitely. Groupings of words are specific, even if the specific grammar rules are going to be a hint of some of of relationships.
+She stayed up with you. Given that everything that you know about classification now index, would you say that that it is classification?
+But can you see how how finding and named entities would be a classification task.
+So even if it is the classification task, it definitely need to show examples for to train.
+The model for this is a person. This is so this is our date.
+This is this is a dollar value of something.
+This is a dosage. Right. You need those labels.
+Do you think another corpus or a differently tagged corpus is necessary to make it happen?
+Let's take take whatever text and your dataset you're using for your.
+Classification, right? You will not. Most likely I a level that think you will not find x jo person Chrysler brand PepsiCo brand in there.
+It's not there but there must be some of these you start to go oh and ask people.
+I think the most basic approach to finding named entities is to look for proper names.
+Would you agree? Even if an even cruder approach, look for something that starts with the capital.
+That would be a good start, right? Is not going to be the best, but this is definitely going to tell you something.
+Now that you're looked at something like New York City, would your part of speech tag tags help you here?
+Just looking at photos of each day. It depends if New York City is If every ward is treated as a separate one, then probably know.
+Someone has something that has to recognize that it's a one phrase.
+So in other words, it already should sound like a pretty challenging task, right?
+Yes. There's going to be pretty easy aspects of name recognition.
+There is only so many countries in the world. Right. You're going to have a list for that.
+There's so many states in the U.S. and so on and so on.
+So you can start with that. There's always going to be names, companies.
+It's never going to be easy. Here's an example of a of well, I guess.
+Think of it as a this is an output of a Native American native entity recognition process
+playing out certain phrases or certain tokens already tag things and thinking tags.
+But you can also think about your Harkless tag in a very simple way that you would use to train named entity recognition tool.
+If if you want to go beyond just simple, look up.
+Okay, this is New York City. I know that New York City is a city because I have a database of cities.
+I could I could do that.
+If you want to go beyond that, the first approach that you should take is look at spans of text that look like they constitute names, specific names.
+You see, again, I do love technology.
+Now a span of tags that. Has to be considered one entity.
+And then Target. I don't think I need to convince you that this is not going to be easy.
+As usual, there is going to be some ambiguity. Here's four examples.
+For what? How many, how many passports and entity tax do we have here?
+Washington was born into slavery. Never a person, right?
+Washington went up two games to one in the four game series.
+That's going to be a sports day. I imagine there arrived in Washington.
+Tony Blair knows Washington as a city.
+In June, Washington passed a primary civil law.
+The last one states. City said it.
+That's one. So how about.
+How about something? Government, right? Well, you can set up a context for where the largest is.
+I remember in those years, we father, we used our extra commission, although we would say we also have like tagging.
+And so we said, okay, with this sequence of words and tags grab from this index to this index.
+Basically this case would be what it would be start as name or a city.
+So and you just give it some examples of like different context.
+And by doing works as you as you can see, just part of the speech tags are not going to.
+You know, just having a part of the speech that was assigned to Washington.
+This is not going to help. No, no, no, no.
+Right. The part of the speech tacked on its own is not going to be of interest understanding that
+they didn't believe how how this part proper nouns at the beginning of the sentence.
+Like, how does that. He said it was like that person was always going to be capitalized and the right at the right time.
+I don't I don't think that when I said that I was a good.
+But too big of a word. You're a piece of the way to start looking for known names is to look for something that is capitalized.
+Of course, this is going to have. Issues.
+Just like you said, if it's at the beginning of the sentence. It doesn't have to be some sort of update.
+Right. So we need more of them.
+But if you were to if you if someone tasked you with that problem 50 years ago or 60 years ago, would it cross your mind?
+Hey, let's look for four names. First, something that starts with a capital.
+I don't know what your experience is. Personal experience.
+After two months of what is more than two months worth of this.
+But I imagine most of you have seen.
+Two situations where you look at a problem and, oh, I think I, I can do it.
+And very quickly you have some, some example or some counterexample that that just breaks your approach due to ambiguity or something like that.
+So yeah. Just looking at the capitalized mean, it's not going to be enough.
+Just like having a lookup table is not going to be there.
+But most certainly if they, if we're.
+What I'm trying to what I'm trying to say is you should not be,
+even though having a look up table for something sounds like a very good and very dumb idea.
+Right. Let's have the machine learn everything. But if if the material, the data you're dealing with is not changing much.
+Right? The members of Congress for the next six years, they're going to be the same, right?
+You could have that list if this helps your problem.
+I don't see a problem in I something like that to your solution.
+Okay, So here's here's one of the older ways of of finding and.
+It's called. Chunky. So that would be a step after part of speech tagging after passing.
+You already have every token, every word, part of speech tag, and then you can see you have a noun.
+The phrase here, right, that this is where parsing would be helpful for you.
+Now, what is choking? It is another way of parsing your text based on some rules, just like Grandma was a set of rules.
+There is going to be a line that is called a chunk where you're going through your text that you're looking for trying to match patterns essentially.
+Oh, rejects would do. Here is a possible Grandma Chung role, and you're scanning the text looking for spans of those of tokens that match the rule.
+He found it. Try taking the.
+So it's one level above part of the speech tech. Of course, Chunking has its own tags.
+There's two basic ways to do the chunking.
+One is with something called I'll Be. And the other one is bi0io and b it means token at the beginning, a token inside or a token outside span.
+Outside spent means doesn't matter. Beginning of of span.
+Okay, this is where our trunk, this is our possible named entity starts this out there.
+But it's like but just like an abbreviation.
+The verb modal. If this is how you travel, it requires you to use this specific bio tagging.
+In order to be successful, it has to know. Very sorry story, but not everyone will pass it.
+Yes, birth is a is old news at this stage.
+But. But now you know where it came from.
+You can actually you should have more granular look at those chunking nodes not only beginning not only inside,
+not only outside, but beginning of a noun trees and of a noun phrase outside of a phrase.
+So just like for part of speech tagging, you will have a set of tags for your children.
+As you can see. We'll have to have specific two categories wrong person, location, organization and your trunk.
+We'll try to find things. I will not be expecting you to understand how each other works because they're kind of old news.
+But you should have at least. Some idea of what it's about, what it is.
+All right. Once you choke a piece of text, you'll end up with another tree trunk.
+Trunk passing a tree. If you push on top of the original pressing tree that everyone has seen already.
+Then you see the entity relation entity structure here.
+The little yellow dog named entity.
+Right. Is not a. Specific name, but it's some entity that.
+That's right. Mark that relation. But can another entity.
+So if you're trying to find Spence or even even here, Jane of United.
+Entity of relation united relationship inside the united a unit of United Airlines of.
+DC How can we help you find spans?
+And pretty frequently what's been between the spans is going to indicate a relationship
+like that under the yellow dog there that does whatever to something else.
+Here's a couple problems that you are very likely to see. Missing important tokens.
+Jones versus Jones, Smith and or Peach would like to capture the whole thing more tokens than desired for the university.
+They really. We don't need that.
+It's not a big deal to include that partitioning.
+Assigning a rotate. That's that's going to be pretty pretty common and misclassified, just like with this Washington example here.
+This one is going to be a good candidate for a firm misclassification here.
+Ms. Ms. Tagging. I guess you can see how this could be problematic, right?
+All right. So you mentioned the birth rate.
+It can be used as a model.
+The hidden Markov model, just like you use it for part of speech and you can use it.
+To assign entity tags. This is where the best results are going to be nowadays.
+Neural frequency models, transformers, essentially.
+Please, let me show you something here.
+Let's just clarify one point. One more thing. So Chongqing,
+everything that we've covered so far would mean assigning named entity tags to two sequences
+of words or individual words in terms binding relationships is another aspect of it.
+Do you think this should be considered a classifier as well?
+And the relation empty. And you make that a classifier.
+You found entities, two entities. Now, can you classify the relationship between them?
+And who decides what better relationships are? Important Not.
+Well, again, it will depend on the problem.
+If you're trying to build a scheduling system, you will be looking for dates and before or after relationships, that sort of thing.
+Here you have a relation or a city that does not need to be always, always there.
+The process of finding those relationships is called a card reference resolution.
+Some pieces in texts, they can be pretty straight up.
+Even a couple of paragraphs apart from each other. They may be referring to the same.
+I think they're related. That's a preference resolution.
+I'm sorry. Here's a little demo of a neural based reference resolution.
+It will tell you, Oh, you want to try some piece of text?
+It's meant to find, to connect.
+Entities in Texas that refer to the same thing call reference.
+Holidays to all this, including taxes.
+We don't. Wrote.
+Well. Production.
+Well, they're working. Research.
+World. Oh, well.
+Let's see if this warrants. Wait wc got as.
+Sure there's there's a reason to have a demo.
+You can get a picture. Okay.
+Never mind that. You cannot trust the Internet.
+Well, let's take a look at what is being shown here.
+So they have some. Example here.
+What do you think? What do you think those connectors will?
+And they show how much, for example,
+is related to the mine in the sense that this is the same person talking about some measure of a reference rate as he did.
+There is negative values as well, which means the opposite of reference is.
+Would that be useful? Works for tragedy, for example.
+It's insanely useful. And this is this is absolutely the step that they're making when they're all analyzing your own,
+your own input, trying to figure out what what is this person writing?
+We will not be making a reference to the resolution tool here.
+That's for sure. Okay.
+Know, again, I think this topic of I'll come back to it when we will be exploring transformers and large language models for a little bit.
+Hopefully we'll have time to see how it actually works behind the scenes.
+But the other thing that I wanted to talk to Dave briefly so we might end up earlier is what do you need to build a chat bot or any conversational AI?
+To. Anything that will talk with you.
+So you if you remember at the very beginning of the course, we talked about Eliza, Right.
+And an example of an early chat, but you guys took a look at it.
+We'll take a look at it again today, but this time we will try to pick it apart.
+How is it actually working? Just briefly, But what do you think a chat bot needs to do?
+You know, to respond to specific problems most of the time, and I'm referring to the chatbots I've seen, these are like, give me like options.
+What is your problem related to? It's just one of the options.
+So now they have like a context problem.
+And if they can make it with like master or they refer it to somewhere else.
+So you could, you could think of chatbot as different levels of, of, of sophistication.
+Right. There is there's chat, but there are very narrowly focused on us.
+It's essentially a decision tree with text around it.
+If you think about it, you a question is ask yes no.
+True or false. Blah, blah, blah. Follow up a different path, a predefined script, maybe randomize some words here and there so it looks more human.
+But really there is there is no conversation going on.
+This, What would we just talk about would be dialog task based dialog agents, very specific.
+They may look appear like they're really good, but they're only designed to do talked with you about very specific,
+not even called target but wouldn't even call it talking to something very specific checkbox.
+Well, it's going to be something way, way more informal.
+But when we get there, let's go to Eloise.
+All right. So I don't want to waste your time.
+We agree the last time you saw ADD that there's some rule based system, right?
+Yes. Remember? All right, let's.
+So someone was the chat with Elijah. So my name is Mark.
+Oh. That was cool. Yes.
+You can already feel something new. Something essential here in that job.
+Anything else at that? That. If that is calling for some nasty response.
+Let's be civil here. I get a bad grade and I'm sad.
+I know you do. Really? I'm pretty sure I know what's coming.
+I know you like them, but I.
+And that there.
+Sure. Unless, of course.
+She. I make them very well.
+My. My midterm. But.
+They see what's going on. All right.
+I think you don't remember.
+What? We don't think you'll understand me. Okay.
+Sinking ship. Be harsh otherwise.
+She's from the sixties. So what's behind the scenes?
+There is no chat. There is no nothing adaptive going on.
+No learning. I can tell you that. Nothing whatsoever.
+Exactly like the therapist to ask, you know, more about what's going on.
+I like I guess it's coded so that it tries to always ask for more and more questions more.
+AS That's exactly what it is. Yes. Yeah, I think so.
+Unless it's targeting a specific mode like we do when we don't see it and then we don't say it didn't pick said indexing.
+So. So he was looking for a particular. Right.
+And then he started the lines of questioning. And I think they're very good.
+And I feel like that showed like the anti relationship where like I said, it repeated that.
+But the other side of it. Mm hmm.
+So it's latching on to certain things and it's trying to flip it around.
+Right. Anything else less than is right when you say bits instead of writing.
+So I am happy that the opposition is saying I'm happy with not saying.
+The thinking. And we're back.
+So, yes, you are absolutely correct. The idea this is and not that I'm an expert in it, but I read enough about the laser to know this.
+This this wasn't meant to be entertaining.
+This was a real attempt at having a computer therapist, a specific flavor of a therapist who just lessons just baits you.
+That's a terrible word here. But I was just trying to to encourage you to talk.
+And then. And then. And then. And then you may laugh at that thing right now.
+Or you may laugh at this right now, but.
+This is that approach in psychology that you don't have to know as a jury in psychology.
+Just keep asking for a follow up question.
+But. There you go.
+Take a look at it. I can't imagine any of you in 2024 doing anything of that nature after talking to allies.
+But in the sixties. I believe some some people even have withdrawals syndrome when Eliza was taken away from.
+All right, Joe.
+And Eliza was also, at the time, considered too old to be a child, but which passed the Turing test.
+No one would say you're passing these days, but it's a different story anyway.
+Here's. Here's the idea behind Eliza.
+It has a bunch of patterns and is looking for.
+Once I enter a match, it will use specific words.
+To us topics of conversation,
+and it has a specific a range of responses where it will just incorporate the the things it found in someone's response, such as here you like.
+Right. So obviously, the word like was one of those words it latched onto in its response.
+What makes you think I and there is a blank place, but it will just go on like this.
+And we'll look at every word and anything that you wrote rank every word and everything that you wrote in in some.
+So this is kind of like an entity recognition that not really entity, but important recognition.
+And we'll try to score every word in whatever you wrote,
+pick the word that it finds the most important and it will use it to build a question for you or a follow up response.
+If if it doesn't see anything, it will just do what you said.
+Right. There'll be more.
+Right. This is. I don't know what to say. Keep going.
+Maybe I will find a word for you. So how would you how would you rate analyzer, given that it's from the second.
+Year that can be. Imagine not knowing anything about natural language processing and someone puts you in front of that.
+You know, you know nothing about computers. Well, let's be let's be right.
+In the sixties, people who knew something about how computers work were very few and far between.
+Right. And then you sit in front of a computer and probably go, Wow.
+In any case, this is not the end of the story. Here's another board from from that era that I'm not sure if you want to talk with.
+Actually, you actually have to you have to sign sign in to talk to this demo and provide your date of birth, because Parry was no joke either.
+And that was a step up from there. But Parry was something opposite of Eliza.
+Eliza was meant to be a psychotherapist, right?
+Perry, I think, was modeled after a schizophrenic.
+So futures therapists would practice for people that need to talk with people with mental health issues,
+with use areas of the practice to pretty much.
+So do you want to talk to a parent or are you feeling.
+They're all cold. They're going to die.
+Yeah. If I'm not here next, next week, that means that we cross the line.
+We aren't going know that soon or eventually.
+Let's soften the blow. Yeah.
+What's going on today. She wants to change the subject so that it shows up instead of the old talking.
+So after. So what you're seeing here is I had a way of just going back at you with questions.
+Kerry, if I recall correctly, has some sort of escalation meter, has been having negative negative attitude and or positive attitude.
+The more whatever it means, if gay Kerry gets angry,
+his responses are going to get like like this and it's going to be Perry going to go back and forth between called and go, okay, I'm sorry.
+If you. Not impressed.
+Right. Do you think someone in the sixties period or the allies entering.
+You bet they did. They had them talk to each other.
+You can find a transcript of that conversation somewhere on the Internet.
+I never looked at it, but it's there. All right, so I know you're not there.
+There you go. Area has effective variables on top of Eliza's structure.
+Anger, fear, mistrust. I'm absolutely convinced that you're not impressed by either one model.
+This is. This is a job by moral standards. Well, I.
+I think you can live with a simple approach to pattern matching and having a structured set of responses.
+You can go pretty far right? Okay.
+Let's go back a little and talk about what needs to happen.
+It's not a question about who does that motto. Is it really anything about what we put in?
+Is it more built on what the responses with said responses to?
+It's not even a predefined set of, it's a set of response patterns, just like Eliza would look for that, or in your expression, to latch on.
+You will do that too. But he's also got some emotions to go with that.
+I had a question of our So these boats and boats are not looking at the context.
+What were the biggest problems for your viewing? I know based on that they were just finding the boat into the settings, right?
+Yes. And based on that, they're filling the responses that should be coming people to this.
+And. So were they looking at some of constrained?
+Do they know what they were looking at? The whole stream. There is a constraint examining each word w in the users.
+And that's Eliza if. Or it exists in its vocabulary, it will try to look for rules that involve that word or a single word,
+and it will use as if if not, it will stop or even just try to find, make you talk to it essentially.
+So even while constructing the response, they need to look at if it's a noun, this is or it's next to that word all before that word, right.
+You you have sort of categories of words, just like you have a pattern here is zero.
+You zero mean, right. This is this is blank.
+You blank me. There is categories of words that could go in there.
+If you spot that you have related responses for for those could be some of this stuff that zero is seriously challenging here.
+Okay.
+So now I know this might be a little boring, but if you were going to build a chat bot ever but are you going to reuse LGBT or something similar?
+Do you have to? Do you think building a good chat bot is easy?
+He wouldn't even be doing that.
+Yup. Okay. Now think about.
+Think about a scenario where you're you take you have access to a plane.
+Burgos, Chad, Djibouti. It was first trained as it is.
+As it is. You get it for free. You have a law firm, right?
+And you use that barebones charging board to be your front desk digital person.
+Would you be happy with it? Like it's a barebones.
+There's nothing. There was it wasn't fine tuned. It was embellished with a bunch of rules.
+You cannot talk about this. You can just barebones.
+It took in the internet, Wikipedia, whatever, whatever it was trained on, it's responding.
+There you go. Right. So you there is always going to be something that you have to be careful about.
+Obviously, if it's a law firm or you don't want to hallucinate ever.
+Right. Can you prevent it from hallucinating?
+For those who don't know what else the nation means in terms of judging, it means that it's just making up nonsense.
+We'll say something that if something is a fact, but you wouldn't know about that, right?
+So even though it will produce judgeship, it will produce legit responses, which may be just plain wrong.
+But it'll work if it's just for entertaining purpose.
+But even even with if you're when you're playing with or so there is going to be a lot of situations where it will just do both.
+Hey, I'm not allowed to talk about it, right?
+Or I'm not trained to discuss blah, blah, blah, things of that nature.
+Just gatekeeping. Is it? Someone put a roadblock there so you're not able to converse about certain things.
+So the reason I ask that question is because every time you will be building some conversa conversational AI tool,
+no matter how big or small, you will have to really, really make sure that it does what you want.
+So that might mean lowering your expectations a little bit, right?
+That might also mean. Downscaling.
+The whole thing, if you're in conversation with a tool, is really nothing more than and that's silly.
+Amazon thought that will just tell you what to do when your package is not in there.
+Right. You don't need all this power behind that.
+It's just a simple task based. Very, very, very simple.
+Right now, the requirements are going to drive your design as well.
+Architecture and whatnot doesn't have to have memory as it have to remember
+prior conversations that it doesn't have to remember the previous think you set.
+Right. So it's not what I'm trying to say is that the stuff that I will,
+the tedious and boring stuff about conversation, conversing with machines is not it matters.
+You have to implement some of some of those aspects regardless.
+So here's a very simple approach, very effective approach for something that is not as sophisticated as you,
+but it will do for answering very simple questions for for, for example, airline booking agent.
+Right. This is a common approach dating a couple of dates back decades back having strains.
+What do I mean by frames? It's.
+It's like a questionnaire to be filled with information.
+So if it's an example, here is airline booking agent.
+Right. It's task is to book you a flight.
+Right. So they want no word from to where, when.
+Right. And so on. Which airline?
+That I don't know that a bunch of planes. So all all the conversation has to be centered around filling in those blanks, filling those frames.
+Now, can you imagine, even even working for that law firm, doing that, filling a offering.
+Why not? Right. Because there's there's going to be common tasks.
+Asked for that assistance book. A book, a meeting with the boss.
+I don't know. Schedule some interviews somewhere. So the idea of a frame is still there.
+It's useful. Conversation turn based.
+That's expected. Now.
+Eliza is billed about Back and forth, you mean. You mean you should continue your chat, but you always, always follow that structure.
+Or perhaps you should wait. Or perhaps you should enter.
+Interrupt. So the models for a chat bots include taking turns and having some flexibility to perhaps barge in and cut something short.
+Another thing to consider when building a chatbot is to think of dialog as a set of actions.
+Does that make sense? Can you?
+If you were to distill look at a look at an exchange or even me and you in my office when you were looking at an ad in your exam.
+Yes. No, I agree. Right. Good idea.
+You should go and do this now. Blah, blah, blah. These are considered speech acts.
+You can acknowledge something, right? You can direct some someone to do that.
+So the conversation is coming from the chat, but is going to have responses grouped in those speech Act categories.
+You may not realize that the short form forming.
+Perhaps is to represent some action is is is going to be very useful.
+Sure. This sounds like someone using Alexa turn up the music anyway.
+Oh, we will not be building a chat bot one.
+One more thing that I want you to understand is the concept of grounding.
+And especially when we're talking about task based chat bots, grounding means making sure that both sides understand each other,
+making sure that whatever was that is understood by their party, especially by a computer.
+Here are some examples. Grounding and acknowledging.
+Grounding. Grounding, confirming. Making sure that everything is understood.
+Okay. All right.
+I guess we can leave the rest for you, for our at large language model explorations.
+Do you have one last question for you for today?
+Do you think a rule based model such as Ally's or that Perry guy still have application in this day and age or not so much?
+And maybe it's part of like existing models, like better models that we use nowadays?
+What is that like? Simply using what they used in the past is not have everything.
+Everything that is worth any anything we say is just neural transformer based model, but we'll get to those.
+So I assume like a rule based model, you much more efficient.
+You can run it on your on your Casio calculator Pretty much.
+No, not at all. All right, let's cut it short for today and 6 minutes.
+I don't want to bore you with more stuff about stuff.
+And is probably the board to.
+To do. Right. Well, we'll get back to all this stuff once we've got through.
+Attention transfer architecture is ready for that if anyone has any requests for the remainder of the semester.
+If I can, I will accommodate you. So just let me know.
+How are you preparing?
+You know, I thought he might been ready to die, but, you know, think.
+Well, you know, let me play him a little bit of The Bachelor.
+And when I was younger, just a year ago, I said, God, I would just let you go crazy.
+And. William Wallace Well, when you think about it.
+So we're not going to comment on the youth vote.
+And that's when you look at all these four women and see whether they like it.
+But I think, you know, I'm willing to give it to you.
+But, you know, I do think that well, you know, you think I'm going to let you know,
+I think that there might be like a little place for them to go in your life.
+But if you put up a great idea that the people who decided that they were going to go to Target,
+my choice and I believe I did a little bit, I decided that I did not know how to do it, but I did not know.
+But I think hopefully. The door is open.

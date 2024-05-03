@@ -1,0 +1,660 @@
+Mortal. Ashes.
+What do you remember from last two lectures? Our last lecture.
+Very little. Sequence to sequence.
+Uh, model. Are those kind of clear what they are doing?
+There are structures in. All right.
+This is what we were looking at before.
+Sort of a variation of, uh, many to many recurrent neural network creation in a sense that, uh, the model is really broken into two components.
+Encoder and decoder. Peter is essentially responsible for accepting the input that will be processed into some output.
+It could be a sentence in one language output, a sentence in another.
+Language input could be a question, could be an answer to that question, and so on and so on.
+So encoder is responsible for.
+Well, I'm quoting as much information about the input as possible,
+and kind of I don't want to use the word, but kind of compressing it into smaller package.
+That will be called the context decoder.
+We'll use that context to drive its answer.
+Is that clear? Now, this particular architecture that you're looking at here is, is based on basic recurrent neural network units.
+And if you follow those reddish brownish arrows right here.
+What are they? It's a conveyor belt for. For something.
+What is being conveyed between. Really?
+Reuse of those raised in time. Times.
+Time one. Time two time three.
+What is being passed along? The context.
+Yes, but what it is technically.
+What we're dealing with. Very basic recurrent neural network units.
+Which are? We have a memory. Right.
+That memory has some way of representing or of what it has seen before.
+Right. Plus. That's not the use of the word plus in the next step.
+That single unit right here will produce something based on the memory and the current input.
+Right. And we'll try to mix it up.
+Let's use a vague term for that. And it will pass.
+What what it produced a long time.
+That's called a hidden state. Essentially representing.
+Hey, you. Your next. You next unit, right?
+It's not really in next to minute, but you in time plus one.
+Grab that and use it when you will be processing the next element of the input.
+This is your context. But now.
+Really? We're trying to connect the two pieces of the.
+That structure, that encoder and decoder with some.
+Larder. Context.
+In this particular example, there's nothing larger.
+While we're purchasing the hidden state vector, we're passing it along and out of the last iteration.
+Here it comes, the last hidden state. This will be our hidden context for the decoder.
+But if I have a very long sequence right here, there are hundreds of.
+Cycles, right? Hundreds of hidden states are produced and produced in producing tattoos.
+That last hidden state that comes out at the end is not going to, quote unquote, remember much about the beginning, right?
+That is the problem. So it's it's it's kind of like summarizing the novel, a novel just based on the last chapter,
+more or less with very little mention about what happened in the past.
+This is this is what's happening. Is that a problem?
+It's missing someone else. So? You'll think some information.
+Is that what you said? Yeah. Because if it's incoherent, a single vector, it's not going to catch all the words.
+Depends on the problem subject. It will depend on the problem.
+There is going to be problems where there are long term dependencies.
+Again remember coreference resolution. That long term dependency matters.
+You want to grab that.
+If if you're lucky and you're doing translation hypothetically between two languages where you have 1 to 1 mappings for every word, right.
+You can use the context is not that relevant.
+But say you're you're translating from from English to two Spanish, given those two languages work in a completely different way, right?
+But English sentences, at least from my perspective as a foreigner.
+Go back to write the sentence backwards, logically.
+Spanish or Polish or other languages? Kind of.
+Express. Thoughts in the opposite direction.
+That's my impression that you're in. You don't have the same kind of mapping and lower context matters.
+So ideally. What? Wouldn't it be great if I could?
+Well, instead of just passing along this last piece as a context.
+This last piece. Submarine. Consider it. Okay. Last chapter.
+Summary. What if I was able to pass along everything?
+Hey. Have it. The decoder.
+Look at everything that I have seen. There's no point for an encoder then.
+Right? Or not? You know, the thing really is just vast entire input to.
+To the decoder. Would that be good? I mean, from a personal performance perspective, performance in terms of quality, quality of output.
+The more context you get, usually the more you can benefit from it.
+Right. But what's. What's wrong with that? Performance intent in terms of processing.
+Right. We have a lot to handle. Uh, processing.
+This could be an input sequence of three, four, five, five, hundreds of.
+Every single one is of different length. You have to be capable on the decoder side of deciphering that, putting it all together.
+Right. That's that's not easy to do.
+So. One possible solution is to.
+Instead of a single vector. This case, it's a hidden state passed from the last recurrent neural network iteration.
+Let's pass all those hidden states. Not inputs, but all hidden states.
+These are just summaries of what though the encoder recites.
+So. Okay. This is what I'm talking about.
+This would provide more context for the decoder at the expense of some processing challenges.
+So far, so good. All right.
+Let me let me give you a hypothetical scenario. This decoder.
+Let's talk about that. No, again, this decoder is inside writing.
+Is there any race literature, literature classes, writing at this university that you can take for humanities right.
+Lit classes. You analyze, you could possibly analyze it and novel.
+Well, let's say that you have this nice little sequence to sequence architecture that writes a summary for you,
+paragraph after paragraph, corresponding to chapter after chapter of the novel.
+Does that make sense? So those y1, y2.
+What are entire paragraphs of summaries for for the novel?
+Does that make sense? Okay, so now if I only pass sort of the summary, final summary, final chapter summary.
+And I'm trying to, uh, as a, as a context or final chapter state as context for, for this decoder which is trying to write.
+A paragraph about the first chapter. What didn't work?
+I just passed the context of the last chapter to the decoder, which starts by trying to write the summary of the, uh, of of the first chapter.
+That's not going to work. Right? Because the information about the first chapter is scarce at best in that, in that vector.
+So instead I could pass every single one of them, right?
+So I have a little hidden state for chapter one, chapter two, chapter three.
+Right. But is it possible that those chapters are kind of connected?
+Is it possible that you once again that you would be when you're summarizing chapter two, you would be referring to chapter one a little bit.
+Okay. Yeah. Just so we just gave them a voice.
+Like different colors have different words for the incoming context.
+Very good, very good. Having different weights for for all these is not a good idea.
+I'm writing a summary of chapter three. I want to include a little bit about chapter two there,
+because there is a story arc or something like that in a bit of a chapter one, which is just a tiny bit.
+So. Whatever that is for chapter one, I would like to look at it or at least write whatever it is.
+For chapter two, I would like to look a little deeper at it.
+And chapter three this is where I want to focus on, right?
+Does that make sense? So once again, the idea is that we're we're have a little decoder that is writing code, no chapters.
+And chapter one, chapter two, chapter three.
+Now based on what I said, to which you use the following expression.
+That this guy right here.
+Writing. Writing a paragraph about chapter three should direct the most attention to the third.
+Context section. Because it corresponds to the.
+Chapter three. From the end. From the novel should.
+That step where summary of chapter three is being written, direct the most attention to words.
+The vector summarizing the input for chapter three.
+Is that a logical. Okay, so I used the word attention.
+Where did you hear that word in an NLP context? Or have you ever.
+Transformers, right? What's.
+Let's go. I'm sure you everyone has or most of you have seen something like this, right?
+In the architecture of a transformer. If not so, you won't see it today.
+Uh. Has anyone was.
+Were you able to decipher what's happening? It's just a bunch of blocks, right?
+What's going on inside? So we'll get this attention.
+In other words, would it be good to have a little mechanism that which, instead of looking at the entire context at once?
+But just focus on pieces of it that are most relevant.
+Chapter three. Probably chapter. Chapter three information and chapter two are the most relevant.
+Chapter one. Maybe a little right. Am I losing you?
+Or not. Okay. So let's add something that is called an attention mechanism.
+This is not yet the mechanism that you see in those transformers, which.
+Large language models are but it's, it's it's it's a first step towards that.
+So hopefully it will be clear to you in a second.
+How does it work. There is nothing more than just pure mathematics and pure linear algebra.
+Nothing more than that. Well, plus some little shenanigans.
+Okay, so. Here's a bit of a description.
+Of what this attention mechanism will do, given us a set of vector of values for.
+A set of vector values would be. Let's consider in each individual red vector.
+As a single value, whatever it means a value for chapter one.
+The value for chapter two. It could be anything depending on what the input is.
+Given a set of vector values and the vector query.
+So this. There's no query just yet here.
+But they won't show up. It will be kind of coming.
+It will be that not kind of they will be coming from the decoder.
+Query. Hey, I'm the decoder. I'm currently looking at this.
+I want to solve this particular to answer this particular question.
+What should I write for chapter two? What should I focus on?
+What should be the second word? What should be the words following this?
+These are the query questions. Of course, your software will not be asking those questions in English, but it will be encoded in in in a vector.
+How? Well let's see. Okay. Attention mechanism amplifies important aspects.
+Did I tell you that that sort of kind of interplay in neural network amplifying something, dampening something will show up plenty of times.
+This this is what we will be doing here as well.
+Attention mechanism will amplify what matters based on the query and it will dampen what doesn't matter.
+Given the current query. All right. Let me walk you through an example step by step.
+And let's see if if if it will stick.
+Right. Our sequence to sequence model is still composed of two elements encoder and decoder.
+Except now I will rename and actually restructure a little bit.
+My decoder. It will be an attention decoder because it will include the attention component.
+All right. Encoder. Encoder is looking.
+It's translating a French sentence. Anybody speaks French here?
+Good for you because I don't, but I know what it means. So word by word.
+Right? Notice how hidden state vectors are being produced.
+These are my values for the attention one word, second word, third word, and end of sentence.
+Right. For values.
+For vectors, that will be the basis of my context.
+Oh, by the way, let me go back one second. Is the context fixed here, as in when it will be traveling through this decoder piece?
+Will it will that context change?
+Know what the decoder gets at the beginning and it comes at a quarter keeps throughout regardless of what it is doing.
+So it's a it's a bit of a problem even with this.
+It's looking at the same thing over and over in the same way.
+Okay. This means I'm a student.
+In French. Now let's be all four.
+Doesn't have to be four, but it typically will be a fixed number of of those.
+Did I mention anything about padding? Let's start. Yeah.
+Okay. So side note.
+Okay, the input sequence can be any sentence in French, right?
+Two words, five words, 20 words. Right. Those structures will typically have a limit for a sequence.
+Let's say that limit is 2020 elements.
+I have three elements or four with this end of sentence four elements, and there is 16 slots left for something else.
+Those slots will be padded and those padded parts will not matter.
+I'm not showing them here. Is that clear? Ignore the whole padding thing you prefer for the time.
+So values go to the attention mechanism and are being stored.
+There are some. Let's not talk about what they are.
+How are they? Constructor. There are weights which will be.
+Use to multiply that it will be.
+We will multiply our values vector by those of weights.
+Essentially, to tell, oh, I care about you.
+I don't care about you. I care about you a little bit.
+You you can go home. I don't care about. You need to write weights.
+And those weights will be changing. Depending on the query, the query will dynamically change the context.
+Anybody lost already? I'll pull it up.
+All right. So first context dynamically created for the decoder.
+We went through time one time two times three times four.
+So times five will be for that encoder. Decoder is getting the context.
+It receives the start symbol right. Produce the first word I.
+That's the name right. That makes sense. Let's do that right. Once it's done, it will also package that query for the next.
+For the next iteration or at time six.
+Hey, I just got it, and I hear. I will be.
+I want to know what words to put after I.
+Inside this little box. I'll get to the details in a second.
+The way it will get adjusted. Values vectors will be will stay the same, but they will be multiplied by different weights.
+And now say any of the attention mechanisms say will say, I don't care about you.
+I don't care about you, I care about you, only you. I'm like 5050 with you, right?
+Mix it up, say another context, and dynamically change context context into the code to produce another output.
+Send another query, produce another context.
+It's another query. Um, and this is how we generate an output.
+Do you see the difference between the approach that we I started with?
+Context is being changed at every every.
+Output stage. Here at every outpost in that context.
+Depends on what just happened a moment ago.
+The decoder will send in the query. Okay, I'm done producing the word I.
+What should I do next? Give me the context for it.
+Does that make sense? I mean, at a high level. All right.
+So let's see what is happening inside the. This is what is inside the attention mechanism.
+Looks like a lot. There's really not much going up here.
+Is that clear? Pointwise addition. You saw it for the RNN.
+You saw it for Lstm vector plus vector elements plus element plus an element plus element.
+Pointwise multiplication. Element times element.
+Element times element. Duplicate vectors.
+Those little circles will mean that I'm just sending the same vector in two directions.
+Okay, so what are we actually doing? Let's go back here.
+The encoder packages all the values, as in all its hidden states, and sends it to the attention.
+This is what the attention mechanism receives for factors.
+In my case it's four. It could be any number of factors really whatever that attention is ready to accept.
+And it so happens that all those factors are part blank.
+For that is just by design here. Just to show you it could be 16.
+They're usually going to be uh, multiplies of two.
+Length of those arms. All right. So I have hidden status values and I'm receiving a query from from.
+From the decoder. Just another vector. Happens to be of the same size.
+Now what's going to happen next is every value vector.
+Everything that came in from the encoder and will not change throughout the process will be scored.
+What's your hunch scored? According to word, it's kind of an oak on its green.
+Yes, it is the second major scale on B12.
+It's. A big zero minus one.
+I know exactly what's going on. But it shows how similar it.
+Is. So how similar individual value vectors are in the hidden states.
+Vectors are to the query. Think about it, and it's not that simple.
+But think about those vectors as being words.
+Word one, word 2 or 3. Word for and then query is a word in itself.
+If I had a synonym for query word right here in the second vector, what would it score highly in the similar similarity scale?
+Yes. If this is an antonym, right, it would score.
+Look at if it's an unrelated word.
+These are not words. Really. The query is not a word either.
+But they're word embeddings versus any vectors.
+Okay. So how would you calculate that score.
+I'm giving you two vectors to make your life easier.
+I'm also going to tell you those two vectors are word embeddings.
+They're not. But imagine that they are. How would you score them according to.
+Well, two to represent similarity. What kind of mechanism would you use to tell?
+One is close to the other and the other is not. Go ahead.
+Kind of distance. Well a sigmoid sigmoid is could be applied.
+It will be applied later. But before we get a sigmoid, we have to get a number.
+A distance measure is a good idea. Is there a slightly better idea among all the ones that you have seen in this course?
+Cosine similarity, right? What is cosine similarity?
+Mathematically speaking. What is it related to the one dot product?
+Weighted sum. Right. That's what work.
+You could do simple dot product, but it will be just a number.
+Could be a large number. If the length of this vector was 512 instead of four and query 512 instead of four, would would would.
+There's one? It's but it's square would be a larger number.
+Hypothetically. One element time query at the times corresponding query elements,
+plus second element times second query element times 512 element is or the sum is going to be longer,
+so it's very likely that it will produce a larger number, right? Now this is where the sigmoid would come in and help us normalize that.
+But in any case, there's if if measuring similarity is not.
+Working for you. Good measure.
+You read it as measuring a line, estimating the importance of that factor versus a query.
+How much attention I should. Get this vector based on the query.
+Attention awaits. All right.
+Here's the softmax. Everybody remembers what softmax does.
+Something like that. That's more or less what sigmoid does for a single number.
+Softmax does the same thing for or for a vector.
+So if I get four numbers right here, four scores.
+Softmax will produce a vector of four numbers.
+Which sum is. Well.
+What? Does that sound like?
+Normalizing? It does. So softmax will produce a vector with four numbers between 0 and 1.
+And now we can those number use those number numbers to multiply the initial vectors by.
+So now we have that was s1 through S force r my weights.
+How much does this vector matter to me given the query word.
+That's one number will tell if it's 0.1.
+I don't care about you that much, right? If it's zero, woof. Go away.
+If it's one, I want you very bad, right? If it's one, that also means that every every single one of s number has to be zero, right?
+So I'm only picking a specific vector.
+Does that make sense? Encoder gives you a handful of vectors, right?
+Decoder gives you a single vector. Attention mechanism looks at that handful of.
+Vectors from the encoder and said hey hey hey hey. I like this one.
+I don't like that one. Let's keep this one. And then it just scrambles it all together.
+As in. Sums them up and ships it back as a as a context.
+Is it clear that, uh, that the information, the vector that matters the most, according to the query, will dominate everything else in that cell?
+It should, right? The content of the factor that has the highest weight.
+The highest est value right here will be the most prominent contribution to the final sum.
+That's how it works. New dynamically created.
+Complex. Sent out. Repeat.
+So now. I guess you can can picture better what is happening here, right?
+One context. Fresh query, updated context, fresh query, updated context.
+Fresh query. And so on and so on. Is it more or less clear how the attention mechanism works?
+It's just scoring all the information that comes from the decoder.
+And. Creates a mash up of those score vectors with some of the parts amplified.
+Some of the parts dampen. Questions.
+Yes. So is there no doubt.
+How the query is designed? The query would be really?
+I'm not sure if I'm showing it. That's the first time the query shows up is really after this first, first iteration here.
+The first context is just going to be all the values here with equal weights.
+Does that answer your question? Okay. Okay, so let's summarize it.
+Um, is it clear that the context is now dynamically adjusted for every decoder duration?
+Also, the context is a function of what decoder is right doing right now, because what decoder is doing right now is passed on in the query.
+Yes. So based on the play, the attention, it's definitely the attention itself, not the context, because is modified based on the query,
+because the query did dictate what the what parts of the content for each query, the model separately.
+We have just this one model. The only thing that is being changed is the score right here.
+Uh, and then uh, it has to go through the processing, uh, for each query.
+It has to go through the same the same processing.
+Yes. Not not really from scratch because of values the states.
+But after the given, after the given states, it's it passes the new query.
+New scores are produced. New softmax vector.
+New multiplication. New sum. Ship it out.
+Repeat this. This does not change. We're not going back to the encoder.
+We're not asking for it again. It's already there sitting for us.
+Let's. Let's have it. Would you like to build an attention mechanism?
+There would be 20 minutes for for most of you if if that there is nothing, nothing in there, just a bunch of vectors and vector at times.
+Scalar multiplication, nothing on. All right.
+Now here's here's the tricky part, which, um, I imagine some of you might struggle a little bit.
+I would struggle with that. I struggle with defining what the query really is.
+Depending on any task you can't really tell.
+That is a very specific question. I'm asking for that.
+It's much more of a mathematical representation of what the decoder is doing right now.
+What is what is it looking right now and what what does it want?
+Rolled into one. It's really hard to to figure out what what it is specifically important for.
+Looking at neural networks. So. That's, um.
+Difficult question. All right.
+So I told you that a dot product is a way of scoring, uh, vectors, uh, value vectors versus where?
+Um, I think it is the only way that you mention measuring the distance right between two points.
+It would it would work that cosine similarity is going to be better unless you normalize over all the vectors that.
+But yes. So that would be the basic approach.
+There's another one that is called a scale problem.
+What what it means is it's the regular dot product between the query and one of the value vectors divided by the square root of the vector dimension.
+Why would we do that? You know, it's quite interesting.
+Because if you divide by the dimension, you're making it, uh, like, uh, very happy with them.
+How about standardizing an oil? But. Right? No.
+The direction. We'll be there regardless of of.
+The division because the division the direction is in the sign of the of the dot product.
+Right? So if I'm always dividing by a positive number, I'm not changing the sign right.
+And dimension is always going to be positive. Square root of the positive number is going to be positive though.
+And minus two to the power of two is to square root of four and not to this four square root of four could be minus one.
+But I for not only going to be using a negative number here.
+So picture picture at this dot product for a very long, long vector.
+Oh [INAUDIBLE] yeah!
+Some of the small numbers of small numbers or very large number.
+A very large number. A very large number. This takes care of that.
+It's kind of related to overflow. Uh, kind of along the same lines as vector.
+Or non vector. Gradient. Gradient work. Vanishing gradient and exploding gradient.
+Not a huge deal. This is this serves as a standardizing step, normalizing standardizing steps.
+So we're always kind of looking at more or less the same scales.
+Softmax you've never seen a softmax.
+This is how softmax work. You get all the values you use that exponent.
+And over the sum of exponents this will be this softmax for an individual value.
+It will be that this layer right here will produce a vector of softmax scores for all four in this case.
+All right. How do you feel about the suspension mechanism on a scale of five five being.
+I completely understand it. Five.
+Okay. But I hope that if it's shared across the group.
+Not necessarily. I can go back to it.
+Actually, we'll do a more advanced version. Only this.
+All right. You can take my word for that.
+And we'll improve the. Model performance as an as in quality performance.
+Not the time complexity space complexity, but the quality of the solution.
+Does it doesn't make sense if every every every and every step.
+The processing is more informed, is better informed.
+The results should be better, right? Because the decoder is better informed at every stage.
+Being we're focusing arrest tension.
+Uh, the right stuff. That's not clear to you.
+Uh, people explain the attention mechanism of using using our human vision.
+A lot. So if the numbers don't work for you, um.
+Think about what your brain does. Let's say you're.
+I don't know, there's a big dog running towards you, right?
+Both your eye and your brain and your eye together.
+Focus. Whatever. You have everything in front of you.
+And what the [INAUDIBLE] is on that dog, wouldn't it? Right. And you would make your decisions what to do next.
+Based on this little snapshot of your entire field of vision.
+Because this matters to you. The most.
+Right. Same thing here. If if you were trying to make a decision just by looking at everything.
+Everything has the same weight. The tree in the background, the running dog.
+Uh, that old guy in front of you is telling you about attention ring.
+It would be harder to make a decision, right? If everything has an equal weight.
+If nothing is screaming for your attention, right.
+So that mechanism is really similar to what your brain, along with your eye, is doing to focus on something that matters right now.
+The dog goes away. Your eye moves to something else, right?
+You keep going. Processing. Processing is that is a is a better analogy.
+Solve the bottleneck issue. The bottleneck issue was this one single vector, this last chapter, some arena.
+We were dealing as a context that we were dealing at the beginning.
+That was not enough. Oh, let's.
+Let's take the vision example again. So uh, that bottleneck issue right here is that your context is something that you saw two minutes ago.
+There was no doc and you're still processing everything as if there was no dog at all.
+Your context is without the dog, right?
+You're missing the dog in the in the big picture.
+This is this is that bottleneck issue, the last submarine that is being fed as context.
+An attention structure bypasses that by dynamically showing you what you should be paying the most attention to.
+Helps with vanishing gradient problem. Dynamically changing what or what what the information is being multiplied by.
+If you remember LSTMs, we were we were using gates to dynamically change the weights as dynamically.
+Changing weights here as well provide some interpretability.
+Does that matter? You can go back.
+And reverse engineer the decision or the processing path and see what was the decoder focusing on at the moment?
+At every step. At every step. Go back and and see and then you can explain why it produced.
+I'm a student versus I'm a something else, right?
+That's even remotely interesting. Yeah.
+Everybody good? So there's that.
+How we can actually there's still what we need to fix because like, you know, that there's training we we're training the model.
+So. I mean, I guess we kind of kind of know that we must adjust the weights and so on.
+So okay. Actually. Let's take a look at the big picture here.
+All right. This is this is the encoder decoder structure. Right.
+RNN recurrent layer. Are there are there ways and neurons and whatnot inside biases?
+There are hidden are in a recurrent layer.
+Same thing here. Weights and biases to train there as well.
+Fully connected layer. Same thing.
+Weights and biases to be trained by backpropagation.
+Embedding layers. Depends on though.
+Depends on the. Embedding solution.
+Attention. There is nothing that will be changed in this specific attention mechanism during training.
+So back to your question. You're absolutely right.
+You the training process will not you will not be able to explain what happened, but you will be at least able to partially explain.
+How this was generated. And how that was generated.
+What was the decoder focusing on? Anytime you can store those and didn't go back.
+This is this is we're talking after training the model.
+We're not training the model right now. We're using it. And those weights right here, we're not trained using backpropagation there.
+It just being changed every time the attention mechanism receives a new query.
+Does that make sense? Here are some weights are in an hour, and here are some weights and biases that are already set baked in.
+By a training process. You can.
+You will be very hard to explain how those work.
+So the ones in the attention block, in this attention block are being changed as we go based on the query.
+So you can see how those changes unfold while you're using the model.
+So that is your question kind of a little bit.
+But. Again it changes according to the context of yes yes.
+But then no. It's not manual work is what I'm saying.
+We are not going to change the way. Like how do we know what to change the way.
+It's not we're not doing it. It getting changed based off of the security that's incoming.
+Yeah. So even if you knew. Oh, okay. That's the these are not the weights for the attention that I want.
+And so what do you do? So part of the part of my answer is this is where you have some interpretability here.
+Not the complete but what, what this interpretable interpretability here means is that, uh.
+Remember when we were doing, um. Part of speech tagging in the example sentence was something flies da da da.
+It was an ambiguous what what what it means, whether it's a verb or uh, or uh or or um, no.
+Right. The context told us that. How should we treat that?
+So now let's say what was a sentence anybody remembers?
+Like a blow. Flies like a flower, right? So.
+When you just when you just look at the word flies. It's a sequence, right?
+When you look at it just flies. And the rest, it's difficult to pick up what's going to happen next when you get like, well, it's still nothing.
+That's not the best exact. I'm assuming you would know why you would interpret splice as the verb instead of the somehow.
+How could you call? Everybody understood why, why, why?
+Words in part of speech tagging in that example were tagged as a noun or a verb in a given context.
+You had no problem figuring it out, right?
+I guess. Imagine that instead of translating this French sentence into English, I would do a part of speech tagging.
+There's not a problem to turn this encoder decoder into a tag.
+Word tag words tag. Write sequence to sequence.
+No problem. You could train it to do that. Right now, which tag comes out?
+One would kind of depend on the context. So let's say that we have this flies like da da da da da da.
+Flies could be a noun or could be a verb. So now there will be a query that will be a context.
+And you can go back and you can look at the final part of speech tagging sequence.
+Look back at the context and say, oh, if that part of speech tagging sequence is wrong, you can go back and say, oh,
+you were focusing on the wrong, wrong section of that sentence when you were deciding between a verb and a noun.
+Is that a better analogy? But.
+We're saying like it. Like part of speech takes the words, which I guess kind of makes that sweet for like, attention.
+So imagine. Yes. So at attention mechanism would decide which parts of the sentence to pick were let's
+say you're you're trying to pick a part of speech tag for this word right here.
+Perhaps the attention should be placed on the word before, because this the word before dictates whether it's a noun or or a verb.
+If it's a noun, it's more likely that the following one will be a verb, not unknown.
+Right now, noun sequences are less likely than not a verb.
+So if if the attention is focused on this word.
+Wait a minute. When you're trying to figure out a part of speech tag for that word, focus on that one.
+This is where the key information is. This. If attention mechanism worked right, this is what it would do.
+If it was not performing well, perhaps it would point to the first word.
+This is where it's at. And the decision or the speech tagging decision would be wrong.
+Does that make sense? But interpretability means that you could go back and see, okay, when you were trying to decide a part of speech.
+Uh, for that worth, you. Your attention mechanism diverted your attention from what you were really.
+Expected to look at towards something that is irrelevant. Something.
+It has to be changed. Right.
+It's not going to be easy interpreting what's going on, like, um, or a speech that you would use, like the same process that we learned.
+Yes, absolutely. I mean, if your question is, can you use the same structure,
+same process for attention mechanism to learn to produce a part of speech tagging in sequence for that?
+Absolutely, yes. What changes here is let me botch French a little bit.
+What do we have here? The input output sequence that this encoder decoder is being trained could be something like this.
+Right. Imagine this being in the training set for this particular application.
+But you could also say, know I don't ignore my part of speech tagging, but you could also have something like this.
+Or we have. No know that a.
+And now your encoder decoder will be just do tagging instead of translating.
+Same structure, same attention mechanism. It will just be trained to do something else.
+Your your context will be based on someone call in a completely different thing, solving a completely different problem.
+But the same structure. Whether you use a sequence to sequence mapping, anything goes here.
+You could you could have a video, video sequence frame frame.
+Frame. Frame, frame. Ma, I don't know. Sounds sounds sounds sounds, sounds.
+Number, number and number, whatever, whatever you your data set is designed to represent.
+You can apply here. Very good.
+Okay. So things get.
+More complex, obviously. What I mean by more complex.
+You don't have to stop.
+The basic structure that I just showed you, with just one recurrent layer on the encoder side, or one current layer on the decoder site.
+Build a deep encoder decoder with multiple hidden recurrent layers inside.
+No problem, just more processing.
+Is it going to capture more nuance? Most likely.
+Is it going to be more expensive to train? You bet.
+Okay. Transformers. So.
+Here's a little definition for what. GPT three is.
+Let's forget about speaking for fun, though. It's a autoregressive language model.
+Let's start with language model. What is the language model? You guys should know.
+And so some some structure that is capable of predicting the next work.
+Right. You did an Ingram language model.
+It's a structure that is capable of assigning probability to a sequence of words.
+You did that with a much less sophisticated approach.
+What is the autoregressive part?
+What do you think? Essentially, without going into details, it means that it learns.
+Learns. Future from past sequences.
+The more sequence it has, the better. The better prediction of the future it has.
+All right. Um. Little trivia.
+175 billion machine learning parameters.
+What? What are those parameters? Just.
+Just for giggles. Among other things, the weights.
+In the neural network biases. One seven.
+175. Billion.
+That means it has a lot of hidden bedrooms. That could mean that you have a one big layer with 175.
+Well, less than that, but you can have one layer but a very, very large layer.
+Or you can have multiple layers slightly smaller with a lot of interconnections.
+It's still alive. Okay.
+Transformer architecture. So, um.
+Who knows what a layer enorme is?
+Raise your head. That's hot.
+Who knows what a feedforward layer is that most of you should know.
+Okay, so that part is pretty easy then of the normalizing the layer norm.
+It's. And it does normalizing but in a slightly different way than than softmax for example.
+Self-attention. Does anyone familiar with the term?
+We just covered attention mechanism, but we haven't talked about self-attention.
+Multi self-attention. All right.
+Let me try to quickly go through what's here.
+We'll come back to it. Um. For the most of the remainder of the semester.
+Now input text and position embeddings. Embeddings.
+You guys know, obviously, right? You have an idea what it is.
+But there's a there's a component here. Position embeddings. Is anyone familiar with what it means?
+No worries. We'll talk about it on Monday. No.
+Transformer architecture. Self-attention.
+Long story short, it's more or less the same process that we already went through, but with a little or, um.
+Nuance, detail and complexity.
+So our attention here, our attention process was based on the encoder supplying those value vector vectors to the attention mechanism.
+Right.
+The encoder produced, those supplied it to the attention mechanism and attention mechanism kept reusing the same vectors over and over and over.
+Right. They were fixed in self-attention.
+Uh, those vectors will be dynamically generated whenever a new input element shows up.
+And actually. You will be generating.
+Not only that, the value vector will be also generating something that is called the key vector, and then the query you already know.
+So the other thing that is worth mentioning here is that you have some weight matrices.
+Those weight matrices were not there for that sequence to sequence attention mechanism.
+Those weight matrices are going to be part of the backpropagation training for the transformer.
+Don't worry if it's too much. This is a big deal.
+This is a pretty complex. System.
+How many of you took an information retrieval class? Never bring.
+But everyone knows how to use, uh. A hash table, right?
+You provide a key. You get a value. Everyone knows how to Google do a Google search, right?
+He has 585 written assignments for solution.
+Then you get documents. Right.
+So written assignment for CSE 585 is a is uh is uh is a is a query.
+Right. What Google wants does show up.
+I hope not. I mean. It knows where I could find Google.
+I mean. The moment of truth.
+But people before you can show something. So 2024 or 2031?
+Oh four this is how I know. Good, good.
+There's there is even a name right here. That's sad.
+All right. Bummer, huh?
+Let's use a different query. Let's not throw anyone under the bus.
+Happy dog. This is our query.
+I don't want images. Let's say. Yes, my very favorite in 73.
+Uh, natural language processing. Let me take a screenshot of that so I will know who you talked.
+I don't know if. Let's put it under my bedside.
+Printing asylum for. Uh.
+I do remember 19. Hmm.
+Class dismissed. I gotta go over them. All right, natural language processing.
+This is our query, right? You will say about you.
+This is our query, right? And here is a list of links to documents corresponding to that query.
+Right. What would you call this?
+A summary of what's in the document. You don't see the entire document.
+So this is my query. This is the key that matches the query.
+And the value would be something that I would retrieve once I click on an entire document.
+Does that help us an analogy. Another one that I have seen is you go to a grocery store with a.
+Recipe for something. Right? And you're looking for, let's say you're going through through the list of items.
+Barbecue sauce. Right. That would be the query.
+You look through the shelves and you have a barbecue sauce section.
+And there will be labels underneath products barbecue sauce, this and that verbiage.
+You saw this on that, right A1 whatever. That would be the key.
+It's not the actual value. It's the information about what's what the value is.
+And then. The actual value is going to be the buffer over the stocks.
+Does that help? It's kind of hard to relate to the, um.
+What it means, but, well, we'll come back to it.
+But what self-attention does is it will produce for every input.
+It would produce a set of those three vectors. And it will calculate attention using very similar approach.
+We have five minutes. So let me not dive into deep uh.
+But this is more or less the same process that we went through with the previous attention mechanism multiplied by weights.
+Summarize. Send it out. Let me skip over, uh, one thing here before we will finish.
+This is called a single head. Self-attention.
+Now there's a multi self-attention attack on multi-head self-attention.
+The long story short, we'll come back to it. That multi-head self-attention means that I will have.
+A bunch of these. For the same input.
+My input, let's say the word dog goes to one.
+Self-attention. Second self-attention. Third self-attention.
+Fourth. Self-attention. What does it remind you of?
+She said she didn't know what was going on.
+Basically, we had multiple decision trees and I dealt with big diversity.
+It's almost like it was like that. And like whichever we have, like if we say that, let's say we as part of Spain, but uh,
+tagging and we see that most of them say, oh, it's a no, we believe the majority.
+I guess. That's a good analogy.
+I they don't think about it, but what I, what I had in mind when I was asking that question is convolutional neural networks, right.
+You take any image and you pass it through a number of different filters to get kind of different responses to,
+to latch on certain aspect, different aspects of that.
+Same here. Those different self-attention heads will be drawing the attention of the system to different aspects of the input.
+You can think about, for example, tense gender, part of speech.
+Right? One had would, would serve as part of speech tags.
+The other one would be concerned with tense. I don't know.
+You know, whatever it is trained to recognize it well.
+But we have two minutes left. So let me ask you.
+Let's go back to this. A in.
+In my slides. This is a violation of copyright.
+People, it's it's a fun game when it's not your word.
+What is it? Uh. It's yours.
+All the different stories. Oh, come.
+On. Someone will have to schedule a meeting with me.
+Um. Has five, three questions. My question for you is not a great question.
+Do you get the the whole attention mechanism? Transformers?
+Not maybe. Not yet, but attention. Yes. So what's the difference between these incidents?
+So, um, one thing.
+I promise I'll come back to it. But one thing that should stick out for you here is that.
+Here once again. Those value vectors, right?
+Are produced by the encoder. Once. And they will be reused.
+Reduce reuse reuse. With self-attention, this network will keep producing new value vectors every time.
+For for for it for for every input piece.
+Because to be honest. And that's, that's a that's a very big difference between, uh, sequence to sequence models and transformers.
+Input here is not processed in sequence as in time.
+One time two time. Everything goes in once.
+Which makes Transformers much better.
+For parallel processing. You don't need to make that connection between two previous states.
+I didn't say that just yet, but that's why transformers are so, so hard at the expense of being larger and more complex.
+All right. Questions? Was that interesting? Somewhat.
+All right. I'll see you on Monday. Uh. I'm.
+I'm cooking a whole assignment for you that involves that.
+Little work on your part just following the rules, but hopefully it will be enjoyable.
+Thank you. Enjoy your weekend. Even though this is the first time.
+Right? I.
+Northern Ireland. I didn't know. I heard that there.
+If I did it like my mother. You don't know.
+What it's like to be sorry. Yes. Well, that's not how it works.
+I know what will talk, but there's no excuse for that, is it?
+If you uploaded someone else and someone else can grab it, that's you.
+I know, I think I got it.
+I have nothing else. I wanna ask for.
+I mean, exams would be like fame as fame and fame as in, like on your program over here.
+Like some multiple questions, multiple choice.
+Or just answer the question. Is it possible that you can make a simple question?
+No. I don't even have a final exam form for this class.
+I can just. I'll give you a list of topics.
+Ready? Yeah, but yeah, be ready for those topics. All right.
+All right. And do you have sushi for dinner tonight? You can come to my office and I'll explain what I'll be posting.
+For that reason. Uh, I was, I was.
+I have a meeting. So I guess, you know, we're progressed from the little thing just working to, you know,
+if I'm available during my office hours, just walk in or take a look at it or schedule an appointment with your.
+Schedule a meeting with me because my office hours are for for classes and someone might be.
+So it's with you or with you? Yes.
+You can go through that. Yeah.
+But then the way it works, you don't spend one specific time with me because there's other people from different classes coming in.
+I have a meeting, so there's always.
+I don't understand why people do that. There.

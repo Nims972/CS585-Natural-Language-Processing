@@ -1,0 +1,636 @@
+He. Good morning.
+Questions. And questions.
+One of them is in two weeks.
+Right? I'll send you a list of topics sometime this week, probably along with your to do list.
+There will be a third assignment, but it will be optional and submit it.
+The reason I did that is. The reason I planted the flag is.
+Because it will involve enough deep learning, machine learning that goes kind of beyond the scope of this class.
+And given the size of the class, I'm not sure if I will be able to help you troubleshoot it and fix it in time.
+So I think it extends though it goes beyond the syllabus a little bit.
+So let's just do it that way. For those interested I will have at least one option for you.
+What will be a recurrent neural network for a translation or something like that,
+and maybe a tiny exercise work with the large language model option so you don't have to do it if you want to.
+That's fine. Um. Otherwise, I don't think we'll have time for another reason, so we're probably not.
+Section two. All right, students.
+Make sure you contact Mr. Scott to make the arrangements.
+Just like the midterm. I don't think he will be reaching out to you, so make sure that you do it yourself.
+Okay? Uh, attention mechanism, self attention.
+How's that sitting with you? Let's make a distinction.
+Attention mechanism is solid with with recurrent neural networks in LSTMs.
+Right. Self-attention is slightly different.
+I didn't have much time last night to go over it. That's why I'm asking.
+Because I'm ready to go a little deeper. Is that. Fine.
+Does anyone understand the self-attention system mechanism?
+I'll take that as a no. Okay. Let's go. So.
+Why do we need that attention mechanism? What did we why did we need it in with recurrent neural networks?
+Recurrent neural networks were taking an input and producing an output.
+And it was one one. Let's keep it simple.
+One word at a time. One token at a time, one up, one output at a time based on the input.
+And the idea was sort of out with attention was to help.
+The RNN decoder. Encoder decoder system to align the input well with the output.
+That's probably the most the easiest to, uh, relate to when you're dealing with translation, right?
+Not all languages will have the same sequence of words.
+There will be no 1 to 1. Let's translate it more than just put it in there.
+It's not going to work. So alignment. Matters.
+And alignment is based on context you are producing dynamically.
+We're producing context with our attention mechanism. Is that clear?
+Let me try again. So we're looking with a sequence of words to be processed, right?
+A sentence in one language. Let's talk about translation.
+We're dealing with a sequence of words to be processed and then turned into another sequence in another language.
+So the way recurrent neural network encoder decoder system works, it will take the input one word.
+Let's say its English one word at a time.
+It will process the whole thing.
+In the mean time, it will generate some context for the decoder side and then decoder will that context and start generating.
+The corresponding sentence in a different language. Using the context the encoder provided.
+That context was some sort of a summary of what what was seen by the encoder in the original input sequence.
+Attention. So a couple of problems that.
+Just passing the output from the encoder to the decoder was generating that.
+It was a very static context, that very static summary.
+It was not really telling. Okay, let me rephrase.
+It was carrying all the baggage from that encoder produced.
+Not all new. New words will need all that information when they are being generated.
+So that was one thing that there was. Everything was available to the decoder.
+Not everything was useful for the decoder at the same time.
+So attention mechanism was a way to while processing what encoder generated.
+Use the information from the decoder, as well as information that tells us or the system itself.
+What is the decoder working on right now? Where is it in this translation process?
+Which word? It was the last one. And then we'll try the attention mechanism.
+We'll try to look at the context it has and it will just adjust.
+Hey pay attention to this a little more than that because your query or the information
+coming from the decoder telling me what is the decoder asking for right now?
+Let's say right here, the decoder just produced a sequence.
+I am and is interested in what should be next.
+Right? So it's passing query query. I just have a sequence of I am what I'm working on, the guessing the next word, predicting user guessing.
+And then the attention mechanism will look at what it has.
+In terms of context from the encoder and adjust levels.
+This is not important. Pay attention to this one. This is slightly important.
+This is not important at all. And we'll ship it back to the car, back and forth, back and forth.
+Dynamic context adjustment.
+Is that clear? Yes.
+Okay. So that is the regular attention mechanism.
+What about self-attention? Whoa, whoa.
+What are you good. So I went quickly through a transformer architecture last time, and I was briefly talking about self-attention.
+I wouldn't be surprised if that didn't. Work out too well.
+So when you're thinking about self-attention. What do you think it means?
+All right. Let's let's focus on what is happening here.
+And with this regular attention, number one, we have the encoder side that produces those orangy reddish vectors.
+Combining all some some distilled information about the input at once.
+Right. This is available to two to the decoder and its attention mechanism when they go to will play with those vectors,
+balancing them out as a as a as it needs to. But it's all a product number, one of a sequential process.
+These were gathered one at a time.
+In those context, vectors or hidden states vectors from the encoder that are in the context.
+They were gathered one at a time and then packaged provided to the.
+Um attention mechanism.
+That encoder has no influence on on those vectors.
+The decoder is not producing those vectors. That's a second thing to remember.
+Encoder produces context. Well the input to the attention mechanism initial context and sequence.
+And provides it at once. Then the decoder attends to.
+Anger output one one at a time. Um, one query at a time.
+Here's a little definition of what self-attention has that should help you make a distinction.
+Self-attention allows each position, which means every part of the input to attends to all positions in the same sequence.
+So where the whole attention.
+Processing happens.
+There is no encoder really there. You can.
+Don't think like there's two separate pieces. We will be talking about the encoder decoder architecture.
+But here there is no an encoder that actually processes input one at a time and generates attention information.
+No, everything just happens at once.
+Let me show you how it's done. Maybe this will. Help you.
+Regular attention. I have values that came from the encoder.
+Values are representations of the original input vectors representing I originally input,
+and then I will have queries from let it go to that will be telling the attention mechanism.
+Hey, I'm working on this and that right now. Find the minimum values.
+What matters to me the most right now. Please reduce the importance of everything that is that.
+Is this distracting? That's data, queries and values.
+Self-attention. Adds another component to a mix called the key.
+So for every part of the of the input.
+Think about it as a word. Whatever. Whatever it is, every word will end up having.
+Three corresponding representations. Wearing.
+I remember in in the previous approach in the previous example query came later, right?
+We already had everything lined up and now we're using queries to find what matters.
+This time we'll be producing the query at the same time.
+Hopefully we'll see very quickly how does it work.
+The key the key is going to be the representation of a short.
+A short brief description of what the value provides.
+Does that make sense? Imagine a paper about and they'll be a key for that would be an NLP right?
+A key word representing the key word corresponding document document would be the value here,
+even though that document is really some sort of representation of a word you.
+Not exactly that word anymore. You can also see here, uh, three.
+Three capital W's. What are those?
+Based on your experience, weights or more specifically.
+Very good weights. Plural. With matrices.
+And so there's, there exists a thing. This is important in there in the existing when the,
+when this self-attention mechanism works they're already existing predefined
+weight matrices through which the embedding of the word will be passed through.
+And three different vectors will be output as a as a product of that query weight matrix.
+Matrix. I'm sorry. Key weight matrix and value.
+Weight matrix. So far, so good.
+Now, every every word or every part in our sequence will produce those three vectors.
+And one thing that that you should notice I bring in.
+Back, but it may not be obvious here. We're not doing that step by step.
+Or add 1 or 2 or three words for it. No, we're just feeding everything at once.
+So far, so good. Think of the query as.
+That's either this or cut.
+The query key is this is a short description of me right value is me query is going to be hey, is there anybody like me around?
+Does that make sense? In other words, my query will be used to match me with other words in that sequence match as in how close am I?
+Do you want to? How close am I to you three?
+And how close am I to you? Worth four. And everyone will do the matching.
+That's why it's called self attention. Is that for word?
+It's self attending to every every other word. Does that make sense.
+It's the it's the part of the sequence that is not the decoder.
+It's the part of the sequence that is asking for a court. Hey, who is similar to me?
+Let's talk. Is it starting to get clearer.
+All right. So input sequence embeddings.
+There's a little more when it comes to embeddings.
+In this in this process compared to what you know already which is basically let's take a word and turn it into word two vec vector.
+Right. There's a little more to it. This is going to be some input sequence representation, a bunch of vectors that probably have nothing to do.
+And in writing with the original words.
+Okay. And attention calculation. Let's leave it aside.
+So let me walk you through the process. How how are we going from this input sequence are actually from embeddings.
+Let's skip the embeddings. Right. We'll get back to it later to the input sequence representation.
+What do you think should be included in this input sequence representation?
+What do you what would you try to do here? But the softmax will do what I think.
+It's a good idea that will normalize things a little bit, right?
+Let's take a step back, okay. Today.
+What does this have to do with the order of the words and how it actually will be the embedding that will do something with the ordering of words?
+Great question. Do you think that in this process, let's forget about the embedding.
+Let. Let's imagine that the embedding is just a word to vec vector.
+Right. Do you think that at the end this input sequence representation will will understand the word ordering?
+What's your guess? As I said, ignore advanced embedding.
+It's just just word to vec. What's your hunch?
+Well, let's set this aside. Isn't a point of self-attention.
+Uh, to actually do this for us. Uh.
+Like this? Yeah. This or this. Related to other words in this way.
+So it has to be here. Yes. Yes.
+I mean, it's not. It's the self-attention.
+Self-attention will not tell you. This word is related to that word, so they have to be there.
+It will tell you this word is related, closely related to that word.
+Whether they're in different positions is irrelevant here.
+It will be some extra work here at this embedding layer that will help us preserve the order as well.
+It's imagine. Imagine what the self-attention is doing without preserving the positioning.
+It's it's as if it would have a bag of words.
+Right. And it would be just putting words that go together close to each other and pulling them out of the bag.
+You are related. You are not related, right? That's what self-attention will do.
+Okay. Let's go back to basics of neural neural networks.
+Right. You have a you have an image processing neural network, for example.
+What would you use a neural network for in in image processing.
+Classify it. Is this a dog or not?
+Right. So you take a probably 20 megapixel large image.
+Right. And you will reduce it to a single binary answer zero one right.
+Or dog not dog. Right. Or perhaps you're dealing with ten different labels dog, giraffe whatever.
+Right. So you're taking a 20 megapixel, which is a huge input feature vector turning into a a vector of answers.
+Maybe it was 1010 vectors. Do you see some reduction?
+Yes. So what do we have? Like maybe Z1 would be.
+So um, matrix with related to these two or not is to like in not related to other words this
+so so z1 z1 through the eyes will be preserving relationships between word one,
+word two, and the word three relationships in the sense those two words are related to each other,
+not in positional sense, but the positional thing will get in there too.
+And they will have like close. How related to arm.
+Mhm. Yes it will be in India.
+Yes. So so these those into a seamless representation will be reduced size to contact
+information about what was in the original sequence that that make sense.
+A smaller version of the original sequence also augment that with with the self-attention output.
+Who is related to whom. You know, I mean, you can think of Z1 as information what is in the word one plus the information,
+which other words I'm related to mixed in and shrunk.
+Does that make sense? That's what this self-attention, uh, business is doing.
+But feeling better about it. Yes.
+Uncompressed. Is it is it like what we have in store?
+Because you said it is like more compressed version, like what they mean.
+So you will you can you can make a decision here.
+How large is your embedding. Right. What is the dimension of your embedding.
+Is it a vector of, uh 200 elements or maybe 20 elements.
+Right. You have a design decision here. Which one word embedding size up to you.
+If you want to capture a more nuance, you want to have a larger embedding, right?
+If if, uh. We talk.
+I think we talked about compression here, right?
+Jpeg image Jpeg image.
+You can said that you normally don't do that when you're producing Jpeg images, but you could set the compression level for for that image.
+Right. What will happen if you have a large compression, uh, image, but it will look very pixelated, right?
+It will represent what was in the original image, but with a lot of loss.
+So you, as a designer, can set up the size of the z vector.
+It could be that small or of that size you're called.
+The longer it is, the more information it captures and more nuanced.
+So it might not, um, capture every single relationship in the world just to capture your overall gist.
+Okay. Then the larger this output sequence is.
+The more nuance it will capture, the more nuance it will capture.
+The larger it is, the more processing it will require, and the more processing it will require.
+The larger your model will be. The training will be longer.
+The the deployment processing will be longer.
+So you have to be really careful.
+I don't know if you looked at the, uh, CSE 581, uh, assignments.
+That's fine. Okay. All right. So let's let's start.
+So let's bypass ignore this embeddings I.
+Embedding layer. We already have our embeddings here.
+We have three fixed weight matrices. Notice that they're the same ones for every word and every every word embedding.
+Every word embedding will produce three vectors.
+Query one key one value one for a single word embedding.
+Second word embedding. Distinct query.
+Distinct key. Distinct value. Value will be typically lower than the query in the key query, and the key has to be of the same size.
+And you will see why. Right? No.
+And little Dodge product. What will a dot product?
+Give me here? The product gives you a scalar.
+Oh, okay. Yeah. Yeah.
+A single value. Yes. Do you remember what words that dot product used?
+Multiple times in this course. Cosine similarity is is based on the dot product.
+So this right here. Shows me how the query is similar to the key.
+Right where if we're doing or if we're dealing with the same word, the query and key should be very similar if not the same thing.
+Right. Because they come from the same order. So this right here will be some scalar measure of similarity between the key and the query.
+Right now we're looking for a key and query for the same word, which doesn't make much sense.
+But let's let's keep going. This will produce a single value.
+This is going to be some similarity measure between the two.
+Softmax. Everybody knows why. What? We use a softmax here.
+The softmax is actually applied across all words.
+So squint your eyes. It's not applied to a single value.
+It wouldn't make much sense. It will be applied to all those outputs here, but can you squint your eyes?
+This is applied across the board. Normalized measure of simple similarity, right?
+So if you. You should think about it.
+If you asked this word, which word should I?
+Am I that close? Am I close to which word I should pay attention to?
+I should pay attention to myself because I'm so similar to myself.
+Right? All right. Here's a very important thing, very important, important aspect of self attention that it will repeat a couple of times.
+I think applying through things like these, not the softmax, but those A1 one omega one values, key queries will especially a1 one and omega one.
+One will be changing with every new sequence.
+These are new ways, essentially,
+that will be produced every time the self-attention mechanism is working on another sentence or another sequence of words.
+Don't forget that those weight matrices stay fixed.
+Once the model is trained, these are fixed. They will just be producing query key value.
+Query key value as it thinks this.
+And that will change every time. All right let's do it for the entire sequence.
+So now. I am processing.
+I'm looking. I'm analyzing the self-attention for the first word.
+This is the current input that is being. Consider it.
+Okay. This will produce four values in the end.
+Notice. Notice which query am I using?
+So it's just the first one. The first one. The first word is asking, hey, who is similar to me?
+Reveal yourself. So. They will ask word to, hey, what's your key?
+Okay, let's see how good, how much we alike. Boom and number.
+Softmax. Another number. Hey, word number three.
+How close are we to each other? Da da da da da da da. Does that make sense?
+Okay, so in the end, after one round of that, we will get normalized attentional weights for work one.
+It will come out numerically. Which word the first word should attend to which words the first one should attempt to.
+As in pay attention. Yeah, really?
+Just put the wood. I mean, I would.
+But I would be calculated for the current. Okay. Like it makes sense if we calculate.
+I've calculated OH1X2X3.
+Mhm. Mhm. Why would we do it.
+So it was me considering the part of the process you could make an adjustment and just simply ignore it for the first word.
+Correct me if I'm at this time. Correct. So we've taken the road and we'll calculate how close the sport is with us.
+Mhm. Right. So again it generates you lose that value.
+Yeah. Again my question. Right. This is like why would we calculate it towards the same.
+It should be one right or close to what we do.
+So. Yes. There's no point if you if you think about it all the all this all this calculation, it's just linear algebra.
+You have a matrix of ways, you have a vectors.
+It just doesn't doesn't help you skip a specific value.
+Just take it out of the matrix. I don't want you for this this calculation.
+Just calculate everything whether you're going to use it. How is that?
+How's that 811 is going to be used. It's a different story.
+I might as well produce it. Does that help okay.
+Do you remember it's, uh, recurrent neural network. Uh, attention or recurrent neural network?
+Attention included or not. Was it easy to analyze?
+Not really, because we're processing things in sequence. Right? One word, second worth.
+Remember what was in the first word. Remember in the second, there's there's a connection between every word being analyzed.
+Can I parallelize that? Hey, you have those forwards.
+Hey, you get those forwards. You calculate the attention.
+Wait for me for the first worth. You for the second. For the third. Fourth.
+Someone will grab it from you and then later aggregate it.
+Does that make sense? Okay, so not only does this and I will not try to convince you that it's true.
+That it is true.
+Not only this is more precise, quote unquote, than the recurrent neural network attention mechanism in terms of finding relationships.
+But also you can delegated to multiple processors at once.
+There is what this is one technical reason behind developing self-attention,
+because we can chop it into pieces and have just a matrix of values that we can, uh, later use.
+All right. Let's do it for a second. All right.
+So now. We will be aligning second words query with keys for every four words.
+Same process. Dun dun.
+So far, so good. Do you see how it works? So at the end of of this little sequence of steps, we produced 16.
+We have four words. We produce 1616 attention weights.
+Okay. Those weights relate every correspond to a relationship between every word including words to itself.
+Doesn't change much. Okay, now the next step is we remember that our goal in the end is to have some summary.
+Brief summary of what was in the original sequence along with that.
+Attention. Alignment. Business. So z1.
+Here is a shortened information about the word one,
+along with all information about other words that that are related to packaged nicely in a little vector.
+That's the idea right here. Okay, so.
+We got those attention weights. Good. Now, how are we going to use them?
+How? We will use them to multiply the original that book for every word.
+To get. Well.
+Attention, attention. Modified version of it.
+That makes sense. How important the content of this of this vector is.
+Yeah. Tension. Weight will tell me every value in this vector will be multiplied by thy attention weight.
+A new vector will be produced. If that weight is closer to one.
+Um. Original values will be more or less preserved, right?
+If not, they will be. Their values will be reduced.
+Softmax. Zero one range.
+We'll do that for every word.
+Now notice that at this stage, I'm working on those updated value vectors only from the perspective of the current inputs.
+This is related to this initial step where I produced attentional weights from the perspective of the first word.
+So A-one two means hey, for the warden one.
+This is how much I am interested in worth. Two.
+This is how I am interested in worth three and worth four.
+I will use those. Wait to. Process.
+Yes. Is it supposed to be cure for all of them here since day one?
+And we're only taking a look. Come to Birmingham. Uh, see the queue on the kids?
+Yeah, yeah. You want you to play it.
+Since this is. You want a taking into account the growing need to kill.
+Um, so, like, go out there says, you know, like those those arrows should not be here.
+That would be better. That's that's what I was. Remove.
+Oh, boy. You know, I want to remove that arrow right here because it might be a little confusing.
+That arrow and that arrow. But otherwise, yes, Q1 matter is here, but Q1 was used to produce A11812813 and A14.
+Yeah, exactly. So in order to produce 8A12, you need Q of K to be ten.
+Well, that's why I'm saying that I should remove those those arrows here because they're kind of confusing.
+So why did we do what we did? In the previous slide we generated 81181213 and one four.
+Okay, I see. Well, let's just. Okay, I understand.
+Let me remove those barrels.
+They're kind of confusing. That would be a better way to represent.
+Let's. It's like the kids are still there, but they're not done just for the particular A.
+They're gone. I already have those A's. This is just.
+I'm just trying to help you track. What? What where the where the values came from.
+Is that clear? 39.
+Okay. So once again, we're looking at everything at the entire sequence from the perspective of the first word,
+a one comma I represents how much the first word has to attend to all the other words,
+how much attention it should pay to every other word that is translated into those weights.
+Those weights will be used to multiply the original value vectors, as in hey, I care about you.
+Word number two I will keep you as you are. I don't care about you.
+Or three I will just reduce your impact here.
+And in the end, once those adjusted value vectors are produced, they will be added.
+Together. It will be a four vector, some sum of four vectors in this case.
+Now guess what? Which will vector will stand out the most in this cell with which?
+Which vector will contribute the most in the sun? The one that word one thinks is the most important one to it.
+Or if there's more than one, the most important ones will be contributing the most.
+Does that make sense? So then.
+Same thing for words to. Up ahead more than three.
+Actually, that doesn't make sense. It's okay too, isn't it?
+So the circle goes there as it should, and then you get the picture.
+I'm taking Q3 from here and using k1, k2 so I can use those backwards that way.
+But. Questions?
+Does that make sense? Do you see how? Why is it being called self-attention?
+All right. So no, what we went through is,
+is actually again summarized in this initial diagram where we have a tension layer softmax saying this, this is really.
+Matrix by matrix Q, as in a matrix made up of individual query vectors stacked.
+Capital Q is a matrix of individual lowercase q vectors stacked together.
+K is a stacked version of key vectors.
+This is a matrix by matrix multiplication.
+And there is one thing that I wasn't and didn't try to cram here too much.
+There is one thing that is involved.
+Dividing by square root of the dimension of the key vector and query vector.
+This is for normalizing purposes.
+Really. Why is it used for normalizing purposes?
+So what I'm talking about right now is. Really what I'm doing this dot product between query one and let's say k two.
+Right. I wasn't showing that. But I'm also dividing it by square root of the dimension of key vector.
+This is because a dot product is is is a is a linear combination of values of both vectors.
+Right? One times another one of element one times in element one plus element two times in the element to.
+If if those vectors are in along with, those numbers are going to possibly grow or go down in either way direction,
+shorter vectors will produce on average shorter dot, but smaller dot products and longer vectors.
+Does that make sense? On average you will expect that variation.
+So this little shenanigan here takes care of of of that.
+And make sure that for whatever size of key vector, whatever the size of whatever he or query vector size is, they will more or less the variation.
+The variance will stay the same. Yes. I was a query weight.
+It was pretty.
+I was a generator. Okay. There is a special weight match matrix for queries that is trained.
+So once again examples back back backpropagation when the model is being built out this right here this matrix will be learned.
+I can't tell you what it will go inside because it was just a product of a machine learning algorithm,
+but it is a way of transferring the word embedding, translating it, or projecting it into a smaller space while preserving.
+I guess in English language. Sort of.
+Yes. Emotion does a little more than that.
+What do you have that has three starting to look like that?
+Might look like that. That would be perfect.
+Am I multiplying the weight vector with something?
+Weight vector. This is a great.
+Yes. So this is essentially this is vector times that matrix.
+So. Input times the weights matrix creates the query vector.
+And reduces its size. Right? So I said.
+This is what I mean by those stacked vectors.
+Think about acts as being, um, a sequence, uh, a matrix or matrix representation of a sequence of two words,
+each represented by a four element low word embedding one word, second word using four element level embedding.
+In practice, it will be longer. There is a corresponding weight matrix for query.
+This is. This is where the multiplication happens. You can just look at it as just one x vector.
+You would get one cute vector here. That's the vector times matrix.
+Get another vector. The way the size of this matrix is is set up.
+It makes it translates a four element long vector into a three ultimately long vector.
+Just to reduce the size. Similar thing for the key value.
+This is here included. Just to summarize what was happening when I was doing it.
+Vector by vector. It's really in practice being done as stacked matrices times weight matrices get I get a stack of vectors.
+Okay. So. Yes. But regardless of representation, whether this is.
+You know, vector in every vector treated individually here or in those in this stacked representation.
+This represents a single had self-attention.
+Just one self-attention unit. It's pretty complex as it is.
+So if it says single, obviously there must be a multi-head equivalent of that.
+We'll get to that in a second. A byproduct of the self-attention process is is this attention to weights matrix.
+It's really in this case it's really not telling us much and it's not being indirectly used anywhere.
+But you can you can relate to.
+To its friend alignment matrix. This would.
+Yeah. If I can go back for a second. So this attentional weights matrix uh.
+Summarizes the attention weights between the same sequence of words.
+Does that make sense? How work one is related to order one outward, one is two related to word two.
+Now imagine if you were doing a translation process right. So we have some input sequence in one language and the output sequence in another language.
+We're. Essentially this.
+This is called something just. This process is called cross attention, where one one sequence is being attended by another sequence.
+Different sequence encoder decoder sequences, which, if you please, let's not completely.
+Make things too complex. Um, right now.
+But this, this, this matrix like right here probably will tell you quite a, quite a bit how and how this process works.
+So this is from the original paper.
+Attention is all you need, right? Which is which is which generated the whole self-attention.
+Craze. Because there's no model and I don't know about it.
+And this represents a translation, um, alignment matrix essentially as a tension matrix between two sequences.
+But as in in French, the other one is in English. Doesn't matter which one, which direction of the translation it was.
+Alignment matrix means you can read it as attention weight vectors.
+That word agreement here attends to the French word accord.
+The most. The lighter the pixel, the more attention there is.
+It makes sense, right? Is. Those two words right here, or the first four actually are kind of like 1 to 1 mappings between French and English.
+This is why everything else is dark around it. Those two are very well aligned though.
+Notice what happens here. This means that we have options in terms of positioning those three words versus those three words.
+Depending on the attention value right here, we will rearrange them.
+Does that help understand what what the attention is trying to do?
+Tell us here. So this is actually going to be pretty interesting versus some more complex sentences or sequences.
+Does that help? Yeah.
+No. I mentioned multi-head self-attention.
+What do you think this is related to?
+Why would we duplicate that process?
+And I can tell you immediately that this duplication will be applicable to the same sequence.
+So here's four words for you. Attention.
+Self-attention had one. Here's four words for you. Self-attention have two, four, six, 11.
+Same input. You guys processing? Tell me something.
+Why would you do that? Let me show you a diagram of.
+All do, I haven't. Right here anymore.
+I think. There you go.
+Oh, yes. Press it further.
+Compress it. Do you guys remember the convolutional neural networks?
+What were they doing? It would take one image and then process it through multiple filters, right?
+Every filter would highlight different things and then everything would get aggregated.
+Filter aggregate. Filter aggregate to distill the important aspects of of.
+Of that image. Eyes, noses, wheels, license plates, whatever.
+Right. Same idea here.
+Do you see two different types of relationships in front of you right now?
+So from the perspective of inversion, that should attend to not and not should I tend to bad.
+Right. Those those two should be. But it's here from the perspective of negating inverted the meaning.
+Right? Logical relationship.
+Property of right. Yes.
+And in the process of converting an image, we're about shifting this blog right on different pixels.
+And this is called a convolution. You know, where our blog is not shifting.
+We're still using the same. Sequence of course.
+Or no. It's all like yes. Now we have a network to work with.
+Yes. The self-attention process is completely different mechanically from from the convolution.
+The underlying reasoning to to have multiple filters and multiple self-attention have.
+It's more or less the same. Dedicate one filter to spotting one specific.
+Aspect of the image. Second filter to a different image and so not image aspect of the image.
+Here one single self self-attention had focus on the tense.
+The second self-attention had to focus on the gender of what's being written, and so on and so on.
+Train those different attention blocks so we would have a different set of query key value weight matrices for every head.
+Yes. Oh, how do we specify what we want to be.
+Also changing their weights would. Yes. But but the way.
+So like it's like one of the ones, you know.
+You just. You just load the data. Tell it what it should tell it what your model should produce from that data.
+Right. That imagine labeled data, right. Translation sentence in English.
+Expected sentence in French or Spanish. Pass it through.
+Calculate the ear. Backpropagation. Adjusted weights.
+Training. Training. Training. Training course. But ultimately put.
+Yes. This would be a model parameter.
+Hyper parameter. Really? I guess what I'm confused about is what are the weights change in the same?
+Exactly. So you end up with the same weights. Like that's very unlikely.
+That's a very good question. What if what if the weights for every head would end up being the same?
+But how do you how do you, if you remember how if you have enough experience about neural networks, how do you start those weights?
+How do you initialize a. Right. So the chance that that this random matrix right here will be the same as that one is very slim.
+Now, even slimmer is the chance that they will be subject to the same backpropagation adjustments.
+They must not start with zero, you know, just random numbers and let let it work for a while.
+It provides. Yes. Or semi-supervised in this case, but the idea comes from.
+Unsupervised learning or providing enough examples.
+When when your model is, for example, it is a large language model which is in its essence, it's predicting the next word, right?
+It's very easy to come up with a live data set first for supervised learning,
+because you grab something from the internet through Wikipedia or whatnot,
+and you always have a sequence of words and you always have the next word, right?
+Just reading, take these five words.
+You already have the sixth word.
+Let's see if your model predicts it correctly, so that it's not like you have to spend a whole lot of time designing the data set for it.
+It's already in there, but can you like it for reading or like reading?
+Uh, training or analyzing or.
+Yes. You could take a random document, provided it's in a readable format to it, and it will read it and learn from.
+Question. So first, is it clear how self-attention works?
+And why is it called self-attention? Okay.
+I mentioned something about the embeddings.
+Uh, itself. So the understanding that we have so far in this course is that embeddings are essentially word vectors coming from subword.
+Let's keep the coming from somewhere. There is. Let's leave the.
+Where are they? Where? Bill aside.
+But let's add some more information about what is happening in this embedding layer and those transformer encoder decoder architectures.
+Input text tokenization. Everyone knows how to do tokenization already.
+Now this is something that we haven't done really in our in our work here.
+But. We kind of did it.
+You would have a dictionary of tokens right for it for your programing assignments.
+You would end up whether it was Naive Bayes or or learned from that a large just a language model that you did first, right?
+You would have a dictionary.
+Every word did not have explicitly assigned an ID, but if you had 200 words in your dictionary, then every word and think it could have its own ID.
+This is what a token idea would be here. An emoji would have its own ID and whatnot.
+So the final embedding would be based um, on its um, the token ID more than the word itself.
+Okay. So these are the embeddings that you are familiar with.
+Getting to them is a slightly longer process, but not difficult at all than before.
+Now the thing that we haven't talked about ever is something called positional embeddings.
+The problem here. Yes.
+Now, once I feed all of that sequence at once and I run self-attention on that, self-attention on its own will not know what what the ordering was.
+Original self-attention will figure out.
+Oh, word one goes well with word three, but it will not keep the information about the original sequence ordering.
+This is why. So-called positional embeddings are being added to the original word embeddings.
+As a preprocessing step. Now notice of notice.
+Uh. Do you notice something unusual?
+Or maybe there is a pattern. Look at those propositional embeddings.
+So they start with a specific integer. And then there's point one for first element right.
+There's a pattern to it. These are about us already.
+No. Well not not in a vector space since we're not interested.
+Like. But looks like you like home.
+Yes. So one.
+Before the decimal point refers. In this case, this is oversimplification refers to due, this being a positional embedding for the first token.
+Point one. .2.3 means. Okay, let's let's have a.
+Three valve three element load vector here. So this .1.2.3 refers to the element in that vector.
+Notice that the second token or second word, uh, positional embedding is all two point something three point something, four point something.
+There is a reason. Two.
+And sure that those positional embeddings are different from every token.
+Does that make sense? Because that positional embedding has to carry very clearly, clearly information about where in the sequence the token is.
+First. Second. Third. Fourth. If I ended up, let's say that I'm randomly assigning values,
+and I ended up and up here for the fourth token with the same positional embedding as the first one, that is the information for the system.
+Hey, these two words are in position one in the sequence.
+That should not be happening. Does that make sense? This is actually.
+But challenging. So, uh, here's here's how.
+Here's one way of. Encoding those positions in embeddings using sine and cosine functions with different phases.
+The goal is to have unique positional positional embeddings for every token, and at the same time carry the information about the ordering.
+That's all you can do. So this is the final process of of pressing.
+Processing the embeddings in in. As an input layer to our.
+Transformer encoder on its own. Same thing happens here.
+Same thing happens here. Text. Tokenize it.
+Replace tokens with their IDs. By the token embeddings.
+Sum those token embeddings with their corresponding positional embeddings.
+And there we have it the final input embeddings that will be.
+Here x1, x2, x3, x4. So there's quite a bit of processing happening before we even reach to self-attention.
+Not a not a challenging, but quite important nonetheless.
+Okay, one more thing about. Two things about what goes into a transformer.
+We'll come back to this architecture for when we were discussing these parts.
+And what top layer norm.
+Okay. Are you convinced now that normalization matters in neural networks?
+Do you want your inputs and outputs to? More or less remain in the same range.
+Between layers. So there is.
+The normalization layer, which is kind of special. Um, here, the way it works is.
+Its output is meant to mimic standard normal distribution, although then start up the standard normal distribution with zero mean and variance of one.
+That's the idea. Whatever comes from the preceding layer will end up being squished, but not in the softmax sense, but more in the more gentle way.
+Variance. Normal distribution. Mean no zero.
+Variance one. This is essentially how you would calculate the mean and standard deviation first, and then recalculate the value.
+Finally. Um. Where are those bypassing heroes bothering anyone?
+Has anyone noticed them? That's quite a few of them.
+We have layer output of one layer. Input to another layer, and so on and so on.
+And then we have those bypassing layers. That layers connections here.
+Is anyone bothered by it? What? What's going on? These are called residual connections.
+Uh, the story behind them is that people just started adding them.
+Uh, mostly to avoid the vanishing, exploding gradients to help with that.
+And it turned out that it actually accelerates the learning process and improves the overall.
+Um. Network.
+Don't ask me why. People. People that still don't know why.
+Why it works. But it works. I mean, this is this is not completely like, we don't know, but there's there's a bit of.
+We're not sure going on there. So if you see something like that, this is there for a reason.
+Because someone added at some point and realized that it works out helps more or less.
+What's going on here? Uh, okay, let's stop here.
+Um, um, I just.
+What would that what would be pass through that if you know.
+This would be a vector right here. An input embedding vector.
+The embedding vector into a vector would be copied and passed along and added after the self-attention.
+If it has to be downscale, it will be downscaled as part of the output.
+This thing is of course. Some some element less element element wise.
+All. Right.
+Questions. Is anyone confused about everything that we discussed?
+I wouldn't be surprised. The reason I'm telling you all this stuff is you were to build your own principle,
+for example, or start working on at least you have some idea what goes on.
+Yes, this part is implemented because the approach I define from scratch,
+like you have nothing and you just sit down in front of your Python ID using like libraries.
+That'll give me the thrust framework for. This.
+This I don't I wouldn't expect this. I mean once again it depend.
+Yeah I don't I don't see it more than a couple of hundred lines of code for that.
+I think with TensorFlow it's not that you have libraries.
+Yeah. Oh yeah. Oh yeah. Oh yeah.
+You you you you like if you have to build every layer from scratch.
+This one is saying because like you can have like basically a bunch of neural networks in the neural net.
+Yeah. So matrix matrix and vectors, matrix and vectors and additional little components just stacking all that up.
+If you've never done that in Python you will see what I got.
+Almost done with your optional assignment.
+You will see in that assignment. And if you're here in 81 so you can already see similar stuff.
+It's just add layer of that kind with that many inputs.
+That many outputs don't add another like boom that you just okay I want the layer with five nodes or ten 10,000 nodes just added.
+Nothing difficult. All right.
+Anything else on the final row?
+It's still. Where do we. And we just before, uh, before the classification.
+Right. I'll give you a an outline, just like I did for the first one, but it will not be.
+Thank you very much. I'll see you on Wednesday. Unless you're going live somewhere and not coming back.
+I can't. You take the transport from the.
+You will have to be transposing in multiple places.
+I wasn't sure. Yes, there will be some transposing, otherwise the application will not work.
+With all the projected earnings playing your part.
+Oh, okay. Well, first I'm going to bring the accountant.
+If I could just put the show. Where I used to live.
+You see how it was? Three hours? Yeah. Rules are rules.
+I will. I will see you at the end of the semester.
+Okay. Thank you. I have another question with the quiz.
+I completely. I mean, I don't remember.
+I wonder I submitted, which is the quiz, but I like the practice quizzes.
+Yes. They are not for great.
+Thank you. Okay. Sorry. We were really concerned about this.
+I think this is. I think the total is lower, I think.
+Maybe if we have a double check. Well, thank you.
+Thank you for finishing. I'll consider every every issue at the end of the semester.
+Whether I will let it slip or not. I haven't decided I have to go all the scores or different measures around.
+Like how this will affect the lab.
+There's nothing left because I've been looking for that work program.
+But this will make up for all.
+One and thousand.

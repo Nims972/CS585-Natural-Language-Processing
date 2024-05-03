@@ -1,0 +1,692 @@
+Yeah. Good morning.
+Four of you. All right. Questions?
+As it looks like it will be a very short review session. But before we get to you, let me finalize one thing and not be on the exam.
+But I want to close. Material.
+All part of the material. All of that anyway. Today, nothing has changed from Monday.
+To Wednesday. Yesterday. Review sessions.
+Demos. If you have demo here or programing assignment number two to here to this is the week to do it.
+Optional. You can stop by my office hours and do that.
+Uh, final exam is on Monday. Any questions about the exam?
+Well, two things for today.
+Let's talk about more detail.
+Uh, when it comes to machine translation. Very short.
+Let's call. Let's not even call it a lecture about it. But it shouldn't give you an idea how to approach the problem.
+Uh, from a practical perspective, of course, everybody knows how that machine learning,
+machine learning based, mostly neural network based machine translation exists.
+Right? And it's pretty, pretty good for some languages and lots of others.
+Uh, it's it's wordless that the tool that you're using, the problem is the same.
+Right. Fine.
+Mathematically speaking, you're, you're you're looking at two output sequences or two sentences in the first language and the one in another language.
+And you your task is to find the best translation.
+The best output sequence problem is obviously that you can have multiple translations of of of a single sentence.
+Some of them will be better than others, but they will do.
+Uh, how would you? Train your model or translation.
+We talked about it a lot when we were discussing sequence to sequence models or encoder and decoder models.
+We'll just have a specific data set and you will find quite a quite a lot of those.
+Uh, online hugging face faces.
+So what one possible source of that data.
+Now data sets for translation are divided into certain categories.
+They're all corpora which means that their bodies of text uh, but the the quality and the content differs between certain datasets.
+The best is probably having a parallel corpora whatever where everything is exactly translated.
+Well, because that's quite a bit of a bad word. Your head for the most part, we have everything translated as it as it's supposed to be.
+Here are some examples. Uh, in popular novels, that nature translated to many languages can be part of your data set.
+Um. There is an option of so-called payback language.
+Data sets were especially useful when you're dealing with a less popular language.
+Better words have a sort of a two step translation.
+Though, from very popular language to less popular data for for other, uh, similar sub languages.
+If you if you please. Does that make sense?
+Local dialects. Does that make sense?
+I think that's it. Okay.
+Good. Now there's something that is going to be much, much more available, but at the same time a more challenging quality, comparable growth.
+Here's a Wikipedia as an example. And as an example here you will have Wikipedia entries in different languages.
+But if you if you're bilingual and you ever checked the Wikipedia entry for free or something in your native language and in English,
+you will see that there is usually a difference.
+For me, it's common that um, something that is global not have a shorter entry in English.
+If it's something related to column, that is vice versa, obviously, but it is a choice.
+Uh, technically speaking, you already know what you need to do as a as an underlying tool to perform your own machine translation.
+You went through it because it was the sequence models. We went through it a little bit with, uh, transformers.
+It's an encoder decoder. It's an ah, you.
+Encoder and code source language sentence and passes in whatever is encoded into the decoder.
+The decoder is encoded in until it. Produces the stop token or end of sentence token.
+That's how it works. The difference is that the main I wouldn't say terribly significant difference is that
+some of the closures will will only take the context vector or vectors as an input.
+Some decoders will take that context vector or vectors plus the original sentence,
+as well as an additional piece of information when it comes to translation.
+But it's the process is the same.
+All right. We talked about sequence to sequence. I don't think this wants to be.
+Elaborated on these here in the public. Now, here's an important aspect of machine translation, because you know how to pull that off technically.
+Now we should have a pretty good idea what kind of data sets to look for and how they are structured.
+There is really nothing challenging in there.
+But what about deciding whether my translation is good?
+The valuation step is is quite challenging generally, I would say.
+Just like evaluating the language. All of this is not easy.
+Language models. We started with perplexity when we talked about glue last time, testing multiple aspects of the model as output.
+Question answering all of all. That's.
+What about machine learning translation? How would you know if you're bilingual?
+How would you decide whether a translation is good or not?
+Um. Um, yes. Go ahead. Um, maybe we can check if the medical is correct or not.
+Okay, so grammatically correct and not not necessarily making sense, but grammatically correct.
+That is good. Um, and then afterwards, if the meeting is preserved or not or anything got lost in translation.
+All right. That's perfect. If the meaning is preserved.
+Right, how do you you look at it as a bilingual person and you see that this is this is, um, I will change a word here or there.
+But what if. What if it's the machine has to do it.
+She has to look at it and calculate something and tell you this is a good translation or not.
+You will see. You will see a metric right in a moment.
+And it's it's. Whether you will agree with me, but to me it's fascinating.
+Crudités. I'm going to eat it. I mean, yeah, any other idea you can translate to the second language and the first one?
+Oh, that's a great idea. Translated that as if you're getting the same thing.
+That's what it is.
+Another challenge with that. Yeah. You know, I have two translators.
+I mean, and one of them can be terrible, right? So you don't know.
+Right. Okay.
+How? First of all, the idea that the beam search that I mentioned,
+that the mandate applies here as well, specifically for translation, always searching for.
+Different options. So you could think of.
+Evaluating. Let's start talking about evaluated internal evaluation by the pilot language in translating um model.
+That's evaluating multiple options at the same time.
+Right. It's building a translation. And it's it's typical that it's not just looking at a one progression of words and a look.
+It's looking at multiple ones. And this is where this being surge that I describe money is in use very often.
+Machine translation. I'm not going to go talk about it again.
+Now about the final. Yes I know what you assign a score to the translation.
+So when we're talking about local being search, we're not really assigning a score to translation.
+We're assigning a score to grammatical correctness or likelihood.
+Yes. Of of of the sentence being produced by right now by our client.
+Right. Okay. Does that make sense? Yeah. So that's what the model is doing internally until it gives you that.
+This is my final translation. Just one sentence.
+I will look at a couple that I see unfold, and I will keep calculating probability of the entire sentence.
+And you already know how to calculate probabilities of sentences.
+Right. So I have multiple options the translator will take.
+The one that gives me the highest probability for an entire something.
+But this is more language model based than translation evaluation.
+If anything. Okay, I'm just actually a little bit confused with how quickly I just like certain like for example,
+certain languages, generally English, it could be grammatical and perhaps quite likely, but just wrong.
+Hmm. That makes sense. It does make sense.
+Like like for example, imagine a, uh, computers like you translate it to the money is called an electric brain.
+Very. Romantically incorrect, but not the correct phrase.
+So jarring. Right? Yeah. It's jarring, but then you're just, um, translating that one word.
+It's really hard. Like probability. Uh, he would want it to correct.
+Like, how would you search? Like you would and that, like something that is more about how we're deciding the probability about it.
+So with that we would have to go to the to go entire language model.
+How is it built. Is those sentenced probabilities are based on what it was trained on and how how much quality that training provided.
+Right? If I mean.
+The less resource you have, the less data you have to train, the less quality you will have in your predictions.
+Right? So I can't give you a perfect answer.
+It's just expect your models to be wrong in that sense.
+A jarring sense for a while,
+especially in languages that are where you where you don't have that significant amount of data available doesn't just like image.
+It seems I see the same thing with Paul is when I see Google translating things from me, and I don't even use it.
+I'd rather do it myself.
+And like, what if we have production rooms in the target time and try to research into which production actually has the highest probability?
+So we have different production models and and, and different translation models.
+Right. And where you're comparing this is where talking as a.
+First, here's an approach. This is one of the common metrics for for machine translation.
+But before we. Well, let's let's just go over it and go back to other things.
+Um. First, first bullet point right here.
+The idea is to compare translations.
+You do have some expectations, right? When you're training here, you're a translator.
+You have some base truth available, right?
+After all, you're training your model on input outputs.
+The sequence itself, input in one language, expected output in another language.
+Nothing is stopping you from having the same input sentence with multiple alternative translations, right?
+That's possible. And the way the scoring approach works is it would look.
+So we're talking about testing the model right. It's trained.
+We know we we feed uh as input.
+We know we feed known sentences with known expected outputs.
+And we scored the way the score works.
+It's it's comparing how many. Parts of the expected translation and the produced translation.
+How much overlap is there between them? Like little, little you?
+How much how many words sequences are in?
+The expected translation and the output translation.
+Does that make sense? It's you're not really comparing.
+Sentence to sentence. You're just scanning it. And this is where the concept of engrams is very important.
+You're scanning first of using uni grams, right.
+Um, are am I seeing the expected words in in the translated sentence?
+And you're moving to bigrams, am I am I seeing word pairs?
+Expected word first in in in the produce sentence.
+Does that make sense. And then trigrams that I don't know that have you.
+The example that I have here is just stopping here. So there's various variance levels to it.
+This one uses for four types of of engrams one gram unigram, bigram, trigram, um for room as a comparison matrix.
+And then it just multiplies what what came out to give you give you some scores.
+So here's here's how it works okay.
+Here is unigram precision. These are these on the on the right are test set.
+Translations. These are the expected. Expected translations.
+I'm not English. Oh, German speaking person.
+But this is based on, uh, from a sentence in English.
+Something about football. I mean, football fans.
+As in soccer. Team that that that is mentioned played yesterday.
+But that's in there. Yes. I am not.
+And you are looking at right outside. Right. Trying to kind of see what's in the target language didn't necessarily might not be next to each other.
+So that's not condoning. If that's the case, if that's the case, it will come down.
+This is not a perfect way of scoring.
+But then again, then again, if the if there is a particular way of translating a two words phrase into a four word phrase in another language.
+Parts of it should should overlap at least, right?
+So a bigram parts of that foreground expect that one should be captured and raised, though that is not going to be perfect.
+Okay. You're just essentially counting counting overlaps here.
+You're not looking at the meaning at all. You're not looking at the grammatical structure, just sequences of words.
+Does that make sense? Unigram precision. Right here.
+Calculate how many how many expected union grams are showing up in the vector in the produce translation bigram.
+Probably grow that program and use that formula.
+To calculate the final score. That is an automated way of doing that.
+Was that right by calling it crude? Yes.
+Pretty crude that you guys are researchers come up with something better.
+I don't. Otherwise, you can ask someone to sit down and evaluate translations.
+I don't think that would work well. Right? But hey.
+Actually. Is it? Is it? Is it such a bad idea?
+We talked about Gpt3 being, uh, using human reinforcement learning.
+Right? Someone is sitting down and constantly probing GDP to produce answers and then evaluate scores them those answers.
+And the GPD gets improved and improved through that process.
+Hire someone bilingual and score that translation.
+So I don't see a problem with that except that it doesn't scale, obviously, but it's an object.
+Exact match. As in, I have a certain expectation, right?
+If that expectation is not produced, if the exact expected sentence is not produced by my translator, my translator at that.
+Okay. So. That's pretty much it.
+When it comes to, um, machine learning, translation, um, scoring and setting.
+Setting the problem up. So for what you need a data set that has two parts input and expected output.
+You need an encoder decoder structure to be trained, whether it's Rand LSTMs or just or take your Poisson.
+But when it comes to scoring or testing, your your virtual translator will.
+There's nothing. Well, there might be bearings of that there a bit better.
+But this is, this is this is a typical approach.
+Questions. The question is, is this going to be on the exam?
+The answer is no. All right.
+Speaking of existing review. Not.
+It's for you, not for me. I don't know what's underneath here.
+Did you get, like, a break? Clobbered in the Transformers?
+Okay. Anybody else? Transverse? Okay.
+Uh, ask me, what are my expectations when it comes to transformers on the exam, or what do you think my expectations are for the exam?
+I think so you might be expecting that, you know, dogs, lovers and.
+At work. There might be some minor calculation somewhere, I don't know.
+Uh, the bottom line is, the more time you should know that line.
+But by now, the more time I spend on explaining something, the more likely it is that I will.
+I can ask you to explain the whole transfer from the ground up.
+Uh, I'll leave that one. Let's go back.
+So is there a specific part about of transport crews that is not clear?
+I just I kind of want to get. Yeah.
+So? Here.
+Okay. That's part of our problem. So all of them look more or less the same.
+They might have more layers here on either encoder decoder side.
+But okay, start the input tax and position that.
+But but before we do that it's an encoder decoder structure.
+Input text gets fed into an encoder.
+Whatever happens here is essentially a way of summarizing the input text.
+Input text embeddings into other embeddings that are meant to convey what's in the original sequence.
+Plus. Context.
+Context as in or whatever itself, attention produces. Does that make sense?
+So whatever happens here is just this packaging of of the original input sequence with the context,
+self-attention the main context, and producing another set of vectors.
+So say that again I have five embedding vectors coming in.
+I will get five embedding vectors coming out. But those vectors will will be some representations of the original input including the context.
+Does that make sense at the same time.
+And this one is trickier. Or we have to decoder. And if you remember sequence to sequence uh decoders.
+Sequence to sequence encoder weight one word at a encoder.
+Encode encode. Produce the context. Pass it to the decoder.
+Decode decode decode as in.
+Let's do this. By the way, I'm expecting you, as usual, for, um, for the end of the semester.
+It's the usual complaint, uh, that I see in due course review.
+Why are you drawing this garbage in on your computer?
+Use a board. Trust me, you're better off watching his garbage on my computer.
+Now, whatever I'm doing here. That's one argument.
+I'm not going to stop doing.
+The other argument is, uh, there is to online sections and really what's what's what's on that board is not captured as well as a computer screen.
+That's that's not my excuse. But in any case, let's throw some more garbage.
+So here's the encoder right. The transformer encoder.
+And well. Produce.
+Some set of z vectors in the presentation context vectors by multiple vectors probably rolling into one vector or even a matrix,
+though we can think of now that the coder was the decoder and knows that.
+Let's say we're doing translation right. The decoder knows it's time to work.
+So the decoder will take in a token indicating starting the word.
+It could be something such as beginning of sentence.
+Or you have to actually go, right. This will pass the decoder at some point.
+And you can see it here. There is.
+And the pension layer of attention layer that is connected to the anchor in the middle of it, right?
+This is a subtle so-called cross attention layer where input and output are meeting.
+And being. Align. Remember alignment matrix.
+Not all will go back to. Okay.
+Is that the one with, like, the the light colors on the diagonal? Yes.
+Oh. But then the attention matrix can look like that too.
+But little colorful dots. But attention matrix aligns input with input.
+Alignment metrics will align well compared.
+Inputs as produced by the encoder. With whatever output the decoder is not producing.
+Okay. So this is a cross attention right here.
+That's some other layers and a word in use a token.
+First token. Does that make sense.
+Now, if you remember a sequence to sequence the encoder decoder structure, we were feeding the output to the input of the decoder.
+This is exactly what is happening here. So when you mention sequence to sequence, that means that like you just take it out.
+We're putting it back into. Yes. That's that's that's how decoders work here as well.
+It's producing one token at a time.
+So whatever, whatever that was in here, let's say let's call it x ray will be fed back to another iteration.
+Through the same decoder structure. Context will be passed.
+And same thing. Next word. Next word.
+Until here we will get an and of sentence token.
+This was this will be a predicted token based on whatever came in earlier.
+This is time to end this sentence. When was this token shows up?
+This is our output. All right.
+So what I'm insisting on new understanding is that this decoder, decoder, uh, side of things is used in the same fashion as the decoder in our.
+And then our Lstm, which is just being recycled. Output input.
+Keep going. Keep going until the entire sequence is produced.
+Cool. All right. Notice that it has its own self-attention layer as well.
+All right. So is it is the whole idea here clear the difference between sequence to sequence.
+Uh, RNA in the real estate with M encoder decoder structure.
+And this transformer encoder decoder structure is first and foremost the existence of self-attention.
+Self-attention allows to take the entire input sequence at once by a decoder,
+where a sequence to sequence had to go one after one after one after one, until the whole sequence is produced.
+So. The benefit of that approach is taking an entire sequence at once.
+It's a performance benefit because we can process everything in parallel.
+Transformers. Parallelization. Sequence to sequence.
+Not so much in at all. Okay. We're so good.
+Wait, so. So you're saying this is parallel because you can put all the words which into encoder?
+Yes. But the decoder side is the sequential decoder is.
+Decoder is inferring words one at a time.
+When it's being trained, it actually gets the whole predicted and expected sequence and ones as well.
+Remember the masked self-attention? So very much like, um, since it's an agrarian, it wouldn't really make sense to be parallel.
+Mostly of parallelization. Uh, parallelization is enabled, uh, as compared to sequence to sequence parallelization is enabled by self-attention here.
+Even even even even if we're looking at the decoder side where it's just going one one at a time,
+the whole self-attention matrix is can be producing masked self-attention matrix can be produced in parallel.
+That is the key aspect here is that. Or do you want to hear a phrase I just said?
+Okay. So. Encoder decoder.
+Same idea in principle a sequence to sequence.
+In practice, self-attention allows us to to parallelize the process and.
+Potentially speed it up because of that? No. Do I need to explain self-attention again, or is that clear?
+Multi-head self-attention. Is that concept clear?
+Yes. Um, but you be asking multi-head self-attention numerically in the finals.
+Yeah. Multi-head some attention there. And what?
+But if you insist. I know you know me.
+No, I. Well, here's the thing I.
+If I, if I felt that it matters. Right.
+I would consider it. But then again, you know, you still a better be question on on the midterm.
+This is too much. I was the there was too much.
+I don't intend to force you into repeating same same any calculations over and over just because I asked you to do that.
+Okay. So. Yes.
+No. Uh, so when we talk about software.
+So the encoder things, um, attention scores, the one to the softmax to the decoder.
+Right. It doesn't send attention scores. Attention scores are being used to.
+Modify the input embeddings. Okay.
+So it's just the context code. And we put more bugs.
+So that actually causes of attention in our attention here.
+And then for meanings of attention spans.
+So every every self-attention layer will be calculating attention scores or alignment scores as part of the process.
+But those scores are just a just a step.
+Okay. Here's. Here's the idea.
+Um. Here's a vector representing a word.
+Here is a vector representing another work, right? Uh, query.
+Be Mary. Keep, right?
+If I want to see how much this word is related to that word, right.
+I would take the query of this word and compare it with the key of that word.
+This will produce the attention score. Then I softmax it out or whatnot.
+But this attention score let's call it x okay will be then used to multiply.
+The original vector by it. In other words, remember we're looking at a at the self-attention right here from the perspective of this guy.
+I'm I'm the guy querying all the other words.
+I want to see how all the other words are aligned with me. How much attention should I pay to this word?
+And another one and another one and another one. So that multiplier will change the values inside here and produce another version of that,
+either by reducing values with x is low or if it's higher, it will just bump it up.
+Okay. Okay. So uh, what example what what is the what who is asking for the prediction.
+So that will produce a key query and bring in a key.
+Yes. Once devise a self-attention predictions go all of that central value and they are multiplied.
+Let me see if I can say that I have a sequence of three words, right.
+I will have to go with every single one of them. There is a there is an input embedding representation of every single one of them.
+Okay. I will check.
+I will calculate self-attention for every single word here.
+I will start with this one. Well this is produced.
+The query will be produced and matched with key here.
+Key of my own. And the key of the third word. This will end up I guess I should.
+I don't want to draw this thing for you to complain about.
+There you go. So I'm looking at the first word, right?
+The value is is as this information kind of garbled complete embedding from the from the input key is
+a small vector that is kind of summarizing what's in that vector query is similar to the key part.
+So now I will go to every word in my word embedding in my sequence of four.
+For every single one of them I will calculate, okay, how close am I to myself.
+Pretty close. So this is going to be some high score. How close am I to the second word.
+So my first word query with the second word key.
+First word quick query with the third work right.
+This will give me I have four words in the sequence.
+I will have four weights. I will use those weights.
+And that will do it forever. For the other three words as well.
+So I will end up with 16. Wait. Once I have those weights, once again I will go through the process one word at a time or one token at a time,
+and I will multiply like my internal representation by that weight.
+Okay, so if I'm using myself as a reference to that, that multiplication should not change me a lot.
+But here, let's say that the second word is not related to me very much.
+Let's use a low multiplier to produce a new vector where the values are reduced.
+Okay. Third word for word. And then we will sum it up.
+So in the end I will have a sum of all those four words squished.
+But it's in such a way that the words that mean the most from the perspective of this first word will have their values.
+Raised and the ones that don't mean anything to me that their values will be lower.
+Does that make sense? Yeah. Um, okay. This means that we have more parameters to build, and then we have more data.
+Right? So I think for each word we have query.
+Okay. Okay. But that's an intermediate process.
+Notice that I start with four vectors and four embedding vectors.
+Let's say that they're of of length ten. They're reduced to query key and value.
+Let's say that value is the longest out of those. And it's probably shorter than the original embedding.
+So let's say the value is five. The original was ten.
+Query is probably three. Key is three something smaller because we need quicker computation right.
+So this will get multiplied by a scalar.
+I said, what was it? Dimension five, size five. This will still be five.
+This will still be five. Vector of size five plus vector.
+Pointwise plus vector. Size five. Vector of size five.
+This is what will be output here from one.
+One self-attention processing for this word.
+For the second one, I will get another one z2.
+And third and fourth. Z1, z2, z3, z for our representations with context of the original words.
+Okay, so I'm not keeping the query. I'm not keeping the key.
+I'm not keeping the value as an out there. It just means to an anything.
+I want to produce a representation with context of whatever it came in.
+This is without context. This is without attention.
+This contains some form of relating individual words in a sequence together.
+Does that answer your question? Okay. All of this had been right.
+Yes. That's the beauty of it. Because I can do this if I if you give me the entire sequence, right, I can do it on my own.
+While you are working on the second word, you don't have to.
+And then we just join forces. Here's my z vector. Here's my z vector encoder.
+Don't ship it to the decoder okay.
+Yes. So for this calculation there's 16 ways there would be 16 ways because how does multi-headed I guess what are the multi.
+And it would be. Multiple versions of that.
+Same input. Notice there's there's weight matrices here.
+Right. They're being used to produce these queries.
+And that is they're the same for this have the same different head will have different weights.
+It will produce its own queries and keys.
+But it will work in the same fashion. It will produce another set of z vectors just representing select something different.
+So not multi-head it works exact.
+Not exactly. Very similar to the convolutional neural networks.
+I take one image, give it to multiple filters.
+Hey you guys, filter it out. Give me see what's in there and then we'll just aggregate it.
+Here we have instead of filters we have, uh, self-attention hats.
+This self-attention hat is responsible for uh, grammar.
+This one is responsible for our named entity recognition data that I have to train to capture that.
+Of course, when you're training that model, you're not telling it.
+Hey, you focus on this or just happen automatically.
+That's your question. I don't know.
+So, so so this is this is I don't yeah.
+I don't get what the competition is for Motorhead protection.
+So you're you're doing X time. Next time death.
+Like for this with this four W's. I know this more x's so I would have to respond to 16 bit.
+But you're all already you're putting all X's in the same time.
+Okay, so let me just grab that. So right here and we have an input sequence where words embedded.
+Right. Here's one self-attention head.
+Here's another self-attention. Let's say that there's three of them.
+Yes. Goes. Into the first.
+That this does the thinking that.
+This goes to the third AD.
+Does that make sense?
+And then every single one of them will produce for z vectors different z vectors as a representations, their own representations of of the inputs.
+More vectors for vectors. Inside.
+I will have 16 ways. 16 ways.
+16 ways in completely different ways. Completely used for free.
+For completely different things. Does that answer your question?
+And that set of 12 context vectors will be what is being fed to.
+Are those not on those output embeddings right here.
+Those those. These on there.
+Right here. So these are representations of the original sequence.
+Do we need to know how do I guess what the 16 weights mean for each of those multi-headed attention.
+Uh, we don't need to know what they mean.
+They're meant to represent how important the third word is to the first word, or the fourth word is to the first one.
+Good. Yes. Yeah. So this trade for signal type certification price has many parameters in it.
+Right. Because now we are dealing with three of one.
+Can I can you rephrase that.
+Okay. So this will help price single. Okay. Yes.
+You will have twice as many. Great. Let's see an example here.
+I mean I we don't don't even comparison in terms of what's inside.
+I wouldn't do that. Conceptually they're trying to capture different nuances.
+Every every convolution, every filter is like a single hat that is focused on something specific.
+In convolution, you could use it for text, but only use for images.
+One aspect of the image, one filter, right edges or arcs, whatever.
+Here where will be one has will be co focused on one linguistic feature of the input sequence.
+Another hat, another linguistic feature. Whatever it is, it will not be spelled out for a transformer.
+It will learn as it goes to capture that.
+Just like in convolutional neural networks, the filters are being learned.
+Does that make sense? Um. I'm sorry. Not.
+No. It's okay. But fully connected networks like the normal multilayer perceptron.
+Because I had a, I guess let's say there are any words that it will have any weights.
+And here for each word there are always like query, key and value.
+So this will have provided me instead of like, uh, a multi-head like a single head.
+All right. So more than that, because we do have a pre-trained weight matrices.
+Uh, we don't initialize them that heavily. When you're training them, you initialize them randomly.
+So every head will have its own different initialized weight matrices.
+Once it is trained, this remains fixed. It's being used to.
+Here is and the input embedding produces a query key and value vector for me.
+So it's a sort of the transformation transformation matrices right.
+Once the model is trained this is unchanged.
+Yes. But just like in feedforward network weights are fixed.
+This will be dynamically produced every time a new sequence comes in.
+Okay. So this is going to be uh wq the weight vector for the query will have a size of one.
+One dimension will be the size of the query vector. The other dimension, it will be the size of the uh input embedding and so on and so on.
+So a weight matrix. Weight matrix.
+Weight matrix. Query vector key vector value vector.
+So there's a lot of going on in this self-attention.
+Uh, parameter wise. Trainable parameter wise.
+This is this is where it's at for, for a single head.
+This is it. They're just being reused here.
+Same matrix. Another head. Another.
+I'm sorry. Another set of these. Capturing different linguistic aspects of the English sequence.
+Does that answer your question? Yes.
+Do you have another business card?
+Uh, no. I don't.
+I don't have any. The ones that I gave you for the midterm.
+Because something I already asked.
+I, I would love to give you something, but I simply don't have the time to come up with that letter, so I don't think you'll read it.
+You know what? If I have time, I'll.
+I'll cook something. I'm not promising anything, but I don't want to.
+The questions in that quiz would be very selected,
+and I don't want you to get an impression that this is what matters the most to me for the next day.
+Does that make sense? Yeah. I just wanted to be you.
+Same answer here. I. I don't want to build expectations that it will not be reflecting the exam.
+Because I want to give you a good idea. I would have to ask you about every single.
+Part of the material in those quiz questions that have come up.
+Um. Type of vision.
+Midterm exam is a good reference point. Uh, will spare you, uh, midterms kind of question.
+Much like you, repetitive computation, that will be nothing of that sort.
+Uh, there will be there were multiple choice questions on the.
+But there were there will be either a single short answer questions or multiple choice questions on that exam because we covered a lot of stuff that.
+Or for practical reasons, it's difficult to just get some practice right.
+So, um, I don't know. All right.
+That's right. I will not. I promise I will not ask you to.
+Here is. Here is Lstm with four gates.
+Now here is an input. Calculate the output. I'm not going to do that because it makes no sense to me.
+But I may ask you what is this component.
+Do it. Yeah Lstm you understand the kind of questions more than hey, I buried this detail in one of the lectures in the middle of the slide 54.
+I wonder if they will remember that I'm not like if you were in class or you watched all the lectures and paid attention,
+you should not have any problems with those kind of questions.
+They will not be. Here is another really obscure aspect of the material that I would not like to know.
+It may feel to some of you as it is. I've never seen that before, but that's not my intention.
+I don't know that that. Help! Don't do it.
+You teach. It is allowed. Just as I said.
+If you. I will not be giving you the.
+Scratch paper. This.
+Some people go for the record, especially in this group bringing 20 chains.
+I'm not joking. That's actually what happened during the midterms, so I'm not going to let that happen here.
+The desk in front of you is your exam paper and one cheat sheet.
+If you can't get up printed on both sides, printed on two separate sheets, staple it.
+If you don't have a stapler, I will have one last staple before your exam.
+There's your cheat sheet, two sides, one page, and there's your exam paper.
+I will add extra black pages to your exam so you have enough space to write on a cheat sheet one whatever you can put on it.
+Is for you. Okay.
+Where were we? Transformers. Back to Transformers. Or something else.
+Could you explain the structure? Yeah, now that I brought it up.
+Very well. What I to do it.
+Here. One.
+Oh, dear. Hey, here's something else.
+Do you know, is it clear for any for everyone why LSTMs were developed as a kind of replacement of RNA in.
+I can go over that again. Could you go first?
+So here is an RNN cell, right?
+The main the main idea behind RNN as a recurrent neural network cell is to have a state memory to remember what happened before.
+This is just you can call it short term memory as an end.
+The longer the sequence, the stuff that was back in the day will not be remembered and encoded here.
+Well, as few steps back will be captured here.
+All right. No.
+What's happening inside this RNA cell is we're taking the input.
+This is some embedding, right. And we mix it with the previous state.
+That previous state is is a way of providing context of what happened just before.
+Does that make sense. So we want to preserve that.
+And for the next iteration we want to generate a new.
+State to remember for another or another cycle.
+Does that make sense? Those state.
+Hidden states are vectors. Those vectors are produced based on what comes in as an input, which is another vector along the way.
+They are multiplied by a weight. Matrices.
+We have two weight matrices here input weight matrix and hidden state weight matrix.
+You can think of those matrices as the one deciding what matters.
+In the input. What matters in the hidden state?
+Those matrices are pre-trained and ones that, uh, are then cell is deployed.
+It's just they are being reused.
+Now, no matter what the input is, no matter what happened before those two weight matrices, you matrices UMW stayed the same.
+In other words, every word is treated the same way.
+Does that make sense? Same aspect of of those work where the embeddings are being treated multiplied the same way.
+Is that good? You just talked about self-attention, right?
+Where every word was looked at from a different perspective.
+If I needed and if the self-attention needed to, it would bump up the values if it needed to.
+It would just reduce values. Here. It's not happening.
+Everyone is being treated. Every possible ward is being treated the same way.
+Is that clear? Lstm.
+Essentially what that input, what it does. If it makes that computation multiplication by those weights, they are dynamic.
+Dynamic in a sense that there's. Three gates.
+Actually let's let this vector in.
+Open the gate. Let's close the gate to just reduce the effect of the vector here.
+Input vector or hidden state vector doesn't matter.
+This these gates are opening depending on and closing depending on what what comes in opening and closing is.
+A is a terrible analogy here, because it means it suggests that not everything is being passed through,
+everything passes through, but its impact is being reduced.
+So if I have a vector of size five, a vector of size five will go through the gate.
+But the values inside the vector will be either reduced or amplified.
+That is the effect of the gate. So. Three gates.
+They are working in me in a similar fashion.
+Who knows? Next. Then. Wait.
+Matrices. But now.
+I have something dynamic, and I think it is kind of like this mechanism of engine of Prudhoe.
+Prudhoe, attention. Because if you care support, get it right, it decides how much of the previous state should be forgotten.
+This doesn't matter to us anymore. Does that answer your question?
+More or less. There's way more to it. But the truth is, I need to keep our pretreatment changed throughout the process.
+You can say that again we get one inch.
+Between in. Every gate is its its own feedforward neural network.
+Yeah, well. They all work together.
+That's that's very important. And they produce just like in RNA.
+And they produce the output and they produce news state actually the Palestinians produce two state vectors, a cell state and the hidden state.
+Just think hidden state. Short term memory cells state.
+Long term memory. So far so good.
+Know you can see it here. There is a.
+Multiplication right here. Multiplication. What's multiplied is.
+Previous hidden state mixed with the current input and based on that current input.
+Those feedforward networks inside the cells, quote unquote, inside the cells will produce, uh, another vector.
+And then that will be. Like. Here.
+This means the output of a of of a of a gate will be, uh, a reducer or amplifier.
+The external. Does that make sense?
+So weights here will be fixed, right. But what comes out and makes a final decision.
+What is being multiplied by what is that is dynamic.
+Does that answer a question? If I had to summarize that issue of can I say that it's just an audit?
+And with some context, I would disagree with that.
+Both work both at the context of Palestinians capture more context and more memory because it is able to capture long term relationships,
+and short term can only come to short term.
+This is a nebulous term, but there is some.
+Correspondents do it. Um. In LSTMs every input.
+Has an influence on on on the on the way.
+The and LSTMs inputs have more influence on how the hidden state is being what gets remembered then in the RNNs.
+In our RNNs, the ability to regulate, that is.
+Sort of limited by that those fixed matrices.
+Does that help? So, you know, whatever the output is for 1% from the posted, it will get stored in a cell.
+But it's I mean for the next iteration I think. Right.
+Mhm. Well that is some more context to that.
+So number one in Lstm what is being fed to the next iteration is two to state vectors cell state and internal state.
+So there is more information right out of the gate. One once again is long term.
+The other one is short term.
+And altogether, though the hidden states are so hidden state and the input have much more say in deciding what is being remembered,
+what is being said, what is forward? What is being forgotten?
+The steady state is the long term. Cell state will be the long term.
+Think about it as as we. So, uh, quotation mark.
+Right. Let's remember it because this is the beginning of a quotation.
+That quotation can last for two paragraphs or half a page.
+Right. This is a long term relationship. So Lstm will latch on to that.
+If it's trained well it will latch on to it. And it will remember until the input includes another quotation mark.
+Oh, and here all those gates will figure it out. All right.
+This is the moment to forget about the quotation mark because we closed close the sequence.
+Does that make sense? So the c vector will be the memory set.
+Here comes the quotation mark. This is the start of the quotation mark.
+We should be looking for another quotation mark, but the edge would be just crossing the edge.
+I think it's it's very difficult to, to, to,
+to think in those terms that there is a specific value in that cell vector that remembers these quotation marks naturally.
+The hidden state will be just remembering. But what was in that few prior inputs?
+Less context. Less context, or very, very, very nearby context cell state will just span much longer.
+Not as the span of the list is, regardless of the cell state being out of here.
+The span captured by by hostnames is not called as long as transformers, for example.
+But it's better than our reliance. This is a sequential.
+It is a sequential model. It takes in one part of an input at a time.
+Decides what to remember about it, what to mix it in with for the future states.
+And this will be at the. I was so paired with the comment this would be slower than the transfer of variables here.
+Uh, entering the parallel versus sequential territory, right?
+There's nothing stopping you from running a transformer on a sequential, uh, single computer, making it sequential.
+Write one self-attention and another one and another one, and then just aggregate in versus.
+You do this, you do this, and then we'll aggregate. If that was the case, I would never say that the transformer is going to be fast.
+It's the parallelism that makes the transformer faster them.
+All right. Then of course, you know the number of parameters inside and all matters.
+It's difficult to compare, but it's I would say it's the parallelism that makes the transformer shine here.
+You're paying. You're paying with the transformer. You're paying with, with, with the size because they're usually larger and more parameters.
+And then it's therefore difficult to keep it on the same level.
+Yes, yes. So um, I do I have like there's a general question.
+Yeah. Like. How do they like, um, to get there in the large language.
+Like so. Very much like the images.
+Right. And. I guess that's a bonus.
+Do you think you're better for it? Um.
+I like to [INAUDIBLE]. So it's a great question.
+Why are one model some models used more for this?
+I forget this area. Like why is it right for like CNN can be used for language.
+There's nothing stopping you from using CNN for that exact.
+They? Well, long story short, CNN's were born in the image processing area.
+Self-attention is sort of the equivalent of of of CNN's in the language in LP domain.
+You could use self-attention for images as well.
+And this is just numbers, vectors of numbers. There's nothing stopping you from building that.
+The key I think is. I would say that Transformers are going to be much more efficient when it comes to language than convolutional neural networks.
+That's why I looking at this first thing, because we use it as before, which is like I'm delivering.
+Like I would say, some sexy talking. I like a question for me, like we're not looking at like a lot of topics, you know, like a single topic.
+I understand that, like, I. I live somewhere in there.
+Like. I would.
+I would say this would be assuming saying that CNN are useless for language processing is an illusion
+and not useless accepted by the time people through using CNN for language are RNNs and self-attention.
+All this stuff came in and just superseded CNN and no one ever went back.
+Does that make sense? No. But people have tried NLP with attention and it was just better than CNN.
+Forget about CNNs. Let's just keep improving attention mechanism going to Transformers and whatnot.
+Another major difference is that transformers or sequence to sequence models are made to process sequential data.
+CNNs you have to add a little more to the.
+Does that make sense? Yeah. And, uh, you know, I was like.
+But, you know, this topic just gone viral, and I'm like, no, it's there or.
+Something. So are you guys asking, is there any practical reason why I would go through CNN, Z and LSTMs and the Transformers?
+Um, or like, we're all or nothing.
+We were like, um. Um, I like everything.
+Uh, if it's all their language and all that. Oh, okay.
+So let's let me start with us. You know. Right.
+He. Here.
+There you go. Here's, uh.
+Matt. Well, Mike. One too many. Really?
+Image captioning system. We're.
+Which is based on RNNs and LSTMs, but it has a CNN convolutional neural network component that summarizes what's in the image.
+Now here's just one example how those two work together.
+GPT four. I'm not saying that it's using CNN, but it's fuzing images and text at the same time.
+So it has to have components that are working with images.
+Potentially more useful. Uh.
+The major reason behind me explaining CNN is something like this where you would be.
+All the rage right now is just building in building images based on text or or generating summarizing images with images of any matter.
+You're here. CNN, out of all these, structure is probably the least important for you.
+But if you were to build a system with text and images of the same time, very it's very likely that you will need that understanding.
+Now are and LSTMs transformer there is a is I'm sorry I'm going over time.
+So I need to quickly think there is a historical timeline.
+Right? Right as I was it was Transformers that are better better better.
+Now the problem with transformers is that it's very hard to it's impossible to build something.
+Uh oh. GPT scale on your own computer or even on on a single machine.
+Powerful, but single machine RNNs. And then you can do that.
+Performance will be slightly lower than a GPT model, but you can pull that off on a single machine.
+So. There's there's. Use cases for, for any, any of those and really most,
+most new architectures that show out there good doing those fantastic things are are
+being different approaches or different models layered or stuck together or interacting.
+This this was my idea behind, uh, introducing all of that.
+Does that answer question? Uh, all right. We're out of time.
+Anything else? Oh, and then I'll see you on Monday.
+You. Know what?
+I'm saying to that question about, uh, similar attention.
+So what I'm thinking this CNN using kernel, it captures bindings between, let's say I places like I was trying to find attention between that time.
+But the feature. Yes. What self-attention is trying to do is it's trying to find context between some part of the sentence.
+Right. Actually within part of the sentence.
+So okay. Or CNN, you know, if I just focus on.
+That is one of the moments where self-attention will look at the entire sequence.
+Okay. That's why we are preferring self-attention, because we now get the context of the whole sentence.
+Yeah. In that sense, it says it's better for that. Okay.
+That's what I mean with CNN. You could pull that out by having more filter.
+Well, is the story of a bigger size of filter bigger, bigger filters, more filter connections,
+or just packaging the input in a way that would help the filter to take something first place, or at least until she came up out of everyone.
+Whatever. So one thing I noticed when I was trying to use CNN with language and give better accuracy, I think.
+I think I've done the transformer because I think so that it was learning it well, but I think so.
+It didn't generalize it because, I mean, it was just fitting the spots, but it was not learning the challenges of sentences.
+But transformer did it. But it did give me a good sentence, uh, meaningful sentence.
+But the CNN couldn't get it. It's a matter of perspective, right?
+Yeah, I think so. That's what I'm you.

@@ -1,0 +1,620 @@
+But this. Good luck with that.
+Well, then when I read that sometimes it's actually quite that you are always.
+I think to write it for me.
+Just for me.
+Whereas if you really think it over, I don't think you can do.
+Thankfully, this proceeding is taking place.
+What I was thinking of artificial intelligence in the beginning.
+So I didn't have the ability to create something.
+Yeah. And so my message right now is like.
+Morning. Your questions.
+Which is what they would be selling you on Saturday, probably tomorrow.
+So leave not everyone in the white section confirmed.
+Scott Berger. You don't you take your exam, so please do so as soon as possible.
+Now, let's go over all you need to understand.
+I want to go over a list of what I expect you to understand at this stage before the midterm.
+Okay. Doesn't mean that everything that you see on this list will show up on the picture.
+But these are my expectations, so I will go step by step stuff.
+But vacation or anything, or if you're completely disinterested, that's fine.
+First, understand what is a language, formally speaking.
+Understand What are the.
+Blocks of language and syntax semantics pragmatics will later play into and help further the relationships between different tasks.
+Ultrasound. What is morphology? Just a place of it. This is not a linguistic class.
+Understand what our phrases and clauses. Understanding what the differences between and will be.
+And then all you. Understanding versus processing.
+Understanding of what goes into a typical inability project steps after thing passing or whatnot.
+Understand? What does it mean to understand language in a computational sense?
+Understand what what the difference is between syntax, semantics and pragmatics.
+Understand and recognize basic preprocessing tasks that mean that causation segmentation, tokenization.
+Where are the differences? Those understand what are the different tokenization approaches to understand
+how byte bearing coding works and what is it purpose and how would you use it?
+Understand the difference between skimming and limit position.
+Understand the basics of projects. You don't have to memorize rules or whatnot, but maybe the basic ones chorizo, wild card, that that kind of thing.
+I will not be asking you to. Right. Of projects that are on the exam.
+Understand the idea and the purpose of a purpose in The Wire.
+Those are different. But what what those differences may mean for your project.
+Understand metrics that define. The corpus.
+Understand the difference between the terms and words.
+Tokens, words, forms and landmass do tiny little differences until you should know what what they are.
+It's another one in the context of the corpus.
+What are the words or token frequency and rank?
+There is example probability, conditional probability, Bayes rule chain rule, prior posterior probabilities.
+Understand the market assumption. What is it?
+Understand what a probabilistic statistical model language model is, something that you build on your for your first assignment.
+I understand what kind of answers that language model can give you and what kind of questions you can ask.
+Probability of a sentence. Word prediction. That sort of thing.
+But understand what our increments.
+Why are they use understand how to build a basic model using?
+You did that for your assignment. Understand.
+What's more is yes, it would be probably beneficial to understand what that was doing is understanding how you evaluate the language model.
+Is it a good model or not a good model? Or how would you compare to different models?
+Understand lexical relationships between words and synonyms.
+All that.
+Variation, understand what a semantic fields understand what collocations are understand how would you measure words, similarity or dissimilarity?
+This goes with minimum edit distance algorithm. Understand what is part of speech tagging to understand what is the most frequent tag approach.
+Almost there. Understand? What does it mean?
+In a probabilistic sense to tag to assign tags to a center.
+What are we? What kind of probabilities are we after here?
+Understand? How would you, using that approach, build a hidden Markov model for attacker?
+Understand how to use it? What are the transmission emission probabilities and how?
+How do they go together? Understand how to use the derby algorithm for tagging.
+Understand what our grammars and how they are related to our streets.
+Understand what our context Free grammars and why do they matter?
+Understand the idea of ambiguity in passing.
+Where where does it come from and what does it mean and how can you address it?
+Understand? What is Chomsky normal for? Understand c k why?
+Or C like K passing over? And the finally understand probabilistic grammars and how to calculate probability of past three.
+You probably already know that. But just I can tell you that I'm not asking for memorization.
+I'm not asking for rewriting that definition for me, for your exam.
+I'm asking you to show me that you understand what you're doing.
+You will need a calculator. Fair warning.
+Calculations. The final calculation. The final value.
+Is. Well, just let's backtrack. If I ask you to calculate something.
+I will expect you to show me all the steps, formulas.
+Where are you getting individual values from?
+What do they represent? So show me all your work. The final calculation was you plugged in the numbers or gave me the formula as the final conclusion.
+If you. If you make a mistake there. I don't know if I knew what you were doing.
+That final mistake doesn't matter. Almost.
+Unless there's something something else wrong.
+So, in other words, don't get too hung up on typing on your calculating and calculating and making making sure that everything is okay.
+It's much easier for me if your answer is correct, because I just can look at your number and say, Oh, this looks good, right?
+And then backtrack from there. But still, I care about your path of thinking more than anything else.
+Practical applications, more than reciting definitions, memorizing, think things through.
+Okay, that works. Questions. Is everyone okay with going until 1:00 on Monday instead of 1240?
+Or are you going to be so hungry that you will want to leave at 1240?
+I works 1125 until 1:00 this morning.
+Write it down for those who listen to it with one ear.
+26 minutes from now. 11:25 a.m.
+Wow. 116 and as be one of four.
+Anything else? Eight questions.
+Sounds like a lot, but some of them are easy. So I can tell you that if you.
+If you know what you're doing, you understand the problem.
+And it seems like there's the the the question the question is representing something really daunting.
+You're probably overthinking. Most of the questions are straightforward.
+I'm not laying any traps for you.
+There will be some questions where you are.
+Things are a little flipped around upside down, so you will have to show me your understanding other than just redoing what on the on the assignment.
+Does that make sense? Maybe like, be like. Yes.
+Yes, some of them will be like that.
+Most of them will do some sort of a small some small problem for me or go backwards from the solution to do it.
+So that. Anything else?
+Chichi. Make it, use it.
+All right. No more questions about the exam. Teaches it to one double sided thing.
+You can put anything you want on it. Letter size. I don't care.
+Mm hmm. The question would be, as long as the last three times, all the questions be as long as the right as written assigning.
+Number three. No, no, no.
+There is at least two problems where you will have to do a little more work than than others.
+But I think everything is doable, by the way.
+Okay. But this is the first time I'm writing a midterm exam.
+Problems at 4585. I don't know what you're capable of.
+Meaning that I may undershoot or overshoot in terms of the amount of work.
+No matter. No matter what happens, I will factor that in, if ever.
+But if everyone leaves after half an hour, cool.
+That means that for sure, for the next iteration of C is 585.
+I have to make it harder. If everyone stays here until 1:00, that means that I probably overdid it and I will compensate one way or the other.
+So I will multiply that. Let's let's put it this way.
+And before you attempt the exam, before you look at your exam problems, my advice is forget about what the syllabus says.
+You know, you have to get A's, blah, blah, blah, blah, blah. Forget about it.
+Do your best and let me work with your exams.
+I'm not going, Oh, I'd love to give everyone an eight four for the example.
+If everyone gets an eight, perfect. If not, well, let's see what happened.
+Okay, so I already told you on day one that that I will.
+I will. I might reconsider my syllabus rules and grading rules.
+I might relax it. If I see a need for it, I will do it.
+The message here is do not freak out during the example.
+This. This is not helping anyone. If you see that you're not making it and that you can't make it in the allocated time.
+But you see everyone around struggling with the same.
+Don't worry, I can see that clear.
+The problems are not difficult. There may be.
+I don't know. I mean, I can't put myself in your shoes and see those problems your way any more.
+To me, they seem like very doable in that timeframe.
+I think they are very doable. So don't freak out.
+Just do it. Okay. Anything else?
+Very well. If this helps you.
+Essentially, I'm pulling the material from everything up to but not including explicit negation.
+So passing we stop after passing will pick up our text classification for the for the final exam.
+All right, buddy. Time.
+Does anyone need any extra materials?
+Between now and Monday. Is there anything that I did not explain?
+Well, will you feel that an extra material, external material without Q or anything of that nature?
+I don't take off. I you think that my lectures that you have, you have the right to feel that way.
+But I want you to be educated at the end of the semester.
+So if there's anything of that nature, just let me know. I'll find something.
+Yes. But for now, you will not be paid based.
+Will not be on the midterm. It will be very, very likely it will show up on the final.
+Showing it. All right. So last time we stopped, we were talking about the logistic regression classifier that we went through.
+How do we how do we actually compare classifiers, Right.
+We use a discussion about with confusion matrix of RC curves area under RC to get an idea.
+Okay, this is how do you decide whether the model is good or not?
+And I believe we had a little discussion about okay, so I made a model, I made a classifier, I evaluated it and it's it's subpar.
+It's it's disappointing. So what do we do?
+I think we covered a couple ideas. Collect more data is possible.
+Change the parameters. Just massage that individual model, trying to work with it if possible.
+But are there any any ways, other ways of improving your classification process beyond just modifying your model?
+So we talked about, you know, training, but training your retraining, your model, tuning parameters.
+I don't think we talked about cross-validation, but this is just just a way of introducing variation to your to your model building.
+Just split your training set in different ways and build multiple models to see how they stack up.
+But this is still within the same model, if you please.
+What about using multiple models for classifications at the same time?
+Does that sound like a good idea? I mean, think about it.
+You're when you're making a decision whether you should go to Cancun for your vacation or somewhere else or you're buying a car.
+Right. Or you're trying to sign up, set up an account with a bank.
+Right. Would you ask your friends or parents or someone for advice?
+Yes. Go for it. No, don't do it. Right. But as one one source of information.
+Sufficient? Or does it help to assemble multiple people or even take a look at Amazon?
+Right. Or buying something you're looking at or abuse the more reviews there are or is some of them affected?
+That's been beset, but the more reviews are, the more accurate your decision might be.
+So that that very same approach can be used with classification,
+as in let's all build multiple models and have them answer the same question Is it spam or how is it a happy message is or is not happy?
+So that approach is called ensemble learning, where you have an ensemble of different models working together.
+There is all sorts of approaches to that.
+One is bagging, but again is about you're building them, you're using the same type of model.
+So say A, your model is a neural network or is it? It's the naiveté as you expand that classifier model.
+And then instead of just using the same training assets like all the time,
+you will just chop the training and test it in different places, build it, build the corresponding models and run them all together.
+We train boost it. So you you have the same data set, right?
+Let's say that for the first model, you will take 80% of it as training to the first 80%, and the last 20 will be the test.
+Build them on. Okay. Just just like we did with naive base point.
+Let's stick to. But then four years ago or let's say that take middle 80% ten and on the left and on the right and left for the deficit.
+Build another one. Then a third model first, 27, 20% of samples just last 80%.
+Training set to just pick a different split for your training and tested, you will end up with a slightly different model, which is,
+depending how that data is, is is built to be more sensitive or less sensitive aspect aspects of the question, and they'll run them in parallel.
+So three naive basis, for example, think that you can just take a plurality vote.
+So it would be of course good to have an odd number of models.
+Model one says spam. Model two says hair.
+Model three and four and five say say spam.
+Okay, let's be spam. With that increase the overall performance of the system very likely because
+you will offset the issues that you have in individual models with that group.
+Think that I would be backing as you have a machine learning approach, it would be naive as it could be logistic regression,
+it could be K means it could be a came near neighbors or was or a neural network and just work with the training to split.
+Another one is, well, listen, this is an ensemble ensemble model where you essentially do you keep the training to split the same.
+But you vary models. So one model could be in the Navy is another logistic regression and another
+would be a neural network train using the same dataset split in the same way.
+But you're building different models that are have a completely different structure.
+Same approach. Ask them the same question.
+Classify that message or be classified as me or classified documents.
+And then it involves. You could try some averaging as well.
+That's possible, but typically it's just majority voting.
+Does that make sense? What's the problem with this approach?
+Because it seems like no matter how you how you how you do it, it will improve your overall system classification performance, right?
+So why not always do it? Educationally computationally expensive.
+You're wasting what you're sacrificing a lot more time to train those models than to run them.
+You have to have X amount of mutational power and possibly naive values will give you an answer within.
+Two microseconds. They're a deep learning network.
+A huge, huge learning deep learning network will take out.
+How about half a second or something like that? So. It's tough.
+You cannot always afford three. Okay.
+So now have you.
+We talked about this briefly about what sentiment analysis is.
+Everybody, I think,
+is comfortable with others understanding what are you doing with sentiment analysis You're trying to pick up on what's in the document.
+And classifiable can be classified as can be used to decide that.
+Is it unhappiness, which is a good customer with you or bad?
+All sorts of things can be tackled with sentiment analysis.
+We did spam messaging, right?
+But probably an even more interesting problem is that I'm waiting on waiting reviews because there is more probably more news in, don't you think?
+So if you were to build a classifier. Let's let's let's keep it simple.
+We're using that bag of words approach. Which has its own problems, of course.
+You're reading in a document. A document as in review.
+Can you can you see problems with. Determining the central theme in the review.
+Like. What I mean is.
+The way people formulate their thoughts. Or sometimes.
+It's not going to be easy to pick up on the actual sentiment.
+Would you agree just by looking at the words by of words, There was a word.
+Oh, great. Great product, right?
+Without being positive, review it somewhere in the review would be great product.
+You would see what that is. Is that a guarantee of a positive review?
+Why not? It's a positive, positively charged word.
+Great. Maybe the review is my experience and was a great product, but it's not a great example, right?
+It's just by looking at words. You're not going to pick up on it.
+Even a simple this was not a great problem.
+Don't. I couldn't decide whether it's a great or not great product.
+You see two grades, right? Oh, that must be a that must be a.
+An even more excited customer. So. Can we can we do something to help with all sorts of tricks?
+Business. Do you have any intuition? What would you do to improve your game here?
+Imagine that you're still dealing with that bag of words of rage.
+So you're just counting words. There are better ways to do that.
+We'll get to that slowly. But for now, we have all we have left.
+If you could just. Okay. I looked at this document. I extracted the words.
+Can I do something extra to increase my chances of positively or correctly classifying that document?
+Here's some idea. Right. Extract the objectives or perhaps put put some weight on them.
+Right. You see an objective. An objective is typically where the sentiment will be buried, right.
+And how would you know that it's an objective. We did a part of speech tagging.
+So you could laser focus on some words and just give them more weight or something.
+Would that help? Possibly. Not really.
+We're back to the same problem. Not great. Great. Happy.
+Happy. Someone writes unhappy. That's much better.
+Yes. It's like the occurrences of like something like.
+Not that like it is a high occurrence. Just place all the words to.
+Actually, it's a great idea. There's a fact that this is actually something that is that is done in a slightly different fashion.
+There you go. Here are some more examples of other work that will be problematic allegations.
+This is a very crude but effective trick to to address.
+More or less what you describe Mark that negation.
+One way or the other. Find it. So instead of just looking at individuals, when you're looking at words in sequence, look for the negation.
+Didn't. Okay. And then that's one possible strategy in they're very crude, very simple but effective.
+If you see something in negation, such as did it right here and until you in next punctuation at not prefix.
+Whatever follows a very simple but efficient approach and then not like becomes a new word in your vocabulary for counting, not legs instead of legs.
+And that didn't negation as is factor in does that.
+Kind of answer your question. That's one possible way to essentially look for allegations.
+And this is something that should. Taking care of.
+It turns out that sentiment analysis, some studies were really.
+The frequency of word occurrence is not as important as as a binary answer.
+If that document includes a word or not.
+So this doesn't change really what we did in our database application because we used the binary that words, but that's not necessarily the case.
+Always the case. The resolution is to finalize your accounts.
+Instead of. Individual.
+Words count multiple times, just couple of words. That's that's a strategy that typically helps.
+And that's a strategy that. It's still in use.
+It's something called having a sentiment analysis lexicon.
+Essentially a predefined list of words that are positively charged or negatively charged or homage or not established,
+and then go through your go through your.
+Documents. And count those words, you could also consider it having.
+So what? What is this? What is our document? Bag of words.
+Vector. It's a vector of features. Right. With individual words as features.
+Right. And then naive base or logistic regression or any network will just take this take this feature vector and use it as a sample.
+Right. Just mark appointment.
+But aren't we restricted to just words as features or it's in this document.
+You can add whatever features you want.
+For example, you're going to have a feature account of positively charged words in in in my document, just one feature number and go use this lexicon.
+Go through your documents. Oh, I have a happy word. Happy word. Happy word.
+I have four that be worth. Let's have it as a as a as an extra feature.
+Have another feature for negatively charged words with that increase your classifying ability.
+Possible you get more information. There's that count would add more weight.
+Yes. I love the ironic irony that.
+That's going to be a problem. So I would say something like naive is a bag of words or a simple algorithm with
+a simple representation of the document are not going to capture that very well.
+Deep learning networks with or embeddings. Might improve things a little bit if is there's.
+The. Under the assumption that someone is using phrases commonly known as sarcastic or ironic, which is not necessarily the case.
+Yes, this is still a problem for for for an LP.
+Things like GP or Gemini are better at capturing that.
+But there's I don't think we'll ever, ever get to perfection.
+After all, when you're listening to me, Right. Do you know where I'm being sarcastic?
+A lot of high rise and it's hard.
+I don't know where you when you are being sarcastic or ironic.
+I have no clue. So that's. I guess you could make it a rule of thumb if if you as a human being,
+whether in a conversation with another human being, cannot spot that a machine will have a hard time with it, too.
+If you have some some heuristic in your mind that you would be that enables you to do it.
+99% of things correctly, then you could probably turn that into something a machine could mimic.
+But I think we're a far away from it.
+Yeah, I felt like that way.
+Mm hmm. Mm hmm. Mm hmm.
+So that's that's a great idea. The question is, how do you how are you going to encode?
+Right. Is we could have another feature. Oh, there is a third.
+There's punctuation, specific punctuation. And I thought, let's, let's make it another feature.
+Right. And we could keep piling features like that, essentially.
+Micromanaging what the machines should be. Look, looking at.
+And that's yes, it will work to some degree.
+But that approach where, oh, it would be a great idea to have as initially a rule based system,
+you don't want to do it because that this is a dead end.
+This is a never ending piling up of more look for more, for more.
+Add another rule. Rule out an exception here. This is this is not sustainable.
+Let me put it this way and you might start adding things that will collide
+with clash with other things you had a before and let the machine discover it.
+But I'm going to let you just think that it's okay to mine.
+But the transition was like five. But that this is this is actually being being used.
+Yeah, that'd be nice. Or in practice, this will be included in word embeddings.
+So will House. Are you familiar with word embeddings?
+You'll learn what they are. Within the next few weeks.
+Essentially, every word will have its own vector describing common, common neighbors.
+And that. That embedding will be trained based on some corpus, obviously.
+So that corpus contains a lot of oh, this was this was great,
+but I don't know that ever embedding it will capture it and then give you a hint that it's capture it and have a document labeled,
+okay, this hypothetical, this was sarcastic or this was not so passive, but you will be over.
+Does that make sense? So what we will be covering in March and April is, is this essentially a mix of two?
+It's going to be a mix of two things, a better way of representing numerically words and documents and a better way of of learning.
+Does that count as regression? Any other questions?
+If anyone wants to try one, Alexa, go.
+Have at it. Another one. This is what you were asking.
+Look for those as that inflection point in the function, a maximum or a minimum that changes.
+But. Again, I would I would stay away from making it a rule I seo, but then therefore I should do something.
+Just let the machine pick up on it itself.
+Otherwise you will be just building rules and laws and rules and laws yourself.
+And. But that's not going to happen here.
+For those who would be interested in. This would actually help with building a sarcastic lexicon.
+What if you want to build one one yourself?
+Words that are or worth bearings that are typically sarcastic, if that's possible, but you don't have one.
+So here isn't an approach. I wouldn't say that this is not used often anymore.
+But if you need a lexicon that is contains words that are specific to you,
+to your sentiment analysis, it doesn't have to have to be happy or are unhappy.
+Could be dangerous. Safe words. I don't know. I'm just making it up.
+But something specific to your problem. If you were to build one from scratch, you go off course.
+You could just go through a dictionary yourself and just pluck the words you want.
+But this is. This is a rather unpleasant venture.
+Another way is to have a machine build one by starting with a couple of words that you know,
+that are what you're looking for and dangerous or what make you have the right words.
+And then look for the neighbors to look for ands and buts.
+Right. If if there's a happy word and something to that other word, that's probably also happy.
+If they're so bad that following work is not going to be a happy, happy work.
+Keep adding words and extending the lexicon.
+This is this is how you would do it. Another way is to build or elaborating graphs.
+You know, you can use a corpus to do that and can use a plexiglass.
+And then once you have a graph like that, you can just discover relationships, positive and negative relationships between words.
+I guess we talked about all sorts of problems, really.
+Here is. Behavior.
+Some. I didn't find them. I got it somewhere else.
+Some some examples where you would probably try a girl struggle.
+To classes. I like that perfume with you.
+I think a machine would be able to pick up on the nuance here.
+What about the opinion of Katharine Hepburn?
+Anyone knows who had Byrne as well as what she passed?
+I don't think a machine a machine can get you can get it easily, if at all at the moment.
+I can imagine some people struggling to think about what's actually behind that sentence.
+So. I guess the message is when you when it comes to sentiment analysis, abandon perfection,
+you will never you will never get a perfect answer unless our own language becomes more robotic and deprived of subtlety and nuance,
+which I someone would might argue that it's happened as we go people.
+Right. Shorter messages. People reach for her messages.
+Messages Right to the point, in any case.
+Yeah. Not so good, right? So it's it's it's problematic.
+But another message that I'm trying to convey here is you can starting starting with your document vector,
+which is just word counts in the back of words approach.
+Nothing is stopping you from adding other techniques to extract information from your document
+and add that information as a another component to the vector and another feature into.
+How many knows how many exclamation marks are in the document.
+If you feel that it means something and contributes to the sentiment analysis, by all means added.
+See, this is this is problematic, really.
+If you if you think about it, it's a task that is very simple for a human being.
+Period. Disambiguation. What is this, the end of the sentence?
+Or is it something else? Sure you can.
+You can create a bunch of rules that will try to figure it out.
+But ultimately. You're building a larger and larger rule based system.
+And you know what? Does that make sense?
+It will help in the short run.
+If you if you have one specific problem that you were a rule adding a rule or two that would help you out it.
+But if you expect this to be an ongoing iterative process, you probably don't want to do it.
+You probably want to build a machine learning algorithm that will pick up on it and.
+Okay. Questions. I'm hoping that once you start working on your programing assignment number two and you will be working with actual data sets.
+A from different domains. I'm hoping that some of you will will will, at least in your mind.
+I don't expect you to to to build that into your model.
+But in your minds, you will think, oh, this would have helped here with the sentiment analysis if we.
+Added this little layer two to our oak.
+So very important aspects or NLP vector representations.
+So far you have met bag of words, and I don't think I need to convince you that it's that is.
+Too simplistic.
+It doesn't capture what it what it needs to capture the relationships between the words, context, negations, all all that stuff is not captured.
+But have I managed to convince you that turning a document, turning a paragraph or whatever textual input into a lecture is is helpful?
+Or a fundamental reality when it comes to and I'll be.
+I mean, no machine learning algorithm works with words directly.
+You have to turn them into numbers. You just have to do it right.
+Words is not enough.
+So how would we improve that situation? Here's a couple of tips.
+Do you agree with those statements? A word is characterized by the confinement to get separated in some big story context.
+Most cases, the meaning of the word is its use.
+Where is it? How is it used? And we have almost identical environments.
+We say that they are synonyms. That being the correct way of putting it.
+If you see the same word in the same sentence, just replace the single position.
+That suggests that one more as the replacement for the other, that possibly suggests that we're dealing with a thinning.
+So clearly it matters what surrounds the word, the context.
+Once again. We talked about it, but let's let's turn it into something more practical.
+If you were able. I know I asked that question before, but if you were able to.
+Let's say we're talking about a novel, a large novel.
+Didn't a thousand pages. Right. And I just suggested that let's look at the company of words to help define it for me.
+Let's look at the neighborhood. Should you look at the entire thousand pages?
+I have a word in the middle by page 500.
+I picked the word as words. From page one to page one 500.
+The preceding that that word. And there is words from page 500 to 1000 following that word.
+Should I just gather all these words? And this is the neighborhood of the word that I'm looking for.
+I'm looking at. Is that the approach?
+It gives me a lot of information. Right.
+I just pull this word on its own. It's a word taken out of context.
+My struggle to understand it's me. So should I take this entire novel and and divided it as a before the word and after the word?
+And consider the neighborhood of my work. Is this going to help me?
+Yes, I know, right? I think she's dying.
+But if it was me and the world was on fire, I would get more.
+We dodged the bullet that came with that. Or that wound to the wall after that to me.
+Mm hmm. Oh, my word is on page 504, revisited the words before page five, but not from page one.
+Okay. So put more weight down on preceding words.
+But. But a subset of preceding ones. The ones closer to the word in question.
+Right. Would you absolutely reject the words after all?
+It can't do that. Right. And they shouldn't. So now the question is very good.
+Okay, fine. Let's not look at the whole thing. Let's put a window around the word how large this window should be.
+Five words. Ten words. 100 words.
+Until punctuations. It can also be a few cents maybe of value.
+Imagine something like this. That's year 585 exam was horrible, period.
+Bummer, right? We're looking at the word bummer. If you start with punctuation, you're at a loss.
+This is a very difficult question. Where do you stop? I'm not going to give you an answer for that.
+Definitely. You have to stop somewhere after a certain point, which I cannot define for you.
+After a certain point, adding more words or more context is not going to help you.
+Or it could have a completely adversarial effect to what you're doing.
+So picking the right context is. Commercial.
+How many of you track the progress?
+Two, three, 3.54. That's anyone being interested in that.
+Look What? Forward. If you haven't, at some point, I'll give you a bit of a break.
+Break down. What's in it? In terms of numbers five one.
+Well, if you dealt with GPT three I don't know about you.
+Djibouti 34153. Would you be able to say that one is better than the other?
+What is it doing and what is the.
+Sentences and rights are better. Answers and rights are better.
+Part of the reason is two factors the numerical factors.
+One is the size of the model to think about it, the size of the brain it has, and then the size of the input feature factors that it is capable of.
+Interesting. The GP2 GP 33.54.
+That vector feature vector that goes into the model gets larger and larger, capturing larger the larger context.
+Okay. So you do you can just play around with either version of that of that model and
+you will see the increase in quote unquote understanding so that size matters.
+All right. So let's try to represent our words, just the word, but think about it as conceptual.
+How would we represent a work with its environment?
+This whole approach is called vector semantics using vectors numerical vectors to represent.
+Language semantics. There are two ideas which should be obvious by now.
+Let's relate the words to other words.
+Or to their neighbor. That's what I hear. Number two.
+Let's have a word. Placed in some vector space as a point.
+What? What is the benefit of that? I'm getting closer.
+And I think he would be. So upset.
+Poodle would be close to a terrier right in the in the vector space if that vectors semantics is realized correctly.
+A poodle should be close to a terrier. Right. What about, uh, night and day?
+On the opposite ends of the vector space.
+With this. Is this where you would expect those words as points to be?
+As opposed to the black white. Zero one.
+You want to counter that, that sort of relationship by words.
+Forget about. You're saying like zero and one of these like opposite ends of the day?
+I think it will depend on on, on,
+on the application what what it would what your look you're looking at a corpus and depends what zero one means means in that corpus if if
+let's say we're going to make that up if your corpus is about probability right zero and one should be the opposite of of one another.
+Does that make sense in that context? They would the opposite of the other.
+I can easily imagine a context where they will be close to each other.
+Does that answer your question? Yes, it is. Number one, it will depend on what you're after.
+Right. So you pick the carpools. You're you're building your vector.
+Symantec's approach to be sensitive to certain. Things.
+Actually. You shouldn't be forcing any sort of relationship here.
+Come. Come out. Naturally. Night and day, black and white are going to be probably better examples than 11110.
+I mean, just be clearer. Like, you're just saying, like, context is like the context will dictate the relationship.
+Okay. Would that make sense? Of course, the vector space that we will be dealing with here is not going to be 2D nor 3D.
+It will be how many? How many D?
+The book's actually number of words where it will be the number of words or tokens.
+Surrounding the world. So when I was talking about it, I told you that the future vector grows, grows, grows.
+The size of that feature vector dictates.
+And in a sense that there is a relationship the size of the vector representing a word will dictate the the space.
+So if I'm looking at just one neighbor to define a word.
+Just one day it would be a one day space to neighbors, to the space for neighbors.
+Does that make sit on a collection?
+The number of them tends to be the number of the number of difference to know.
+I would not limit myself to just synonyms and untenable situation here.
+You're not only looking if I'm understanding your question correctly,
+you're not only looking at synonyms sentence you you want your vector space to represent a synonym.
+Antonym and antonym should be very far on the other side of the vector space.
+The word synonym should be close. This is a good vector vector.
+Semantics is what I consider being an.
+Okay. And different applications would be different.
+Yeah, that's that's a fair assessment.
+Every every neighborhood word that says ladies go at another temperature.
+Does that help? You can think of it as a crude way to think about it is, I don't know.
+Happy. And this is my vocabulary for some word.
+So. Jungle. AP.
+But it would be a. Probably not.
+Not very rare, but not a very common occurrence.
+Next to junk. All right. So let's put medium the medium number.
+Medium value elephant, probably high grade ruler.
+Well, if I change the word to something else, the numbers will will change.
+That's the that's the basic approach. The more words I have here, the more dimensions I'm looking at.
+Is that. But you could.
+You could. Well, let's let's let's let's go through some of these approaches.
+This is what you what you want. Essentially, a vector space is such a representation of of words in the vector space that keep.
+Key words that you would expect to be close to each other. Close in opposites.
+Fire away. Now what? What is the benefit? Of representation.
+Can you see some evidence? I figured it was what I could do with it.
+Mm hmm. What about. What about computation?
+Any sort of competition. You're looking at vectors, right?
+A computer come to an agreement with the business?
+Absolutely. It's a they're vectors just like velocity in physics.
+Or or anything vector presented within the comparison of the distance between the.
+Absolutely. You absolutely can calculate distances or cosine similarity.
+You tell how close or just apart are those words.
+But that's not all. Can you subtract words?
+Or add words. They always keep forgetting the examples.
+So I'll just twisted around. But you need to look at any NLP textbook that talks about word embeddings.
+You will see an example involving King, a Quinn Wiener or something like that.
+But think about a vector. Female Right.
+Woman And another factor.
+Ruler As in ruling country. Add those two vectors and then in a vector space like this, you should land on queen.
+That makes sense. Female plus ruler equals queen.
+Does that make conceptually that does that make sense?
+Conceptual. You can do that with vector of semantics.
+You absolutely can double track and add words in that sense, which is impossible in just written language.
+Right now that you have this vector represent, the better this representation is,
+the better it captures the word relationships, the more accurate those woman plus ruler relationships will be.
+That makes us. Okay.
+What is it? I'm betting. It's a mapping.
+From one space to outer space with a single word to a vector space.
+In our case, embeddings are going to be our bread and butter moving forward.
+Remember our bag of words just once a year.
+There is a vector of ones and zeros carry more information than a vector like this.
+Mostly non-zero values.
+Remember, I think we meant that we talked about as vectors less and less tied to bars and dance, but not spas as vectors or matrices.
+Forests, mostly zeros, some values you don't want there, but certain metrics takes care of that.
+But a vector embedding also have one.
+Very, very useful feature.
+That last bullet point. Take a look at it and tell me, what do you think it means?
+What do you think it means? We can generalize to similar but unseen words that is not in our original training set.
+Exactly right. With our bag of words. We were we specified a very specific.
+Set of vocabulary. What? What have we agreed upon?
+What are we doing with unseen unknown words? Ignore them.
+Should we ignore them? Absolutely not. So that vector imbalance will.
+Solve that problem. How? Can I live with this approach?
+Well, we'll talk about it more. So I'm just poking your brain a little bit here, probably in your brain.
+Can I, for example, tell? I'm reading a document, right?
+I'm analyzing a document. I stumble upon a word that is not in my dictionary.
+But that word is in some context. It shows up multiple times.
+If I let's call it this word X or.
+X here is. Multiple times.
+Well, some context. Without, would I be able to figure out a letter?
+X is x synonym.
+For. Have.
+We're using this approach where every word is represented by a vector.
+It defines defining and neighborhood. Absolutely.
+Because once I go through this document, I will look at X's neighbor neighbors, right?
+I can end up with a feature vector for X that would be, I don't know, 11 001 Well, in in three dimensions.
+Right. And then I have happy as a vector that's 2011 to I'm making it up of course but.
+12. Are they close to each other? Absolutely.
+I don't need to know the word ex.
+In fact, the machine will not even have a clue what X means, but it's able to pick up on the relationship between ex and happy.
+Does that make sense? Or. What would this vector embedding for X mean with respect to happy?
+The opposite. Right. The antonym very likely in the answer.
+Do you see how how useful that can be? The better them bearing the more information of that nature we can carry.
+All right. So.
+I have only 3 minutes, so I don't want to start talking about.
+The actual embedding is why don't we stop here? Any questions?
+Go. Have a good weekend and I'll see you next Monday.
+Same place if anyone needs.
+Never mind. I forgot. I forgot it was exactly in your car.
+Same. Simon.
+He doesn't need to know right now that, you know, I was not there because I'm in there and there might be things that I'm not aware of.
+You know, I mean, when I have the people that I know do the best he can utilize and think like,
+okay, now, okay, A-level students are going to attempt the exams here.
+Yes. Which are the kids whose auspices?
+Yes, it is. So we are going to work with amazing until the end of the semester.
+Like most most of the topics that we will use, we will use the banks of the brain for the presentation.
+Oh, they can. Good afternoon.
+Picture this morning. Incredible. If you really connect the dots and everything.
+Yeah, it happens. Maybe you could do that with embeddings of the ground, knowledge of presentations, skills, the spirit together.
+Once you're dealing with vectors. Anything is anything.
+If any representation is possible and. And computation is allowed.
+That's. That's what's most important. Happy. Good plus morning Newsletter.
+In writing supporters of that group plus vector.
+You can do something like that. And also the topics are up to 37.
+We start exam stops before text classification, so passing is the last topic.
+The list is in.
+The slides is just no textbooks, no classification, but it will be on the file within the maximum on how many marks for a maximum of 100 quizzes.
+Once you can really take the quiz.
+Yes, the quizzes before practice and the crazy quizzes are just an extra piece that is not super essential to your success on the exam.
+How do I phrase them? My goal is to get a good understanding of everything that I cover in this class.
+Not everything that I cover on this class will land on the exams because you don't have time to work.
+Answer every question that I could possibly. So they are part of the syllabus but not part of the exam.
+I'm not going to say more than that.
+I have expectations. By this time you should know everything that I listed.
+And right from there I can pull topics that I consider.
+Okay. This is what I can tell you. That's all what I think.
+You have a pretty good idea what to expect. I can't just tell you.
+Learn test, not just about words. But Well, let me put it this way.
+If you were if you were to base your study on those review quizzes, then I shouldn't have posted.
+I would not be in that. We have done away more than the quizzes.
+Looking for a husband.
+You get out of here, okay? You know, I decided I made it.
+Do you have to segment that document? Yeah. The rest of the petition needs to come up with that, whatever you call the paper.
+One to all people out of this is garbage. But I went through your inventory.
+All of. Oh, your.
+You're just. You're just going to do that.
+I am not going to lie to you. This is just not even close to an actual record.
+Does that make sense to you? Yeah, but due to the backlog, I get it.
+This is why I'm not taking it. It's just. This is way, way far away from something sufficiently usable in the future.
+So I get the value and everything, but we just update and build based on your methodology.
+What did you use? How did you use? Why did you use it? Results Result Analysis.
+I know for the future of the people, I consider that children are used for this purpose and this is a learning experience.

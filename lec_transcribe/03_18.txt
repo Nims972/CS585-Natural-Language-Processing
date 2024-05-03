@@ -1,0 +1,559 @@
+I think it was $60. You know, the last two weeks it was you.
+That's not great. Oh. Oh.
+She's in your.
+Just. But.
+Will I get the message?
+Good morning. He was a very amazing, smart decision.
+Right. Questions. Okay.
+No question. Well, okay.
+So for your challenge. It did pretty good.
+I mean, it wasn't. Was it hard, though?
+It seems to have been hard for some of you.
+I remember what was the lowest. You load in anything.
+So problem number one, iceberg and coding.
+Most of you did that this one correctly.
+The answer should be ambulatory.
+But in the word token.
+And then there was a. Now.
+Couple. He did something. Well, if I should call it weird.
+Not necessarily. But I don't think worth it.
+Did this come from. So the way we would work on a problem is starting to break down every word right and about.
+And the auto can here right at the end of every word.
+No income divided except some people would do.
+I guess it wasn't visually obvious to me how they arrived at them, but some people would do something like that.
+Merge everything. I mean, put it in one big lie and then count this as a fifer so that our score s something like that.
+That's. That's not what you need to do. I wouldn't give you.
+I wouldn't take away too much points for that. But still, this nurse score only lands at the end of the word.
+It's not meant to represent the beginning of the word,
+the fact that we're breaking down the corpus into individual words and then counting the person is already factoring that in.
+Some people with Ms. adding in their score, in their final of their final response.
+Thank you for that.
+If they had it initially, categorize it somewhere else as well as easy tokenization limitation was easy too, but still some people would.
+Make mistakes here. This should have an.
+But my post ran right then and there.
+When to go here?
+No, no, no one did that. But if you left me in this as it is, I would accept it.
+Because you can think of the twins as a as a nickname or something you could keep.
+I would not complain about this, however. And to be there here we had.
+This like. And it's.
+They own in this one. So you're saying there is an entire.
+Change into all. It doesn't make sense.
+We're not converting when we're eliminating things, not between synonyms or those words,
+which is kind of like glimmer of the word or something like this.
+It's like. I feel like this is even worse because you're completely flipping the meaning of the word around.
+You're not supposed to mess around with the meaning that you're preserving, meaning you're just normalizing the word forward.
+But very few of you made mistakes like this. I don't think it was anything else.
+First. Meaning at a distance.
+Joe. Uri, you were all over the place in terms of your solutions.
+Mostly correct? Mostly correct.
+Mostly if not correct. Just minor, minor problem here and there.
+I would say I think some people just probably blew it.
+I think the answer was war and you have to be really careful when moving.
+This is where our common mistake was. So.
+I was. I know you so badly.
+Here. Substitution fruit from that cell.
+There is no substitution of SARS, Right.
+So some people would just get sex here, I suppose.
+Or another thing here with boric acid versus as people would end up with six.
+Minor mistakes, but still a final solution.
+The problem here, most of the problems started when with lack pointers.
+Some people are not sure if you understand where those black pointer is coming from or what do they mean.
+So there were some problems here and a few solutions where it is in the numbers and here.
+How do the people arrive at? This will hopefully correct.
+Probability of sentence equals probability of.
+She'll even. Starts to.
+I was expecting you obviously, to write this all down.
+Correct. Conditionals. Or.
+And. All right.
+I want to start with the. Picking the right numbers for each individual.
+Conditional probability estimate. Why did you feel you would write something like this about looking for.
+First. So first.
+I get over How?
+If you did that, you across the board, you lost almost half of the points for this problem.
+Obviously it's the first word. So we're trying to get wealthy to.
+Moving on. What's.
+Yes. Oh, by the way, some would.
+What's his name correctly. So what's the first word or once for you?
+What's. But I want to hear from some people try to use emoting, which is unnecessary here.
+If you did that right, fine. But there was a couple of times I got that most of them wrong.
+Either you would just add plus one somewhere here without compensating it in the denominator or some of the world.
+All right, This. The table right here for about five points was meant to be a gift from me.
+Do you like boys? Easy, boys. Just pick the numbers and write them in in the table.
+Do you think someone botched it? Two or three people just wrote nonsense in that name.
+I don't think I need to explain what goes on here. Most of you got it right.
+I don't know why I get it right.
+Here. A lot of a lot of you lost points for this tugging problem.
+The second part, the cause you never gave me any information on.
+What are you trying to calculate or estimate?
+Meaning there was. What are you trying to get?
+If you didn't write that, that was, I think, minus three points or that was meant.
+President. Given the sequence of also specified here.
+So if you flip those around, you still lost two points or something like that.
+You need to know your business is correct.
+You need to know what you're doing. The fact that you can pull out the formula from your kitchen means only that
+you can pull out the formula from your cheat sheet and plug in the numbers.
+I didn't expect much, but I still want you to understand.
+Work. In a way it wasn't.
+It wasn't a big deal. Some people just did some weird things here.
+I think two or three people tried to be therapy to solve this particular problem,
+which makes no sense because the therapy is meant to to decide among a list of possible sequences of tax.
+Find the right one. I'm giving you a signal. So you're supposed to calculate the probability corresponding to that sense of the derby mix.
+This is of no use. This was like 5050.
+Right. The first part of it is what can be said about the sentence and grammar.
+Yeah, the fact that we don't have an ass right here in the cell, it means that our code grammar G1 is not able to produce that sentence at all.
+That would. That would be the correct answer. So what about partial credit for for something that meant something?
+If you were just blowing smoke, there was nothing in there, Right.
+Well, it's. Go on. The answer was.
+It has to be. CHOMSKY Normal for him? Grammer This one is not.
+And also convert those to our streams.
+Similar problem to what I described here with packing.
+I understand that everyone can read those numbers and just write them in sequence one number at times, another one times another one.
+But what are those numbers that you have pointed to is or by my to dos here?
+Which one? My suppose to guess.
+I know it's easy. It's a very easy problem to just follow all of the tree and just plug in numbers.
+But. Which What do they mean?
+In the end, those trees were at the same probability.
+So if you got that right, you had some that really specified fruit will as you were.
+Right. And your favorite. Well.
+I'd have given five stretch of green. I think I think that kind of this must be worth 15 points.
+I'm not going to go back and recreate here, James, if that was the case.
+Sounds good. Or do you want me to go on record here, given the nature of that problem where you had to do a lot of calculations?
+I mean, if your work makes sense to me, you got partial credit if your work made sense to me.
+But that was incomplete in a significant way, you could almost complete credit for it.
+It was gibberish. No credit, as I said.
+Questions. So this one was worth 100 points.
+You got three points already on this exam and you have no intention whatsoever and probably
+have no intention whatsoever in getting your butt in here and start starting to study.
+I would withdraw right now. 35 points out of 100.
+It's not not a good sign. And I won't repeat myself, but you easily.
+You have 80 points here just by solving your homework, but easily 80 points right there.
+Understand what you're doing. Okay.
+That works. The fact that the town would have a similar oil example of a similar structure, if I will.
+So let's say, how would you rate this one example?
+I mean, the content percentagewise of content on the exam that matches maps very well to your homework assignments.
+80%. So your your your your midterm is going to be 6049 during your retirement.
+6040. That makes sense.
+So study.
+I'm not going to pull out the most obscure detail for a moment from my lectures just on every page, just to make sure that everyone misses that note,
+but be prepared to do something more than just arranging a cheat sheet and rewriting it, which I don't blame you for, but that's fair.
+The exam was designed like that. This is why I'm so surprised with people who are below 50 or even the that it's really bad.
+Anything else about the exam? Fair. Unfair.
+But I think what you said about an explicit thing that it's like to look like a police officer is straightforward.
+So having to rate the probability of either verbally, purportedly.
+But the task your task is to convince me that you understand.
+What you're doing is you're skipping a step. Yes.
+In my mind, I understand that you're cutting corners here, but what happens is that in general, some sort of is, like, complete.
+You think that that's the only thing they did wrong or not?
+Let's take a look here. Show all formulas and variations.
+Black and white. All. Show all your derivations be low ball until you start calculating something.
+What is it that you're trying to do? My point. I'm not trying to just take points away from you for the sake of just taking points away from me.
+If I have students who will write everything that I need to see that will get more credit than the person who won't miss a step,
+that's that's how it should be.
+If it's a trivial calculation that does not require any sort of understanding, I will just close my eyes here.
+This tagging situation. Right? What what are you actually trying to calculate?
+That's the question. I'm really not interested in the final number that you're getting.
+The final number that you will write it right down on in the space for me is to make my life easier grading it because I know the answer.
+I think the same answer under right things that some things.
+Okay, but I have to go back. I know how to do the rest of it.
+Though for the final include everything. You will have enough time right now.
+This is this is subtle, but without any.
+Permissions. And if you're really worried, I don't know.
+Here. So this is this was worth out, right?
+If you didn't write this, you lost three points.
+In the large scheme of things, you're not missing a whole lot, especially if you buy positively anyway.
+Yeah, I don't think that's true. You know, Let it be.
+Is that right? You guys are engineers.
+You have to be precise, but. You feel that I'm just blah, blah, blah, blah, blah.
+And I kind of am. But you have to be really precise with expressing what you're doing or anything else about the exam.
+Programing assignment in any issues. I've heard of some buddy doing good.
+Yes. Is it you know how we go into, like, space, you know, or other flow?
+Is it possible that, like long sentences, though, that you.
+If you're adding I would be in it may hypothetically,
+you could be going to have an overflow because you're adding so but I don't I don't see an overflow happening with such low numbers.
+Are you getting any of that? No. Let me take a look at it.
+Send it to me. One thing about the programing assignment, I look at the distribution of which problem?
+Which the data set. Oh, my God. We will probably not be doing any presentations in class.
+I will just ask. Record a present show that work doesn't have to get Hollywood production.
+Just get to the point. And does anyone actually think what's troubling anyone in trouble massaging the data dataset?
+You just start working. On it.
+Filtering out some incorrect data.
+T cells, blah, blah, blah. Any issues of that nature or something?
+All right. So I ended up giving an assignment to the U.S. to do that.
+I'll give you more of a couple more days for for for the programing that works.
+So recording no in-class presentation?
+No, it's not enough time for that. All right.
+Let's see how many of you are.
+Familiar with the concept of convolutional neural network.
+Familiar. How many of you are confident with understanding of what it does?
+Or did you see a convolutional neural network? Imagination.
+Your vision. Okay, so we'll talk about a convolutional neural network.
+And and your question should be why?
+This is a neural neural language processing section upload of the material.
+Natural language processing is the name of the course. Why are we even bothering with something?
+And those images? Welcome.
+Or work with a bull's eye model. Approaches with the images and.
+And. Expert said into the system simultaneously.
+But there's another reason for us going through it.
+Before we get into it.
+Convolutional neural networks voltages, the burst first structure that we all cover that is without question called deep learning structure.
+We powered neural networks that last time, right? We played around with a little toy online.
+The neural network was that deep learning network that the one that we play with.
+I'll let you guys remember I was adding layers.
+I was adding nodes, removing nodes, changing things. Was that a learning model?
+When we have a lot of layers and neurons.
+So I don't know if it was conservative, but that's a great comment.
+Does anyone know deep in deep means, in a sense, how many layers we have in a network?
+There is a little more meaning to it, but does anyone know how many work does or does deep learning start?
+Two layers. A million layers and layers.
+One day more than one layer. One layer is just a perceptron is just one.
+One layer. Okay. Give or take.
+Yes. So. I am not sure what kind of opinions you heard about deep learning, but to me, this is this is a password.
+More than anything else, there is a gap.
+Gather. There is. Cutoff point with more than two layers is considered a deep learning network.
+I don't I don't I don't see much reason. Personally.
+So you know, I'll have to listen to. But personally, I don't see much reason in even making that distinction.
+There's layers. There's a network. But what does it mean, though, if you were to define beyond the number of layers, how?
+Is there any way you would, based on your experience, define what is deep about deep learning?
+So we have a you already know that there's multiple layers based on just that.
+You can you can figure out where the depth is going from.
+It's not much to it. You can think of it as.
+The depth being the length of the process in Pakistan.
+So you have an input, multiple layers in your in your own network.
+The longer it takes for the data to go through the network and be processed, the longer the processing path, the deeper the the model.
+A perceptron is a shallow model because it just has one one layer.
+Nothing, Nothing more to it. So feel free to look up some definitions.
+I will not be quizzing you. I'm glad to hear the term explaining how much processing an input goes through.
+You know, another thing that you have to remember from our previous conversation is that artificial neural network,
+including the Deep Learning Network, is representing some sort of function.
+So I put a lot of effort,
+a bit of an effort for the last time to convince you that we need those layers to represent a nonlinear boundary between some something.
+Right. That was one of the points.
+That boundary is actually going to be defined by some function in your neural network as a function mapping input to something else,
+and it's going to get known in your function. Now, what are the technical problems not only with processing text when it comes to neural networks?
+It's a loaded question. So just think about it for a second.
+We have a little input layer. We put data and something else that comes out on the other side.
+Depending on how you train your network, that something will have a real problem related meaning.
+Let's start with the input list. What are the challenges when it comes to an input layer here?
+We have three input to input layer nodes, right?
+What does it mean in practice?
+Which features we have.
+How many features? Three features. Whatever comes in to this particular network will be a vector with three numbers, numbers of words or whatever.
+Just three numbers. And everything in the world be described by three numbers, by three features.
+Not at all. So. There's this neural network going to be efficient or or useful for a lot of problems require.
+More than. Okay.
+Can I have a billion features as an input?
+Theoretically, yes. But what's going to be a problem that.
+It's for us as much as right for you guys.
+Remember, the factories that we worked at before we started talking about were the two that even the idea of Oh,
+remind me can tell you something about the idea for your assignment.
+There is a little bag of words, deep idea.
+What kind of vectors are those? Far more than.
+Sparks have a lot of zeros, Right. So frequent.
+There will be a lot of zeros. I guess I could change my network, neural network, to accept a billion year long vector.
+Right. Give me an element. Long feature vector.
+Let's say that this. This would be a horrible idea or a very terrible attempt to make it a bag of words.
+Actually, more often than not, some. Most of those features will be zeros.
+Right? Would.
+Wouldn't you be tempted to reduce the number of features?
+Most of the time that feature is zero for most samples.
+Why do I bother? Dixon just wants to deliver the features is the most important for people.
+Don't forget. There's three different strategies.
+Their names. The features that are the most important for the problem.
+Right. Sounds like the reasonable approach.
+Select the features. There is an entire field that's in feature engineering, collecting and massaging.
+True that. The future engineer is a human being that will make that selection.
+Follow up question. Will a human being be a good sure selector for every problem?
+Absolutely not. Right. So you're. Well, I don't know.
+We looked at an image, a digital recognition example last time.
+Right. That's that's already a challenge.
+Or what about trying to find patterns in.
+Yeah, I don't know. GW Just images.
+Telescope. Right. You're looking at Cosmos.
+You have no idea whether there would have would, you know as a human being which which things you focus on.
+Know, are there patterns in those images. Absolutely.
+All right. So problem number one. This input layer is a fixed structure, right?
+Once you decide there's going to be three input nodes, there will always be elements, factors as an input.
+You can change them. Yes, you can redesign your network, but then you will have to make a decision of what What should go in here and here?
+What should go in there. And as you said, result.
+The human being is not the more reliable source of that election.
+Will it be better for a machine to pick up on what's important itself?
+That's all still part of it.
+There is an aspect that comes with deep learning and that that amount of process I don't know that we have at our disposal that enables us.
+Although the human factor I of out of the engineering let's.
+Let's do a feature extraction feature selection. Let's leave it to the machine.
+And convolutional neural network is one of the ways to do that.
+Mostly geared for images. Is there a sort of an equivalent when it comes to natural language processing that you might have heard about?
+Farmers in parts parts of France.
+Farmers Attention mechanism. We'll talk about it pretty soon.
+Let's let's cover. Convolutional neural network first.
+But. Then Is there anyone here familiar with what the term convolution would mean?
+And a convolutional neural network? One due process.
+Every interview that could be. Yes.
+Your convoluted exalts using something called the kernel.
+All right, let's. Talk about images for a second.
+Have you ever. I mean, your phones have tons of filters, right?
+But I'm not talking about image filters.
+I'm not talking about the ones that will, you know, fix blemishes on your skin or out of ears to, you know,
+not that I of difference, but there's there's plenty of filters that will just move your image a little bit or sharpen at.
+Right. Or adjust. Right. That's right.
+I'm sure you use that or even your your your phone is suggesting, oh, this is how it would look.
+We applied a little sharpening here, Right. These are the filters that are very similar to what is happening through the in the convolution process.
+We'll just find it. Things them.
+Right. This should be a very familiar problem.
+Mostly it's a recognition. So what you see here on the left, right here, this this is an image of a digit right, a grayscale image.
+It's it's a matrix of subpixel grayscale in intensity values.
+Now, let's let's run that a little convolution here without explaining what's going on.
+But you can already see by three blocks will play a role and portion play.
+What do you think that green light three window is doing to our image on the left?
+Or perhaps easier to look at the output on the right and figure out what happened.
+Photo it is applying some function of.
+This is looking for the most distinctive parts of the continent, but scanning it.
+So this little window here, without going to too much detail, is is a filter.
+It is design. There's different kind of filters.
+This one is designed specifically to highlight and amplify edges.
+That would be an edge filter, I'm pretty sure.
+Top edge builder. They will look for some a sequence of of of of pixels that have a drastic horizontal change in intensity and it will amplify them.
+Does that make sense? Whenever you see something like that, you can see this filter right here.
+The window may try not to go into too much detail.
+This right here is actually taken from from from the image itself.
+That three by three matrix is a filter itself.
+You can see right here that there is minus one, minus one at the top, one in the middle and zero here.
+So it's looking for horizontal pixel arrangement edges in the image and it will amplify.
+So you. Dampen that top part.
+Bring up something that is in the in the middle. Now, why am I showing you this?
+This is the output of a convolution right here. Some things in this image on the right.
+Some things are being highlighted and amplified.
+Does that make sense? We talked about the machine figuring out what is important in the image in this case or in text.
+We'll get to that by itself. They want to have an assistant.
+And when that doesn't work for you. Okay, fair enough.
+Well, we'll series summarize things for you.
+Highlight things that it thinks are important for you.
+Probably not. Right.
+An assistant, a research assistant at this fine establishment will go through a paper work and date up for the professor, and we'll find things out.
+This is important. This is important. This is important. Right. Disregard all the rest.
+So that task of that going through all those data and documents is actually filtering things right now.
+Would that research assistant need to be trained to look for specific things?
+Absolutely right. So the original image and image after filtering are a convoluted image with certain aspects of it highlighted.
+Those aspects are being highlighted because we had a filter that went through it and looked for quote unquote looked for specific things.
+This is exactly how convolutional neural networks work.
+So just basic image processing.
+A neural network like this. What we do right. It's a cat or not.
+Da da da da. But you have to specify what the feature are.
+And by specifying features, your you yourself are deciding this important.
+This is important to disregard everything else here.
+Convolutional neural network, which typically looks like that.
+We'll have this section right here all the way up to this purple line.
+Actually, this is this is already somewhere there.
+There's an input to a regular neural network right here.
+That would be your regular neural network that has a predefined number of input nodes in the input layer.
+This is the convolutional section.
+Okay, so what is happening in. This is an important image.
+Any image, of course, it has to adhere to this specific size and whatnot.
+But in any image I'm not specifying here.
+What should we look for in our convolutional neural network?
+These squares right here are the equivalent.
+Of that output on the right, something that comes out after applying a specific filter.
+Now, if you notice, there's multiple of them.
+So that first blue square is that is going to be, I don't know, after applying filter X filters, see, blah, blah, blah, blah, blah.
+Different different things will be amplified in here in every one of those images or convoluted images.
+Does that make sense? The question for you is here.
+I have a predefined three by three filter. Someone came up with this output minus one here, minus one here, one in the middle, and just let it run.
+Do you think that a human being needs to specify filters that will take this image and produce something here?
+After all, we want the machine to figure out what is what is what is the most important aspect of that image.
+So what do you think the machine would need to find the best filters possible to highlight what matters in that image?
+Yes. If you remember the basic neural network training we're feeding at, let's say,
+image with the label, feed it back, propagate the error, feed it back, propagate here.
+Same thing here. We'll. But we will feed the image and process it through the higher convolutional network.
+And the convolutional network will learn. But what is this?
+We'll learn a number of those based on the training data.
+In other words, it will learn like that research assistant to focus on something that that matters.
+To focus on something that takes a cat image and leads it to a cat label.
+Does that make sense? Multiple convolutions because we're looking for multiple aspects of it.
+Remember when we were having a discussion about a new room focusing our eyes and urine,
+focusing on noses and whatnot, But previously the assumption was that someone all.
+Kind of on not someone with the training.
+Those girls were trained to latch onto specific things.
+Well in the image that is being fed to the network here before even feed that image to the network, that final stage.
+Important aspects will be distilled down reduced to the movie images essence.
+So probably doesn't make much sense. Let me show you some.
+I think I. Here.
+This is. This is good. If you think about it with this, let's say let's find out or something like this will do.
+And what does this look like? Something recognizing a zebra pattern.
+This right here. This box is not three by three, but this is the equivalent of that filter that some that work out.
+So. One filter.
+Like this. Which produces one convoluted image based on the.
+Second filter. Second image.
+And you will have a stack. It's like you took a photo of something that matters to you.
+And then you you duplicate at that photo and run it through multiple filters and got those funny looking.
+Outputs. On average, every every convoluted photo, you will hope you will have aspects of it highlighted different aspects of.
+That's what convolution does. Now, why don't we have multiple layers down the way?
+Here's another convolution happening here, another revolution happening here.
+Ultimately, we're reducing the size of individual areas of the stack one by one.
+I something that is helpful for some someone. What does it mean?
+Here's an example of something called max bullying. Later.
+Matt As in the South section, this is what you buy to sell.
+So you reduce it to a single pixel and you replace whatever was in that piece of data.
+The maximum value out of these four, which is why it's called max born.
+So first filter or convoluted to highlight things and reduce it, sort of zip it, reduce the size.
+It still doesn't make it smaller because you start with a really large image, large input vectors be complete so that we don't want more just gas.
+So. Coalition.
+Multiple filter images substantially reduced the size of those images.
+Keep going. Keep going. Eventually, you will have a vector of individual numbers just like you would for the regular artificial neural network.
+Eat it. That's that's the idea. But I'm absolutely not insisting on new understanding.
+Convolutional neural networks. Your day will.
+Oh, we'll see how much how big of a role they will play in our discussion of multi-modal natural language processing down the line.
+But I'm interested in your opinion. Assuming that you got the gist of what a convolutional neural network is doing.
+This is not an image processing course by any means. But what this year does is pretty important for language.
+When you think. I think the most important work, right?
+Right. You're number one week. Absolutely.
+You're right that you need the machine to be able to focus on something, something of of importance.
+Right. You're translating text you want to figure out.
+Which parties go together in different language. For example, summarize them.
+You want to figure out what is what are which words are the most important in in the paragraph so I can squeeze it into one sentence.
+We can not. Part of the human being being due to write a corpus.
+A good corpus is well, it's helpful, but you can't annotate a corpus with, oh, this would be a this would be a subject here in this book.
+You can't do that or any any any input.
+Besides, you're an op here. He has to be ready for any sort of input from from the user.
+Right. You can't be prepared for that. So your NLP network will be the transformer.
+Most likely has to be ready. To ex distill the key aspects of that.
+Text and highlight it amplifier make it make it more important.
+You know, that's one problem.
+The other problem that we are not dealing here with, the convolutional neural network is we already talked about it.
+What's the other challenge with, like, putting text into a neural network?
+Is Size of Texas a challenge? I'm sold right here.
+If. If we. There's no problem in reformatting all the images that go into this network to it.
+I don't know. A thousand by thousand pixel space.
+Right. Can you can you normalize text the same way, take a tweet or two words, normalize it into something.
+A structure of 100 words or take up anything over 10,000 pages or reduce it into a hundred words.
+That's impossible. Cannot normalize that.
+That is a sequence. Word after word and spoken after poker.
+Can a network like this or even. Our basic neural network.
+Can it handle? Sequence.
+Like this. Well. Yes.
+Do we need to go this? Can we split it in, like, parts?
+Sort of like an. Mm hmm.
+It's the accuser. But are you going to lose something?
+Well, maybe. But like it, I feel like in order to make good sense, good outcome, you know?
+I mean, the whole thing. Well, maybe for specific sentence, you only need, like, ten pages and pages.
+What's going on? Of course we need. Exactly what will happen in in neural network processing of the text.
+Do you already know what embeddings are right now? Rings embeddings are solving the primary problem of neural networks turning words into numbers.
+Now, the other problem that we're talking about is that, okay,
+fitting an image into an image detection network to decide is a cat or not just a11 off thing, You do an image, get a response you're done with next.
+Her scanning through it. Pick out an Ingram's 1000, whatever you do and not look at the whole thing at once.
+So you have to sort of go window by window.
+By window by window. Does this diagram kind of explain?
+The process. If you look at the bottom right, we have a oh, we have some projection layers.
+We'll talk about it later. But all input is at the bottom of this of this network.
+And it's a neural network. So it means a standardized size input.
+In this case, it will be three words sentences.
+Now, these are still words.
+It will be replaced by embeddings embeddings of the same fixed sides.
+So instead of one word, well, let's say this is a 200 long vector, 200 low vector, 200 low beta.
+It crosses What happens after that?
+Dessert is delicious and whatever. We have to shift the window.
+This is how we will solve the sequencing challenge.
+That's not the only way for us to solve.
+The sequencing problem with both textual input.
+How many of you are worried about recurrent or long short term memory networks?
+Okay. This will be our next next step.
+In other words. Can you process text using the neural network?
+With. With forgetting. With forgetting the context.
+With forgetting what came before. Can you correctly successfully process text with for getting the context?
+I just saw three preceding words. Let me forget about them.
+The next three words. That doesn't work that way.
+So a standard neural network does not accommodate.
+A standard neural network is not going to pick up on on on the most important aspects of what's in the text.
+We need to solve right sequence embeddings our solving our words.
+The number of problem sequencing words to numbers.
+Attention. And this is.
+This is just the beginning of modifications that we need to introduce through a neural network to make it work, which with words.
+Okay. If it's not clear for anyone, why then why was.
+Why was I talking about image processing network?
+This is a duplicate for architecture. The images and text.
+At the same time, these images have to be processed in a different way than.
+Okay, Before we get into details about recurrent neural networks, I'll give you an idea what it is.
+Think about. Regular neural network.
+Such as this one. How would you how would you introduce memory into this network?
+So remember, we are interested in processing sequence without forgetting.
+Without forgetting what came before. Let's say word next word or next word.
+But when it's all passing through the network, should this guy have an idea what came before?
+The previous word or even two previous words.
+That structure is not enabling that a recurrent neural network is the crudest possible way to introduce that memory.
+What that means. You're a long story short.
+We only have one layer, but imagine that the multiple layers have so.
+Get that connection to whatever whatever information is passing through this layer in this direction, it will reach another layer right here.
+No problem. But it will also be fed back.
+So the next the next whatever next year will have also historical information from the previous
+or due place or this is the same approach that you would take when dealing with video frame.
+Next frame repeat. Oh, short term memory.
+Let's just leave those. I want to spend more time. This is a more sophisticated version of a regular world network.
+That's a little more nuance to it.
+Okay. Let me let me come back to the idea of things that I want to bring up.
+Any questions so far? That is what they are doing with the mechanism mechanism that they are using for video.
+You could use a recurrent recurrent neural networks are not used anymore, but that much.
+But you could use it for any any time you have a sequence of information where one depends on the other or multiple, you want to have some form of it.
+That loop that connects the two or three of the current neural network.
+This is the most basic way do it.
+It's not very efficient because it only remembers one one frame before and not ten frames.
+You could simply as word, yes, you could add more recurrence to it, but it makes things more, more, more complicated.
+There's other ways to have all that. All right. Here by the app.
+So I guess when I was explaining the PEF idea that what I should have highlighted something here is your vocabulary right before it was or to.
+Pretty.
+What I want you to do for your for your written assignment is problem number one is to treat your video vectors as you would back up words vectors.
+So you have a sentence. Let's say w one, ww1.
+Okay. This is some sample sentence that draws from from all the all words in Corpus C.
+Some of you might have my impression that when you're doing a T, if I give a lecture for it, this sentence would have a vector with.
+Pretty values. That is not the case.
+Should he? How many? Four.
+I have four words in my vocabulary that I have to have a better idea of vector
+of size for simply w four and w three will have when you you're doing counts.
+Count how many times w4x appears in in this document would be zero.
+That count would be zero that the corpus count would be different.
+So don't the reason I'm showing you this is because I got some questions from from your friends.
+If you want to come through, let's say this is your document.
+One document to what?
+I don't know which is w four is why not?
+It still would have have four positions in that vector.
+Otherwise you will not be able to do does product or cosine similarity between the two.
+Is that clear? All right.
+Anything else to extend that length or it was always, I will extend the deadline for programing assignment.
+What is the other way around? I have the impression that it works for this one.
+No. This is from Saturday, right?
+And my forgetting something. This is due on the Saturday, Saturday or Sunday.
+Okay. Are you guys ready to work with your own large language model?
+Okay. Okay. Okay.
+Yes. So, yes, you will.
+All right. I'll see on all of the things that I learned over the course of my life and using comments from.
+Yeah. Against the attack unit, I think.
+Oh, really? Yeah. But they had like, give you have quite like and a lot of things like, like this kind of stuff.
+Why don't you feel like wiping up entire.
+I don't know. I, I was, I was trying to fix that.
+I you, it was about that.
+But I certainly hope so.
+I will. I will. Okay, stop.
+I will. We'll take a look at it. There's so many to answer by having someone like an extension, which I thought was pretty.
+People don't think about how many releases, but they're like.
+Like I'm booking like, in case I think it's a written assignment.
+I'll give you an extension. I will give you all an extension on your programing program.
+Okay. And I already said that in class.
+Right. You'll get an extension of the programing assignment that they taught me.
+And I just had a one which I spoke regarding the grading, that if you apply only to like,
+meetings like gaze or 77, then I'd like to know also things here.
+Actually, I did actually write low decks, but in the last like 50% of question I skipped steps.
+That's alright. Which one? But the turbulent last one I couldn't get because I like was it.
+Almost everyone finished everything in their right, but I accepted like I was like, Oh, I can't do anything about it right now.
+I'll try to make the final exam a little less.
+I think we take a look at our exams tomorrow.
+Okay. I have to have a more. I will be able to start another.
+But we all have to show. Well, of course.
+So let's see. We're gonna have to show over progress on that.
+No, no problem with our.
+Hear me? But is different.
+But it's not because they can't get it right or.
+What is it that this is bringing to bear?
+Adding. Right. I think a lot of people are hopeful.
+Oh, possibly. Well, I'll just accept sit and take a look at you have time for it.
+So I don't know.
+But it's just visual zero. That's the last.
+I think. Yeah. I'm really.
+So that was his. On the.

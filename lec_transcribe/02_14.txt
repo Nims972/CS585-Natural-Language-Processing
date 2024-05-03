@@ -1,0 +1,548 @@
+Well, think. In.
+Well. Good morning.
+You guys are, like, early. Okay.
+Question. Right.
+Third Regional segment posted. Or slow down with written assignments after the midterm.
+But with assignments. Your second programing assignment will be posted soon after the midterms so you don't have to rush down.
+Next classification. Let's go back and talk about some other options here.
+Are you familiar with the term logistic regression?
+If anyone here is not familiar with that. Well, that's too bad.
+Do you know how that works? Oh, and this is for those who are not here and don't know anything about it.
+There there's plenty of options for classifications and there will be classification, whatever.
+We're doing something known as this or we we just went through naive is which is of course, the baseline.
+You will see what you will not get far with it.
+There is other options and specific networks are going to be your friend if you want to do some good classifications.
+We'll talk about the basics behind it and then we'll talk social progression.
+I imagine it will be a thing or two, which you are not familiar with.
+Okay. Okay. The basic neural network related to classification would be with a single perceptron.
+What is a perceptron? Perceptron is a model computational model of a artificial neural.
+Long story short, it accepts signals, multiple signals.
+Those signals are, in a sense, weighted. They matter less or more to the neuron.
+And depending on the aggregate, quote unquote power of those signals, the neuron will pass its own signal.
+Slower or not will get excited or not.
+This is this is the structure of the frame.
+You have some. Input nodes which are imitating dendrites in the actual near.
+There are snaps which connects dendrites, which are sources of meaning to in Europe,
+and there is an axon single part of the perceptron or Newton neural that is firing information.
+So what matters here is that this set of inputs are incoming signals.
+You know, our brain.
+It's going to be signals from our eyes, sensors or whatnot, or just internal signals, internal processing for text classification.
+What would be the signals here? Mm hmm.
+Document the sentence. Document broken down into something.
+So. So really, you can think of the bag of words vector as a as an input layer here.
+Every single feature in that vector is going to be an individual input.
+It doesn't have to be a bag of words, but it's. It will be.
+A vector of inputs, and our neural is meant to respond differently to every every future.
+What's going to happen with those features or the values or the features is they all get summed up.
+That's going to be very basic weighted. So and then for the basic perceptron, the decision will be made.
+Is it above a certain threshold or not? It is above a certain threshold via pass, as information or not in the most basic.
+Artificial neuron. This is a binary information.
+Yes or no? I'm saying yes or no to something I so multiple things.
+I aggregated them, decided, okay, this gets me excited or not.
+This is spam. This has happened. This is a happy document.
+This is an unhappy document. And so on and so on. So there's nothing fancy going on here.
+Just a weighted sum, of course, somewhat to ask.
+These are the weights right here.
+These are the parameters of the model. Someone has to find them.
+All right. This is part of the typical neural network training to find those weights, but we'll be spending too much time on it.
+Yeah, this is the idea that I just described.
+You have a vector representing a document numerically, and then we have a model that tells yes or no.
+Happy about a single artificial neural neuron is.
+Insufficient. Inadequate for or for any sort of serious educational work.
+Why is that? After all, our classification.
+He is trying to mimic. Some function, right?
+Correct. In your mind when you're reading reviews or whatnot,
+There is some sort of function that in your brain that decides this is this is a happy document, this is a good review.
+This is not a good review, Right? It's hard to put it into words What's what's what's going on in there.
+But do you think a function like that would be fairly complex?
+All right. Very likely. Right. So why would a perceptron be inadequate to capture a function like that?
+But perception of what it does. It's a linear combination of inputs.
+Lincoln I'm highlighting the word linear. In other words, it's only capable of modeling a linear function.
+So if we have nonlinearity is not nonlinear, D is not going to be captured by a single, single perceptron.
+If you're dealing with a linear function, fine, this will suffice.
+But something more. Well, this is where we need perceptron or more artificial neurons just connect them together and they will.
+By interacting with each other, they will create a nonlinear function right here that will mimic an nonlinear function.
+Does that make sense? Just take more artificial neurons.
+Connect them. Add some bells and whistles and you have an artificial neural network that is capable of imitating a nonlinear function.
+But we'll leave that for for the other half of the semester.
+And I'll just walk you through the basics of how an artificial neural network is always going to be based on multiple layers of artificial neurons.
+They're going to look more or less the same as that perceptron with some additional.
+Different activation function. But let's put aside the signal that comes in as before.
+So in our case, it would be a document represented by a vector that in it passes through the network and then produces an output.
+This is called a feeds or the neural network because we're feeding forward left to right.
+The input data. This is one way to classify things.
+Someone has to do. Some algorithm has to train the weights here everywhere.
+These are the parameters of the model. But in essence, this is this is just a bunch of.
+Artificial neurons grouped together. Do you need a training set in training?
+You're absolutely. How do you train a neural network?
+With gradients. It would just suggest we adjust the weights of the predictions to predict the actual event.
+So yes, you're measuring how bad the response is, the actual response versus the expected response,
+which is in the in the training set at the end, when you measure that response,
+you have you will have some error function that decides how bad the prediction was,
+the classification on the scale, and that that error will be back propagated through the network effects this way.
+So essentially, let's say that numerically speaking, this and that note right here contributed the most to the to the to the is terrible answer.
+So back propagation will will say, oh, you guys, you too said that it was a oh, let's just go to spam.
+Oh, okay. You two said that it was a spam document where whereas it was a ham document,
+you better fix your attitude in the sense change your weights the most because you contributed the most to your back.
+Propagate. It forward back, propagate beach forward.
+This is the training process. The actual classification.
+Once you deploy the model will be just. Feedforward.
+There is no back propagation model. That was all set. But as I said, it will go back to neural networks later on.
+This is the idea of back propagation, one of the algorithm, as you said, for fixing fixing a way of reading this as well near his neighbors.
+I mean, I imagine most of you are familiar with it. This is a very simple one.
+Now, given that we have our documents already in vector raised for for better or worse, with bag of words approach, we can.
+Place a new document in a vector space which will be surrounded by other documents that we already know that they belong to a certain category.
+Let's say let's say that all the blue once belonged to the music of the green.
+The purple ones are sports, right? So now let's place a new one somewhere here.
+And look at its K nearest neighbors, whatever it is.
+It's a small, odd number that basically decide, okay, you're surrounded by sport documents.
+You're probably a sport document as well. That's the. Very simple process.
+Nothing challenging about it.
+All you need to do is measure the distances or the sign similarity document.
+Now. There may be some problems with that.
+You have never. Signs, similarities and.
+Results that are not necessarily somewhat problematic.
+Does that make sense? No.
+Are these vectors representing points close to one another?
+Let's say cat and dog. You have X coordinates?
+No. Back to the right. So Cat has a one in the first score and then it's only Dog has a Y in another card.
+So they're just pointed in completely different directions. Right. What's good saying what angle is gives cosine zero.
+I think. So for single words, we have that now if we have a document.
+Oh, sorry. What about hash? Sign.
+Okay, So now these are coming closer to each other, right?
+The cat and mouse. The cat in the bird still still apart.
+All right. I'll come back to it. You don't see it?
+Shoot cat dog miles the bird and close to each other as words.
+As individual words. You can see that they're not in the document is just made of one word.
+They're just spread apart, even though they should probably be close together.
+That's that's the that's the problem. You know, that we're not perfectly capturing that similarity here, which can be resolved by using embeddings.
+All right. Let's talk about logistic regression. So first.
+Let me show you something. Okay.
+What comes to your mind when this is like 37?
+What comes to your mind when you hear the term generative when it comes to NLP or A.I. in general?
+Generative A.I. chat bot they will diffusion write generate things.
+Generative model. AGP is a general break.
+There is different meanings for the word generative in machine learning.
+And this part is actually pretty important to to know the distinction between generative
+AI that will produce pretty pictures or a nice song or a nice chart response.
+It generates something, but it's. No, I mean, try to decide what the distinction is.
+You have two types of machine learning models.
+I'm not marking unsupervised machine learning unsupervised versus a different classification generative versus discriminative models.
+When it comes to classification, those two.
+Of all types of models differ one when given data will learn.
+To generate the actual distribution of of.
+The underlying data. Does that make sense?
+That's straight. Strader.
+What is that? Well.
+Right. This represents some distribution of.
+Real life data, right. That can be learned.
+So once once a machine learns that let's say that this generates a number, this to this,
+this one right here, this is if it learns this distribution, it will start producing.
+To some more often than once. And three, it's right because it understands that it's that it's.
+But what the underlying distribution.
+Not exactly generating a one or two here, but understanding how that distribution is constructed is what generative models are after.
+They want to understand how how essentially, if if our model was to generate human beings,
+it will learn how to what the human being is made of kind, and it will start building new human beings for better or for worse.
+Discriminative models will not do that.
+Instead, it will lock on on some feature and it will create a boundary or a set of features that will create a boundary.
+One when used to decide, okay, this is a human being.
+This is not a human being. For example, it will see a lot of a lot of human being samples for examples, and it will see and cats and dogs and whatnot.
+And it will learn or the engineer will specify that that there is a there's a feature called has a tail.
+Right. It will learn that human beings don't have a tail and then we will use that information to create a boundary.
+Right. And it will ask a question. I don't care about specifics, right?
+I don't know what the human being is made of. I don't care about that.
+I will check whether what I'm looking at has a tail.
+If it has a payoff, this is not a human being. Does that make sense?
+So those two types of models operate on a completely different principle.
+One will just try to find a way to distinguish between one class and the other class.
+The other one, the generative one, will be actually able to generate it knows what the data with the real stuff it's trying to capture is made of.
+Do you see the difference between the gender that you see in the media and that kind of generative approach?
+They will both do the same thing. In terms of classification, you'll give it a sample.
+And I will tell you, this is a human being or not a human being.
+This is a spam or not spam. The one will kind of understand what spam is.
+The other will know how to distinguish spam from from from, not spam.
+How does this work as an explanation?
+Okay. There is a practical difference between the two.
+Generative models used a joint probability distribution.
+They learned the joint probability distribution of all the features from the training data,
+and then it uses Bayes theorem to make the prediction discriminative model.
+We'll try to learn the conditional probability, the same one then that the generative model eventually will arrive at after applying Bayes Theorem.
+This, the discriminative model, will learn that. Directly.
+So. Which one is naive Bears.
+Imperative because it learns you So Navy is learning.
+Okay, all spam messages are very likely to have the word Rolex, this that word, that word that word site analyzes.
+What is this document made of to allow you to understand its structure?
+Does that make sense? Logistic regression will be on the other side of the.
+File right here. Where would Perceptron be?
+Absolutely right. It will create a linear boundary between two classes.
+It doesn't care what's inside. I just found about I learned the word the boundaries.
+I will use it. Same for a neural network, except the boundary will be nonlinear.
+Not. Not. Linear in the Markov model.
+Does that make sense after what you sell?
+Part of speech tagging it learns everything about how it's trying to capture how the language works underneath.
+Okay, so if you remember our classifier.
+It was about this particular conditional probability.
+I'm going to give you a document represented by a vector x.
+Find me a class, a label that maximizes the probability of the label given.
+Given the document. Correct.
+This is what we were doing with my bands when we started with Same.
+It holds for every classifier. If you take the base rule, that probability can be replaced by that fraction right here.
+And from there we were doing some massaging.
+For them. The baby is to get somewhere else, to expand that vacuous here into individual features and what not.
+Make some assumptions. Use the product rule to simplify things.
+But in the end we were working between conditional probability and joint probability.
+Conditional probability using probable naive Bayes.
+If you don't remember. If not, you can go back to it and take a look at my face.
+Was trying to estimate this joint probability in the end to offer us the conditional on the left.
+In other words,
+we did a detour with Main Vegas to get joint probability distribution in order to later get to the conditional probable logistic regression.
+We'll go directly after that. Let me show you how.
+So. This right here.
+This blue shape is some joint probability distribution for two random variables, X and Y, Right.
+That's sliver of right. Right. Here is a conditional probability.
+Or given that this is this is X, given the Y being at a minus two or something like that.
+So naive is try to learn the whole thing, just ultimately extract this logistic regression all directly learning.
+What is the regression? Just the process.
+What is it? What is it after? Because people are going backwards.
+Recursion is one of those names that are a bit of a misnomer.
+Historically, do you know the history behind mathematical regression?
+I will not bore you a long story.
+Quickly. There was a guy, a scientist and a mathematician in England.
+I think it was 19th century. He was a statistician as well.
+He was interested. Hey, when two people produce offspring, right?
+How come too tall people are not producing even taller people?
+So he just started collecting data about offspring, how tall his mom told his dad, put it on the scale, and it came out so mass and weight, I think.
+It came out that no parents are all right and and both parents had what?
+Convert. I got a bunch of dogs into that with a with a line that goes to the middle.
+And what he observed is that the.
+Child's height regresses to the main mean between two parents.
+So his observation was that instead of two tall people or just kind of tall and tall person producing even taller children,
+he found that the child would be somewhere in the middle on average.
+So this is where the regression came from. The regression was finding essentially this this mean line between observations.
+So in practice doesn't have to be a line.
+It means finding finding a curve that best feeds data.
+Feature. One feature do this is Judy. This is a linear regression.
+There's nothing funny going on. Very easy stuff, Excel.
+We'll do it for you easily. It doesn't have to be alone.
+It could be a polynomial. Fine. But regression.
+The process of regression means okay. Take a look at this.
+This plot right here. So I have data.
+I have an observation for X. Let's say that this one and this is 1.5, right?
+Then this 1.5 and one. Whatever. Right. Do I have a date up for this X?
+I don't. Right. But I would like to predict whatever this is, this relationship.
+I would like to be able to predict if I give you X, what will be the Y Regression is finding that curve.
+That is that is the curve of prediction. Exactly.
+So in the end, if I give you a value of X, I should get a nice little prediction from this line.
+That is the regression. It's different from classification.
+Classification if doesn't belong to here, doesn't belong there.
+But that curve that separates them, that boundary curve, is still produced in the same way.
+Do you see two kind of problems? A boundary.
+If I want to use regression, I will I will find a spot on this boundary corresponding to the input data.
+If I want classification, I want to put my observations somewhere in this plot and see is it above my boundary or below my boundary?
+The process of finding the boundary, regardless whether using classification or regression, is the same.
+Okay. So.
+Is there anything? No.
+Okay.
+So let's say that we we want to find that linear, separate grid will be aligning to a plane in 3D in and it will be a hyperbolic linear separator.
+How do we find out? It's the same approach as here, right?
+We all will have a bunch of training data, x, y, x, y.
+A lot of it. And we will try to find.
+And that data will be labeled. Of course, Gary, we will have a red and blue label or spam, but it doesn't matter.
+Vectors. But this point be at the end of a vector.
+Possible. Yes. Oh, everything. Every little dot right here could be a document.
+Those documents could be labeled spam. You can see that there's a very nice separation here.
+So how do we find that? Separator we we let you can bet on having.
+Data points. This is our training set.
+So every every blue and red point comes from my training set, which includes vector information, coordinates, plus red or blue as a label.
+So same thing I had. Or for a naive base, same effort, it would be just fine.
+Our product everyone talks about with the product.
+No. What is a door from?
+Of two victories. So multiplication pitch following the matrix pretty much if we don't go forward.
+So is that going to be a scalar? Ah ah ah ah ah ah.
+A vector. What does it represent to the actors?
+I brought it up to lectures here.
+This is what you. I feel like what is the product of two vectors represent?
+You know that I don't. What was the.
+What if your orientation of two vectors. For example.
+The distance between two vectors. Take a look at this right here.
+Okay, let's. Let's go back. What is this expression right here?
+Oh, the lang lang equation, right?
+So we have three parameters. X and Y is easy to relate to, right?
+But what if we just swapped them for x one and x2? Different labels for two different features.
+Maybe it could be a plane, too.
+Yes. You're it's just it's just thought, okay, let's swap x y for x one and x two and rename the coefficients.
+What's that? Okay. Just a different label.
+So we're going to go X plus C, Y plus B equals zero.
+2w1x1w2.
+That still implies B actually w b could become w zero.
+But at some point this. Expression.
+Look, anything like that dot product?
+Wait times. Cortez.
+Okay, so. Is it starting to make sense?
+So if I. If I have. A line by using two vectors.
+Using a dot product of first.
+If my ex. Point, right?
+X is x. X is my data point represented by two cards by a vector.
+So let's say this is one one, right?
+Or this is two one. Right. That would be my x weights r weight.
+Now you can be our line or our playing parameters.
+No if. This equation scholar brought us this big obsession.
+If this equation is equal to zero, so pretend that a vector representing birds of a certain point in that space time.
+So the coefficients of the light in this case.
+A question which is which is really a vector that guides this line, right?
+Defines that line. If we have those two vectors and that expression evaluates to zero, what does it mean?
+That your ex-wife is on that lot.
+Exactly. It's on the boundary. That makes sense.
+Now, if. If it's below.
+If it's if the if this. Product plus B is less than zero.
+Our point is below the boundary. Greater than that above Earth.
+So do you see how do we interpret this style, our product right now?
+It will tell me whether my point is on the boundary or below the boundary or above the boundary,
+which is what we want when we're dealing with a classifier. Right.
+First find where the boundary is and then given a new point, tell me where it falls.
+Above the boundary in a certain class region or another class region.
+Everyone on board. Okay.
+So if that kind of makes sense, how do we what do we need to find?
+Because we want to have a classifier to have a discriminative classifier.
+We need that line or that plane to have that line or that plane.
+We need those WS and B, Right.
+We find. Started sitting around a budget and just ripped apart the things we started with.
+So it started with random like random separator and try to position it correctly.
+And this is this is actually what what the training will do.
+Now one more thing. So if I know that my point is below that the separator above the separator that puts that towards the
+gives me information kind of what class that point to what what class should be assigned to that point.
+Right. It's this point right here.
+More Spanish and that point, or vice versa.
+Exactly. So we if we could also.
+On top of deciding we're in that space by point lands on top of that.
+We would also be able to find out how far from boundary it is.
+Would we get more confidence in our spam or ham classification or any sort of classification If we have that number,
+the farther it is from the boundary, the more likely the classification is correct.
+All right, so let's try. Doing that.
+Let me remind you what we have.
+We have a training set of input output pairs, which means an x vector describing a pointer in some space along with a label for it.
+We have a lot of those bins. So we have these.
+We will see. Does the weight factor this one, this weight plus B which defines the further.
+But. Sure.
+Okay, so let's go a little backwards. This is how we would define.
+I were like, Life starts with a random boy, as you said, and try to.
+See how well it divides our training so that data.
+Calculate the error. Mean.
+I mean what Let's let's go back. Started with a random separator.
+Let's make it a line. It will have its initial W and Z.
+Right. Just put this line on the plot virtually and see measure distances between
+our data points and the line and see how well it classifies our training set,
+calculate the error and try to move around the line whether it just.
+Changing the law, shifting it. Does that make sense as a as a process?
+Yeah. Before we get to that, here's a classification.
+Process. If I have even that random initial initial line.
+Parameters. Right. I can calculate.
+The. The estimated value, the estimated classification value for every point in my training set according to this line.
+Does that make sense?
+Every single training set vector is a lecture defining a point, and there is a label zero one associated with it, as in Amsterdam.
+Happy and happy, right? If I have a line parameters, I can calculate where is that point with respect to this line?
+This will give me and give me a number. High or low, close to one or close to zero.
+Now I have a predefined label for either one or zero.
+Z is is my estimated classification.
+My current model is producing that. Zee is going to be somewhere between Z one and zero, right?
+If it's far away from expected one, that means that my model is producing a huge error for that particular data point.
+Another data point, another error. Some of the errors see how bad W and B is.
+Keep adjusting and.
+Through some simple operations until the error is it's not going to be zero, but it's more much smaller than the difference as that makes sense.
+This is the process of of training the separator.
+Start with a random one. Go through every training set point, calculate distances in the errors in judgment.
+Adjust. Repeat. Adjust. Repeat. Adjust.
+Did I lose you? Okay.
+So what we are really, really trying to.
+Establish your. Is that conditional to find a conditional probability?
+Right. This was what our classifier was after probability of label giving document, Correct.
+This was the original approach. If this is giving me.
+Some number. Or just zeros and ones, perhaps.
+Is it going to be a probability measure already?
+What do we have here? Is this really further for the time being?
+Kind of like perceptron. Small number.
+Low high number. High or zero.
+Minus one, 101. Something like that. This is not like this is about normalization.
+Then that there is actually something better that this is and that something better is where the logistic regression is.
+This is coming from. The logistic function.
+Logistic function is a very, very special function in a sense that no matter what kind of number you feed through to it,
+that would be the number, right?
+No matter what kind of number you feed through it, the outcome will be always between zero and one, which is something that we want, right?
+If we want to imitate probability zero.
+So as opposed to our initial perceptron approach, which is a step function.
+Yes. No. Zero one. Happy and happy.
+Let's feed it through a sigmoid or a logistic function to get a zero re scaled response between zero zero and one.
+Just with with just the separator that we have learned.
+Right. We all have some that this will be value less and w x plus be.
+Or less than zero or higher than zero.
+Right? It could be -1000 plus thousand.
+That's not going to cut. It has probability for it to get probability.
+We have to take those that number and feed it through the sigmoid function.
+Exactly. So we're kind of the logistic regression model is kind of like the perceptron with a single logistic function.
+Applied to it as an activation function to with shifts or scales, everything from minus infinity to plus infinity to your.
+Does this look like a linear combination right here?
+This expression, it is absolutely a linear combination.
+So we're technically this is a perceptron like.
+Response. Okay.
+How do we decide classes now? The world should decide that.
+Well, someone should find a novel, at least this one, closer to the threshold.
+A threshold? The basic idea, though, that the basic approach would be we have our model is once, but at a data point, a document vector.
+Right. It will it will calculate this scale or that value.
+Then it will feed it through sigmoid function, and we will end up with a number between zero one.
+Okay. Now, as you said, we can set up a threshold .8.3.
+We could do that initial approach probably should be point five, right.
+If my number falls between below 2.5.
+Label it as spam or have above 4.5.
+Label it as the other. Why would we move the threshold?
+Yes, I guess this should be wholly different, the classification decision that we were in.
+First of all, I absolutely agree. But does everyone agree here that I could move that threshold right here?
+This will change. This will change my decision making when it comes to deciding what is what is class one?
+What is class zero? What is spam? What is how?
+By default. I could just put it at point five, which is absolutely fine.
+But am I going to gain anything by moving, moving this red line up or down?
+Possibly. Is it something? It is going to be related to the data for sure activities in the.
+Wow. No, because the data points that balance.
+Very good. You got to remember the confusion matrix.
+What? What? What? We had a little discussion about the confusion matrix.
+That is true. Positive is true. Negatives, False positives. False negatives.
+Right. And and you're when you're testing your model, right, your model will just produce.
+A bunch of numbers for for all four categories, right.
+Are you going to be happy with a large and then always happy with the Lawrence No.
+Number of false negatives or false positives? It will depend on the problem, of course.
+But each if you can even can you imagine a scenario where you would like to, hey,
+can I do anything to bump up the number of true positives at the expense of false negatives, for example?
+I mean, medical diagnosis, right? You want if you're being screened for cancer, you want true positives, right?
+If you have cancer, you want to learn about it. Right.
+You don't want to have oh, you don't have cancer. Right. And then it's.
+The false negative right is often the culprit.
+There's the same thing. Same thing.
+But there's there's there's going to be situations, right?
+For example, if you're if you're if you have a thermometer.
+Right. That you're measuring your body temperature and sometimes it will be wrong.
+I'm making it up. Sometimes it will be wrong just by a little bit.
+Right. Can you tolerate that? Well.
+It depends, I suppose. On what else?
+And your computer is is is telling you that it that it has a virus.
+Right. And it doesn't it's not a big deal.
+It's annoying. Right. But it's not going to hurt you. But the opposite would be rather unpleasant.
+Right? You have a virus, but your virus is not going to detect that.
+Right. You would like to tip the scales in situations like that.
+You don't want misdiagnosis or cancer at all. That should not be happening.
+It's okay if it's okay if you have a if you have a false positive for cancer screening, screening,
+you will the doctor will tell you all you have cancer and then you'll send for a bunch of other tests and you come back clean.
+Everything is fine.
+This is way better than just being told, oh, you don't have cancer and that you actually have cancer so you can play around with it.
+The point being, I'll show you that, you know, Oh, maybe we'll manage.
+The point being is by manipulating that red line right here, which separates it's a probability threshold.
+By manipulating that red line, you can change your model in such a way that the confusion matrix will look completely different.
+If your model is super sensitive to certain things and you don't want it to be shipped that.
+All right. Have we arrived at some understanding here what logistic regression is?
+Scalar product of of of some boundary boundary structure line plane after plane parameters vector
+representation of the point events below belongs to one category above belongs to another category.
+If we want to term the below and above or very above and very below into zero one range.
+To imitate probability. Lets pass those numbers through a sigmoid function or a logistic function.
+Once we have those numbers, we need to select where is the cutoff point between categories 0.5 or something else?
+This was that red line that we were talking. So.
+This is essentially what a lot of what a regression model looks like.
+It's a bit like the perceptron with sigmoid activation function to compress everything to zero one.
+By the way, this is a regular perceptron.
+It does not have this extra node B for bias.
+Do you know what that means? What was the purpose of this additional node?
+I'm pumping in an additional number to myself.
+This is just a sum of wait time times the input plus wait times input plus blah, blah, blah.
+And then I'm adding a little. A little extra.
+Violently. And unbalanced values.
+I would say that you get out of there.
+So if you recall this, this little perceptron model says yes, if if if this the produce is above one above zero.
+Right. If it's below, it will give you a no answer or vice versa.
+It doesn't really matter. But the separation is is this some right here produced here is the sum above or below zero.
+Now, what if what if the input values times the weights are never below zero?
+It's possible, right? You have you have positive weights and positive inputs.
+This will always be above zero. All right. But we want to make.
+We want to make that decision somewhere so that that extra.
+That extra bias will create a shift.
+Everything above zero and to neatly cut in half the zero is right here.
+Does that make sense? This also represents shifting, shifting our boundary back and forth to better accommodate.
+The split. I feel like I'm doing a terrible job today.
+Okay, so. I told you that.
+Well, we have to go through the training set to adjust our alignment with Backfoot back and forth.
+Increase the angle rate or decrease the angle.
+But how do we do that? Well, we're not going to do it at random or we're not going to do it in some structured way,
+or let's let's shift it by five points first and then another five points.
+Let's just keep trying. That's not going to work. So this is just a general machine learning problem.
+Calculate the error. The error would be.
+The difference between expected label position or that for a given document and the assign label position or probability if you don't.
+Measure those there some those errors for every every every training set point.
+And use it to minimize the errors as anyone familiar with cross entropy loss.
+Gradient descent. Some of you are. This is how.
+Cross entropy would be calculated for an individual document.
+What is white hat? What is what is why I predict it will be the predicted ones by my model Y is the actual one.
+Do it for every for every data point.
+So you'll get us some of those errors and then you want to minimize the error.
+You want to maximize the probability that.
+Classification is correct. In other words, you're using this expression right here.
+As on probability. Conditional probability estimate.
+Does it make sense? To use lot of variables here.
+Same expression when play when moved into a lower space.
+Because there's no explanation anymore.
+Just. Just some.
+The searches. That's a technicality right here.
+Did I miss anything? So you used the log to avoid possible explosions on their float?
+Not. Not in this case, although they will help with that because those numbers might be smaller as well.
+So this helps with the computational.
+Aspect of it. Okay, tell.
+Are we interested in maximizing the probability of our document being correctly classified?
+Yes. In order to do that, we will.
+Minimize the year reduced by.
+The model. Using a cross entropy loss, which is minus minus our probability estimate.
+The opposite negative. Our probability.
+You can see here, it's. It's made up of y and white hats, right?
+Y is the actual label y hat is the predicted level.
+Predicted label is truly this output of the logistic function.
+So what I had right here is logistic function of my separator parameters, times the document vector or other product of it.
+This is for a single for a single document.
+This expression right here is for a single document. It defines the cross entropy laws for a single document.
+So far, so good. So X would be that single document.
+Y would be the corresponding class for it.
+To. Minimize that.
+The only thing that we can play with is.
+The WNBA dose to her debut is going to be a vector, B is going to be scalar, and together you can make it one, one vector.
+So work. These are the moving pieces. And those moving pieces are are going to be used to minimize the loss.
+So minimizing the loss, it means minimizing this entire function.
+Which is a sum of individual cross entropy losses for every document in our training set.
+Okay to minimize that stochastic great understand but full of well 40.
+So go back to it on Monday. Was it too much?
+But so many questions.
+Just to understand the process was a little clumsy, but I guess that the steps were there were what we started with,
+what we wanted to do and how did we arrive at the probabilities.
+And then fixing, fixing our battery will take more of your time.
+Thank you so much. And I'll see you Monday, right?
+Oh, yeah.
+You know, I didn't know.
+I think in general, it's actually an additional sense for the team which might cause injury without considering all the details.
+It's really hard to select of them, but how can we see that we are playing nice based on these issues, that everything is independent?
+It's pretty much the opposite of Internet.
+We are actually considering everything if look what there.
+One of the things you're focusing on.
+You're already past. We're already past the step of.
+Simplification stuff. So you can you can think of it as naiveté as it is Just a way of getting at is learning everything without relationship.
+And it will do the best job to learn. All the teachers are about how the future is for the firm in deciding whether it's memory,
+those assets or discarding all the information, all the relationships.
+But still, we are going to consider everything. Yeah. Yes.
+So that's the essence of that.
+This is good if you want to.
+You could. And it probably wasn't too clear to David in case you go back to the produce lecture.
+Right. Very least, we ended up with a list of probabilities, right.
+Just for every work. Now, with that set of probability, you could let's say that we're looking at the system, right?
+With that set of probabilities, you could generate a spam message.
+Yes. This is why it's called generate.
+It has enough information to build a document that it that has all the features that capturing the discriminant model would not be able to.
+It will just look, oh, it has Rawlings in it that doesn't have Rawlings in it, no spam.
+But beyond that it would not be able to to create a document like is that a better explanation?
+This is why it's called generative. It doesn't it?
+It classifies.
+But if you really took all the information that went into building the model, you could use it to generate something that it's trying to classify.
+Okay. So summarizing photographs is far more than we have The knowledge based probability for all of these,
+we can essentially generate all the labels based on probabilities that we actually arrived at After using,
+not label the documents, your documents document, you would have a vector, right?
+Well, it's got a vector as an able table.

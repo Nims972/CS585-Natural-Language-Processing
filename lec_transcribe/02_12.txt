@@ -1,0 +1,637 @@
+Are you sure?
+All right. Before you.
+But. Let's do it.
+Any questions? Yes. And after five weeks, he let loose.
+How was the programing assignment? Was it frustrating?
+Frustratingly bad in terms of results.
+Oh, yeah, I guess it does.
+This gives you an idea why it took so long for something like LGBTQ to have rights.
+This is not easy. Did you have an itch to start tinker with it?
+I like, do a little heuristic here. Add something to that.
+Yeah, that's a little bit of that. But you could try it.
+All right. Original assignment three posted.
+Furthermore, two will be posted. This will be.
+My interest in the midterm exam is approaching.
+We'll post a list of topics that are all my expectations, probably.
+Next week or something like that. Section zero two online students.
+If you haven't responded to Mr. Charles email, please do so.
+This is also important for me to know where will you be?
+Okay. As I mentioned before, I have to prepare a lot of things for the next two or three years.
+Okay, let's go back to tax classification. Here's a task.
+We're given a document. We have a predefined list of categories.
+This document or classes, this document may or may not belong to predefined as we were trying to decide whether it belongs to a specific category.
+Let's have a prediction. So how do we do that?
+Well, we need to build a classifier, and classifier is a machine learning learning model that is based on training data.
+So I think last time we talked about, well,
+the classifier for for for for language has to do a little bit more than the classifier that does images or something like that.
+A little bit more preprocessing for a very reason that machine learning classifiers have to ingest numbers.
+So our input tax that will be classified has to have some numerical form or more specifically
+a numerical vector explaining that to a structure which is a problem in itself,
+especially when we're dealing with variable length documents, we have to do something about it.
+So today. I think we went through a very old age classification.
+It's not yes, you could build a classifier that just looks.
+Is is there a bad word in that document?
+Jack, is there something else? Jack And then I'm like, this is this is not.
+Not going to be a very adaptive solution for a closed.
+Closed family documents where nothing ever changes.
+New words are not and should not introduce this good work or a very specific language.
+Yes, but that's not typically what's going to happen.
+So let's try a very basic supervised machine learning approach to our text classification.
+So once again, we will have an input document, the set of classes,
+But before we will be able to judge that document, we have to teach the classifier to recognize based on.
+Label, the label. They come from a training set.
+You already have dealt with training sets, as in corporate.
+Not every single one of them will be directly relevant for you for some sentiment analysis and analysis or text classification,
+because it is not going to be necessarily labeled as such.
+I think of writers as labels. Yes, I like news category, sports, politics, whatever it is.
+So we could use that.
+Otherwise, typical stuff reviews stand out, but in other case, we have our training set and we have to start with dividing it into.
+Let's start with two sections training set and tests.
+Both are labeled, but we'll be using training set to build the model.
+And then the test said the smaller subsection of it, to check how good the model is.
+Some training sets are going to be manually labeled.
+Okay. That's no problem. Some of the labels.
+You will have labels baked and into your text.
+You just have to extract it. These are just examples, emojis or stars.
+And there's a number of ways of building the classifier.
+Same as with any other application. Doesn't have to be text.
+You have plenty of ways to do it.
+So some of them are going to be more or less sufficient to be able to start working on a naive based classifier, which I imagine many of you heard of.
+At least some of you have done that the most primitive possible machine learning model.
+But before we learn, we have to somehow do something about it.
+So we've been talking about embeddings since they One embeddings are always floating around.
+Oh, if you have a embedding, it will be easier. It will be better, more from our position.
+But before embeddings there were other approaches such as those.
+Have you heard about bag of words? You have.
+It's a very primitive idea. Remember, we have to create a big size vector feature vector for our classifier for both training and then deploying.
+Fixed size vector belt documents don't have fixed sizes, so we have to somehow cram every kind of document into.
+A single factor of a mixed bag of words.
+Take it. Take a document. All the words go into the back to back to back, and you pull them out one by one and count them.
+So what's going to happen when you do that? Our original document has all the structure of sequencing data.
+You just put it in the back. This is all gone.
+All the structure, our relationships go. But it will work.
+So here's the more the technical aspect of it.
+What are we going to actually be pulling in that?
+First, we have to decide what is going to be our vocabulary and will based our vector art because we will list.
+Words in the vocabulary, and then I'll be pulling words one by one from the bag.
+Oh, I have it on the list plus one. I don't have it on the list.
+Also, I have it on the list plus one plus one plus one and so forth until the back is out.
+This is the approach, though.
+We're actually doing something similar to deliberate frequency.
+How did. To be fair, there is this is not the only way to implement bag of words.
+And it's simpler with a binary bag of words where we will just be checking whether a word is the document or in one,
+for it is 0.9, which was better known binary or binary.
+He. You say that?
+It depends on the application. Sometimes you don't care.
+Money. How many instances of a certain word are in the document?
+You're. You're searching, right? You're searching at almost 585 solution on Google Work solution.
+And you just want you don't care how many solutions show up in that document.
+If you have a solution, this is what I'm looking for, Right? So. That's one way of looking at for a sentiment analysis, for example.
+What the number of the words happy. Great. If they repeat that, I'll repeat with that strengthened your conviction that this is a positive review.
+Yeah. So pick the one that suits your needs.
+Doesn't really change much in terms of the key idea.
+All right, so we have our feature vector. Our document is analyzed and crammed into just the size feature vector.
+You know, we can use it for machine learning or.
+Do you see any problems with this approach other than just losing relationships between work?
+So. See what the problem here mentioned at the bottom.
+Let my eyes are total or lowercase your input before doing the bag of words.
+Well. And you if you don't do that, you may end up with I'm unless you try to find it yourself.
+I just want to take every single word that shows up in your dictionary that you're.
+All have its own future in the vacuum.
+Right. That's ruled it doesn't rule the solution.
+It might be actually sometimes a little helpful.
+But what will what will happen to our future vector if we allow that, it will expand.
+Right. That's true. What does it mean?
+A larger feature vector. More competition, more competition, more processing time.
+Sometimes it's fine. Sometimes you will not have the time for that, especially if your performance gains are that small.
+Right? So something to consider.
+Anything else that that a bag of words approach would fail to capture.
+So. Relationships.
+Okay. We talked about it. Yes. That's all one word positioning, right?
+Or even phrases, Right. Well relationships we could kind of address by making our bag of words a bag of diagrams.
+All right. This this could increase our.
+Window of capture in some relationships, some phrases, and some San Francisco, Seattle, Los Angeles would be correctly captured.
+Let's think about it. I'll give you one more example of what could go wrong.
+Now, what will the classifier do? Once we have our feature back.
+It will just. It can process it now or just different processes and give you the decision to category.
+This document represented by those documents feature vector is going to be x, whether for better or worse now.
+Do you agree with that equation? No.
+Why not? But in general.
+In general. This is not super accurate, but there's some truth to it, right?
+A document which is structured in the same way, using the same words in the same more or less the same places can be considered similar, right?
+Especially if you give them the task of comparing two documents to the machine which you can read and pick up on nuances.
+So this very basic structure, this very basic equation, or what's more important question,
+because I get an approximation of sorts, is, is a good starting point for comparing documents.
+So how would you compare it to documents when you when you're reading?
+I don't know. Two scientific papers are. Or I don't want to do it, but let's say that I'm comparing to written assignment solutions.
+I'm trying to decide how similar. How would I.
+How would I go about it? Same words in the same places, write same same numbers and same places.
+Absolutely right. There's something going on here. So.
+But when documents have structures slightly in a slightly different way, well, it's not no longer that easy when Google is doing the search.
+Right. It's it's showing you results ranked according to similarity.
+Right. Or in a way, it's looking for whatever you you ask you you're searching for examples that are similar
+in the sense that they contain some sort of some amount of what you're looking for.
+Right. But it's not difficult. I mean, not easy to do that.
+But that would be road text. Now we have our vector.
+So vectors represents points in space.
+Correct. So if my documents are No.
+A, B, C. In that three dimensional space.
+Of course, this this is this really brilliant joke, three dimensional space.
+And in practice, it's going to be hundreds of dimensions.
+So our documents be in a similar to each other.
+According to our approach. Or maybe B and C are more similar than DNA.
+How would you decide that? We measure the distance, right?
+That's one way of doing it. Straight line distance between the two points.
+That's that's a good idea to decide how close to documents are in that sector of space.
+That's not the only way of doing that. I'm sure many of you worried about the cosine distance measure.
+If they're close to each other, the angle between the vectors is going to be small.
+The more apart they are, the the angle will grow. So.
+To more distance measure it to your catalog of measuring distances accuracy.
+You might need it at some point. So I suggest if you're not familiar with those formulas, I suggest getting familiar with it in distance.
+Cosine similarities. Both are measures of how similar two documents are.
+But let's go back to. The problems with our bag of words.
+Consider that two sentences or two documents that are shown at the bottom.
+Bio desktop purchase used to be seat, right.
+Is it. Are these two sentences or not.
+Let's call them document three word documents. Are they to you human beings similar?
+Absolutely. They are talking about the same thing. Pretty much.
+Is that the words going to capture that relationship?
+Actually, the points represented by the corresponding back of words vectors may be very, very apart.
+So ones is like that. Not easy.
+What about new words or words out of the vocabulary?
+All right. So how would we now that we have a bag of words detector, which is not perfect, but learn something better pretty soon?
+For now, let's. Let's have it. Now our task is we're given a document.
+Now it is represented by a bag of words vector.
+Let's do classification. So what is. How do we actually decide?
+How do we protect the class that document belongs to?
+If we have a if we have a nice little if we were to have a nice little classifier.
+So what are we actually after? Based on everything that we've done so far this course.
+What will decide that this document, this vector belongs to Category A or B or C?
+Or let's keep it simple. Belongs to a category A or not.
+Does not belong to category. That's a binary.
+So we challenge binary classification.
+So how would you make that? How would you teach?
+What would you tell the machine to do? Choose to solve this?
+This document belongs to a as opposed to not belonging to a.
+How would the machine decide Machine and works with numbers.
+Right. So what kind of number are we after? The abilities, probabilities, or let's be honest,
+some sort of estimate of of a probability that makes a relationship between those two classes visible.
+Measurable. Okay. So. Do you agree with that?
+Given a document.
+Which is the most probable category for our document, or let's be more specific, a probability that is related to the lowest error in judgment.
+So now that you're all familiar, by the way,
+is everyone comfortable with probability and everything that we were talking in this class about conditionals by using probabilities and whatnot.
+I want to make sure because if it pops up on the exam, I don't want anyone to be surprised because you're supposed to know that.
+Okay. Probably conditional probability.
+Given the document, what's the probability that. 13 class given this document.
+Would that be something that we're interested in seeing and seeing, measuring, evaluating.
+Yes. Document is our input. It's given.
+We cannot change it. Yes, come in a way we will.
+But if we can compare them or similar words are terms synonyms.
+Because if we can compare to documents and we see that this word is the synonym of this word, and it's very probably very good, very good idea.
+And this can lead us to basically, after getting the probabilities, we can start getting more concerned.
+I was referring excuse me.
+So you're talking about further refining your decision?
+Absolutely. I'm not sure if this is so visible in what I'm talking about,
+but we've been going through a number of different techniques and at different levels of processing all along.
+And we're gathering information about our text. Right?
+Right now we're kind of stripping it to just words, words, words without extra step.
+But yes. Are you good at it?
+Yes, You first of all, replace that bag of words vector with something that that perhaps contains information about synonyms as well.
+Yeah. That we all know this is what we're after.
+Okay. We have multiple classes to decide.
+Same document. Let's find or let's estimate those corresponding probabilities, conditional probabilities, and then pick the one that does the maximum.
+But how? And to make it worse, our exit document is something that our our classifier has never seen before.
+The classified or the paper document was much simpler.
+It would learn how likely are certain the words to show up for a given class writing, and then it will use this information to to decide.
+Absolutely. Absolutely. Okay is rule abiding remembers that.
+Just a little refresher, but our hypothesis is, is our model here.
+Thanks. We'll see.
+It would need to be is that it's actually recognizing naive is.
+We will certainly see that that mining phase actually, even if we have multiple classes.
+I will just tell you this belongs to this class or not or actually we'll never not even tell you those who will not report.
+So the hypothesis and the model is that a do are we belonging to a certain class?
+So I think there's theorem, probability.
+You know, the certain class can be associated to a document given the document.
+Is the probability of given a class.
+Does this document match the class times probability of that class showing up at all?
+Over probability of this document ever occurring.
+Does that make sense? Kind of. So. For starters.
+If not. Trust me for for a second.
+Now, our document is now represented as a vector of features.
+Correct to our document. If x is a vector.
+The shoot out there. That's.
+Right. Let's just fix it. Well. It's.
+So if our document is a vector with every feature up to every word being an independent variable, that's an important.
+Attention here. This would be.
+What kind of probability? Multiple variables representing individual words corresponding to entire vector.
+What kind of probability is Jordan, Jordan or now given here?
+We have two conditions, but then the joint probability is now just one.
+This is a joint probability right here. There's not just a single variable probability, conditional or conditional.
+All right. What kind of bag of words representation we're looking at here if this is our document binary or non-binary?
+No, no, non-binary because we haven't written in either way works.
+All right, So how are we going to obtain those probabilities?
+How are we going to estimate them? Or do we even need to estimate all of them?
+I'm pretty sure you already know how to estimate the probability of a of of of a certain document appearing in English.
+That's called a document, not a sentence anymore. But in. You could do it.
+Do it with the. Yes. Multiple x one.
+X one with different patterns. Way multiple x one with different patterns.
+Like x one is one. Mm hmm. One. Also three. Hello.
+What type of x do? Copy paste.
+It's always. Thank you.
+Well. What about the probability of.
+Why? Being a specific class, how would you. How would you establish that you have a corpus?
+Assume that it's a labeled corpus, right. So document labeled document labeled document label.
+Would you just treat it like the part of speech thing?
+Like we already have classes. Yeah.
+Similar. Or you could just do a simple count.
+How many how many documents are labeled with this class or category over the total number of documents done?
+Again, this is just an estimation, but this will do.
+Hopefully there's no more. Teach sex.
+What next? Okay.
+Various rule.
+It. Do you agree that the bottom. Probability that capability is a constant.
+We're trying to classify the same document. So that document is fixed, right?
+The only moving pieces are why here?
+Okay, so same approach as before.
+We're trying to find such such a way for which this will be maximized.
+Right. Which means if this is fixed, we're trying to maximize the numerator.
+Really? Right. And P of Y is relatively easy to find.
+So let's drop that denominator.
+Everybody agrees with that. Can we do that? There's no loss in what we're doing.
+We're not interested in in the actual probability number again.
+We're trying to find the value of why for which this whole thing is maximized.
+That's our task. The numbers really are irrelevant.
+Okay. So now we have two probabilities for trying to.
+Estimate, but it's the category that we're after.
+Now we're back. We're back to the problem of, hey, we have something that we want to calculate, but how do we go about it?
+This is a conditional right.
+It's a slightly different forum than than usual, because possibly many of you are used to one variable given another variable,
+or we even went through one variable given a sequence of variables.
+But now we have a sequence of variables given the single variable. So how do we go about it?
+There's not much difference here. Okay, you guys remember the product for.
+Let's apply. So this product product right here really is sort of a reverse.
+Right. Right. We have conditional times higher becomes probability of doing probably right.
+Let's use it. Right. So conditional times prior is.
+His joint probability. But no, I just mixed my document with the with the class as it's a sequence of variables.
+Everybody agrees with this approach. Mathematics adds up.
+Okay, How can we if we do this, we're back to where we were before it.
+So now we have this joint probability right here.
+Document and class. How likely is this combination to appear?
+Document with all those words. And the corresponding class is.
+Would you agree that we would be interested in that? That would be useful.
+All right. Joint probability. What can we apply to a joint probability table?
+Absolutely. Okay. But before I do that, let me do a slight shenanigan here.
+Okay. I will pick the first feature and I will label it as a and everything else as be.
+So. And reverse engineer into using the conditional approval rate in the chain.
+Real world tickets will relax. You will be there.
+Everybody agrees that you see here we started with.
+X1 and x2 given given a y or high probability of y.
+Now I would shuffle things a little bit and I have probability of x1 given x2 through all the way to the class is.
+Whatever is left. Take a look and see if it adds up.
+And it does add up. It's a little it's not even a trick.
+It's just. Rewriting stuff.
+Okay. So I want you to focus your attention on this last term right here.
+And compare it to that one. X one has got gone, right?
+This just X to add it in. And add. And Y.
+At the expense of this conditional. You know if I have this.
+Can I break it down again the same way? No, I don't have x one, so I could just keep breaking.
+Breaking it down into smaller and smaller and smaller probabilities.
+And that leads me to the chain of rule, right?
+I suppose now that you look at it, the channel will start making sense if you if you've never thought about it.
+I can I can keep doing that until I'm until I write down this entire probability into this product of conditions with our p y at the end,
+which was everybody agrees on the fact that the probability of class or a label is easy to find.
+The easy to estimate number of all the documents in the corpus that are labeled with that class over a total number of digits.
+Now we have to deal with. All these conditions, right?
+So it's X1. Given something. Probability of x two.
+Given something. Probability of x three. Giving something all the way to X and given the Y.
+Everything adds up. What?
+What? Why is naive. It's called naive face.
+Also, it's like they're replacing the place of the last word.
+I don't know if this is playing a single word or using the label for every single conditional in here.
+Independent variables. To show independence.
+You got to remember that. It's not something.
+Needs to be reviewed, but had to. Let's take a look at this expression number three right now.
+If X probability of x given a Y and Z, if it is equal to.
+Just X given Z. What does it mean?
+But why is that? Why is it relevant?
+Right. It's Z is no Y is not going to affect the probability here.
+They're conditional independent in this case. But this is important.
+Conditional because I need to know the first before I before I would before this independence kicks in.
+Now our words in a document independent of each other.
+They might be. It's just a random stream of words.
+But if you're writing something we talked about talking part of speech, liking it doesn't it's not random because it follows grammar rules, Right?
+So we have the world in that world. Well, we are making this assumption or destroying the the reality with this assumption.
+In reality, we cannot say that.
+But to make our calculation easier, we're going to make that assumption.
+We're going to make a naive base assumption where we will assume that every word in the bag, every teacher is independent of each other.
+After all, we just discarded all the relationships positioning.
+Who carries the word is there? Fine. It would be there without the other word.
+Yes. This is exactly what we did for the court of speech, though, for using it just the same thing, just for that very, very similar thing.
+We're using the same bag of tricks all the time just with with for a different application.
+So naive is assumption.
+Words. Are independent of each other.
+That means that all the features in my bag of words vector are independent of each other.
+This is so not true. Is so not real. But hey, let's.
+Let's give it a go. Therefore, we can replace every probability that has multiple terms here.
+By simple probability of the feature given class and then multiply.
+Does that make sense? Kind of.
+So our original problem now got way, way simpler.
+Probability of the class times the product of. In a word, appearing in documents.
+Classify it with that label of that class. Mike says, So far, so good.
+Okay, Well, let's get to. Finding.
+These. Who will build the classifier will build that park right here in a function that translates into documents and maps.
+The documents to a class under this age is going to be, in our case, a list of probabilities.
+Responding to labels will work. So our model will be a list of problems, kind of like what you did for your language model.
+Approach. So let's let's have a training set.
+Our training set will look as follows. We'll have documents, document after document after document with a corresponding label.
+Our every single document is going to be represented ultimately by a vector of the future of energy.
+In our case, we're doing a very silly bag of words approach.
+Though we're still with raw attacks. We were comparing it to a battle of words labels.
+And if we were to do a spell classifier.
+It would have been relatively easy if you were to take a different approach approach to it,
+would it be relatively easy to pick and a number of words that typically show up in the spam message?
+Those change a lot. But let's assume, yes, there is going as there's going to be some urgency in that email.
+Hey, you have to act quickly or something that will happen.
+Something about selling, something about cash, Something about money.
+Right. Usually this is what's what's expected. So let's assume that we can pick up a bunch of words.
+And these were. These will be our markers, right?
+So imagine. Imagine.
+Can you go tell CNN thoroughly that the words that we were looking for our Rawlings and replica.
+It's way out. As if we can't see either one.
+This is most likely. At least this is what our our training says Intel is telling us.
+Right. Let's take a look. Rolexes 000 is how much girls now not spend here.
+We have both Rolex and replica. Okay. This was this was labeled spam.
+Is this if we if we just keep scanning documents and counting those things,
+are we going to pick up on words that are typically associated with spam, more and more likely to appear in spam messages, study hand messages?
+This is what we're after. So let's do this.
+Okay. Now our 19.
+These classifier is really encapsulated in this.
+Expression right here is the expression.
+Asks for two types of probabilities to be some probability of collapse.
+Probability of a word or feature given a class.
+And really, really. These are again, counts, number and probability of class we already talked about.
+It is two times number of documents, number of samples in the training set that are labeled with a certain class over total number of documents.
+Is for this conditional.
+Oh, let's see. Count how many times certain word or feature appears in that document to label with a specific label.
+Over some of all counts or all words that appear in documents labeled with this specific label.
+Very similar approach to what we did before. So.
+This is what we are after. We want to find a number of those probabilities.
+Build our model. Okay. So here's probability of of am of the category being is number of samples labeled and so 1 to 3 or five.
+This is where the five came from over the total number of samples or documents.
+One, 2375 over seven. Very spam.
+One, two, two over seven. Don't. Okay, so we have part one of it for the rest.
+Okay. We have to do it twice. In our case, we have two categories.
+So everything will have to be done twice for every word in our vocabulary.
+Let's look at the word Rawlings. Okay. If it strikes and labels us now this appears Rolex.
+Rolex one that I'm too.
+This one. What's that one? It's made to all four.
+The number of all the words that appear in spam labeled documents.
+So one, two, three, four, five, six, seven, eight.
+Just I'm just counting word occurrences in spam, spam documents, two over eight.
+Then we keep going. Okay.
+Side note, this is going this is going to be a frequent.
+I'm sure some some of you already encountered that in your in your.
+Professional or semiprofessional work where?
+Possibility of something being labeled. Something is not necessary.
+It may not be or the training set is not giving you the greatest picture ever of a year.
+Some of the labels are under samples or there is a bias.
+There is in this in this training set that could have.
+Sometimes it's easier to ask an expert in the field to decide, okay, how often this category happens.
+Even I have a very small data set. I can't rely on the or on the numbers in the dataset.
+Let's ask the expert. All right.
+Or if you're absolutely at a loss, just assume 5050 or if there's three classes, 33, 30 of equity, probable.
+But in our case, we have a our little way to estimating.
+So let's bring it all back before we actually build a my based classifier.
+Remember they base classify your assumptions are all words are independent.
+All events. All words are conditionally independent given the label.
+So as I know the label. Was just the coexistence of words.
+Doesn't doesn't matter. I can just treat them in isolation.
+Which is true. It's an approximation, right?
+So in the end, we want those two probabilities to train the model.
+Okay. Can anyone see what's on the screen? Let's say that this is our training set.
+So we have seven documents. Again, our vocabulary is made up of eight words.
+I Rolex replica watch by cheat.
+I wasn't lowercase, but it doesn't really doesn't really matter.
+Okay, so this is where we were. We'll be doing it again.
+Probability of of label and number of samples label have one.
+Two, three, four. Five over seven.
+Five over seven. Probability of the label being spam.
+Two over seven later. Now, here's a very, very important aspect of the naiveté as a classifier.
+Well, I actually built two models. While going through the same process, I will end up building two distinct models.
+One will be for the labels and the other will be for the label hair.
+And then once I have those two models in in the shape of a list of probabilities, word even labels, spam or given labels spam or even label and that.
+Two distinct models. I will ask both models.
+Hey, what probability you will assign to this w what probability you will assign to this model?
+And then I will say, Oh, have told me gave me a larger number than I am model I'm going to go with have.
+Does that make sense? We'll do it anyway. Now for the individual words we'll doing.
+We're doing what you described already.
+Probability of a word. Even class is approximated by count how many times that word appears in and in documents from that class or that label.
+So we're doing I give an F how many times I showed up in hand samples.
+One, two, three, four, five, five over all the words that appear in our sample.
+So that would be one, two, three, four, five, six, seven, eight, nine, ten, 11, 12, 13.
+14 and 15. This is where we're just looking at have examples.
+Ignoring stands the same thing for for the rest of work.
+You do it yourself. You. And what kind of probabilities we are end up having.
+Second model. Spam model. Same thing.
+Okay. Two models built this right here.
+Probability of hair and those individual conditionals.
+Words given M are constituting the naive base model for the M label.
+This probability of the label or category being spam which all those word given
+spam probabilities are constituting the spam model to name basis models.
+Now we're we're done with the learning phase.
+We're done with training. Our model is trained with probabilities that Max maximized the chance that these B samples would be produced by BI,
+by a language defined by that model or.
+A big reason times time for a taser.
+Test. It is something that we have before we have labeled, but we will not be using the label or will not give the label to the model.
+The model will decide the label for us and that will. Hey.
+You did a good job or you did a terrible job. Well, compare what's going on.
+So test it. Consider this to be our tests.
+Okay. Three different documents I have them labeled, but our my neighbors will not be able to see it or just hate.
+Use the probabilities and ask to calculate, to evaluate them.
+Classify the document. So. Let's do this or this is.
+These are our two models right here. Green for ham and red for spam.
+Ask them both. What do you think about this document?
+What should be the label according to you? So let's do let's classify x eight, which is.
+Rolex replica by cheat. So far, so good.
+This is our initial sentence. It will be turned into a bag of words vector.
+Once we have this bag of words, Victor, we can finally calculate two probabilities.
+What is the probability of the label being given our test sentence?
+What's the probability of a label being spam given test centers?
+And these are proportional to those products, which we already decided will be our naive based classifier.
+I'm not going to go one by one, but if you pick it up the way that it so happens that they're going to have classifier,
+we have a zero probability that it's a it's a ham message according to the spam classifier.
+It's small probability, but larger than zero.
+So our classifier is decided.
+It's a spam message, the one probability larger than the other.
+Correct classification. The classifier produced the result that was expected by the original.
+Tests that label. Let's do it again for for it for another one x net.
+I owe Chief Rawlings worth a bag of words. Two probabilities.
+And now we're coming up with it's. Ahem.
+Sample. Once again, this was correct.
+Let's do it again for the third one. This time our classifier was wrong.
+It classified it as. Or was it?
+Yeah, I suppose it has them, but it's like it is a heavy document.
+Misclassification. Does that make sense?
+So. Now to something that very many of you are familiar with you so yourself that it was a very
+simple example where we just had our seven training documents and three test documents.
+This is a joke and it comes to machine learning as an example.
+It will do. So you saw that our classifier correctly identified two of the three.
+Documents correctly classified?
+No. Two out of three.
+Is that good or bad? Is it is it good? Is it a good classifier?
+Is it an average classifier? It would be nice to have some measure, right?
+How good is the classifier? So-so. So the most basic way to evaluate the classifier is to use something that is called confusion matrix.
+I know many of you are familiar with it. I know some may have used it.
+This confusion matrix is based in this particular binary arrangement.
+Two classes is made of four cells.
+Positive positives, in other words.
+How many times? A document that was originally labeled as positive was actually classified us by our model as positive.
+How many times is a false negative? Many times.
+And a document that was originally classified as positive was.
+Falsely classified as negatives, false positives through negatives.
+So every time we're. Testing our document.
+For every document, we're making a judgment.
+What was this classification? A true positive. False.
+Negative. True negative or a false false positive.
+Right. And then we do a plus one here.
+So our document right here had three positives as in well, one true positive.
+It correctly identified spam as spam, by the way.
+So I have spam listed as positives and have us negative.
+Right. Does it have to be that way? Can I flip things around?
+Well, when would I do that? I could easily interchange spam with em and spam with them here.
+The results would be different. But can I can I do that?
+And if yes, what are the consequences of it or why would I do it?
+The global situation depends on the situation, right? One want to maximize by being positive, always manage to be the positive.
+Yeah. You're you're interested in findings about.
+You want your classes higher up and you actually want your classifier to be very good at finding spam.
+It shouldn't be bad at. Picking up on that have messages.
+Because if you're if a very important message from your grandma goes to spam, that's no good.
+Right? But this is an this is a this is a design problem.
+What is considered a positive outcome? What is considered a negative outcome?
+You can flip those around that you have.
+Then you are responsible for correctly placing the numbers in the right boxes and interpreting what comes out.
+Are we always do we always care about?
+The same results for true positives and negatives.
+A medical diagnosis, right? You'd rather be diagnosed with something and then get a little scary to later learn that everything was alright.
+So the classification failed. But you did not suffer because of that, right?
+Versus you have been incorrectly diagnosed.
+You have nothing going on. Go home, have fun, enjoy it.
+Right. And then six months later something bad happens because that was missed.
+So those are two different things. It will depend on the problem.
+How what matters to you most? True positives and negatives.
+False positives. Which one do I care more for?
+True positives or the true negatives? How much tolerance do I have for false negatives or false positives?
+So you're even something simpler, like a confusion matrix will tell you a lot of information about it.
+And if you're not happy with those numbers, which can be expressed in with those additional metrics here if you're not happy.
+With what your classifier is producing, what you should you do.
+Get more data, for example, adjust some parameters.
+Perhaps if there are any things, work with it, make it, make it to your satisfaction.
+In other words, do a different iteration in any case.
+Okay, let's see our. Our little spam classifier got one true positive one true negative, one false positive, no false negatives.
+This translates to the other image metrics for those who have never dealt with those.
+Take a look at this description of what did they actually mean or what does it matter to you which which
+metric actually contributes the most to your understanding of the model or tells you how bad or good it is?
+Because you will be depending on the problem you will be. You will be interested in some of those more than the others.
+That's the bottom line. Okay.
+What else do we have here? Oh, so now the actual prediction.
+So we did the training. Build the model, training, learning.
+Now, I had those three little test cases, three test set documents,
+which I already have labeled so I could compare it and make some judgment about my model, how good it is it time to deploy it, let's say.
+And I'm happy with what I see right here. This is good. This is good enough.
+Let's deploy it. Let's keep on let's put it into my email box and have it right.
+So now new documents will be flowing in into our model, converted into a bag of words, representation evaluated by the class for classifier and label.
+So here's a here's an unseen example, right.
+Document something that editor Da da da.
+Calculate bag of words. Calculate two probabilities for ham and spam.
+Compare them. Decide whether it's spam or not.
+Does that make sense? The whole process. Does it look easy building a naive base classifier or.
+Pretext. Have you ever, ever built one yourself?
+That's great, because you'll be building one pretty soon for the.
+Just a just a piece of information before I get to post anything,
+you you will be allowed to choose your own dataset so you can work with text that interests you, labels that interests you.
+It doesn't have to be ham spam, it doesn't have to be happy, unhappy.
+It could be anything. Heck, if you're political, you might be discovering right or left wingers or whatever.
+So I'll inform you about all the details.
+Pretty soon there will be rules about your data sets.
+I'm not. Every single data set will be acceptable for that purpose.
+And I'll I'll tell you what I'm looking for pretty soon, but I will be your second programing assignment 19 be as classifier.
+And ideally, unfortunately, this is not going to happen.
+But ideally I would let you present your results to other people.
+But there's way too many of you spend time on presentations that will all be there.
+Something else. Okay. I don't know if you notice, you can see here, for example, probability of even spam.
+We have zero all zero. Is that a bad thing?
+That we have zero probabilities it.
+We shouldn't have zero probability because ultimately we have or or we have one in perfect conditional probability.
+It's ruining our entire product right here.
+It will turn everything to zero. Same problem as before.
+So what can we do here? Smoothing again and smoothing to remove zero zero counts.
+Same we did for the language model, same same approach.
+Here you can do. Get rid of zero.
+Count by smoothing and another instance of the same problem that I didn't tell you to do that for your language model program.
+I didn't ask you to use the log space to avoid under blue box for your naive base model.
+You will be asked to do that because hey, you'll be dealing with documents that are way longer than just five words,
+and that under flow will show up very quickly. And so we'll will take care of that by doing the logs.
+Okay. Here is a little pseudocode for.
+For the future. No, I'm pretty sure you.
+It was easy to see. It's going to be relatively easy to implement.
+No actual challenge really isn't going to be good.
+No. Bag of words.
+Naive assumption. All the relationships are gone, nothing is included, which is something which is a problem.
+Probabilities are far from the actual probabilities that we would want to.
+A lot of those will be. Spread out close to zero one.
+You will see it yourself. So there's there's little middle ground for a naive base classified or there's a
+middle section of the probability spectrum is is not going to be populated Will.
+Stop words. Would stop.
+Words affect your classification performance.
+Can you? Is this the good place? Is this a good application to ignore stop words?
+Yeah. Because you will hurt them a lot. They don't. For spam and, well, spam typically.
+You know, there's no no grammar rules or just by googling.
+But if you're trying to evaluate, for example, or you're trying to build a classifier for sentiment analysis.
+Right. Happy or unhappy about something, there's going to be ad every word in both of you can.
+You might as well. Discarded, but not necessarily going to happen.
+Unknown words. Okay.
+We made a very specific one of the many, but very specific assumptions.
+Our feature vector is going to be down long based on that vocabulary.
+Anything that is outside of the vocabulary. Well, I don't know what it is.
+Okay. Just ignore the.
+That's that's the way to go. All right.
+Should you be happy about ignoring a no warrants?
+Absolutely not, because they may carry that extra piece of meaning that you need to say, hey, nothing better is available.
+This is important. Okay. We all come back to that because we only have a minute.
+Oh, I want that to sink. Sink in. I gave you an example of a spam ham classifier.
+Right. Which is a binary classifier. Two classes. What if I have multiple classes?
+All right, let's. Let's leave that, will. We'll come back to them on Wednesday.
+Any. Any questions? Very good. In that case, enjoy your evening and I'll see you in two days.
+Thank you so much.
+Okay. So, you know, we're dealing with people who are not homeless.
+People are trying to like people in the industry.
+You know what I. I think the largest single email thank you for.
+But we're not doing anything. So I don't do things.
+So I should be in class. But me more assignments be on Mr. O'Mara in this program in particular, though, So it does start and end with that.
+I know what you're talking about and we're doing the right thing.
+And obviously we were doing exactly this. The problem is obviously we're having like 0.3% weight in the first days.
+So it was doing the same thing because we just yeah, I was a bit of that.
+You know how many there were no more than four different problems and maybe three.
+And then, you know, one of the things and then that sort of stuff, you know, we're talking about how hard it is to go,
+the language forgotten, to make it easier to write a sentence or in a word or something that is about the most frequent.
+And I mean, to give an example, it's like, what if you don't use.
+I don't I don't look for something specific.
+So you think that a certain word is not used commonly, you don't use it coming zero.
+I will be on the fence if it's something I literally I literally wrote to.
+Sorry. I don't know the definition for technical and non-technical and the opposition have a category for that.
+And I think the read my analysis is less than what I know you'll talk about in other topics.
+I explain what I mean by example.
+And then they were posted on the discussion board.
+It's that simple. And I want all I wanted is for you to pick a word that you would consider rare.
+Okay. It's a technical university. Pick a technical word.
+Try it with your corpus, See if we will get a zero account or one or two.
+It should reflect that it's right. Okay. Typical word day.
+Happy dog. That would that would be a common word.
+Use that. That should go high. Right.
+Or I'll try to find you referring by the more books through asking for by the phrase document there is What about you?
+Right. Sorry.
+You want to just run that can I can write a little script that will run all your assignments like that and how you make them comment like,
+can I do that for you? But there not. But I think there is.
+Your answer has to be in context.
+It's a big thing. How do you know what you.

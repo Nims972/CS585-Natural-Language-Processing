@@ -1,0 +1,625 @@
+You. Search.
+That's. Well.
+But. All right.
+He's. I was.
+Well, divorce or heartbreak or on a couple of levels, she said.
+First, there's a tie. Just like, for example, one of the things I and I asked our side.
+You would go for a job. Yes, it's important.
+See here, you would have the word test for it.
+Yes. You've got to go after it.
+Good morning. Questions? So far, only two from the written assignment.
+Let's say we have the same frequency according to personality.
+Is the choice arbitrary or is it like whichever? And to the first it says in the problem description.
+Go for the one which shows up in the corpus first.
+Go left to right. Okay, so here you have you have say this is my corpus, right?
+This is right. And I am looking at two by fours, for example, h five and I.
+S they have the same column. Right. Let's make it four. In this case, you would go for it.
+You would match it because it shows up first. That's right.
+So some some of you pick some of these answers on their own.
+Read them all with your marriage. Every single library that has the same count.
+But let's just do one more. Okay. Okay.
+Is it I? There are two words which differentiate, in other words, independent and also starts at the same position of their head.
+What do you mean by that? They can be. So you're saying.
+Well, if somebody is is three for this, AJ is tentative and their solution is five.
+It will only at the end if I have this and that does it start in the same place in the end.
+Let's. Let's work this way. Right. But this is the corpus.
+This is not broken down into two individual words.
+We're talking about time. Right. So even though h I froze up in the first word, right?
+Yes. Was. Come down.
+Right now. Let's see that we counted all the words and all the all the microphones and come up with five or more.
+I asked, being important, and I said that which ever shows up in the cartoons first.
+Going left to right should be marriage. That's true for the confusion.
+Is there a confusion? His historian h h I appears before I s in the first.
+That clarify everything.
+If you find yourself in this and that is being said that this is as is as play their little right, you have a sentence, right?
+Yeah. This is yes this is true that it's right that.
+Okay, Now see, it also comes to light. All right.
+If teenage also is more than its purpose.
+Yes. I use I don't want to start from the beginning of the words just loop so no one thinks that I'm thinking about the beginning or the possibility.
+H was first. It was if it was a tie between d h h h ii and I asked h would be Morris.
+Yes. Whatever shows up first go to the left to right through entire purpose.
+But that's okay. Is there a space between for history or.
+Yes, there is, but this is okay.
+This is the corpus, right?
+What I do is for every march or at the beginning of the process, I think this is first are a part of let's keep it simple wherever the spaces show up.
+All right? And then I break down every single word in using her character based tokenization.
+Also, let's just add it here and cover the tabular is whatever it is that I know that I don't know, plus an underscore.
+So I will take this break it down into this.
+Okay. And now I start counting individual areas.
+H r i s as underscore h i everybody so that they i.
+S was there s. So what I'm asking is, would you underscore H.
+No underscore in this context is only used to indicate the end of the war and the beginning of
+sort of certain sort of sorts of the war itself as it will be visible because individual fighters.
+But the final characters, no matter how long in the vocabulary, will have a start.
+Every time we're thinking.
+You can make it a little more complex like that,
+but there's no there's nothing more that you're interested in in in making a distinction between, for example.
+You want to make a distinction between the R.
+Inside the word. And we are at the end of the word because that e r with underscore is is a likely
+candidate to be a very common suffix in the language of the grammar ones.
+And you want to capture that? Yeah. Okay.
+Right. But then you say in your first kiss, I mean, is due tomorrow or next one will be posted probably more often in May or Friday morning.
+That will be difficult. Okay. Let's go back to part of the speech that again.
+So we start. So we're here, right?
+Correct. The idea that we were trying to address in our discussion was how do we build this yellow box right here that,
+given a sequence of words, will produce the corresponding most likely sequence of attacks?
+Part of the speech that. And to answer that question, we have to look at a bunch of probabilities.
+What do I mean by a bunch of probabilities? Let's say my word.
+One or two or three is.
+So Joe is.
+Yeah, right. So what's.
+Let's see, do I have possible tax.
+Ah, let's ignore English A, B, C, Okay,
+so our this is a given I or someone gave me or the pre-processing step or whatever gave me this sequence of words.
+I this is fixed. I have no way of changing it.
+However, I'm interested in mapping a sequence of tags.
+C one, two, three, three, one two.
+My. Great.
+Thank you. In other words, I want to pick the best.
+Best. As in most likely.
+Or. And I have multiple options here.
+C1 equals A, C, C2 equals B, right.
+This is pretty trivial. It could be also C one equals a, C two equals a three equals a.
+Why not? Right. Of course, the second one is going to be in any regular language.
+This is going to be very rare.
+Very. Or is probably not going to happen a lot.
+Although you can imagine a sentence. Go, go, go. Right. That's fair.
+But that's not going to be a frequent situation.
+So we're interested in exploring, okay, what is the probability of this given?
+Our words. What is the probability of that?
+Even our words. One of them will be larger than the other and we will have a whole lot of them to to go through.
+The brute force will force us to analyze every possible possible permutation of.
+Oh, tax right here. But in the end, you will have an answer to this.
+One of them is more likely than the other because they have a higher probability that this is what we want to get.
+We are after. However. What do we need to do to you to estimate this, this probability?
+In the ideal world, this would be a cold, right?
+Sequences of pact words in the corpus.
+In the following way. Right over. Count of all three.
+Three words sequence everything.
+Right. Is it is it going to be easy to find that first count?
+Or a longer.
+We're back to the same problem. We had the language model.
+Some of this some of the sequences will not be there at all.
+Some of them will be very not captured in the corpus because no one wrote that.
+No one spoke that even though it's possible. So we have to make do with some shenanigans again.
+And this is where we arrived that okay, let's try using Bayes Theorem to break this probability that we are after into into something different.
+Right? Potentially.
+Let's let's explore this idea. Maybe this information of our probabilities is this way of rephrasing.
+It is going to be easier to estimate.
+And let's take a look at it. We have a probability of a of of of a certain sequence of words of being appearing in the corpus.
+Is this going to change? No.
+Those words are given. This is next. The corpus does not change this.
+This is what we. And it's a positive number no matter what.
+What about the probability of a of a sequence of tags appearing in the corpus?
+If our car passes unattended, we can just instead of looking for work sequences,
+we would look for corresponding tag sequences and maybe we could estimate that.
+But the longer the sequence of tags, the more the less likely it is to appear just like the sequence of words in the car.
+And what about the other one? So a couple simplification steps, right?
+Okay. If this is positive, the denominator is positive.
+And I'm really and I'm trying to find the maximum possible probability of this expression if I
+ignore this denominator isn't going to change the the sequence of of of tags that will maximize.
+The whole thing. No, I can easily ignore that and just try to maximize that.
+The top part. This is this is one trick and the other one trick that we thought we started talking about it
+is to use a very similar Markov approach as we did with the language model instead of okay,
+oh, joint probability, a product through a chain or a product of of conditional probabilities here.
+But tag following a long sequence of tags, this is going to be a problem again to find that.
+So let's simplify it. Workshops. So two gram by gram approach to tags as well.
+Similarly, this conditional instead of looking at entire sequence of tags, sequence of words,
+why don't we squint our eyes and assume that words tag words tag word tag are independent of each other, which is not true.
+And then just approximate it with a product. Does that make sense?
+Why don't we do that? I mean, ideally, we're just we're just drifting away from from an accurate estimation farther and farther.
+Simplification after simplification, because we have no other choice we have to make do with what we have.
+The ease will be much easier to find. And those are think everybody on board with that.
+Our initial this is what we are after in use.
+By that you're going to expand that ignoring some factors and after some simplification this
+is what will be out of this just approximation will help us find the right sequence of tags.
+By the way, I'm going to repeat myself again.
+I told you a number of times that a a deep learning network can do that thing for you.
+You don't have to build a probabilistic model yourself either.
+But do you think that that deep learning network that does part of the speech tracking, is it after the same probabilities?
+Is it trying to find the same probabilities? Absolutely.
+In a different way, using different methodology and more automatically picked up by the process.
+The outcome, though, the input is saying, okay, this is where we stop using Markov model.
+Have you had a chance to take a look at what a hidden Markov model is?
+Someone explain it to me. Alex last best wishes, especially by seeing the books like without knowing what rules were used to build that language.
+These sentences because you can assume what these rules for based on like some probabilities are like words.
+Basically the key part is that we don't know the rules.
+They're not given to us. We weren't. We're trying to figure that out.
+We're this is a generator.
+This is a in our case, in the very simplistic English sentence generator right here, a finite state machine, start with no sentence.
+Right here will also explain everything.
+And then probabilistically. Flip a coin.
+I can go to article or noun states. I go to the nouns thing, flip a coin again, I don't care how I arrived at this noun state.
+This is the Markov part and I forget about it. I'm already at the noun state.
+I don't know whether I came from article, whether it came from preposition.
+It doesn't matter. Okay, then I have.
+Actions to apply. I can move from another state, transition to another state, and so on and so on.
+And keep going, keep going, keep going. This is how that generator would work.
+The numbers right here are transition probabilities for transitions.
+Probabilities for states.
+In our case, states are attacks are part of the parts of speech we are moving from one part of speech to another to build a sequence.
+And this even though this is very simplistic, this is supposed to reflect the rules of English,
+certain parts of speech should follow other parts of speech.
+Others should reflect in low or high probabilities.
+Those probabilities can be extracted from.
+The annotated Corpus. You will see which which tags follow which that's more, more, more it now.
+Two years. Here's a difference part between what we did for the language model and what we're doing right now for the language model.
+We were only concerned with words and their sequences.
+Now we are concerned with words through sequences, but also tags and words and tags are part of speech sequences.
+But one step at a time. No. Would you agree that these in them or in those in this Markov model, let's say that we already have it at these numbers.
+Transition probabilities would correspond to our probabilities.
+Probability estimates that a certain attack followed and follows another attack.
+At now, that's a given. The ability that I will end up with an error is with 43 verb following and now point 43.
+Amputation probabilities, but also a tag sequence, a very simple tax probability estimate.
+So what you see in this table here is that part right here corresponds to that part.
+The tag following another tag we can build that we can build based on the car.
+Build on the car. Okay.
+Now, I would be assuming that you trust me and that this this summarization here is valid.
+It's. It's an approximation, but it works. Trust me on that.
+Okay. How would you know?
+Find the probability of the following cell sequence being generated by this.
+By this model. Start up the beginning of the sentence article.
+No or no? How would you. How would you find the probability?
+How likely, given all that information that you have in front of me, how likely it is that this sequence will appear in front of us?
+Next from that generator. So we're looking specifically at a sequence of attacks that would be this probability of attack.
+I that. Which is approximated to what I said by a product.
+Of individual pairings. One word, one tact.
+Second. Second. Tact. Third. Third. DAC, Fourth day.
+Does that make sense? This is more or less the same approach as you as we as you are working on for the 40 year program.
+The center's probability. Oh.
+Right. Once you have that morale built, it's pretty easy to do.
+You calculate the probability. And you see that it's an A it's an estimate.
+It's an approximation better than nothing. A product of individual conditionals breaking.
+Okay. But that takes care only of that section or actually also just this section.
+What about the rest? And by the way, how many possible sequels of that length could we have generated by.
+By this model. A lot, right?
+Some of them will not be possible. You cannot have a start and then go to preposition.
+Right. Everything will start with you. Right now, we're starting our protocol and then it's off to the races.
+So you will have many, many, many options. This is a very simple model.
+I showed you a table of tattoo tags that are covered.
+About 30 of them instead of four. This is just for simplicity.
+So we have one part. Now.
+What about? What about. That other part that can be approximated again by that simpler, simpler version of probability of attack.
+Given attack, what's the probability of a certain word being emitted emitted by.
+The state so called says okay.
+Well, that's the problem. My model's work is just moving between states.
+A state machine is moving between states. We are at third.
+What? What is the probability? I I'm not expecting an actual number, but rather a zero or something positive range.
+What is the probability that while at this.
+State, the machine will generate the words star.
+Starke is a very bright star in the movie, so I think it might well have.
+But I don't I don't know what the number that's at the point is that that is not going to be zero.
+We can get half of our staff.
+Right. What about. Geez, I don't think she was ever used as a verb.
+Was it something cheesy? I get that the stakes are so low.
+I don't know any more reviews of cheese in English I'm not familiar with.
+We can assume that probability. That word, the cheese given tag verb is zero.
+And so on and so forth. So there's two things happening with this moment.
+Number one, it's moving between part of speech states.
+And then one, it while it is at that state, it will emit a word.
+This is how a sequence sequence is generated. This emission is what you see.
+You see words being emitted. You look at them. You can you.
+You can tag them yourself. Also, a verb following a noun.
+And this is how. How the model could be eventually built.
+But let's say that our corpus is giving us something.
+And. The probability is that I am talking about it can also be extracted from the corpus.
+These was a word given the tag.
+Here is a small part of. Or our synthetic car plus, which only involves four possible tacks.
+These are accounts, of course. So there is nothing fancy going on here in our corpus.
+The word flies up is tagged as a noun 21 times.
+It is tagged as a verb, 23 times as an article.
+Never. And so on and so on. You know, zeros are actually being kept.
+Now, how do we how do we estimate our conditional probabilities or given a target based on that?
+Sly's even given in.
+Well, it's the number of times flies are taxed as a noun over over the total count of all the words being tagged as a noun,
+a very crude accounting approach that it will do.
+Does that make sense? So now. That can easily be extracted from a corpus by simple counting as well a tagged purpose.
+So we now have. All the components to approximate that expression.
+All we have to do is go through every possible sequence of tax.
+Calculate that using our approximation and then see which one which sequence comes on top.
+And that would be our most likely sequence. Sounds like a lot of work.
+I was like, you would. You wouldn't want to do that by that.
+Okay, so here's an example.
+Flies like a flower in order to find the sequence of tags.
+That is most likely, which means we want to find such a sequence of tags that maximizes this expression, which is approximately by that product.
+So our ultimate goal is to find such a sequence of tags that maximizes that product at the bottom.
+This will be our proxy for finding the best sequence of that.
+Do you see the problem? We only have four taps and we're dealing with only four words.
+Yes, we have like them. But if we problem if we see early that something is low probability already, we can just consider it.
+Then you're on to something. If something has a low probability so we don't have to check all that.
+I agree. We don't we don't have to check that. But if we had that, no better idea.
+You actually would have to go to every possible arrangement here.
+Start with a flight, the word flies. And then those notes represent every possible tag in our system.
+We have only four, which makes our life easier. But I'm showing you a table with 30.
+So right up out of the gate, you have 30 nodes right here interconnected with the next 30.
+This is a lot of paths to go through.
+Yes. But not the.
+We know that some words are not all of the words that we all know.
+Yes. Yes, we can.
+It will be it will be based on their estimate of the probability.
+So if if we have a zero here, for example, you have a zero example of that as a third is going to have a zero probability.
+What I mean in a sequence. Yes.
+You know what? We don't.
+We know that there's nothing like it. But.
+Go, go, go. Or is still.
+Well, you're you're both touching very important aspects of it.
+What you describe is there's some in practice. Some sequences are going to be impossible.
+Right. Because they're they just roll incorrect in English how we can lead them out, even though it's not obvious here.
+We will. This is a product. Right. So as I go through that graph right here, I'm multiplying things.
+This probability of of this following that I use, probability of this, following that, and so on and so on.
+At some point what you described is we will.
+There cannot be a, I don't know, a word tagged with the tapping here.
+There cannot be a verb. Right. So somewhere in our lookup table here, we will have a probability of there being a verb is zero.
+Something times zero is always going to zero no matter what, you will multiply it by later.
+Right. So we can tap in to that.
+Absolutely. Now, should we should we consider all the possible options?
+Go, go, go, go, go. All the.
+All the attack sequences. Yes, But we'll be back again to certain tasks being being essentially automatically ignored because of what you described.
+And it will be reflected by the sequence of probabilities, probability, positive, positive times zero.
+Don't. There's no there's no point in going further.
+Does that kind of answer your question? It will. It will.
+Go ahead. I'm sorry. Yeah. I was just thinking the last thing we always have to do, if we're looking at we're going to have.
+So. Okay, so this this will work.
+This is something we can find for every word that appears in the.
+If this is a new word, then we have a problem because it's not going to be.
+You can make some assumptions about it.
+This is where, you know, things like synonyms or additional pieces of information could help with deep learning.
+Networks will actually use attention mechanisms to sort of figure it out, put some number on it.
+But if for our very simplistic approach, if we don't have that word in the corpus.
+What you can do is is is one of the ways that is not perfect is just assign probability out
+of a one and just kind of as effectively ignoring that word in the meet up in the middle.
+But that's a. That's a shortcut.
+Yes, absolutely. If it's not in a corpus, we cannot count it.
+We cannot estimate the probability we can do something about it.
+But that's not sustainable because we have to think clear.
+Other questions? Okay.
+So. For a single path.
+It's not going to be a big deal to to calculate the don't just take out of the insurance first.
+First the sequence of of. Pax.
+And then the sequence of. I mean, okay.
+It's just like. Yeah, I think so.
+Well, in any case, there should be a slide here that multiplies all the numbers taken from here.
+And the final number for that is 5.4 times ten to the minus five.
+And we have our number, whatever it is.
+Now to figure out what the best sequence of taxes is, we would have to follow every single path right here without being clever about it.
+Just follow every single possible path, brute force it and get all the numbers.
+One of the numbers will be the highest. This is our winner. This is our winning sequence of tax.
+Do we want to brute force it? That's all we got.
+Especially that that's. The lower the sentence.
+The much the the the more exponential it becomes.
+Any any ideas what to do about it. Well, you're looking at a summary of what a hidden market really is.
+Have you heard about the Viterbi algorithm? How many of you are familiar with dynamic programing?
+Most of you, but not all of you. How many of you are comfortable with dynamic programing?
+Like you would be able to explain it to it to a stranger? Okay, Very well.
+Let's let's close the hidden Markov model discussion here, and hopefully this kind of clarifies what it does.
+So remember, the Denmark model is a model of some some sort of generator of sequences.
+Those sequences are sequences based on well reflecting some some stayed inside the the
+moral high low being human or whatever based on either predefined or learned probabilities.
+These right here that we use are transition probabilities, but we also have something that is called emission probabilities.
+Okay. We inside the model, we arrive at a certain state.
+Q three. How likely are we?
+Goal is for us to observe something being produced by that particular state right now?
+That's the emission probability. In our case, we are we might be at a state and somewhat how likely is that to be emitted by that state?
+Zero chance. We already established this state cannot amend the word of the buck fly.
+Absolutely. But not. So there's two sets of probabilities there that define all of that.
+These numbers right here are transition probabilities, state to state probabilities,
+how likely a certain sequence is to be and how likely are the observations corresponding to that sequence?
+Are this These are emission probabilities.
+So. Transition probabilities.
+Emission probabilities. I'm at its date.
+I'm going to emit a value. More or less understandable.
+I'll take that as a no, but hopefully we'll clear up as we go.
+This is the reason why you would not want to brute force it. That makes sense.
+K would be the number of tags. L would be the length of the sequence of our sentence.
+You only have 20 tags and a 1010 word long sequence.
+This is how many? Options we have to consider.
+That's not going to work very well. Okay.
+So for those who are not too comfortable with dynamic programing, giving anyone, give me an idea what is dynamic programing?
+They got stricter and then build a solution based on muddying the water, having some problems.
+So take advantage of existing problems that you calculate and store the results and don't do not calculate them over and over and over again.
+The more repetition is within the problem structure, the more reuse is there, the more applicable dynamic programing is.
+I mean, you should be an example to clergy members. Right.
+Everybody knows. I imagine. Next Fibonacci number is the sum of the previous two.
+It's a recursive relationship. Right?
+So we can we can build a build a tree that corresponds to finding a number like that.
+Banerjee 15 Fibonacci No, I think it's a sum of the fourth and the third.
+Or at least some of the third and second. And what?
+How much? How much repetition do you see on the street?
+Repeating the same sentence. Something over and over and over and over again.
+Say I calculated F2 here. I can reuse it right here, right here.
+And so on and so on. That's. That's how.
+That was the benefit of dynamic programing, storing those solutions somewhere in a table.
+The process of storing it is called normalization, right?
+Sort of memories, memorization, but different.
+Could you call it caching? Absolutely.
+Starring? Absolutely. One device. Find your solution by tapping into it, into existing setup solutions.
+So Viterbi algorithm algorithm is a dynamic programing algorithm, by the way,
+dynamic for those who don't know that programing in dynamic programing has nothing to do with coding.
+It's going to term entering values into the table.
+That's what it really means. That's how old that algorithm, that approach is.
+Okay. What were we doing when we were trying to find those?
+Those. Those probabilities that we discussed a couple of minutes ago.
+It was a product of individual probabilities. What's the probability of flies being a verb and following the start of the set?
+That's the first probability. Let's follow this van.
+And what is the probability that like is a noun and it follows a verb like two second probability.
+Multiply, multiply, multiply. If we're multiplying more many terms, how do we how do we maximize the whole thing?
+Oh, go ahead. You multiplied the maximum probability of this section, right?
+We want to find the maximum here.
+Multiply it by to get maximum of this entire section.
+We want to have the maximum here in times. Maximum here.
+Okay. This is. This is the idea.
+We maximize it as as as we go. Picking the path that so far maximizes everything.
+If. If it's like shortest path of algorithm, if one of our previous steps is not the maximum or not the minimum.
+Right. We're not building a shortest path. Every single step has to be optimal.
+Okay. This diagram right here is an example from one of your textbook,
+which is essentially a more elaborate version of this with more tags and a different sentence.
+Janet will be back will back the bill. And we have our our what kind of this is this is based on the mark of my old course.
+What are what kind of probabilities do we have in remarkable.
+Transition in a mission probably. So we have a mission.
+Probability is probability that we're at, John. It will be a verb zero transition probabilities.
+Probabilities that I don't know. A verb follows. A verb is, well, very low.
+Not unlikely, though. How do you think what kind of benefits can we get from dynamic programing here?
+How would we happen? Oh.
+Hmm. You can continue. Awesome.
+The best probability issue for the next day.
+You want to play?
+It's a combination. Maybe individually, but close.
+Okay, you're first. That's all. We have to find the best maximal probability of a sequence as we go and expand.
+But where is the algorithm specifically? There is.
+There is one initial step where you will.
+Populate the first column with probabilities.
+How about a part? Let's call it Viterbi values.
+So what do we have here? This is d17 right here.
+That corresponds to Janet being the Terminator.
+Let's find out something more relatable.
+Janet. BRB, know the here and now.
+But despite. What do you want?
+Okay. And this. This algorithm is using the same principle as we did or.
+Probability, transmission, probability and mission probability.
+Same thing. Okay, So.
+Number one, we have an appropriate position.
+Probability times that mission probabilities, resolution probability is that that now follows the beginning of.
+Of the sentence times probability. John is a no.
+Find it. But it didn't. This is this is a simple lookup, but the next step is hey.
+We have to keep going. Next column. And this is where we have we have to consider all the all the possible options.
+So for every next note in this Viterbi crash, you have to calculate values.
+But this is this is where we will be using when we will start maximizing things.
+First step, just populated products based on table information.
+Second step. Okay. What is the what is the maximum value?
+I mean, moving forward, what is the. Or every stage right here.
+Q It's the maximum, but a little bit of radius value.
+Previous column, though we're looking in transition probability.
+From the previous to the next step and observation likelihood, which is admission probability or the next point.
+In other words, we're trying to maximize whatever came before old times, the new product of transition times emission at every step.
+So this maximizing means that I have to go through every possible death and corresponding transition times.
+I mission this. I think transition types of mission take the maximum body.
+Does it mean that there's going to be one atch that represents the best combination?
+Most likely there may be a tie, but that's very unlikely. This is how we will decide the beginning of the path.
+That doesn't mean that we will stop exploring other paths, but.
+As we go. Some of those facts will be.
+I guess I can use the term diminishing in value and will be not ignored, but they will sort of decay.
+Confused. Okay.
+Go through it. If anyone is confused by it, let me let me know.
+I'll just create another document that's broken down those two individual steps.
+How about more confusion? Are you ready? So this was supposed to come before the part sagging, but it doesn't matter that much.
+The ordering will do something very similar.
+So perhaps this is a little easier. So perhaps this was better.
+How many of you heard about minimum distance? You know everything.
+Good for you. Okay.
+This will be helpful for spell checkers. How do you spell checkers Work?
+Or do you have any idea how to build a very simple spell check?
+Or how would you start that type of correction?
+Yes. Whatever you have in your phone, whatever it is, is just a deep learning network that was trained on.
+That's just a misspelled word. This is how it should be spelled.
+Label training, training, training, training done. But if we don't have that, how would you go about it?
+Surely a word then, or using the word as a victory?
+Just about a year ago.
+So I don't know this word right. And find the word that seems to be the closest doing.
+Is that okay? But what does it mean?
+The closest to it. Which one should be sure to replace grass.
+Here. Yeah. Oh, it's easy for you.
+For a human being, for a computer. Maybe someone just slipped and.
+A gaffe, maybe. Yes. When the changes required.
+Yes. There you go. So if we were to replace one word with the other, how much work do we have to do?
+Does that sound like a solid idea? How much?
+How many changes? I need to perform. And to go from grass to giraffe.
+And the changes are.
+About three times. Delete the leader character, insert a character or substitute the character.
+Ultimately, the goal is really to align two strings.
+How much work does it take for me to align the source with the destination and source of being our incorrect word?
+And destination is one of our potential candidates and every word in the dictionary.
+If you were to do a thorough job right, So we are trying to align that and that is the truth of the one is here.
+But at least one of you is from Biomed Department.
+This is what you would do for me in computational biology.
+A lot to compare DNA strands and whatnot.
+But let's go back to misspelled words.
+So the alignment, the amount of effort to align two strains is measured by the number of edits insertion, deletion, substitution.
+This is not not the only measure of distance that we will use in this class, but let's let's stick to edits.
+Now, there's there's two basic ways to calculate that distance.
+The basic one is let's assume every single operation is equal in terms of reference deletion.
+One cost, one insertion. Cost one, substitution, cost one.
+However, to be more precise, people actually came up or someone, a gentleman from Russia called Levenstein came up with a modified version of it.
+Let's assign costs due to substitution because after all deletion and insertion rolled into one.
+So let's do this. If we if you take that into consideration, this changes the distance a little.
+Now, finding the minimum edit path, we're looking more or less at the same problem as we did with tagging.
+We have to consider it. If we're done about it, we have to consider every possible sequence of insertion,
+deletions and substitutions that will result in that tree of changes that at the end of the tree we are aligned with the original word,
+but that tree is going to be huge.
+So the smart way to do it is to use dynamic programing again for the same purpose.
+There is a minimum at a distance algorithm,
+which is more or less somehow related to the interview algorithm will keep counting and adding processing different data.
+Okay, let me show you how it's done. You have 40 minutes.
+Hopefully this will be easier to understand than the other one.
+For now, this is a table dynamic programing table that we will build to find the minimum.
+Edit Just right here.
+We will have our search source string Source word.
+Misspelt word. Let's say m characters here.
+Sometimes you will see that that initials that right here, which is an empty string placed in the upper left corner.
+It doesn't matter where you start. At the bottom will have our target string.
+They don't have to have the same amount of that we don't need for that.
+And at any point in time, or at least once, we're when we are, we want to populate this table.
+This is for the normalization purposes.
+Every cell in this table is going to be populated according to this formula.
+The minimum value of either cell to the left, plus the insertion cost, which in our case is one the minimum value of the cell across.
+So minimum out of the three is the value of the sell across plus substitution cost.
+So this could be two or zero if there is no need for substance substitution.
+That makes sense. Overdose or a third option.
+Sell below the value of the cells below, plus the deletion cost, which is one Again, calculate three, all three and take the minimum value.
+Put it in there. Move on. Right.
+So after the after sell column after column, row after row that with the.
+Okay. But if we do that, there's an initial step where we populate the first column and the first row first
+column is essentially how do we go from an empty string to our source word?
+How do we go from an empty string to a by adding insert?
+How do we go from I to I am by inserting and so on and so on.
+Plus one plus plus plus one plus one plus one. Does that make sense? Same for for the target word from the from the empty string, the full string.
+Nine insertions plus one plus one plus one. That's it.
+Now we can start our calculation.
+So what are the what is going to be the value here for the red Cell?
+What? So let's start with the first option.
+Green cell volume one plus insertion cost one plus one to purple cell volume plus substitution.
+Because you need to do a substitution, you get to go from A to Z.
+Yes, we do. So zero plus two blue cell value one plus deletion cost one.
+So we have 2 to 2. We have a tie. We'll end up with a two here.
+But here's here's an important step is not know just to know the minimum distance.
+This is not necessary. But if you want to know the steps for aligning, you will need something called Black Point.
+It's telling us where did we come from to find the minimum added value cause.
+Okay. Sense that value here is the same for every out of the three options, we can put back pointers to every single cell that we have.
+Because it doesn't matter which way we go, we'll end up here with the two.
+If I keep doing that for a little bit, we will be getting more or less the same results.
+Tie free, high or high five.
+I think, look, I'm using all those three pointers every time.
+High seven. This is where things will change a little bit right here.
+So let's take a look. Green cell is seven.
+What's the insertion course? One seven plus one is a distance called the minus one row.
+Minus one, which is purple. So it is six.
+What is the substitution cost? Zero.
+Because we have I and I. So we get six plus zero.
+And what about the blue plus dilation? Seven plus one is eight.
+So we have eight, six, eight.
+Now, only one option is best and this is our way to go.
+Six goes into the red.
+So the back pointer, the only back point for that is going to go across is this is our minimal edit path right here if you keep doing that.
+You'll end up populating the entire table. I don't want to waste time doing that.
+Eventually, the table is complete and your are interested in this number right here in the upper right.
+So this is the actual minimum Edit cost of getting intention to be aligned with execution eight months.
+The trivial way would be we'll start with the intention complete and start deleting character after character.
+Write down on it and and I go to an empty three and then expand into execution.
+But that's nine less nine, right. 18 There's a better one.
+So this number right here, it tells you how much work does it require it to go from intention to execution using deletions,
+insertions and substitutions. Okay, minimum edit distance.
+Now, if you were looking for or if intention was the misspelled word and you were looking for a correct worth,
+you would have to do that table for every word in the dictionary and that number.
+And picked a pick to pick the words with the minimal at the distance.
+Of course you can. I'm sure you can trim down the amount of work here a little by teachers just by looking at shorter words and whatnot.
+But this is what you need to do to find that at a distance.
+Is this the end of the of the work you do?
+So to be here, we can use the back pointers to actually find find the scenes,
+the exact sequence of what do we have to do to move from one, one or the other.
+Well, just if we kept track of those back pointers, let's just follow them.
+Right. This is not a problem. Just one by one by quarter.
+This is where we have it's not shown in this table.
+But essentially we are we're splintering here in this.
+You look as if we were building a tree and we can follow in in three directions.
+There's one that is actually the cheapest. Doesn't mean that we have to follow it in this case.
+Well, let's keep following and.
+The dust up right here. I have got this red cell and I have to make a decision.
+I can go either across or to the left. Right.
+And if I go across, this is a higher value than that.
+Right. But if I were to follow floor, I'll end up here and there is no way I can get to the.
+To the boy. Empty string was the same.
+Cause I've done. And then.
+Change a word? Yes. Part of it or.
+But you cannot get to the end. It will take longer.
+Arma three three. And we could do a bunch of deletions here.
+Yes. But less moves that way.
+I think I'm going to be a cop.
+One, two, three, three, or at some point on a different path you're not adding.
+Anything in the other path, you will not be adding anything.
+And so when you sit longer, it's not very important that we're going to more so in the table without reaching.
+I will end up with the same value here, but with more steps.
+There are some. There might be more than one path minimum added path distance in that table.
+I just showed you one. You can find another one alternative.
+Go for getting from here to here.
+That's fine. If they're attacked, if it's the same amount of stuff.
+Either one. Answer a question. Okay for those who love time complexity.
+Essentially a quadratic quadratic term and complexity for building the whole thing.
+Back tracing as is linear quadratic is not that great to exponential because
+if we were to just explore every possibility individually make it much worse.
+Okay. But can only improve our spell checker.
+What it does. It's looking for deletions, insertions and substitutions.
+Let's focus on the last one. Are all characters equal when it comes to misspelling?
+Pretty common, huh? So.
+But then it's unlikely to be. Speaking of misspelling, I misspelled as.
+That's almost not not going to happen. Right?
+If you factor that in, you actually could use up data or Google keeps track of all all your misspellings when you're doing a search.
+If you keep track of that data, you can build a table where you have well out.
+How likely a is going to be is misspelled with an E.
+If you have that table,
+you can replace that substitution cost of two with more accurate information and use it to guide your selection of correct word candidates.
+Does that make sense? All right.
+So is this dynamic programing example, is it easier to wrap your head around than the verb you want?
+Is this understand this one understandable? Completely.
+Or 90%. Take a stab at the B-to-B yourself.
+Take a look at it. If if this what we discussed today is not enough, I'll just create something extra for you there.
+What what is being done There is more or less the same thing,
+except there's products instead of sums, and they're calculated in a slightly different way.
+Questions like what?
+With one of the latest smaller. What is one of the little smaller?
+If that's okay, that's fine. But they don't have to be equal.
+Actually, you could have two characters here in the ten here you will have more insertions or more deletions and substitutions.
+All right. Thank you. Have a good weekend.
+What is.
+They know we're still looking for somebody.
+Oh. Yes.
+Yes, it's the same.
+So you have to go with the first person.
+And if you are able, every single one of you and you have the same result.
+It's right. You want us to write like we talk about something?
+Yeah. I tried it next to the bike here somewhere.
+I think the name of a piece, if I can prove this thing is based on the real feeling.
+I didn't get the.
+I don't know if I did not capitalize it.
+That depends upon the little boy who was dependent on the package.
+Yeah. Wrote the use of I. It's so.
+Yeah. What were you thinking? If I keep a smaller eye in the dictionary, it would like the limitations of small words.
+Well, the question is, are they.
+Are they. Are they always, always done?
+Or do they make some exceptions? Because it's easy. And I guess I it means a lot.
+A lot in a way more than just. Yeah. Though they may have to just have some curiosity in there.
+That's okay. I see.
+I like, you know, being sarcastic basically is not as transparent as an antique, but I'm very glad that you're looking at other things.
+You will see differences like that that I would never do.
+And there was a bit not a huge difference, but there was a big difference between, yeah,
+you're going you're going to see that and you have to factor that in when you're building your own applications.
+Do I have to address them myself or do I tool that doesn't for me?
+All sorts of other things. Thank you.
+This is not a surprise. This is why I knew why I wrote what I wrote this morning using other tools just to list all these possibilities.
+Take a look at it. Just so you're aware that you're always thinking with it and intellectually and in your own writings,
+which organizes this kind of stuff with any strength and instruction, if it would come back?
+I think basically that this writing expresses removal.
+All that out of the literal world should be reduced to domination.
+So in that dodge should be a token that should be carried in your notebook.
+That's how I got into this. This is where you would the best option to note here is just to provide two versions of it was to remove some of them.
+In this one, I use this organizer in another version of creation.
+We can just mention that I looked at it, I saw it.
+I can see that this.
